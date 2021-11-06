@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>CS, Leo personal wiki</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.88.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+      <link href="/notes/index.xml" rel="alternate" type="application/rss+xml" title="CS, Leo personal wiki" />
+      <link href="/notes/index.xml" rel="feed" type="application/rss+xml" title="CS, Leo personal wiki" />
+      
+    
+    
+    <meta property="og:title" content="Notes" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://example.org/notes/" />
+
+<meta itemprop="name" content="Notes">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Notes"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        CS, Leo personal wiki
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Notes
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20211005165705-set_image_size_in_org/" class="link black dim">
+        Set image size in org
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Use these tags above the image (without blank lines):
+#+ATTR_HTML: :width &lt;width&gt;px #+ATTR_LATEX: :width &lt;width&gt;px 
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210929092514-setup_mu4e/" class="link black dim">
+        Setup mu4e
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Asegúrate de usar la configuración de mi repo https://github.com/LeobardoArguelles/emacs.
+  Clona mi repositorio dotfiles. https://github.com/LeobardoArguelles/dotfiles
+  Copia el archivo .mbsyncrc de dotfiles a ~/.config/mu4e
+cp .dotfiles/.mbsyncrc .config/mu4e   Crea un archivo llamado &ldquo;mbsyncpass-acc1&rdquo; con la contraseña de la cuenta registrada, en texto.
+  Encriptalo:
+gpg2 -c mbsyncpass-acc1 #+end_src* 5. Borra el archivo de texto sin encriptar. 6. Instala ~mu~ desde [[https://aur.archlinux.org/packages/mu/][el repositorio en AUR.]] 7. Cierra Doom y corre ~doom sync~.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210912205914-shell_sort/" class="link black dim">
+        Shell Sort
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Es una mejora sobre Insertion sort.
+En shell sort se comparan elementos distantes, y se incercambian si es necesario.
+La principal diferencia entre shell e insertion sort, es que insertion solo maneja un array ordenado, mientras que shell maneja length/h arrays ordenados.
+PASOS  Dividir la lista en \(\frac{n}{2}\) grupos, cada uno con 2 elementos. Cada grupo de elementos estará separado por un espacio también de n/2. Recorrer la lista, comparando individualmente cada grupo de elementos, y haciendo los intercambios necesarios.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20211016205232-shells/" class="link black dim">
+        Shells
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      See:
+ Reverse shell This is the most common kind. Bind shell  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210831222734-sistema_de_ecuaciones_lineales_con_matrices/" class="link black dim">
+        Sistema de ecuaciones lineales con matrices
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Un sistema de ecuaciones lineales se puede plantear como un producto de matriz por vector, de la siguiente forma:
+\begin{equation*} Ax = b \end{equation*}
+donde:
+ A es la matriz de coeficientes Los coeficientes se obtienen de las ecuaciones del sistema. x es el vector de variables Por ejemplo: x, y, z. b es el resultado, el cual es una combinación lineal de las columnas de A.  De esto se deduce también que:
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20211015185451-sistema_generador_algebra_lineal/" class="link black dim">
+        Sistema generador (Álgebra lineal)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      En ingles se dice que un sistema generador son vectores que span (abarcan?) el espacio vectorial.
+En español, un sistema generador es un conjunto de vectores a partir de los cuales se puede generar el espacio vectorial V completo.
+EJEMPLO El sistema generador básico de un espacio en \(R^n\) es la matriz identidad de dimensión n.
+Esto es porque sus columnas son linealmente independientes, y al combinarlas linealmente es posible generar cualquier vector de \(R^n\).
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20211015102229-smbclient/" class="link black dim">
+        smbclient
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      LIST SERVICES smbclient -L &lt;ip&gt; # Example: smbclient -L \\\\192.168.54.4\\ It should output a table containing, for example:
+ IPC$ ADMIN$  Then, you could try and connect to one of these services.
+CONNECT SERVICES smbclient &lt;ip&gt;\\&lt;service&gt; # Example: smbclient \\\\192.168.54.4\\ADMIN$ 
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210909211627-solucionar_sistemas_de_ecuaciones_con_matrices_elementales/" class="link black dim">
+        Solucionar sistemas de ecuaciones con matrices elementales
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Es posible solucionar un sistema de ecuaciones si se plantea de la forma Ax = b.
+Para hacerlo, hay que encontrar una matriz \(E\) que, al multiplicarse con \(A\), genere la matriz identidad. Dicho de otra forma, hay que encontrar la matriz inversa de A (\(A^{-1}\)).
+Nota: Si una matriz tiene matriz inversa, significa que habrá una solución para cualquier vector b. Sin embargo, que no exista la matriz inversa no significa que no exista ninguna solución.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20211008140534-solucion_completa_de_ax_b/" class="link black dim">
+        Solución completa de Ax=b
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      La solución completa x es: \(x= x_p + x_n\), donde:
+ \(x_p\) son las soluciones particulares. \(x_6\) son las soluciones del espacio nulo.  OBTENIENDO SOLUCIONES PARTICULARES Se recomienda obtenerlas partir de la matriz escalonada reducida R, pues así es más fácil encontrar los valores de los pivotes.
+Entonces, partiendo de R:
+ Se le asigna valor 0 a todas las variables libres. Se calculan los valores de los pivotes usando sutitución hacia atrás.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20211015192620-ssh/" class="link black dim">
+        ssh
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      NORMAL CONNECTION ssh &lt;ip_address&gt; # Example: ssh 192.168.57.134 ALTERNATIVE METHOD Sometimes, when we dont have the key, we will need to do this process:
+First, try the normal connection: ssh &lt;ip_address&gt;. This shoul throw an error, and it should give you an &ldquo;offer&rdquo; of a key exchange. Copy it, and use it in the next line:
+ssh &lt;ip_address&gt; -oKexAlgorithms=+&lt;key_exchange&gt; This should also throw an error, and it should also offer a &ldquo;matchin cipher&rdquo;.
+    </div>
+  </div>
+</div>
+</div>
+      
+    </section>
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/notes/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/20/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/19/" aria-label="Page 19" class="page-link" role="button">19</a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/20/" aria-label="Page 20" class="page-link" role="button">20</a>
+      </li>
+      <li class="page-item active">
+        <a href="#" aria-current="page" aria-label="Page 21" class="page-link" role="button">21</a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/22/" aria-label="Page 22" class="page-link" role="button">22</a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/23/" aria-label="Page 23" class="page-link" role="button">23</a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/22/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy;  CS, Leo personal wiki 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

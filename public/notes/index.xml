@@ -1,0 +1,2906 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on CS, Leo personal wiki</title>
+    <link>http://example.org/notes/</link>
+    <description>Recent content in Notes on CS, Leo personal wiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021-08-31</title>
+      <link>http://example.org/notes/2021-08-31/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/2021-08-31/</guid>
+      <description>Estructuras de datos Shell Parecido a insert, pero más eficiente
+Heap sort Usa un árbol para ir organizando los números. Reglas:
+ Un nodo siempre debe tener valor &amp;lt;= a sus hijos El arbol se puede representar linealmente, si un nodo en i tiene sus hijos in i*2 e i*2 + 1 El arbol se ordena haciendo pop a la raiz, se mueve hasta el final del array, el elemento que estaba ahí se intercambia con la raíz, y este elemento se reordena antes de pasar a la siguiente iteración (se deja caer como hoja hasta su posición correcta).</description>
+    </item>
+    
+    <item>
+      <title>2021-09-14</title>
+      <link>http://example.org/notes/2021-09-14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/2021-09-14/</guid>
+      <description>CC Aplicadas Multiplicación de matrices &amp;hellip;Continuación de una clase anterior
+PRODUCTO LÍNEA I-ÉSIMA-MATRIZ \begin{equation*} AB= \begin{bmatrix} a_1\\ \dots \\ a_n \end{bmatrix} B = \begin{bmatrix} a_1B\ \dots a_nB \end{bmatrix} \end{equation*}
+Es como el producto columna j-ésima matriz, pero con los vectores línea de A.
+  CON NUMPY
+l1 = A[0,:].dot(B)[np.newaxis, :] l2 = A[1,:].dot(B)[np.newaxis, :] C = np.concatenate((l1, l2), axis=0)   LEYES PARA OPERACIÓN DE MATRICES SUMA  Conmutativa: \(A+B=B+A\) Distributiva: \(c(A+B)=(cA+cB)\) Asociativa: \(A+(B+C)=(A+B)+C\)  PRODUCTO  Conmutativa: \(AB \neq BA\) Distributiva  Por la izq: \(A(B+C)=AB+AC\) Por la der: \((A+B)C=AC+BC\)   Asociativa: \(A(BC)=(AB)C\)  PRODUCTO DE UNA SECUENCIA DE MATRICES Suponga una secuencia de n matrices cuadradas \(AA \dots A\) Podemos asociar el producto como \((A^p)(A^q)\) talque \(p+q=n\) y \(n \geq 1\).</description>
+    </item>
+    
+    <item>
+      <title>2021-09-17</title>
+      <link>http://example.org/notes/2021-09-17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/2021-09-17/</guid>
+      <description>Predicado II Comprobación directa.
+Suponga \(\exists A^{-1}\) y dado \(Ax=0 \therefore x=0\) (vector columna)
+\begin{align} P_1 &amp;amp;: \exists A^{-1}\\
+P_2 &amp;amp;: Ax=0\\
+P_3 &amp;amp;: A^{-1}Ax=A^{-1}0\\
+P_4 &amp;amp;: A^{-1}A=I\\
+P_5 &amp;amp;:Ix=A^{-1}0\\
+P_6 &amp;amp;:Ix=x\\
+P_7 &amp;amp;:x=0 \end{align}
+Donde x será un vector columna de tamaño n.
+Predicado III Comprobación directa.
+Si \(\lvert A \rvert \neq 0 \therefore \exists A^{-1}\).
+Predicado IV A no posee dos o más matrices inversas (solo tiene una).</description>
+    </item>
+    
+    <item>
+      <title>2021-09-21</title>
+      <link>http://example.org/notes/2021-09-21/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/2021-09-21/</guid>
+      <description>Factorización A en LU \begin{equation*} L = E^{-1} \end{equation*}
+La matriz L es la inversa de la matriz elemental que genera U, a partir de A.
+Entonces:
+\begin{equation*} LU = A \end{equation*}
+Donde:
+ L tiene los multiplicadores U tiene los pivotes  Flashcard: Si A y B son invertibles, entonces el producto AB es invertible. Flashcard: L es la matriz que cuando multiplica a U, genera A.
+Entonces, si \(E_{21}E_{31}E_{32}A=U\),</description>
+    </item>
+    
+    <item>
+      <title>2021-09-24</title>
+      <link>http://example.org/notes/2021-09-24/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/2021-09-24/</guid>
+      <description>TRANSPUESTA Y MATRICES DE PERMUTACION Transpuesta Dice Mr. Hirales que nos ayuda a reducir la cantidad de espacio requerido para almacenar la informacion.
+La matriz transpuesta de A, se denota como \(A^{T}\). Y la transpuesta es la matriz donde las lineas y las columnas estan volteadas. E.g:
+\begin{equation*} A= \begin{bmatrix} 1\ 2\ 3\\
+4\ 5\ 6\\
+\end{bmatrix} \end{equation*}
+\begin{equation*} A^{T} = \begin{bmatrix} 1\ 4\\
+2\ 5\\
+3\ 6\\
+\end{bmatrix} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>2021-09-28</title>
+      <link>http://example.org/notes/2021-09-28/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/2021-09-28/</guid>
+      <description>ESTRUCTURAS DE DATOS Lista doblemente enlazada Esta lista permite ir en ambas direcciones: Hacia delante y hacia atrás.
+Nodos Tienen 3 campos: Valor, nodo anterior, nodo siguiente.
+Preguntas para Anki  Cuantas clases se usan para implementar lista enlazada 2, una para lista enlazada, otra para nodo Qué atributos tiene la un objeto nodo (hablando de listas enlazadas) Valor, next (apuntador) Qué atributos tiene un objeto lista enlazada Head, tail, size Cuantas formas hay de insertar un nodo en una lista.</description>
+    </item>
+    
+    <item>
+      <title>2021-09-30</title>
+      <link>http://example.org/notes/2021-09-30/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/2021-09-30/</guid>
+      <description>Conferencia Human-centered AI  Pone a las personas primero, usando tecnología de AI, pero a la gente no le importa eso. Guía para hacer este tipo de productos: &amp;ldquo;People+AI Guidebook&amp;rdquo; Primero hay que conocer a los usuarios, comprender el problema a resolver.  Entender cuáles problemas sí se pueden resolver con AI.  Hay que conocer cómo las personas hacen su trabajo diariamente Este permite detectar qué situaciones pueden resolverse con AI.</description>
+    </item>
+    
+    <item>
+      <title>2021-10-01</title>
+      <link>http://example.org/notes/2021-10-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/2021-10-01/</guid>
+      <description>CC APLICADAS ESPACIO COLUMNA C(A)  Si A es inversible, entonces existe una solución para \(Ax=b\), con \(x=A^{-1}b\) Si A es singular, no significa que nunca haya solución. Es posible que para algunos valores de b sí exista solución. El objetivo es encontrar para qué valores de b existe solución.  Definición: \(Ax=b\) posee solución si y solo si b pertenece al espacio columna de A: \(Ax=b \; tiene\; solucion \; \leftrightarrow b \in c(A)\)</description>
+    </item>
+    
+    <item>
+      <title>2021-10-05</title>
+      <link>http://example.org/notes/2021-10-05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/2021-10-05/</guid>
+      <description>ESTRUCTURAS DE DATOS (ÁRBOLES)  Estructuras no lineales (duh) Se usan en fórmulas algebraicas y en varias aplicaciones como AI o cifrados Tipos de nodos:  Raíz (El de hasta arriba, sólo hay uno) Rama (tiene hijos) Hoja (No tienen hijos)   En un árbol los datos se organizan relacionando los elementos a través de ramas.  Se forma por un conjunto finitode elementos (llamados nodos) Las líneas que conectan a los nodos también son llamadas arcos.</description>
+    </item>
+    
+    <item>
+      <title>2021-10-07</title>
+      <link>http://example.org/notes/2021-10-07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/2021-10-07/</guid>
+      <description>ESTRUCTURAS DE DATOS RECORRER EL ÁRBOL  Inorder: Left -&amp;gt; Root -&amp;gt; Right Preorder: Root -&amp;gt; Left -&amp;gt; Right Postorder: Left -&amp;gt; Right -&amp;gt; Root  ELIMINAR DATOS DE ÁRBOL BINARIO Casos
+ELIMINAR HOJA El más fácil, se elimina el arco desde el padre hasta el nodo a eliminar.
+UN SOLO DESCENDIENTE El hijo sustituye al padre, easy.
+2+ DESCENDIENTES 2 formas: Sustituyendo por el nodo máz a la izquierda del subárbol derecho, o por el nodo máz a la derecha del subárbol izquierdo.</description>
+    </item>
+    
+    <item>
+      <title>2021-10-08</title>
+      <link>http://example.org/notes/2021-10-08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/2021-10-08/</guid>
+      <description>CC APLICADAS Expectativas:
+ Conocer la solución completa para Ax=b Aplicar eliminación al sistema aumentado [A b] y transformarlo a [R d]. Y entender cómo se relacionan Endender que los sistemas Ax=b y Rx=d tienen solución solo si todos los ceros en R poseen ceros en d.  MATRIZ A -&amp;gt; R  Se forma la matriz aumentada [A b] Se transforma A en R (aplicando eliminación para llegar a la forma escalonada) Al terminar el paso 2, nos queda la matriz aumentada [A d] El vector b se transformó en el vector d.</description>
+    </item>
+    
+    <item>
+      <title>A = LU</title>
+      <link>http://example.org/notes/20210922195503-a_lu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210922195503-a_lu/</guid>
+      <description>La matriz A puede ser factorizada en dos matrices triangulares: L y U.
+\begin{equation*} A = LU \end{equation*}
+Donde:
+ A es la matriz original U es la matriz triangular superior que se obtiene aplicando eliminación a A. L es una matriz triangular inferior que hace el proceso inverso a eliminación. Es decir, se puede entender como que se genera invirtiendo cada paso necesario para convertir A en U. Entonces, si E es la matriz elemental tal que \(EA=U\), entonces L es la inversa de esa matriz: \(L=E^{-1}\)  L Esta matriz es el producto de las inversas de todas las matrices elementales que se usaron para convertir A en U.</description>
+    </item>
+    
+    <item>
+      <title>Accents in Linux</title>
+      <link>http://example.org/notes/20210926101708-accents_in_linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210926101708-accents_in_linux/</guid>
+      <description>Add the following content to ~/etc/X11/xorg.conf.d/00-keyboard.conf:
+Section &amp;#34;InputClass&amp;#34; Identifier &amp;#34;Keyboard Defaults&amp;#34; MatchIsKeyboard &amp;#34;yes&amp;#34; Option &amp;#34;XkbLayout&amp;#34; &amp;#34;us&amp;#34; Option &amp;#34;XkbVariant&amp;#34; &amp;#34;intl&amp;#34; EndSection </description>
+    </item>
+    
+    <item>
+      <title>Add height (Latex command)</title>
+      <link>http://example.org/notes/20211008110551-add_height_latex_command/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211008110551-add_height_latex_command/</guid>
+      <description>Usado en combo con subf para crear matrices de imágenes en latex.
+LATEX DEFINITION AS ORG HEADER #+LATEX_HEADER:\newcommand*{\addheight}[2][.5ex]{ \raisebox{0pt}[\dimexpr\height+(#1)\relax]{#2}} </description>
+    </item>
+    
+    <item>
+      <title>Algebra Booleana</title>
+      <link>http://example.org/notes/20210924110942-algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210924110942-algebra_booleana/</guid>
+      <description>Son las reglas que describen a las operaciones booleanas, tal como la aritmética, pero con algunas importantes diferencias.
+Las funciones booleanas se forman tanto con variables como con operadores booleanos, y su resultado siempre será 0 o 1.
+CARACTERÍSTICAS PRINCIPALES  Las variables solo pueden tener 2 valores: 0 o 1. Las operaciones principales son:  OR AND NOT   Otras operaciones:  NAND NOR XOR XNOR    LEYES DEL ÁLGEBRA BOOLEANA Son usadas para simplificar una expresión booleana, y reducir la cantidad de compuertas/operaciones necesarias para obtener el resultado correcto.</description>
+    </item>
+    
+    <item>
+      <title>Algorithms</title>
+      <link>http://example.org/notes/20210827072505-algorithms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827072505-algorithms/</guid>
+      <description>Los algoritmos son una serie ordenada y finita de pasos, los cuales tienen entradas y salidas para resolver un problema específico.
+Sus caracteriśticas princiaples son que los algoritmos son:
+ Finitos Exactos Bien definidos  EFICIENCIA Y RECURSOS Es importante que se busque tener algoritmos eficientes, ya que todo algoritmo utiliza recursos tanto de tiempo como de memoria.
+La cantidad de recursos que utilizan se representa en función de la cantidad de datos N (Theta Notation):</description>
+    </item>
+    
+    <item>
+      <title>Algoritmos de Ordenamiento</title>
+      <link>http://example.org/notes/20210827171047-algoritmos_de_ordenamiento/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827171047-algoritmos_de_ordenamiento/</guid>
+      <description>Estos son necesarios cuando se hará una gran cantidad de búsquedas en un conjunto de datos, pues los algoritmos de búsqueda son más eficientes en conjuntos ordenados.
+Hay 2 tipos de ordenamiento: Interno y externo.
+Ordenamiento interno (arreglos) Los elementos a ordenar se encuentran en la memoria principal.
+Métodos directos (n^2) Recorren todo el array por completo hasta \(n^2\) veces para realizar el ordenamiento.
+ Bubble sort Selection sort Insertion sort  Métodos logarítmicos (log n) Esto algoritmos usan técnicas que resultan más eficientes para grandes colecciones de datos.</description>
+    </item>
+    
+    <item>
+      <title>AND</title>
+      <link>http://example.org/notes/20210924112414-and/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210924112414-and/</guid>
+      <description>También llamado conjunction, puede pensarse como una multiplicación lógica.
+SÍMBOLO Símbolo: \(\wedge\) Nombre en latex: ∧
+TABLA DE VERDAD    A B Y = A*B     0 0 0   0 1 0   1 0 0   1 1 1    </description>
+    </item>
+    
+    <item>
+      <title>Anki Flashcards</title>
+      <link>http://example.org/notes/20210902175812-anki_flashcards/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210902175812-anki_flashcards/</guid>
+      <description>MAKE ATOMIC CARDS One idea per card:
+ Be specific, break up big ideas into smaller ones. Or, condense multiple ideas into a higher level one (this is harder).  BE HOLISTIC That is, integrate an idea into your knowledge before putting it into Anki:
+ Have holistic ideas, but atomic flashcards.
+ FUTURE-PROOF YOUR CARDS Don&amp;rsquo;t think that remembering something know equals to remembering it in the future, with the same level of detail.</description>
+    </item>
+    
+    <item>
+      <title>Anulación (Ley de álgebra booleana)</title>
+      <link>http://example.org/notes/20210928193343-anulacion_ley_de_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928193343-anulacion_ley_de_algebra_booleana/</guid>
+      <description>Se anula el valor de la variable de entrada, y toma el valor constante ya sea de 1 o de 0:
+  \(A+1=1\) Esto es como un OR. Otras formas de verlo: -\(A\; or\; 1 = 1\)
+ \(A \vee 1 = 1\)    \(A*0=0\) Esto es un AND. Otras formas de verlo:
+  \(A\; and\; 0 = 0\)
+  \(A \wedge 0 = 0\)</description>
+    </item>
+    
+    <item>
+      <title>Arch Linux Beep Sound</title>
+      <link>http://example.org/notes/20210927112505-arch_linux_beep_sound/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210927112505-arch_linux_beep_sound/</guid>
+      <description>Save your ears the sorrow, turn off the beep today, not tomorrow.
+For a one-timer, not-permanent solution, just run on terminal: sudo rmmod pcspkr.
+To win the war against the annoying speaker, blacklist it.
+ Create the file: /etc/modprobe.d/nobeep.conf Add this line: &amp;ldquo;blacklist pcspkr&amp;rdquo;  </description>
+    </item>
+    
+    <item>
+      <title>Arch Linux volume control (with buttons)</title>
+      <link>http://example.org/notes/20210926163543-arch_linux_volume_control_with_buttons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210926163543-arch_linux_volume_control_with_buttons/</guid>
+      <description>Source: https://wiki.archlinux.org/title/Xbindkeys
+ Install the xbindkeys package. Create the /.xbindkeysrc file. Write the content bellow in said file. Run the command xbindkeys --poll-rc. Add it to .bashrc so that it runs on startup. Done.  # Increase volume &amp;#34;pactl set-sink-volume @DEFAULT_SINK@ +1000&amp;#34; XF86AudioRaiseVolume # Decrease volume &amp;#34;pactl set-sink-volume @DEFAULT_SINK@ -1000&amp;#34; XF86AudioLowerVolume # Mute volume &amp;#34;pactl set-sink-mute @DEFAULT_SINK@ toggle&amp;#34; XF86AudioMute # Mute microphone &amp;#34;pactl set-source-mute @DEFAULT_SOURCE@ toggle&amp;#34; XF86AudioMicMute </description>
+    </item>
+    
+    <item>
+      <title>Archivos (Tipo de dato)</title>
+      <link>http://example.org/notes/20210825105705-archivos_tipo_de_dato/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825105705-archivos_tipo_de_dato/</guid>
+      <description>Son usados para almacenar información fuera de la memoria principal.
+Conjunto de datos estructurados en registros/artículos, que son de igual tipo, y a su vez constan de entidades de nivel más bajo llamadas campos.
+La organización de un archivo define la forma en que los registros se distribuyen. Se consideran 3 tipos:
+ Secuencial Directa o aleatoria (random) Secuencial indexada (indexed)  Cada una de estas tendrá su propia forma de acceder a los registros.</description>
+    </item>
+    
+    <item>
+      <title>Arrays</title>
+      <link>http://example.org/notes/20210825105600-arrays/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825105600-arrays/</guid>
+      <description>Un conjunto de datos que todos son del mismo tipo (puros int, puros float, puros char, etc&amp;hellip;).
+Se almacenan secuencialmente en la memoria, entonces si el array inicia en la memoria 10200, el elemento 1 estará en el espacio 10201 y así sucesivamente.
+Características  Ordenado  Es decir, se sabe cuál es el elemento 1, 2, 3, etc&amp;hellip;   Homogéneo  Todos los datos son del mismo tipo.    Vector Es un array unidimensional: [1, 2, 3, &amp;hellip;, n]</description>
+    </item>
+    
+    <item>
+      <title>Asociativa (Ley de álgebra booleana)</title>
+      <link>http://example.org/notes/20210928201004-asociativa_ley_de_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928201004-asociativa_ley_de_algebra_booleana/</guid>
+      <description>Se pueden re-asociar los elementos:
+  \(A+(B+C) = (A+B)+C\)
+  \(A(BC) = (AB)C\)
+  </description>
+    </item>
+    
+    <item>
+      <title>Árbol (Estructura de datos)</title>
+      <link>http://example.org/notes/20211005164123-arbol_estructura_de_datos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211005164123-arbol_estructura_de_datos/</guid>
+      <description>Se usa principalmente para representar datos con relación jerárquica entre sus elementos.
+Un árbol es un conjunto finito de nodos, tal que:
+ Hay un nodo especial llamado RAIZ (\(V_{1}\)). Les demás nodos se dividen en conjuntos disjuntos y cada uno es, a su vez, un árbol. Se les llama suárboles del raíz.  TERMINOLOGÍA TIPOS DE NODOS Los nodos son los vértices o elementos del árbol.
+POR SU POSICIÓN  Raíz Si el árbol no está vacío, tiene un único nodo raíz.</description>
+    </item>
+    
+    <item>
+      <title>B-trees</title>
+      <link>http://example.org/notes/20211102201547-b_trees/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211102201547-b_trees/</guid>
+      <description>Son árboles balanceados diseñados para funcionar bien en la memoria secundaria.
+Son similares a los árboles rojo-negro, pero los árboles-B minimizan las operaciones de entrada y salida (I/O).
+Estos árboles generalizan a los árboles binarios.
+JUSTIFICACIÓN DE USO La memoria secundaria tiene tiempos de operación mucho más lentos que la memoria primaria (RAM). Sin embargo, su costo de almacenamiento es más barato.
+Entonces, juntando ambas características, es conveniente usar esta estructura que usa mucho espacio, pero disminuye las operaciones de I/O.</description>
+    </item>
+    
+    <item>
+      <title>Bases (Álgebra Lineal)</title>
+      <link>http://example.org/notes/20211015130711-bases_algebra_lineal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015130711-bases_algebra_lineal/</guid>
+      <description>La base de un espacio vectorial es la secuencia de vectores donde:
+ Los vectores son linealmente independientes. Los vectores son generadores del espacio.  Dicho de otra forma (mi forma): Es la cantidad mínima de vectores (independientes) que pueden generar todo el espacio vectorial. Existen rank de ellos Por ejemplo:
+ 2 vectores para el plano cartesiano. 3 vectores para \(R^3\)  BASES Y PIVOTES Partiendo de una matriz A, los pivotes facilitan encontrar las bases de los espacios vectoriales:</description>
+    </item>
+    
+    <item>
+      <title>Batch Scripting (Windows)</title>
+      <link>http://example.org/notes/20211004084630-batch_scripting_windows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211004084630-batch_scripting_windows/</guid>
+      <description>File extension It can be either .bat or .cmd
+Commands Turn off cmd logging @echo off
+Comments &amp;ldquo;Rem&amp;rdquo; marks a comment: Rem A comment here.
+Open a shortcut Just write the path to the shortcut, starting from the bat file location. &amp;quot;Path/to/script.bat&amp;quot;
+Scheduling  Open task scheduler Click on Create Task Follow the instructions  Write name and description Set triggers Set action  Action: Start a program Program/script: &amp;lt;Path/to/file.bat&amp;gt; Add &amp;ldquo;Start in&amp;rdquo; field with &amp;lt;Path/to/file&amp;gt; Or really, wherever you would like for your script to start running.</description>
+    </item>
+    
+    <item>
+      <title>Battery status bash script</title>
+      <link>http://example.org/notes/20210925211521-battery_status_bash_script/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210925211521-battery_status_bash_script/</guid>
+      <description>What we want to do is get the battery info, which we can do with the package acpi, get the necessary data, and then if the battery is low, send a notification using notify-send.
+This is done with:
+BATTINFO=`acpi` if [[ `echo $BATTINFO | grep Discharging` &amp;amp;&amp;amp; `echo $BATTINFO | cut -f 4 -d &amp;#34; &amp;#34; | cut -c -2` &amp;lt; 15 ]] ; then DISPLAY=:0.0 /usr/bin/notify-send &amp;#34;low battery&amp;#34; &amp;#34;$BATTINFO&amp;#34; fi Then we just run it regularly using a Cron job.</description>
+    </item>
+    
+    <item>
+      <title>Bind shell</title>
+      <link>http://example.org/notes/20211016205317-bind_shell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211016205317-bind_shell/</guid>
+      <description>We connect to the target machine.
+The ide is that we will (somehow) open up a port in the target, which will be listening, and then we connect to that specific port.</description>
+    </item>
+    
+    <item>
+      <title>Bisección (cálculo de raices)</title>
+      <link>http://example.org/notes/20211008173537-punto_medio_calculo_de_raices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211008173537-punto_medio_calculo_de_raices/</guid>
+      <description>Como una raíz es el punto donde y=0, entonces este método toma un intervalo definido por dos puntos a y b, donde:
+ f(a) sea negativo f(b) sea positivo  (Estos pueden ser al revés, la idea es que la función cruce el eje x en el intervalo)
+Partiendo de ahí, se determina un punto c a la mitad del intervalo. Si f(c) es positivo, el nuevo intervalo va desde a hasta c.</description>
+    </item>
+    
+    <item>
+      <title>Bubble Sort</title>
+      <link>http://example.org/notes/20210827171653-bubble_sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827171653-bubble_sort/</guid>
+      <description>Este es un algoritmo de ordenación directo.
+Funciona comparando pares de elementos adyacentes, y los intecambia entre sí hasta que estén ordenados.
+Puede hacerse de dos formas:
+ Llevando elementos pequeños hacia la izq. Moviendos elementos grandes hacia la derecha.  Por ser de ordenamiento directo, no es muy eficiente. De hecho, bubble sort es uno de los algoritmos más simples, y a diferencia de otros métodos directos como insertion sort, no hay técnica que lo haga más eficiente.</description>
+    </item>
+    
+    <item>
+      <title>Burp Suite</title>
+      <link>http://example.org/notes/20211012202852-burp_suite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211012202852-burp_suite/</guid>
+      <description>Web proxy used to analyze web requests, modify them, and test webpages.</description>
+    </item>
+    
+    <item>
+      <title>Calcular angulo entre vectores usando producto punto</title>
+      <link>http://example.org/notes/20210830181735-calcular_angulo_entre_vectores_usando_producto_punto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210830181735-calcular_angulo_entre_vectores_usando_producto_punto/</guid>
+      <description>Es posible calcular el angulo que hay entre 2 vectores sin necesidad de recurrir a trigonometría, simplemente sabiendo calcular el producto punto, y sabiendo como normalizar vectores.
+Sabemos (por definición) que cuando trabajamos con vectores unitarios, el producto punto resultante es igual al coseno del angulo que forman. \(u \cdot v = \cos \theta\)
+Además, cuando tenemos vectores no unitarios podemos convertirlos en unitarios al normalizarlos, dividiendo cada componente por la norma:</description>
+    </item>
+    
+    <item>
+      <title>Calculo de matriz inversa usando determinante y cofactores</title>
+      <link>http://example.org/notes/20210918124952-calculo_de_matriz_inversa_usando_determinante_y_cofactores/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918124952-calculo_de_matriz_inversa_usando_determinante_y_cofactores/</guid>
+      <description>FALTA EXPANDIR MAS, YA QUE SE VEA EL TEMA.
+\begin{equation*} A^{-1} = \frac{1}{\lvert A \rvert}(cofactores\ A) \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>cdpath</title>
+      <link>http://example.org/notes/20211009172953-cdpath/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211009172953-cdpath/</guid>
+      <description> A colon-separated list of search paths available to the cd command, similar in function to the $PATH variable for binaries. The $CDPATH variable may be set in the local ~/.bashrc file.
+ bash$ cd bash-doc bash: cd: bash-doc: No such file or directory bash$ CDPATH=/usr/share/doc bash$ cd bash-doc /usr/share/doc/bash-doc bash$ echo $PWD /usr/share/doc/bash-doc </description>
+    </item>
+    
+    <item>
+      <title>Ciencia</title>
+      <link>http://example.org/notes/20210912164224-ciencia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210912164224-ciencia/</guid>
+      <description> Es el cuerpo de conocimiento que explora el mundo físico y natural.
+ </description>
+    </item>
+    
+    <item>
+      <title>Ciencias Computacionales</title>
+      <link>http://example.org/notes/20210912170257-ciencias_computacionales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210912170257-ciencias_computacionales/</guid>
+      <description>Es el estudio de las computadoras. Incluye:
+ Teoria, diseño, desarrollo de software Análisis y diseño de algoritmos Determinar qué problemas se pueden resolver, y la complejidad de los algoritmos que los resuelven. Diseñar aplicaciones fáciles de usar, que respeten medidas de seguridad.  </description>
+    </item>
+    
+    <item>
+      <title>Codigo de Etica de la Ingenieria</title>
+      <link>http://example.org/notes/20210912164407-codigo_de_etica_de_la_ingenieria/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210912164407-codigo_de_etica_de_la_ingenieria/</guid>
+      <description>REGLAS Quien se desenvuelva en el ámbito de ingeniería debe&amp;hellip;
+ Mantener como lo más importante la salud, seguridad, y el bienestar del público. Trabajar sólo en el área de su competencia. Hacer declaraciones públicas solo de forma objetiva y diciendo la verdad. Actuar siempre como un agente de confianza de sus clientes y empleadores. Evitar actos engañosos.  OBLIGACIONES PROFESIONALES Las ingenieras y los ingenieros&amp;hellip;
+ Deben ser guiados en sus relaciones por los estándares más altos de honestidad e integridad.</description>
+    </item>
+    
+    <item>
+      <title>Combinacion lineal</title>
+      <link>http://example.org/notes/20210827183539-combinacion_lineal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827183539-combinacion_lineal/</guid>
+      <description>Es la combinación de dos operaciones fundamentales: La suma y el producto escalar de vectores.
+Si se tienen 2 vectores \(u\) y \(v\), y 2 escalares \(c\) y \(d\), una combinación lineal sería:
+\begin{equation*} cu + dv = \begin{bmatrix} cu_1\ +\ dv_1\\
+cu_2\ +\ dv_2\\
+\end{bmatrix} \end{equation*}
+CASOS ESPECIALES SUMA Una suma se puede entender como una combinación linear donde todos los escalares son iguales a 1: \(1v + 1w\)</description>
+    </item>
+    
+    <item>
+      <title>Complemento (Ley de álgebra booleana)</title>
+      <link>http://example.org/notes/20210928194757-complemento_ley_de_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928194757-complemento_ley_de_algebra_booleana/</guid>
+      <description>Complemento se refiere a hacer una operación con un elemento y el mismo elemento negado.
+Dependiendo de la operación realizada, el resultado será 1 o 0.
+OR \(A \vee \neg A = 1\)
+   A A&#39; Y     0 1 1   1 0 1    AND \(A \wedge \neg A = 0\)
+   A A&#39; Y     0 1 0   1 0 0    </description>
+    </item>
+    
+    <item>
+      <title>Complemento a 2</title>
+      <link>http://example.org/notes/20210924101602-complemento_a_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210924101602-complemento_a_2/</guid>
+      <description>Es la forma en que las computadoras representan números enteros. Usa el sistema binario.
+Realmente es simple:
+ El bit más significativo representa el signo.  0 = Positivo 1 = Negativo    NÚMEROS POSITIVOS Es un número binario normal, con una excepción. Tiene n-1 bits, donde n es la cantidad de bits con la que normalmente estaríamos trabajando.
+Como se explicó arriba, esto es para reservar un bit para el signo.</description>
+    </item>
+    
+    <item>
+      <title>Complemento ortogonal</title>
+      <link>http://example.org/notes/20211022125140-complemento_ortogonal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211022125140-complemento_ortogonal/</guid>
+      <description>El conjunto de todos los vectores u que son ortogonales a w, se denomina complemento ortogonal, y se denota como \(w^{\perp}\).
+Nota: Un complemento ortogonal de un segmento es bidireccional, por ejemplo:
+\begin{equation*} L=w^{\perp} \; \; y \; \; w = L^{\perp} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Conmutativa (Ley de álgebra booleana)</title>
+      <link>http://example.org/notes/20210928195051-conmutativa_ley_de_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928195051-conmutativa_ley_de_algebra_booleana/</guid>
+      <description>Igual que en álgebra regular, 2 variables en una operación pueden intercambiar lugares en los extremos del operando, y la operación será la misma:
+  \(A \vee B = B \vee A\)
+  \(A \wedge B = B \wedge A\)
+  </description>
+    </item>
+    
+    <item>
+      <title>Construccion de programas</title>
+      <link>http://example.org/notes/20210902112746-construccion_de_programas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210902112746-construccion_de_programas/</guid>
+      <description>1. Analizar el problema Hay que entender el problema y su contexto. Asentar el análisis por escrito.
+2. Especificar la solución Se especifica qué debe hacer el programa (aún no importa cómo). Considerar:
+ Datos de entrada Salidas Relación entre ambos  Hay que documentar por escrito.
+3. Diseñar la solución Se determina cómo se va atacar el problema, eligiendo algoritmos y estructuras de datos. Se toman decisiones en base al contexto en que se aplicará la solución, y los costos asociados de cada diseño.</description>
+    </item>
+    
+    <item>
+      <title>Convertir matriz rectangular en matriz cuadrada y simétrica</title>
+      <link>http://example.org/notes/20210928204916-convertir_matriz_rectangular_en_matriz_cuadrada_y_simetrica/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928204916-convertir_matriz_rectangular_en_matriz_cuadrada_y_simetrica/</guid>
+      <description>Si A es una matriz rectangular de (nxm), \(A^{T}A\) va ser una matriz cuadrada, pues quedará un producto (mxn)(nxm), con un resultado de dimensiones (mxm).
+Además, los productos \(A^{T}A\) y \(AA^{T}\) genera una matriz simetrica. Por si fuera poco, la diagonal siempre sera positiva (porque los elementos que conforman la diagonal son las lineas multiplicadas por sí mismas, pues linea i de A es la columna i de A transpuesta).</description>
+    </item>
+    
+    <item>
+      <title>Cron job</title>
+      <link>http://example.org/notes/20210925213527-cron_job/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210925213527-cron_job/</guid>
+      <description>cron reads from a table the scripts to run, and these are scheduled to run every certain time. The format is as follows:
+minute hour day month day_of_week path/to/command output Where:
+ minute indicates that the job will run every time the time marks minutes. Range: 0 - 59 hour indicates cron to run the job at Range: 0 - 23 day indicates which day of the month to run the script Range: 0 - 31 month indicates on which month to run the script Range: 0 - 12 day_of_week indicates if it should be run monday, tuesday, and so on Range: 0 - 7  SETUP First, install cron:</description>
+    </item>
+    
+    <item>
+      <title>Cálculo de raíces</title>
+      <link>http://example.org/notes/20211004133941-calculo_de_raices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211004133941-calculo_de_raices/</guid>
+      <description>Las raíces de una función son los puntos en los que \(y=0\).
+Visto de otra forma, para \(f(x)\), son las x que hacen real la igualdad \(f(x)=0\).
+MÉTODOS  Bisección Newton-Raphson Punto fijo  EJEMPLO \(f(x)=x^2-2\)
+Raíces de la función:
+ \(x= \pm \sqrt{2}\)   </description>
+    </item>
+    
+    <item>
+      <title>Código Gray</title>
+      <link>http://example.org/notes/20211104082929-codigo_gray/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211104082929-codigo_gray/</guid>
+      <description>Es una forma de ordenar los números binarios, de forma que cada siguiente valor solo difiera en un solo bit.
+Esto significa que son celdas o valores adyacentes.
+Ejemplo:
+   Decimal Binario Gray code     0 000 000   1 001 001   2 010 011   3 011 010   4 100 110   5 101 111   6 110 101   7 111 100    </description>
+    </item>
+    
+    <item>
+      <title>Data Breaches (Ethical HaCKING)</title>
+      <link>http://example.org/notes/20211012195132-data_breaches_ethical_uacking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211012195132-data_breaches_ethical_uacking/</guid>
+      <description>BREACHED CREDENTIALS https://www.dehashed.com/</description>
+    </item>
+    
+    <item>
+      <title>Data Types</title>
+      <link>http://example.org/notes/20210825102303-data_types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825102303-data_types/</guid>
+      <description>Los tipos de datos son clasificaciones que representan qué información puede almacenar una variable o un objeto en programación.
+Se dividen de la siguiente forma:
+ Simples  Primitivos  Numéricos Lógicos (Boolean) Carácter   Abstractos   Compuestos (estructurados)  Estáticos Dinámicos    </description>
+    </item>
+    
+    <item>
+      <title>Datos abstractos</title>
+      <link>http://example.org/notes/20210825104843-datos_abstractos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825104843-datos_abstractos/</guid>
+      <description>Son un tipo de Dato primitivo, pues no tienen estructura (a diferencia de los datos compuestos).
+Esto datos, a diferencia de los datos simples, son definidos por el programador.
+Se definen formalmente como:
+ El conjunto de valores que puede tomar este tipo de dato, así como las operaciones que los manipulan. Ejemplos son las clases usadas en los lenguajes orientados a objetos.
+ Por ejemplo, &amp;lsquo;Game&amp;rsquo; es un tipo de dato abstracto, con un método &amp;lsquo;startGame&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>Datos compuestos</title>
+      <link>http://example.org/notes/20210825105148-datos_compuestos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825105148-datos_compuestos/</guid>
+      <description>Este tipo de dato tiene una estructura, la cual almacena otros datos (normalmente datos simples).
+Estas estructuras pueden ser estáticas o dinámicas.
+Estructuras estáticas El tamaño que se ocupa en memoria se define antes de que el programa se ejecute, y no se puede modificar.
+Algunas son:
+ Array (vector/matriz) [0, 1, 2, 10, 15] El array reserva espacios secuenciales en la memoria para almacenar sus datos. Archivo (fichero) Literal son archivos de la computadora.</description>
+    </item>
+    
+    <item>
+      <title>Datos logicos</title>
+      <link>http://example.org/notes/20210825104155-datos_logicos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825104155-datos_logicos/</guid>
+      <description>Los datos lógicos pertenecen a los Datos simples, pues no tienen estructura, y solamente pueden tener uno de dos valores: Verdadero o Falso.
+Operadores de comparación Estos son usados para comparar dos valores, y regresan un resultado booleano.
+   Operador Significado     == Igual a   &amp;lt; Menor que   &amp;gt; Mayor que   != Diferente de   &amp;lt;= Menor o igual que   &amp;gt;= Mayor o igual que    </description>
+    </item>
+    
+    <item>
+      <title>Datos numericos</title>
+      <link>http://example.org/notes/20210825103840-datos_numericos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825103840-datos_numericos/</guid>
+      <description>Son un tipo de dato simple (sin estructura), y primitivos.
+Simplemente son valores numéricos, los cuales pueden contener valores enteros o reales, dependiendo el tipo de dato específico.
+Enteros Subconjunto finito de los números enteros. Son números completos, sin fracciones ni decimales, y pueden ser tanto positivos como negativos. Ejemplos:
+ 5 6 -15 1340  Tamaños (variables comúnes) byte, short, int, long, +unsigned.
+Real Siempre tienen punto decimal, y pueden ser positivos o negativos.</description>
+    </item>
+    
+    <item>
+      <title>Datos primitivos</title>
+      <link>http://example.org/notes/20210825103623-datos_simples_primitivos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825103623-datos_simples_primitivos/</guid>
+      <description>Son un tipo de dato simple, es decir, sin estructura y almacenan únicamente un tipo de valor específico.
+Las datos primitivos aquellos definidos por el sistema, y no están definidos en función de otros tipos de datos.
+Los más comúnes son:
+  Numéricos Ya sea enteros o reales: 1, 5, 10.0, 3.1416
+  Lógicos Solo pueden tomar dos valores: Verdadero o falso.
+  Carácter Un solo caracter como &amp;lsquo;a&amp;rsquo;, o una cadena de ellos.</description>
+    </item>
+    
+    <item>
+      <title>Datos simples</title>
+      <link>http://example.org/notes/20210825103204-datos_simples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825103204-datos_simples/</guid>
+      <description>Son un tipo de dato que no tienen una estructura, simplemente almacenan un tipo de información específica, ya sea números, letras, booleanos, u otros.
+Estos datos pueden ser:
+ Primitivos Estos son dados por el sistema (ej: Python), y el programador simplemente los usa. Abstractos Estos son creados por el programador para cumplir un propósito específico dentro de su abstracción.  </description>
+    </item>
+    
+    <item>
+      <title>Datos tipo caracter</title>
+      <link>http://example.org/notes/20210825104621-datos_tipo_caracter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825104621-datos_tipo_caracter/</guid>
+      <description>Son un tipo de Dato simple (sin estructura).
+Representan letras o conjuntos de letras.
+Carácter (char) El conjunto finito y ordenado de caracteres que la computadora reconoce. Solo contienen un carácter. Los caracteres reconocidos no son estándar, pero la mayoría de las computadoras reconoce los caracteres:
+ Alfabéticos [A-Za-z] Numéricos [0-9] Especiales [+,-,*,/,.,&amp;lt;,&amp;gt;,&amp;hellip;]  Cadena (String) Sucesión de caracteres delimitados por apóstrofes o comillas dobles.
+Como un string son &amp;lsquo;varios caracteres juntos&amp;rsquo;, pudiera considerarse como un dato compuesto, pues es literalmente un array de chars.</description>
+    </item>
+    
+    <item>
+      <title>Dependencia e Independencia lineal</title>
+      <link>http://example.org/notes/20210831225518-dependencia_e_independencia_lineal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210831225518-dependencia_e_independencia_lineal/</guid>
+      <description>Nota: Para más información sobre independencia, bases, y dimensión, ver la nota individual de cada tema.
+Cuando un vector es una combinación lineal de algun otro (o 2, o más) vector(es), se le llama linealmente dependiente.
+Por otro lado, si no hay una combinación lineal que genere al vector, es linealmente independiente.
+INDEPENDENCIA LINEAL Y EL ESPACIO NULO Para un sistema \(Ax=0\), las columnas de la matriz A serán linealmente independientes si y solo si el espacio nulo contiene únicamente al vector Z.</description>
+    </item>
+    
+    <item>
+      <title>Desigualdad de Schwartz</title>
+      <link>http://example.org/notes/20210830191226-desigualdad_de_schwartz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210830191226-desigualdad_de_schwartz/</guid>
+      <description>El producto punto de dos vectores siempre será menor o igual (nunca mayor) que el producto de sus normas.
+\begin{equation*} u \cdot v \leq \lVert u \rVert \lVert v \rVert \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Determinante de una matriz</title>
+      <link>http://example.org/notes/20210914140823-determinante_de_una_matriz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210914140823-determinante_de_una_matriz/</guid>
+      <description>CÁLCULO ARITMÉTICO DE LA DETERMINANTE DE A  CALCULAR DETERMINANTE DE A, UTILIZANDO U Si tenemos una matriz A, y la llevamos a la forma U, entonces la determinante se puede obtener multiplicando todos los elementos de la diagonal.
+Ejemplo:
+Aritmeticamente:
+\begin{align*} A &amp;amp;= \begin{bmatrix} 2\ 3\\ 2\ 4\\
+\end{bmatrix} \\
+\lvert A \rvert &amp;amp;= (2*4)-(3*2) = 8-6 \\
+\lvert A \rvert &amp;amp;= 2\\
+\end{align*}
+Con la matriz U:
+\begin{align*} A &amp;amp;= \begin{bmatrix} 2\ 3\\ 2\ 4\\</description>
+    </item>
+    
+    <item>
+      <title>Dimensión (Álgebra Lineal)</title>
+      <link>http://example.org/notes/20211015130746-dimension_algebra_lineal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015130746-dimension_algebra_lineal/</guid>
+      <description>Es la cantidad de vectores que contienen todas las bases de un espacio vectorial.
+Existen rank vectores en una base, por lo que la dimensión es igual al rank.
+DIMENSIONES DE LOS 4 SUBESPACIOS Para ver las dimensiones de los cuatro subespacios, ver individualmente:
+ Espacio linea Espacio columna Espacio nulo Espacio nulo izquierdo  \begin{equation*} R= \begin{bmatrix} 1\ &amp;amp;0\ &amp;amp;0\ &amp;amp;-1\\
+0\ &amp;amp;2\ &amp;amp;1\ &amp;amp;-2\\
+0\ &amp;amp;0\ &amp;amp;0\ &amp;amp;0\\</description>
+    </item>
+    
+    <item>
+      <title>dirbuster</title>
+      <link>http://example.org/notes/20211015095717-dirbuster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015095717-dirbuster/</guid>
+      <description> Set the target E.g. 192.168.57.4:80 Set the wordlist Find some lists in /usr/share/wordlists Set the extensions to search Like .pdf, .zip, .txt, etc&amp;hellip;  </description>
+    </item>
+    
+    <item>
+      <title>Discovering email addresses (OSINT)</title>
+      <link>http://example.org/notes/20211012195500-discovering_email_addresses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211012195500-discovering_email_addresses/</guid>
+      <description>Part of OSINT.
+hunter.io https://hunter.io/
+phonebook.cz https://phonebook.cz/
+voilanorbert.com https://www.voilanorbert.com/
+clearbit Google Chrome extension to find emails, sort by position, etc.
+tools.verifyemailaddress.io https://tools.emailhippo.com/
+email checker https://email-checker.net/</description>
+    </item>
+    
+    <item>
+      <title>Distributiva (Ley de álgebra booleana)</title>
+      <link>http://example.org/notes/20210928195228-distributiva_ley_de_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928195228-distributiva_ley_de_algebra_booleana/</guid>
+      <description>Igual que en álgebra normal, un operando puede distribuirse en 2 o más términos dentro de un paréntesis.
+ \(A \wedge (B \vee C) = (A \wedge B) \vee (A \wedge C)\)  Tabla de verdad para \(A \wedge (B \vee C)\)
+   A B C Y     0 0 0 0   0 0 1 0   0 1 0 0   0 1 1 0   1 0 0 0   1 0 1 1   1 1 0 1   1 1 1 1    Tabla de verdad para \((A \wedge B) \vee (A \wedge C)\)</description>
+    </item>
+    
+    <item>
+      <title>Divide and Conquer</title>
+      <link>http://example.org/notes/20210825095910-divide_and_conquer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825095910-divide_and_conquer/</guid>
+      <description>Steps Divide The problem into a number of subproblems that are smaller instances of the same problem.
+Conquer The subproblems by solving them recursively. If the subproblem sizes are small enough, however, just solve the subproblems in a straightforward manner.
+Combine The solutions to the subproblems into the solution for the original problem.
+Cases in divide and conquer Recursive case This is when the subproblem is big enough to keep solving it recursively.</description>
+    </item>
+    
+    <item>
+      <title>Doble negación (Ley de álgebra booleana)</title>
+      <link>http://example.org/notes/20210928194535-doble_negacion_ley_de_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928194535-doble_negacion_ley_de_algebra_booleana/</guid>
+      <description> Negativo y negativo hacen positivo.
+ Posdoctora Marisela, 2019   \(NOT\left( \overline{A} \right) = A\)
+TABLA DE VERDAD    A A&#39; (A&#39;)&#39;     0 1 0   1 0 1    </description>
+    </item>
+    
+    <item>
+      <title>Dominio (Álgebra booleana)</title>
+      <link>http://example.org/notes/20211018122942-dominio_algebrab_lineal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211018122942-dominio_algebrab_lineal/</guid>
+      <description>Son todas las variables que aparecen en una ecuación booleana, ya sea que estén o no negadas.
+Ejemplo: \(F = A + B + C&#39;\)
+Su dominio es A, B, y C.</description>
+    </item>
+    
+    <item>
+      <title>Ecuación de la recta</title>
+      <link>http://example.org/notes/20211011100922-ecuacion_de_la_recta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211011100922-ecuacion_de_la_recta/</guid>
+      <description>\begin{equation*} y = mx+b \end{equation*}
+Donde:
+ m es la pendiente de la recta. b es valor de y donde la recta cruza el eje y.  </description>
+    </item>
+    
+    <item>
+      <title>Eliminación de Gauss con factorización LU</title>
+      <link>http://example.org/notes/20211011164032-eliminacion_de_gauss_con_factorizacion_lu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211011164032-eliminacion_de_gauss_con_factorizacion_lu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eliminación de Gauss usando </title>
+      <link>http://example.org/notes/20211011164102-eliminacion_de_gauss_usando_id_7f536f07_0356_4223_a997_5b062429b228_eliminacion_de_gauss_con_factorizacion_lu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211011164102-eliminacion_de_gauss_usando_id_7f536f07_0356_4223_a997_5b062429b228_eliminacion_de_gauss_con_factorizacion_lu/</guid>
+      <description>Este método se utiliza para solucionar un sistema Ax=b.
+PROCEDIMIENTO  Se descompone A en 2 matrices LU. Se despejan 2 ecuaciones:  Ly=b Se obtiene y con sustitución hacia delante. Ux=y Se obtiene x con sustitución hacia atrás.     A continuación se muestra el proceso matemático para llegar a las ecuaciones.
+\begin{equation*} \begin{aligned} Ax&amp;amp;=b\\
+A&amp;amp;=LU\\
+(LU)x&amp;amp;=b\\
+Ux&amp;amp;=y\\
+Ly&amp;amp;=b \end{aligned} \end{equation*}
+Después del tercer paso, se descomponen las 2 ecuaciones:</description>
+    </item>
+    
+    <item>
+      <title>Enummerate ftp</title>
+      <link>http://example.org/notes/20211030215129-enummerate_ftp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211030215129-enummerate_ftp/</guid>
+      <description>WITH NETCAT nc -nv &amp;lt;ip_address&amp;gt; 21 ANONYMOUS LOGIN ftp &amp;lt;ip_address&amp;gt; #provide anonymous as username #provide any passowrd </description>
+    </item>
+    
+    <item>
+      <title>Escalares</title>
+      <link>http://example.org/notes/20210827182950-escalares/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827182950-escalares/</guid>
+      <description>Si un vector tiene dirección y magnitud, el escalar es simplemente una magnitud.
+Por ejemplo:
+ 10 km/h es un escalar 10 km/h hacia el sur es un vector.  </description>
+    </item>
+    
+    <item>
+      <title>Espacio columna de A</title>
+      <link>http://example.org/notes/20211003105934-espacio_columna_de_a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211003105934-espacio_columna_de_a/</guid>
+      <description>Cuando una matriz A no tiene matriz inversa, significa que el sistema Ax=b tiene solución para algunos vectores b, pero no para todos.
+Así, el espacio columna de A está conformado por los vectores b que sí tienen solución. Es decir, que pueden crearse con una combinación lineal de A (Ax es una combinación lineal).
+La bibliografía describe el espacio columna como:
+ El espacio columna consiste de todas las combinaciones lineales de las columnas de A.</description>
+    </item>
+    
+    <item>
+      <title>Espacio compacto</title>
+      <link>http://example.org/notes/20210908181753-espacio_compacto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210908181753-espacio_compacto/</guid>
+      <description>En matemáticas, la &amp;ldquo;compactación&amp;rdquo; es una propiedad que generaliza la idea de un espacio Eucladiano (necesito más info aqui) que está cerrado y limitado.
+Ejemplos sencillos son: Un intervalo cerrado, un rectángulo, o un conjunto finito de puntos.</description>
+    </item>
+    
+    <item>
+      <title>Espacio linea de A</title>
+      <link>http://example.org/notes/20211015190936-espacio_linea_de_a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015190936-espacio_linea_de_a/</guid>
+      <description>Partiendo de una matriz \(A_{mn}\), el espacio linea es el subespacio de \(R^n\) generado por las filas.
+ESPACIO LINEA DE A Y ESPACIO COLUMNA DE SU TRANSPUESTA El espacio línea de una matriz A es: \(C(A^T)\).
+Es decir, se entiende también que es igual al espacio columna de \(A^T\).
+Por ejemplo:
+\begin{equation*} A= \begin{bmatrix} 1\ 4\\
+2\ 7\\
+3\ 5\\
+\end{bmatrix}\; \; y \; \; A^T= \begin{bmatrix} 1\ 2\ 3\\</description>
+    </item>
+    
+    <item>
+      <title>Espacio nulo</title>
+      <link>http://example.org/notes/20211003115744-espacio_nulo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211003115744-espacio_nulo/</guid>
+      <description>El espacio nulo (nullspace) es el subespacio que contiene todas las soluciones al sistema Ax=0.
+NOTACIÓN El espacio nulo se representa como: \(N(A)\).
+Hay que notar que los vectores x tienen n componentes, hablando de una matriz con dimensiones \(A_{mn}\). Entonces, los vectores x pertenecientes a \(N(A)\), están en \(R^n\). Hay que diferenciar eso del espacio columna, cuyos vectores pertenecen a \(R^m\).
+ESPACIO NULO EN MATRICES INVERTIBLES En matrices que sí pueden ser invertidas, el único vector en el espacio nulo es el vector cero.</description>
+    </item>
+    
+    <item>
+      <title>Espacio nulo como función de mapeo</title>
+      <link>http://example.org/notes/20211026123024-espacio_nulo_como_funcion_de_mapeo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211026123024-espacio_nulo_como_funcion_de_mapeo/</guid>
+      <description>Se puede entender a los vectores que forman parte del espacio nulo como una &amp;ldquo;función de mapeo&amp;rdquo;, con las siguientes características:
+ Los vectores del espacio nulo pertenecen a \(R^n\) Al hacer el producto Ax = 0, el vector 0 generado pertenece a \(R^m\)  Para visualizar lo anterior, sirve este ejemplo:
+\begin{equation*} \begin{bmatrix} 1\ 0\\ 4\ 3\\ 2\ 3\\
+\end{bmatrix} \begin{bmatrix} x_1\\ x_2 \end{bmatrix} \begin{bmatrix} 0\\ 0\\ 0 \end{bmatrix} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Espacio nulo izquierdo</title>
+      <link>http://example.org/notes/20211016200122-espacio_nulo_izquierdo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211016200122-espacio_nulo_izquierdo/</guid>
+      <description>&amp;ldquo;Espacio nulo izquierdo&amp;rdquo; es la forma fancy de llamarle al espacio nulo de la matriz transpuesta.
+Es decir, el espacio nulo izquierdo es igual a \(N(A^T)\)
+Para obtenerlo se resuelve igual que para obtener espacio nulo, pero usando el sistema: \(A^Ty=0\)
+Se le llama espacio nulo izquierdo, porque el vector y puede escribirse a la izquierda de A, de esta forma: \(y^TA=0^T\)
+DIMENSIÓN Tiene dimensión m-r, donde r es el rango de la matriz.</description>
+    </item>
+    
+    <item>
+      <title>Espacio vectorial</title>
+      <link>http://example.org/notes/20210929195024-espacio_vectorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210929195024-espacio_vectorial/</guid>
+      <description>Se le llama espacio vectorial de dimensión n al conjunto de vectores v que tienen n dimensiones, y que cumplen las 8 reglas.
+Los espacios vectoriales contienen subespacios vectoriales.
+NOMENCLATURA LETRAS Se utilizan letras para denotar qué tipo de números son aceptados en dicho espacio vectorial:
+ \(R^n\) espacio vectorial de vectores columna con números reales. \(C^n\) espacio vectorial de vectores columna con números complejos. \(M\) espacio vectorial de todas las matrices reales 2x2 \(F\) espacio vectorial de todas las funciones reales \(f(x)\) Este espacio tiene dimensiones infinitas.</description>
+    </item>
+    
+    <item>
+      <title>Estructuras dinamicas lineales</title>
+      <link>http://example.org/notes/20210825105939-estructuras_dinamicas_lineales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825105939-estructuras_dinamicas_lineales/</guid>
+      <description>Arreglos a.k.a. Arrays Es un conjunto de elementos de un mismo tipo, ordenados, y que pueden variar en número. A esto se le llama almacenamiento secuencial.
+Operaciones que se pueden hacer con una lista secuencial:
+ Insertar, eliminar, localizan un elemento Determinar su tamaño Recorrer la lista para localizar un elemento particular Ordenar sus elementos de forma ascendiente o descendiente Unir dos o más listas en una sola Dividir una lista en sublistas Copiarla Borrarla  Para insertar o eliminar un elemento en medio de la lista (cualquier punto excepo el final) es necesario recorrer todos los demás elementos, pues están organizados secuencialmente.</description>
+    </item>
+    
+    <item>
+      <title>Estructuras dinamicas no lineales</title>
+      <link>http://example.org/notes/20210825110049-estructuras_dinamicas_no_lineales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825110049-estructuras_dinamicas_no_lineales/</guid>
+      <description>A diferencia de las estructuras lineales, en este tipo cada elemento puede tener &amp;ldquo;varios&amp;rdquo; elementos que le sigan.
+Por lo anterior, también se les llama estructuras multi-enlazadas.
+ Árbol  Árbol m-ario  Árbol binario      Grafo Son como una red de nodos. Sería como tener un árbol sin restricciones, donde cada nodo puede apuntar a cuantos nodos quiera, y puede ser apuntado por cualquier cantidad de nodos.</description>
+    </item>
+    
+    <item>
+      <title>Expresión canónica (Álgebra booleana)</title>
+      <link>http://example.org/notes/20211018122003-expresion_canonica_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211018122003-expresion_canonica_algebra_booleana/</guid>
+      <description>Es la expresión booleana que solo tiene minitérminos o maxitérminos.
+SUM-OF-PRODUCTS (SOP) CANÓNICA/ESTÁNDAR Consiste de puros minitérminos. Literal se suman los productos.
+Es una suma de productos estándar cuando todas las variables en el dominio aparecen en cada producto.
+Ejemplo:
+  Dominio: A, B, C, D.
+  SOP Estándar: \(AB&amp;rsquo;CD+A&amp;rsquo;B&amp;rsquo;CD&#39;+ABC&amp;rsquo;D&#39;\)
+  CONVERSIÓN DE ECUACIÓN GENERAL A SOP CANÓNICA Se parte de una ecuación no estándar, donde a algún término (o a todos) les haga falta alguna variable del dominio.</description>
+    </item>
+    
+    <item>
+      <title>Extend VM Storage (Virtual Box)</title>
+      <link>http://example.org/notes/20210907200903-extend_vm_storage_virtual_box/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210907200903-extend_vm_storage_virtual_box/</guid>
+      <description>Extender el espacio desde Virtual Box es súper fácil si la máquina fue creada con memoria estática.
+Si no, va tomar más tiempo, pero los pasos siguen siendo sencillos.
+EXTENDER MEMORIA ASIGNADA EN VBOX CON MEMORIA ESTÁTICA  Simplemente ve abre VM Box y abre Tools -&amp;gt; Media. Ahí extiende la memoria con el slider. Easy.  Aún no terminas, ahora toca extender la partición.
+CON MEMORIA DINÁMICA Haz el paso 1 de CON MEMORIA ESTÁTICA.</description>
+    </item>
+    
+    <item>
+      <title>Factorizacion LDU de A</title>
+      <link>http://example.org/notes/20210922202821-factorizacion_ldu_de_a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210922202821-factorizacion_ldu_de_a/</guid>
+      <description>Esta factorización parte de A = LU, y le agrega un paso extra para &amp;ldquo;balancear&amp;rdquo; las matrices L y U.
+Lo que se hace es dividir U entre una matriz diagonal D que contenga los pivotes. Esto ocasiona que la diagonal de U tenga puros unos, al igual que la diagonal de L.
+Ejemplo: Si una matriz A, genera el siguiente LU:
+\begin{equation*} LU = \begin{bmatrix} 1\ 0\\
+3\ 1\\</description>
+    </item>
+    
+    <item>
+      <title>Finding subdomains</title>
+      <link>http://example.org/notes/20211012195032-finding_subdomains/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211012195032-finding_subdomains/</guid>
+      <description>TOOLS  sublist3r https://crt.sh/ OWASP Amass tomnomnom httprobe Check if a list of subdomains is alive  </description>
+    </item>
+    
+    <item>
+      <title>Fingerprinting</title>
+      <link>http://example.org/notes/20211012195056-fingerprinting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211012195056-fingerprinting/</guid>
+      <description>IDENTIFYING WEBSITE TECHNOLOGIES Tools:
+ https://builtwith.com/ Wappalyzer Whatweb (Linux tool)  </description>
+    </item>
+    
+    <item>
+      <title>Flowchart in LaTeX</title>
+      <link>http://example.org/notes/20210914080940-flowchart_in_latex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210914080940-flowchart_in_latex/</guid>
+      <description>Para poder crear diagramas de flujo, vamos a necesitar TikZ.
+PACKAGES TO LOAD BUILDING THE FLOWCHART El diagrama de flujo debe ser creado en un ambiente tikzpicture. Dentro de este (en la parte de ) se agregan los nodos del diagrama de flujo.
+ADDING ARROWS ARROW PATH Una flecha puede seguir distintos caminos. Estas son las opciones disponibles:
+ -- Sigue una línea recta desde A hasta B, así que sirve para hacer líneas ortagonales, o si queremos una diagonal.</description>
+    </item>
+    
+    <item>
+      <title>Heap Sort</title>
+      <link>http://example.org/notes/20210913074004-heap_sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210913074004-heap_sort/</guid>
+      <description>Este algoritmo utilizarun Monticulo Binario.
+COMPLEJIDAD EN TIEMPO Para sus 3 casos (mejor, peor, promedio), heap sort tiene una complejidad en tiempo de \(n \log (n)\)
+COMPLEJIDAD EN ESPACIO Heapsort ordena in place, por lo que no usa espacio auxiliar. En este sentido, heapsort es superior a mergesort, el cual corre también en \(n \log (n)\), pero utiliza \(n\) espacio.
+PASOS  Construir un max-heap de un array desordenado. Encontrar el elemento máximo, localizado en A[0], porque es un max-heap.</description>
+    </item>
+    
+    <item>
+      <title>Hydra (bruteforcing)</title>
+      <link>http://example.org/notes/20211016213436-hydra_bruteforcing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211016213436-hydra_bruteforcing/</guid>
+      <description>Tool to bruteforce logins/passwords.
+Basic syntax:
+hydra -l root -P &amp;lt;wordlist&amp;gt; &amp;lt;service&amp;gt;://&amp;lt;target&amp;gt;:&amp;lt;port&amp;gt; &amp;lt;flags&amp;gt; # E.g: hydra -l root -P /usr/share/wordlists/metasploit/unix_passwords.txt ssh://192.168.57.134:22 -t 4 -V  -l is for loggin -P indicates the password file -t is the number of threads -V verbosity  </description>
+    </item>
+    
+    <item>
+      <title>Idempotente (Ley de álgebra booleana)</title>
+      <link>http://example.org/notes/20210928194216-idempotente_ley_de_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928194216-idempotente_ley_de_algebra_booleana/</guid>
+      <description>Una variable, operada consigo misma, genera esa misma variable:
+  \(A \vee A = A\)
+  \(A \wedge A = A\)
+  TABLAS DE VERDAD Para comprobar.
+OR \(Y = A \vee A\)
+   A A Y     0 0 0   1 1 1    AND \(Y = A \wedge A\)
+   A A Y     0 0 0   1 1 1    </description>
+    </item>
+    
+    <item>
+      <title>Identidad (Ley de álgebra booleana)</title>
+      <link>http://example.org/notes/20210928193916-identidad_ley_de_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928193916-identidad_ley_de_algebra_booleana/</guid>
+      <description>Se mantiene el valor de la variable, pues realiza una operación con el valor neutral de esa operación:
+  \(A+0=A\) Las siguientes formas son equivalentes:
+  \(A\; or\; 0 = A\)
+  \(A \vee 0 = A\)
+    \(A*1=A\) Las siguientes formas son equivalentes:
+  \(A\; and\; 1 = A\)
+  \(A \wedge 1 = A\)
+    </description>
+    </item>
+    
+    <item>
+      <title>Independencia (Álgebra Lineal)</title>
+      <link>http://example.org/notes/20211015130919-independencia_algebra_lineal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015130919-independencia_algebra_lineal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ingeniere</title>
+      <link>http://example.org/notes/20210912163853-ingeniere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210912163853-ingeniere/</guid>
+      <description>Es un profesional que inventa, diseña, analiza, construye, y prueba máquinas, sistemas complejos, estructuras, y materiales para cumplir objetivos funcionales, al mismo tiempo que considera limitantes impuestas por regulaciones, practicicidad, seguridad, y costo.
+ Ingeniería es creación basada en el conocimiento científico.
+ </description>
+    </item>
+    
+    <item>
+      <title>Ingenieria en Computacion</title>
+      <link>http://example.org/notes/20210912170617-ingenieria_en_computacion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210912170617-ingenieria_en_computacion/</guid>
+      <description>Se enfoca en usar principios de ingeniería para resolver problemas usando hardware de computadora.
+Temas que cubre: Arquitectura de computadoras, redes, seguridad.
+ Planificación, diseño, construcción, probar dispositivos que realicen una función específica. Combina física, ingeniería eléctria y electrónica, e informática. Más hardware que software.  COMPUTACIÓN Proviene del latín computatĭo, y se deriva de computare, que quiere decir computar o evaluar.
+ Ciencia que se ocupa del estudio de las computadoras, abarcando su diseño, operación, y uso en el procesamiento de datos.</description>
+    </item>
+    
+    <item>
+      <title>Ingenieria en Computacion vs Ciencias Computacionales</title>
+      <link>http://example.org/notes/20210912170913-ingenieria_en_computacion_vs_ciencias_computacionales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210912170913-ingenieria_en_computacion_vs_ciencias_computacionales/</guid>
+      <description>Ver Ingenieria en Computacion y Ciencias Computacionales.
+   Ingeniería en Computación Ciencias Computacionales     Construcción de hardware Ejecución, mantenimiento, solución de problemas de OS.   Diseño de arquitectura Instalación y administración de redes de computadoras   Software de diseño, progra, y prueba Software de diseño, progra, y prueba   Desarrolla y trabaja con circuitos Diseño y codificación de estructuras de datos y algoritmos   Trabaja con varios softwares específicos Comprender lenguajes de programación    Ciberseguridad y criptografía.</description>
+    </item>
+    
+    <item>
+      <title>Insertion sort</title>
+      <link>http://example.org/notes/20210827173456-insertion_sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827173456-insertion_sort/</guid>
+      <description>Cada elemento se examina y se coloca en la posición correcta del subarray &amp;ldquo;ya ordenado&amp;rdquo;. Nota: Las condiciones iniciales consideran al elemento con índice 0 como el &amp;ldquo;subarray ordenado&amp;rdquo;.
+Análisis  Peor caso: \(O (n^2)\) Mejor caso: \(O (n)\) Caso promedio: \(O (n^2)\)  Pseudocódigo for i=1 to i &amp;lt; array_size: aux = numbers[i] a = i - 1 # Insertar numbers[a] en el subarray ordenado while a &amp;gt;= 0 and numbers[a] &amp;gt; aux: numbers[a+1] = numbers[a] a -= 1 numbers[a+1] = aux </description>
+    </item>
+    
+    <item>
+      <title>Install Anki Arch Linux</title>
+      <link>http://example.org/notes/20210926184831-install_anki_arch_linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210926184831-install_anki_arch_linux/</guid>
+      <description> Download and install Anki from the official page. Install qt5: sudo pacman -S qt5-base Profit? I hope I didn&amp;rsquo;t miss something.  ADD-ONS  Hierarchical Tags 594329229 Image Occlusion Enhanced for Anki 2.1 (alpha) 1374772155 ReviewHeatmap 723520343  </description>
+    </item>
+    
+    <item>
+      <title>Install Matlab Arch Linux</title>
+      <link>http://example.org/notes/20210926184306-install_matlab_arch_linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210926184306-install_matlab_arch_linux/</guid>
+      <description>Download, install, and activate Matlab from the official page. There shouldn&amp;rsquo;t be any problems here.
+Now, what I had to do to actually make it work:
+ Install Java 8 sudo pacman -S jdk8-openjdk. Add to your .bashrc these variables:  export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre/ export J2D_D3D=false export GTK_PATH=/usr/lib/gtk-3.0 export _JAVA_AWT_WM_NONREPARENTING=1   Create a symbolic link to launch it just calling matlab. ln -s &amp;lt;path/to/MATLAB/VERSION/bin/matlab&amp;gt; /usr/local/bin E.g: ln -s /usr/local/MATLAB/R2020a/bin/matlab /usr/local/bin  Done?</description>
+    </item>
+    
+    <item>
+      <title>Interpolación</title>
+      <link>http://example.org/notes/20211027110735-interpolacion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211027110735-interpolacion/</guid>
+      <description> Vander Lagrange Spline cuadrático/cúbico/etc  </description>
+    </item>
+    
+    <item>
+      <title>LaTeX</title>
+      <link>http://example.org/notes/20210914080443-latex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210914080443-latex/</guid>
+      <description>GRÁFICOS   TikZ   </description>
+    </item>
+    
+    <item>
+      <title>Latex decimal point</title>
+      <link>http://example.org/notes/20211008111839-latex_decimal_point/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211008111839-latex_decimal_point/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Latex image matrix</title>
+      <link>http://example.org/notes/20211007153011-latex_image_matrix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211007153011-latex_image_matrix/</guid>
+      <description>Se utiliza tabular para crear la cuadrícula. Para que cada imagen tenga su caption, podemos definir un comando nuevo: subf, y otro para que se vea bonito con espacios: Add height (Latex command)
+USO </description>
+    </item>
+    
+    <item>
+      <title>Leyes de las operaciones con matrices</title>
+      <link>http://example.org/notes/20210914131950-leyes_de_las_operaciones_con_matrices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210914131950-leyes_de_las_operaciones_con_matrices/</guid>
+      <description>SUMA  Conmutativa: \(A+B=B+A\) Distributiva: \(c(A+B)=(cA+cB)\) Asociativa: \(A+(B+C)=(A+B)+C\)  PRODUCTO  Conmutativa: \(AB \neq BA\) Distributiva  Por la izq: \(A(B+C)=AB+AC\) Por la der: \((A+B)C=AC+BC\)   Asociativa: \(A(BC)=(AB)C\)  </description>
+    </item>
+    
+    <item>
+      <title>Linux Screensaver</title>
+      <link>http://example.org/notes/20211002130409-linux_screensaver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211002130409-linux_screensaver/</guid>
+      <description>Use the program xset.
+COMMON COMMANDS  To set time before screensaver activation, use: xset s &amp;lt;seconds&amp;gt; To turn off the screensaver, use: xset s off. Prevent screen from blacking: xset s off -dpms  </description>
+    </item>
+    
+    <item>
+      <title>Linux Zoom Can&#39;t Annotate</title>
+      <link>http://example.org/notes/20211011124224-linux_zoom_can_t_annotate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211011124224-linux_zoom_can_t_annotate/</guid>
+      <description>INSTALLATION You need an extra package to handle transparecies.
+ Install xdpyinfo sudo pacman -S xdpyinfo Check if you have the &amp;ldquo;Composite&amp;rdquo; extension enabled for the X Serve: Run xdpyinfo | grep Composite It should output &amp;ldquo;Composite&amp;rdquo;. Otherwise, check the source. Install xcompmgr sudo pacman -S xcompmgr  CONFIGURATION  Run xcompmgr -c Add the following line to your xprofile to make it run at session start. xcompmgr -c &amp;amp;  </description>
+    </item>
+    
+    <item>
+      <title>Lista enlazada circular</title>
+      <link>http://example.org/notes/20211001110532-lista_enlazada_circular/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211001110532-lista_enlazada_circular/</guid>
+      <description>En una lista circular, todos los nodos están conectados para formar un círculo, o un anillo de elementos.
+Es una lista enlazada que puede ser simple o doble, donde el atributo previo de la cabeza apunta a la cola, y el atributo siguiente de la cola apunta a la cabeza.
+ </description>
+    </item>
+    
+    <item>
+      <title>Lista enlazada doble</title>
+      <link>http://example.org/notes/20210929124014-lista_enlazada_doble/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210929124014-lista_enlazada_doble/</guid>
+      <description>Esta lista, a diferencia de la Lista enlazada simple, puede recorrerse hacia delante y también hacia atrás.
+La principal diferencia es la clase Nodo, que ahora tiene 3 campos:
+ Valor Nodo anterior Nodo siguiente.   </description>
+    </item>
+    
+    <item>
+      <title>Lista enlazada simple</title>
+      <link>http://example.org/notes/20210929122632-lista_enlazada_simple/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210929122632-lista_enlazada_simple/</guid>
+      <description>Se implementa con 2 tipos de datos abstractos: LinkedList, Node.
+Cada elemento de una lista enlazada es de tipo Node, y el nodo tiene 2 atributos:
+ Key: El valor almacenado Next: El nodo que viene después en la secuencia Es un puntero. El último elemento de la lista no tiene sucesor, así que se le asigna valor null, o None.  REPRESENTACIÓN GRÁFICA  IMPLEMENTACIÓN (PYTHON) class Node: &amp;#34;&amp;#34;&amp;#34; Clase auxiliar para una lista enlazada.</description>
+    </item>
+    
+    <item>
+      <title>Listas enlazadas</title>
+      <link>http://example.org/notes/20210929121401-listas_enlazadas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210929121401-listas_enlazadas/</guid>
+      <description>Una lista enlazada es una estructura de datos lineal, donde el orden de los elementos se determina utilizando punteros.
+PROS Y CONTRAS Usar punteros trae varias ventajas sobre los arreglos estáticos, entre ellas:
+ Modificar su tamaño durante la ejecución del programa. Tienen tamaño &amp;ldquo;infinito&amp;rdquo;. Siempre y cuando no se agote la memoria de la máquina. No desperdician espacio, pues solo se asigna memoria cuando se necesita agregar un elemento.  La desventaja es que se requiere memoria extra por nodo, para almacenar tanto el dato como el puntero.</description>
+    </item>
+    
+    <item>
+      <title>Literature Survey</title>
+      <link>http://example.org/notes/20210826165250-literature_survey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210826165250-literature_survey/</guid>
+      <description>It is a review of the existing material regarding a topic. A literature survey (or literature review) is meant to check existing published works to get a general overview of the state of the art and the current knowledge about said topic.
+It can be formalized by writting it in a proper article, or just a section of it, but both have the same objective.</description>
+    </item>
+    
+    <item>
+      <title>Longitud de un vector</title>
+      <link>http://example.org/notes/20210827190056-longitud_de_un_vector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827190056-longitud_de_un_vector/</guid>
+      <description>La longitud de un vector es lo mismo que su norma. Para calcularla se requiere utilizar el producto punto.
+DEFINICIÓN La longitud de un vector \(\lVert v \rVert\) es igual a la raíz cuadrada del producto punto del vector por sí mismo.
+\begin{equation*} length = \lVert v \rVert = \sqrt{v \cdot v} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Mapas de Karnaugh</title>
+      <link>http://example.org/notes/20211018130613-mapas_de_karnaugh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211018130613-mapas_de_karnaugh/</guid>
+      <description>Los mapas proveen un sistema para simplificar ecuaciones booleanas, resultando en expresiones POS o SOP en su mínima expresión.
+Es similar a una tabla de verdad, porque tiene \(2^n\) celdas, donde n es el número de variables, y además muestra todas las posibles combinaciones de entrada, y sus posibles resultados.
+Para reducir, hay que elegir entre trabajar la ecuación utilizando suma de productos o producto de sumas.
+Para elegir cual de las dos se usa:</description>
+    </item>
+    
+    <item>
+      <title>Matrices</title>
+      <link>http://example.org/notes/20210831072010-matrices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210831072010-matrices/</guid>
+      <description>Las matrices pueden entenderse como varios vectores combinados en una misma estructura, dependiendo de qué tipo de vector estamos usando:
+ Vectores columna Cada vector columna es una columna de la matriz. Vectores línea Cada vector línea es una línea de la matriz.  Por ejemplo:
+Los vectores columna \(u=(1, 3, 5)\) y \(v=(2,4,6)\) pueden colocarse en la matriz 3x2:
+\begin{equation*} A = \begin{bmatrix} 1\ 2\\
+3\ 4\\
+5\ 6\\</description>
+    </item>
+    
+    <item>
+      <title>Matrices Triangulares</title>
+      <link>http://example.org/notes/20210902165246-matrices_triangulares/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210902165246-matrices_triangulares/</guid>
+      <description>Los valores no tienen que ser 1, pero la característica es que se forma un triángulo arriba, con elementos con valor distinto de 0. Todos los demás son iguales a 0.
+En matrices triangulares, la diagonal de la matriz está formada por los pivotes. Además, para que exista la matriz inversa, debe haber tantos pivotes como el tamaño de la matriz. De lo contrario, una ecuación es linealmente dependiente, y no existe la matriz inversa.</description>
+    </item>
+    
+    <item>
+      <title>Matriz Aumentada</title>
+      <link>http://example.org/notes/20210909214239-matriz_aumentada/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210909214239-matriz_aumentada/</guid>
+      <description>Se le conoce de esta forma a la matriz que combina a la matriz de coeficientes y al resultado de un sistema de ecuaciones en una sola matriz.
+Es decir, si el sistema se plantea de la forma \(Ax=b\), entonces la matriz aumentada es [Ab].
+Para crearla, simplemente se agrega b hasta la derecha de A.
+Ej: Si A y b son:
+\begin{equation*} A = \begin{bmatrix} 1\ &amp;amp;2\\
+6\ &amp;amp;10\\</description>
+    </item>
+    
+    <item>
+      <title>Matriz bloque</title>
+      <link>http://example.org/notes/20211009181821-matriz_bloque/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211009181821-matriz_bloque/</guid>
+      <description>Es una matriz que se interpreta como que fue sub-dividida en secciones llamadas bloques o submatrices.
+EJEMPLO Una matriz P de 4x4 puede partirse en 4 bloques de 2x2:
+\begin{equation*} P= \begin{bmatrix} 1\ 2\ 2\ 7\\
+1\ 5\ 6\ 2\\
+3\ 3\ 4\ 5\\
+3\ 3\ 6\ 7\\
+\end{bmatrix} \end{equation*}
+\begin{equation*} P_{11}= \begin{bmatrix} 1\ 2\\ 1\ 5\\
+\end{bmatrix}, \; \; P_{12}= \begin{bmatrix} 2\ 7\\ 6\ 2\\
+\end{bmatrix}, \; \; P_{21}= \begin{bmatrix} 3\ 3\\ 3\ 3\\</description>
+    </item>
+    
+    <item>
+      <title>Matriz Cuadrada</title>
+      <link>http://example.org/notes/20210902165338-matriz_cuadrada/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210902165338-matriz_cuadrada/</guid>
+      <description>Son las matrices que tienen la misma cantidad de líneas que de columnas.
+Las siguientes 2 matrices son cuadradas:
+\begin{equation*} \begin{bmatrix} 1\ 2\\
+3\ 4\\
+\end{bmatrix} \; y \; \begin{bmatrix} 1\ 2\ 3\\
+4\ 5\ 6\\
+7\ 8\ 9\\
+\end{bmatrix} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Matriz de Permutación</title>
+      <link>http://example.org/notes/20210909220221-matriz_de_permutacion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210909220221-matriz_de_permutacion/</guid>
+      <description>Es similar a la matriz identidad, pero con 2 filas intercambiadas para que, al multiplicarla por otra matriz, se haga el mismo intercambio.
+\begin{equation*} I = \begin{bmatrix} 1\ 0\ 0\\
+0\ 1\ 0\\
+0\ 0\ 1\\
+\end{bmatrix} \end{equation*}
+\begin{equation*} P_{23} = \begin{bmatrix} 1\ 0\ 0\\
+0\ 0\ 1\\
+0\ 1\ 0\\
+\end{bmatrix} \end{equation*}
+UTILIDAD DE MATRIZ PERMUTACIÓN Esta matriz se vuelve importante cuando se obtiene un sistema \(Ax=b\) donde no es posible aplicar eliminación, pues hay un cero en los pivotes.</description>
+    </item>
+    
+    <item>
+      <title>Matriz de Seleccion</title>
+      <link>http://example.org/notes/20210902164949-matriz_de_seleccion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210902164949-matriz_de_seleccion/</guid>
+      <description>Solamente tiene unos y ceros, donde los unos son los elementos a conservar al hacer el producto punto con otra matriz.
+\begin{equation*} \begin{bmatrix} 1\ 2\\
+3\ 4\\
+\end{bmatrix} \begin{bmatrix} 0\\ 1 \end{bmatrix} \begin{bmatrix} 2\\ 4 \end{bmatrix} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Matriz Densa</title>
+      <link>http://example.org/notes/20210918130420-matriz_densa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918130420-matriz_densa/</guid>
+      <description>No he encontrado una definición per se, pero es una matriz que no puede ser comprimida, porque contiene más valores que ceros.</description>
+    </item>
+    
+    <item>
+      <title>Matriz Diagonal</title>
+      <link>http://example.org/notes/20210907130335-matriz_diagonalizada/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210907130335-matriz_diagonalizada/</guid>
+      <description>Una matriz que, solo tiene valores distintos a 0 en su diagonal. Todos los demás serán 0.
+Ejemplo:
+\begin{equation*} A = \begin{bmatrix} &amp;amp;2\ &amp;amp;4\ &amp;amp;-2\\
+&amp;amp;4\ &amp;amp;9\ &amp;amp;-3\\
+&amp;amp;-2\ &amp;amp;-3\ &amp;amp;7 \end{bmatrix} \end{equation*}
+Para esta A, su matriz diagonal será:
+\begin{equation*} D = \begin{bmatrix} &amp;amp;2\ &amp;amp;0\ &amp;amp;0\\
+&amp;amp;0\ &amp;amp;1\ &amp;amp;0\\
+&amp;amp;0\ &amp;amp;0\ &amp;amp;4 \end{bmatrix} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Matriz Diagonal Dominante</title>
+      <link>http://example.org/notes/20210918125241-matriz_tridiagonal_dominante/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918125241-matriz_tridiagonal_dominante/</guid>
+      <description>Definición formal: El valor absoluto del elemento en \(a_{ii}\) es mayor que lo suma total de los demás elementos de su línea. (Nota: \(a_{ii}\) es un elemento de la diagonal).
+\begin{equation*} \lvert a_{ii} \rvert &amp;gt; \sum_{j \neq i} \lvert a_{ij} \rvert \end{equation*}
+EJEMPLO DE MATRIZ DIAGONAL DOMINANTE \begin{equation*} A = \begin{bmatrix} 5\ &amp;amp;1\ &amp;amp;2\\
+0\ &amp;amp;-9\ &amp;amp;3\\
+1\ &amp;amp;3\ &amp;amp;5\\
+\end{bmatrix} \end{equation*}
+Fila por fila:
+ Fila 1.  Elemento en la diagonal: 5 Suma de todos los demás en esa fila: 3 Cumple la condición.</description>
+    </item>
+    
+    <item>
+      <title>Matriz Elemental</title>
+      <link>http://example.org/notes/20210907211457-matrices_elementales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210907211457-matrices_elementales/</guid>
+      <description>Es una variante de la Matriz Identidad, la cual, además de la diagonal de unos, tien un único elemento con valor distinto a cero, el cuál afectará a la matriz por la cual se multiplice esta matriz elemental.
+Ej:
+\begin{equation*} E_{13} = \begin{bmatrix} 1\ 0\ \frac{1}{4}\\
+0\ 1\ 0\\
+0\ 0\ 1\\
+\end{bmatrix} \end{equation*}
+CREACION DE LA MATRIZ ELEMENTAL \(E_{ij}\) es la matriz identidad con multiplicador \(-\ell _{ij}\) en su posición i,j, donde \(-\ell _{ij}\) es el valor que se usará para afectará a la posición (i, j) de la matriz multiplicada.</description>
+    </item>
+    
+    <item>
+      <title>Matriz Escalonada Reducida</title>
+      <link>http://example.org/notes/20211008134315-matriz_escalonada/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211008134315-matriz_escalonada/</guid>
+      <description>Esta matriz es generada aplicando eliminación a una matriz rectangular.
+Si se trabaja con una matriz cuadrada, la eliminación se detiene al generar la matriz triangular U.
+PRODUCIENDO LA MATRIZ R Hablando de matrices rectangulares, podemos llegar a la forma escalonada reducida R aplicando los siguientes 2 pasos:
+ Producir ceros arriba de los pivotes. Producir unos en los pivotes.  EJEMPLO Partiendo de una matriz U:
+\begin{equation*} U= \begin{bmatrix} 1\ 2\ 2\ 4\\</description>
+    </item>
+    
+    <item>
+      <title>Matriz Identidad</title>
+      <link>http://example.org/notes/20210831224956-matriz_identidad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210831224956-matriz_identidad/</guid>
+      <description>Es la matriz que multiplicada por otra matriz, da la misma matriz. Equivalente al 1 en multiplicación escalar. Su diagonal está llena de 1, el resto son ceros. Es un subtipo de matriz identidad.  Nota: Otra notación para la matriz inversa \(I\) es escribirlo como: \(A^0\)
+\begin{equation*} I = \begin{bmatrix} 1\ 0\ 0\\
+0\ 1\ 0\\
+0\ 0\ 1 \end{bmatrix} = A^0 \end{equation*}
+CARACTERÍSTICAS  Es cuadrada Tiene una diagonal de unos, y el resto son ceros Su símbolo es la letra &amp;ldquo;I&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Matriz Inversa</title>
+      <link>http://example.org/notes/20210831224318-matriz_inversa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210831224318-matriz_inversa/</guid>
+      <description>La inversa de una matriz es una matriz que cuando se multiplican entre sí, producen la matriz identidad:
+\begin{equation*} A \cdot A^{-1} = A^{-1} \cdot A = I \end{equation*}
+Nota: No todas las matrices tienen inversa. Para que tenga inversa, la matriz debe ser linealmente independiente. También su determinante debe ser != 0
+DETERMINAR SI EXISTE LA MATRIZ INVERSA  Si A es de \(nxn\), y tiene \(n\) pivotes, sí existe.</description>
+    </item>
+    
+    <item>
+      <title>Matriz inversa de una matriz elemental</title>
+      <link>http://example.org/notes/20210918123533-matriz_inversa_de_una_matriz_elemental/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918123533-matriz_inversa_de_una_matriz_elemental/</guid>
+      <description>Nada más se invierte el signo del multiplicador, y queda en la misma posición.
+Ejemplo:
+\begin{equation*} E= \begin{bmatrix} 1\ &amp;amp;0\ &amp;amp;0\\
+-5\ &amp;amp;1\ &amp;amp;0\\
+0\ &amp;amp;0\ &amp;amp;1 \end{bmatrix} \; \; E^{-1}= \begin{bmatrix} 1\ &amp;amp;0\ &amp;amp;0\\
+5\ &amp;amp;1\ &amp;amp;0\\
+0\ &amp;amp;0\ &amp;amp;1 \end{bmatrix} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Matriz Rala</title>
+      <link>http://example.org/notes/20210918130217-matriz_rala/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918130217-matriz_rala/</guid>
+      <description>Esta es una matriz con poca información útil, pues tiene más ceros que valores.
+EJEMPLO \begin{equation*} A= \begin{bmatrix} 1\ 2\ 0\ 0\ 0\\
+0\ 1\ 2\ 0\ 0\\
+0\ 0\ 2\ 1\ 0\\
+0\ 0\ 0\ 1\ 0\\
+0\ 0\ 0\ 0\ 2\\
+\end{bmatrix} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Matriz Simétrica</title>
+      <link>http://example.org/notes/20210918125103-matriz_simetrica/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918125103-matriz_simetrica/</guid>
+      <description>Es una matriz donde aplicarle la transpuesta no genera ningun cambio.
+\begin{equation*} A = A^{T} \end{equation*}
+E.g
+\begin{equation*} A= \begin{bmatrix} 1\ 7\ 3\\
+7\ 4\ 5\\
+3\ 5\ 0\\
+\end{bmatrix} \; \; \; A^{T}= \begin{bmatrix} 1\ 7\ 3\\
+7\ 4\ 5\\
+3\ 5\ 0\\
+\end{bmatrix} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Matriz Singular</title>
+      <link>http://example.org/notes/20210918113102-matriz_singular/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918113102-matriz_singular/</guid>
+      <description>Una matriz singular es una matriz que no tiene matriz inversa.
+De forma contraria a las propiedades de una matriz inversa, una matriz será singular si:
+ Su determinante es igual a 0. Alguno de sus vectores es linealmente dependiente.  Ejemplo: Para una matriz A:
+\begin{equation*} A= \begin{bmatrix} 1\ 2\\ 1\ 2\\
+\end{bmatrix} \end{equation*}
+Su determinante será:
+\begin{align*} \lvert A \rvert &amp;amp;= (1*2)-(1*2)\\
+\lvert A \rvert &amp;amp;= 2 - 2\\</description>
+    </item>
+    
+    <item>
+      <title>Matriz Transpuesta</title>
+      <link>http://example.org/notes/20210928201705-matriz_transpuesta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928201705-matriz_transpuesta/</guid>
+      <description>La transpuesta de una matriz A, es una matriz \(A^T\) cuyas columnas corresponden a las líneas de A, y sus filas a las columnas de A. Es decir: Las filas y columnas están intercambiadas.
+Ejemplo:
+\begin{equation*} A= \begin{bmatrix} 1\ 2\ 3\\
+4\ 5\ 6\\
+\end{bmatrix} \; \; \; A^{T} = \begin{bmatrix} 1\ 4\\
+2\ 5\\
+3\ 6\\
+\end{bmatrix}
+\end{equation*}
+OPERACIONES CON LA TRANSPUESTA SUMA \begin{equation*} \left( A + B \right)^{T} = A^{T} + B^{T} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Matriz Tridiagonal</title>
+      <link>http://example.org/notes/20210918125138-matriz_tridiagonal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918125138-matriz_tridiagonal/</guid>
+      <description>Tiene la diagonal central, y otras 2 diagonales adyacentes. Todo lo demás son ceros.
+NOTAS EFICIENCIA Y RECURSOS COMPUTACIONALES Una matriz rala es una matriz que tiene más ceros que valores Entonces, hablando de recursos computacionales, podemos comprimir esa matriz, para no usar tanto espacio.
+La excepción es si vamos a calcular su inversa, pues será densa.
+INVERSA DE UNA MATRIZ TRIDIAGONAL La inversa tiene la característica de que será densa.</description>
+    </item>
+    
+    <item>
+      <title>Metasploit</title>
+      <link>http://example.org/notes/20211015101405-msfconsole/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015101405-msfconsole/</guid>
+      <description> Run it msfconsole search &amp;lt;something&amp;gt; use &amp;lt;code&amp;gt; info Set the necessary options set &amp;lt;option&amp;gt; &amp;lt;value&amp;gt; run  </description>
+    </item>
+    
+    <item>
+      <title>Meterpreter</title>
+      <link>http://example.org/notes/20211017184236-meterpreter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211017184236-meterpreter/</guid>
+      <description>Environment from Metasploit.
+HASHDUMP The command hashdump dumps the contents of the SAM database.</description>
+    </item>
+    
+    <item>
+      <title>Metodo de eliminacion</title>
+      <link>http://example.org/notes/20210902165958-metodo_de_eliminacion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210902165958-metodo_de_eliminacion/</guid>
+      <description>Este método busca crear una matriz triangular superior.
+Es el método que ya conozco para resolver ecuaciones lineales:
+ Se plantean las ecuaciones Se multiplica una igualdad por el recíproco del primer término, y eso se mutiplica por el primer término de la siguiente igualdad. Se repiten estos pasos hasta que se obtiene la matriz triangular superior.  En general, si nuestras ecuaciones son:
+\begin{align*} 2x+4y-2z&amp;amp;=2\\
+4x+9y-3z&amp;amp;=8\\
+-2x-3y+7z&amp;amp;=10 \end{align*}
+Generan el sistema Ax = b:</description>
+    </item>
+    
+    <item>
+      <title>Método de Gauss-Jordan para obtener matriz inversa</title>
+      <link>http://example.org/notes/20210918122240-metodo_de_gauss_jordan_para_obtener_matriz_inversa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918122240-metodo_de_gauss_jordan_para_obtener_matriz_inversa/</guid>
+      <description>Para una matriz A, se aumenta con la matriz identidad: [AI]
+Ejemplo:
+\begin{equation*} A= \begin{bmatrix} \ \ 2\ \ &amp;amp;\llap{$-$}1\ \ &amp;amp;0\\
+\ \ \llap{$-$}1\ \ &amp;amp;2\ \ &amp;amp;\llap{$-$}1\\
+\ \ 0\ \ &amp;amp;\llap{$-$}1\ \ &amp;amp;2 \end{bmatrix} \end{equation*}
+Matriz aumentada [AI]:
+\begin{equation*} [AI]= \begin{bmatrix} \ \ 2\ \ &amp;amp;\llap{$-$}1\ \ &amp;amp;0\ \ 1\ \ 0\ \ 0\\
+\ \ \llap{$-$}1\ \ &amp;amp;2\ \ &amp;amp;\llap{$-$}1\ \ 0\ \ 1\ \ 0\\</description>
+    </item>
+    
+    <item>
+      <title>Método de substitución hacia atrás</title>
+      <link>http://example.org/notes/20210902171623-metodo_de_substitucion_hacia_atras/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210902171623-metodo_de_substitucion_hacia_atras/</guid>
+      <description>Este método se usa para solucionar un sistema de ecuaciones lineales, con matrices.
+Para poder aplicarlo, es necesario obtener una matriz triangular superior, la cual puede determinarse aplicando el metodo de eliminacion.
+Se llama sustitución hacia atrás porque se inicia resolviendo la igualdad con una sola incógnita y, con ese valor, se empieza a resolver hacia atrás resto de las ecuaciones, pues cada una utiliza el valor recién calculado en la anterior.</description>
+    </item>
+    
+    <item>
+      <title>Minitérminos y Maxitérminos</title>
+      <link>http://example.org/notes/20211018121043-miniterminos_y_maxiterminos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211018121043-miniterminos_y_maxiterminos/</guid>
+      <description>MINITÉRMINO Es el producto de todas las variables con, o sin su complemento. Cada variable aparece únicamente una sola vez, y existe una sola combinación que haga que el resultado del producto sea 1.
+Todas las demás serán 0.
+Se crean a partir de los valores de las variables:
+ Si el valor es 0, se usa la variable complementada. Si el valor es 1, se usa la variable tal como es.</description>
+    </item>
+    
+    <item>
+      <title>Monticulo</title>
+      <link>http://example.org/notes/20210913075136-monticulo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210913075136-monticulo/</guid>
+      <description>Los montículos (Heap en inglés) son estructuras de datos basadas en la estructura multi-enlazada árbol.
+La característica principal es que en un montículo, la raiz de cualquier árbol siempre será mayor o igual (o menor igual, depende lo que se quiera) que todos sus hijos. Esto se conoce como heap property.
+Sin embargo, esto no significa que sea una estructura ordenada. Cada nodo debe cumplir el heap property, pero los hijos de los nodos hermanos pueden estar repartidos en cualquier orden.</description>
+    </item>
+    
+    <item>
+      <title>Monticulo Binario</title>
+      <link>http://example.org/notes/20210913074958-monticulo_binario/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210913074958-monticulo_binario/</guid>
+      <description>Es un tipo de Monticulo que cumple con la propiedad de que todos los nodos son mayores (o menores) que cualquiera de sus hijos.
+Es binario porque sigue la estructura de un árbol binario, donde cada nodo tiene como máximo 2 hijos.
+PROPIEDADES  El árbol binario es completo Esto significa que todos los niveles están llenos, excepto las hojas del árbol, las cuales son colocadas cargadas hacia la izquierda. Max-heap property (or min-heap property) El valor de cada nodo es mayor o igual (o menor igual) que el de cualquiera de sus hijos.</description>
+    </item>
+    
+    <item>
+      <title>Multiplicación Matriz-Matriz</title>
+      <link>http://example.org/notes/20210909214626-multiplicacion_matriz_matriz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210909214626-multiplicacion_matriz_matriz/</guid>
+      <description>LEY FUNDAMENTAL \(AB\ times \ C\ equals\ A\ times\ BC\)
+REGLAS Para 2 matrices A y B, en el producto AB=C:
+ El número de columnas de A debe coincidr con el número de filas de B. Es decir que para poder multiplicarlas, deben tener la siguiente forma: \(A_{m\times n} \; B_{n\times p}\) porque n será común. El resultado tendrá las dimensiones \(C_{m\times p}\) Cada elemento de C será el resultado del producto punto AB.</description>
+    </item>
+    
+    <item>
+      <title>Método de Choleski</title>
+      <link>http://example.org/notes/20211011164954-metodo_de_choleski/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211011164954-metodo_de_choleski/</guid>
+      <description>CONDICIÓN A debe ser simétrica, por lo que se puede descomponer como:
+\begin{equation*} A=LL^T \end{equation*}
+PROCEDIMIENTO Se aplica exactamente lo mismo que en Eliminación de Gauss (LU), pero como se está trabajando con matrices simétricas, podemos ahorrar espacio.
+Normalmente A se factorizaría en LU, pero cuando se trabaja con matrices simétricas, se sabe que \(U=L^T\).
+Entonces se obtiene únicamente L, y ahorramos el almacenamiento de U.
+A continuación se muestra el procedimiento algebraico sobre cómo se despejan las ecuaciones usadas:</description>
+    </item>
+    
+    <item>
+      <title>Método de Gauss-Seidel</title>
+      <link>http://example.org/notes/20211011161752-metodo_de_gauss_seided/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211011161752-metodo_de_gauss_seided/</guid>
+      <description>CONDICIÓN  La matriz A debe ser diagonal dominante.  PROCEDIMIENTO Se factoriza A en L, D, y U. Luego se despeja el vector de resultados x, de la misma forma que en Método de Jacobi (Usando matrices).
+A continuación se muestra el procedimiento.
+\begin{equation*} \begin{aligned} Ax&amp;amp;=b\\
+A&amp;amp;=L+D+U\\
+(L+D+U)x&amp;amp;=b\\
+Lx+Dx+Ux&amp;amp;=b\\
+(L+D)x&amp;amp;=b-Ux\\
+x&amp;amp;=(L+D)^{-1}\, (b-Ux) \end{aligned} \end{equation*}
+ECUACIÓN FINAL (LA QUE SE USA) \begin{equation*} x_{i+1}&amp;amp;=(L+D)^{-1}\, (b-Ux_{i}) \end{equation*}
+Donde:
+ L, D, y U vienen de la factorización de A.</description>
+    </item>
+    
+    <item>
+      <title>Método de Jacobi</title>
+      <link>http://example.org/notes/20211011144116-metodo_de_jacobi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211011144116-metodo_de_jacobi/</guid>
+      <description>CONDICIONES  Para poder aplicar este método, la matriz A debe ser diagonal dominante. Para n incógnitas, debemos tener n ecuaciones.  PROCEDIMIENTO  De cada ecuación se despeja una variable diferente. Iterativamente se usan las ecuaciones obtenidas para obtener el siguiente término, hasta que el error sea aceptable. Por ejemplo, para calcular un \(x_{n+1}\) en función de y, se utiliza \(y_n\). Es decir, cada iteración depende de la anterior.  Nota: Los términos iniciales \(x_0\) y \(y_0\) deben iniciar en un punto cercano a la solución.</description>
+    </item>
+    
+    <item>
+      <title>Método de Jacobi (Usando matrices)</title>
+      <link>http://example.org/notes/20211011155405-metodo_de_jacobi_usando_matrices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211011155405-metodo_de_jacobi_usando_matrices/</guid>
+      <description>Es la misma idea que el Método de Jacobi con ecuaciones, pero en vez de despejar variables y usar las ecuaciones, podemos usar matrices y vectores, lo que resulta más sencillo de trabajar en la computadora.
+CONDICIONES Las mismas que Jacobi normal:
+ Para poder aplicar este método, la matriz A debe ser diagonal dominante. Para n incógnitas, debemos tener n ecuaciones.  PROCEDIMIENTO Se inicia a partir de un sistema de ecuaciones como el siguiente:</description>
+    </item>
+    
+    <item>
+      <title>Método de Newton-Raphson (cálculo de raices)</title>
+      <link>http://example.org/notes/20211008174336-metodo_de_newton_raphson_calculo_de_raices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211008174336-metodo_de_newton_raphson_calculo_de_raices/</guid>
+      <description>Este método parte de un guess \(x_0\), al cual le corresponderá un \(y_0\) en la gráfica de la función.
+Con este punto \(P_0\), se calcula la pendiente, usando 2 definiciones distintas:
+ La derivada La derivada es la pendiente de la recta tangente en un punto. La pendiente es el delta y sobre el desta x. Para calcular el delta, se necesita otro punto. Se usará el punto donde la recta tangente cruce el eje X, por lo que se sabrá que \(y=0\).</description>
+    </item>
+    
+    <item>
+      <title>Métodos numéricos para solucionar un sistema Ax=b</title>
+      <link>http://example.org/notes/20211011143935-metodos_numericos_para_solucionar_un_sistema_ax_b/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211011143935-metodos_numericos_para_solucionar_un_sistema_ax_b/</guid>
+      <description>MÉTODOS ITERATIVOS Estos son métodos abiertos, y se aproximan a la solución.
+ Método de Jacobi  Método de Jacobi (Usando matrices)   Método de Gauss-Seided  Eliminación de Gauss usando factorización LU    </description>
+    </item>
+    
+    <item>
+      <title>NAND</title>
+      <link>http://example.org/notes/20210924142844-nand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210924142844-nand/</guid>
+      <description>Hace una operación AND, y luego la niega. Esto significa que siempre regresa verdadero, excepto cuando sus dos entradas son verdaderas.
+Formas de expresarlo:
+  \(\overline{\left( A \wedge B \right)}\)
+  \(\neg (A \wedge B)\)
+  TABLA DE VERDAD \(Y=\overline{(A \cdot B)}\)
+   A B Y     0 0 1   0 1 1   1 0 1   1 1 0    </description>
+    </item>
+    
+    <item>
+      <title>netcat</title>
+      <link>http://example.org/notes/20211016205431-netcat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211016205431-netcat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netdiscover</title>
+      <link>http://example.org/notes/20211030211530-netdiscover/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211030211530-netdiscover/</guid>
+      <description>Useful to scan for devices on your network.
+Run:
+sudo netdiscover -r &amp;lt;ip_here&amp;gt;/24 </description>
+    </item>
+    
+    <item>
+      <title>nikto</title>
+      <link>http://example.org/notes/20211015094622-nikto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015094622-nikto/</guid>
+      <description>Web vulnerability scanner.
+TCM recommended command:
+nikto -h &amp;lt;page or ip&amp;gt;  -h stands for &amp;ldquo;host&amp;rdquo;  </description>
+    </item>
+    
+    <item>
+      <title>nmap</title>
+      <link>http://example.org/notes/20211015093157-nmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015093157-nmap/</guid>
+      <description>BASIC TCM recommended command:
+nmap -T4 -p- -A &amp;lt;ip&amp;gt; Where:
+ T4 is the speeed from 1 (slow) to 5 (fast) -p- asks to scan every port. -A enables scripts to get more info  SMB nmap -p445,139 --scrit smb-protocols &amp;lt;ip&amp;gt; </description>
+    </item>
+    
+    <item>
+      <title>NOR</title>
+      <link>http://example.org/notes/20210928191555-nor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928191555-nor/</guid>
+      <description>Hace una operación OR y luego la niega. Si cualquiera de sus entradas es 1, regresará 0. Entonces, la única ocasión que regresa 1, es cuando ambas entradas son 0. Por lo anterior, puede considerarse como el inverso del AND.
+TABLA DE VERDAD \(Y=\overline{A+B}\)
+   A B Y     0 0 1   0 1 0   1 0 0   1 1 0    </description>
+    </item>
+    
+    <item>
+      <title>Normalizar vectores</title>
+      <link>http://example.org/notes/20210827191223-normalizar_vectores/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827191223-normalizar_vectores/</guid>
+      <description>Normalizar un vector significa obtener un vector unitario que tenga las mismas características que otro vector no unitario.
+Para lograr esto, simplemente se divide cualquier vector (que no sea el vector cero) entre su norma:
+\begin{equation*} Unit\ vector = \frac{v}{\lVert v \rVert} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>NOT</title>
+      <link>http://example.org/notes/20210924113322-not/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210924113322-not/</guid>
+      <description>También conocido como negación. Invierte el resultado del valor booleano al que se aplique.
+SÍMBOLO Símbolo: \(\neg\) Nombre en latex: ¬
+TABLA DE VERDAD    A Y = ¬A     0 1   1 0    </description>
+    </item>
+    
+    <item>
+      <title>NPM</title>
+      <link>http://example.org/notes/20210830195008-npm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210830195008-npm/</guid>
+      <description>Npm can be used as a standalone package manager, although it is usually used with Node.js.
+Because of this, npm will go hand in hand with a package.json file, which will hold the projects metadata and the packages required.
+ESENTIAL COMMANDS npm init This command will init a project and ask questions like its name, version, description, etc&amp;hellip; and create a initial package.json.
+npm install npm install &amp;lt;module&amp;gt; will install the requested &amp;lt;module&amp;gt;.</description>
+    </item>
+    
+    <item>
+      <title>OOP (Object oriented programming)</title>
+      <link>http://example.org/notes/20210907210318-oop_object_oriented_programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210907210318-oop_object_oriented_programming/</guid>
+      <description>The most popular programming paradigm, and one of the most importants. It relies on the concepts of classes and objects.
+CLASSES It is like a blueprint, which is used to create the objects. Clases are broad categories. Car, Dog, Animal are common examples.
+ATTRIBUTES A class is a kind of object that will share attributes with other objects of the same class. And though the attribute is the same, the value changes.</description>
+    </item>
+    
+    <item>
+      <title>OR</title>
+      <link>http://example.org/notes/20210924111618-or/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210924111618-or/</guid>
+      <description>También llamada disjunction, y puede pensarse como la suma lógica, recordando siempre que estamos trabajando con bits, entonces el resultado nunca será mayor que 1.
+SÍMBOLO Símbolo: \(\vee\) Nombre en latex: ∨
+TABLA DE VERDAD    A B Y = A+B     0 0 0   0 1 1   1 0 1   1 1 1    </description>
+    </item>
+    
+    <item>
+      <title>Ordenamiento por mezcla</title>
+      <link>http://example.org/notes/20210826103850-ordenamiento_por_mezcla/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210826103850-ordenamiento_por_mezcla/</guid>
+      <description>Este es un algoritmo que utiliza el paradigma Divide y venceras.
+PASOS DE ACUERDO A DIVIDE AND CONQUER  Divide al partir el array a la mitad (len/2). Vence al ordenar recursivamente los subarreglos de cada mitad. Combina al mezclar los dos subarreglos ordenados en un solo subarreglo ordenado.  EFICIENCIA  Peor caso: \(\theta (n \log n)\) Mejor caso: \(\theta (n \log n)\) Caso promedio: \(\theta (n \log n)\)  PSEUDOCODIGO MERGESORT(A) n = length(A); if n &amp;lt;= 1 then return A; L = MERGESORT(A[1:n/2]); R = MERGESORT(A[n/2+1:n]); return MERGE(L, R); MERGE(L, R) m = length(L) + length(R); S = empty array of size m; i = j = 1; for k = 1 -&amp;gt; m do: if L(i) &amp;lt; R(j) then: S(k) = L(i); i++; else: S(K) = R(j); j++; return S; </description>
+    </item>
+    
+    <item>
+      <title>Org table vertical lines</title>
+      <link>http://example.org/notes/20211026175017-org_table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211026175017-org_table/</guid>
+      <description>To group columns, or to draw vertical lines in the table, add an extra row below the headers, and use the following commands:
+ / In the first cell of the extra row, to indicate that the row is used for delimiting column groups. &amp;lt; To start a group. &amp;gt; To end a group. &amp;lt;&amp;gt; To make a column a group of its own.  Note: It is also valid to just use the &amp;lt; group starter command.</description>
+    </item>
+    
+    <item>
+      <title>Ortogonalidad</title>
+      <link>http://example.org/notes/20211022120819-ortogonalidad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211022120819-ortogonalidad/</guid>
+      <description>Dos subespacios u y v son ortogonales si todos los vectores de u son perpendiculares a (también) todos los vectores v.
+ORTOGONALIDAD DE LOS 4 SUBESPACIOS  El espacio nulo y el espacio columna son subespacios ortogonales en \(R^n\)  TEMAS RELACIONADOS  Complemento ortogonal  </description>
+    </item>
+    
+    <item>
+      <title>OSINT</title>
+      <link>http://example.org/notes/20211012195404-osint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211012195404-osint/</guid>
+      <description>Open Source Intelligence.
+EMAIL ADDRESSES Discovering email addresses</description>
+    </item>
+    
+    <item>
+      <title>package.json</title>
+      <link>http://example.org/notes/20210830195251-package_json/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210830195251-package_json/</guid>
+      <description>This is a file that holds metadata and information related with a project, which is usually used with the Node.js framework.
+The package.json will always be structured in json format.
+COMMON METADATA This are the keywords used inside the file:
+ name Name of the project version Version of the project description Text descripiton of the project main The main file (?) license The license for the project  DEPENDENCIES These are the packages which your project depends on.</description>
+    </item>
+    
+    <item>
+      <title>Paquete simbólico en matlab</title>
+      <link>http://example.org/notes/20211101113301-paquete_simbolico_en_matlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211101113301-paquete_simbolico_en_matlab/</guid>
+      <description>Permite hacer derivadas/integrales indefinidas (sin números, solo da el resultado como si lo hicieras a mano).
+USO Ya viene incluido (creo, al menos ahorita que lo probé, ya venía).
+Hay que declarar la variable simbólica usando: syms x &amp;lt;&amp;mdash; Donde &amp;ldquo;x&amp;rdquo; es la variable, puede ser cualquiera.
+Una vez declarada, ya podemos usar las funciones simbólicas.
+OPERACIONES INCLUIDAS  Integrar: int(&amp;lt;expresión&amp;gt;) Derivar: diff(&amp;lt;expresión&amp;gt;)  </description>
+    </item>
+    
+    <item>
+      <title>Payloads</title>
+      <link>http://example.org/notes/20211016210127-payloads/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211016210127-payloads/</guid>
+      <description>The payload is the code we use when running an exploit. These are sent to the victim, to try and get a shell.
+NON-STAGED Sends the exploit all at once. It is larger in size, and doesn&amp;rsquo;t always work.
+Meterpreter path example: windows/meterpreter_reverse_tcp
+STAGED Sends the payload in stages, and can be less stable.
+Meterpreter path example: windows/meterpreter/reverse_tcp</description>
+    </item>
+    
+    <item>
+      <title>Pendiente</title>
+      <link>http://example.org/notes/20210908164151-pendiente/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210908164151-pendiente/</guid>
+      <description>Es la inclinación que tiene una línea respecto al eje horizontal. Va de 0ᵒ a 180ᵒ.
+ CÁLCULO DE LA PENDIENTE Se denota con la letra m, y se calcula:
+\begin{equation*} m = \frac{̣\Delta y}{\Delta x} = \frac{y_2-y_1}{x_2-x_1} \end{equation*}
+RELACIÓN ENTRE EL ÁNGULO DE INCLINACIÓN Y LA PENDIENTE Otra forma de llamar a la pendiente es como coeficiente angular, el cual se denota con la letra k, y este es igual a la tangente del ángulo de la recta.</description>
+    </item>
+    
+    <item>
+      <title>Permutación de lineas</title>
+      <link>http://example.org/notes/20210909215903-permutacion_de_lineas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210909215903-permutacion_de_lineas/</guid>
+      <description>Una permutación es intercambiar las líneas de alguna matriz.
+Se crea una matriz de permutación intercambiando las líneas i y j de la matriz identidad, y multiplicandola por la matriz que queremos permutar. Nota: Esta matriz es útil para colocar las filas en una posición más conveniente para resolverlo computacionalmente.
+\begin{equation*} I = \begin{bmatrix} 1\ 0\ 0\\
+0\ 1\ 0\\
+0\ 0\ 1\\
+\end{bmatrix} \end{equation*}
+\begin{equation*} P_{23} = \begin{bmatrix} 1\ 0\ 0\\</description>
+    </item>
+    
+    <item>
+      <title>Pivotes de una matriz</title>
+      <link>http://example.org/notes/20210914132053-pivotes_de_una_matriz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210914132053-pivotes_de_una_matriz/</guid>
+      <description>Los pivotes de una matriz son posiciones que indican un &amp;ldquo;límite&amp;rdquo; de la matriz. Normalmente queremos que los elementos a la izquierda y abajo de los pivotes se conviertan en 0.
+Se localizan en la diagonal de la matriz.
+Ejemplo:
+\begin{equation*} \begin{bmatrix} 1\ 2\ 3\\
+0\ 1\ 4\\
+0\ 0\ 1\\
+\end{bmatrix} \end{equation*}
+Cada uno de la diagonal es un pivote de la matriz.</description>
+    </item>
+    
+    <item>
+      <title>Predicado I (Matrices)</title>
+      <link>http://example.org/notes/20210918120018-predicado_i_matrices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918120018-predicado_i_matrices/</guid>
+      <description>Suponga \(\exists\ A^{-1}\) y dado \(Ax=b\ \therefore \ x=A^{-1}b\)
+Comprobación directa:
+\begin{align*} P_1&amp;amp;: Ax = b\\
+P_2&amp;amp;: A^{-1}\\
+P_3&amp;amp;: A^{-1}Ax = A^{-1}b\\
+P_4&amp;amp;: AA^{-1} = I\\
+P_5&amp;amp;: Ix = A^{-1}b\\
+P_6&amp;amp;: Ix = x\\
+Entonces&amp;amp;:\ x = A^{-1}b\\
+\end{align*}</description>
+    </item>
+    
+    <item>
+      <title>Predicado II (matrices)</title>
+      <link>http://example.org/notes/20210918120914-predicado_ii_matrices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918120914-predicado_ii_matrices/</guid>
+      <description>Suponga \(\exists A^{-1}\) y dado \(Ax=0 \therefore x=0\) (vector columna)
+Comprobación directa:
+\begin{align} P_1 &amp;amp;: \exists A^{-1}\\
+P_2 &amp;amp;: Ax=0\\
+P_3 &amp;amp;: A^{-1}Ax=A^{-1}0\\
+P_4 &amp;amp;: A^{-1}A=I\\
+P_5 &amp;amp;:Ix=A^{-1}0\\
+P_6 &amp;amp;:Ix=x\\
+P_7 &amp;amp;:x=A^{-1}0 \end{align}
+Donde x será un vector columna de tamaño n.</description>
+    </item>
+    
+    <item>
+      <title>Predicado III (matrices)</title>
+      <link>http://example.org/notes/20210918121238-predicado_iii_matrices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918121238-predicado_iii_matrices/</guid>
+      <description>Si \(\lvert A \rvert \neq 0 \therefore \exists A^{-1}\).</description>
+    </item>
+    
+    <item>
+      <title>Predicado IV (matrices)</title>
+      <link>http://example.org/notes/20210918121317-predicado_iv_matrices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918121317-predicado_iv_matrices/</guid>
+      <description>A no posee dos o más matrices inversas (solo tiene una).
+Comprobación por contradicción:
+Premisa: Suponga que B y C son matrices inversas de \(A \ni B \neq C\).
+\begin{align*} B&amp;amp;AC\\
+(BA)C &amp;amp;= B(AC)\\
+IC &amp;amp;= BI\\
+C &amp;amp;= B \end{align*}</description>
+    </item>
+    
+    <item>
+      <title>Predicado V (matrices)</title>
+      <link>http://example.org/notes/20210918121703-predicado_iv_matrices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918121703-predicado_iv_matrices/</guid>
+      <description>Suponga una matriz diagonal.
+\begin{equation*} A = \begin{bmatrix} a_{11}\ \phantom{x}\ \phantom{x}\ \phantom{x}\\
+\phantom{x}\ a_{22}\ \phantom{x}\ \phantom{x}\\
+\phantom{x}\ \phantom{x}\ \dots \ \phantom{x}\\
+\phantom{x}\ \phantom{x}\ \phantom{x}\ a_{nn} \end{bmatrix} \therefore \ A^{-1} = \begin{bmatrix} \frac{1}{a_{11}}\ \phantom{x}\ \phantom{x}\ \phantom{x}\\
+\phantom{x}\ \frac{1}{a_{22}}\ \phantom{x}\ \phantom{x}\\
+\phantom{x}\ \phantom{x}\ \dots\ \phantom{x}\\
+\phantom{x}\ \phantom{x}\ \phantom{x}\ \frac{1}{a_{nn}}\end{bmatrix} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Predicado VI</title>
+      <link>http://example.org/notes/20210918122004-predicado_vi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918122004-predicado_vi/</guid>
+      <description>La matriz inversa de un producto de matrices será igual al producto de al inversa de cada matriz individual, pero en orden inverso al producto original: \((AB)^{-1} = B^{-1}A^{-1}\)
+Suponga A, B matrices de (nxn) talque la inversa de A es \(A^{-1}\) y la inversa de B es \(B^{-1}\). Entonces vale: \((AB)^{-1} = B^{-1}A^{-1}\)
+Comprobación por construcción.
+\begin{align*} (AB)\\
+(AB)^{-1}\\
+ABB^{-1}A^{-1} = I\\
+A(BB^{-1})A^{-1} = I\\
+AIA^{-1} =I\\
+AA^{-1} = I\\</description>
+    </item>
+    
+    <item>
+      <title>Producto de matriz con matriz</title>
+      <link>http://example.org/notes/20210907211328-producto_de_matriz_con_matriz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210907211328-producto_de_matriz_con_matriz/</guid>
+      <description>Se hace el producto punto: Filas de la primera matriz, con columnas de la segunda matriz. La fila i con la columna j dará el elemento i,j del resultado.
+Ej:
+\begin{equation*} \begin{bmatrix} a\ b\\ c\ d \end{bmatrix} \begin{bmatrix} e\ f\\ g\ h \end{bmatrix} \begin{bmatrix} &amp;amp;(a, b)\cdot (e, g)^T\ &amp;amp;(a, b)\cdot (f, h)^T\\
+&amp;amp;(c, d)\cdot (e, g)^T\ &amp;amp;(c, d)\cdot (f, h)^T \end{bmatrix} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Producto de sumas (Álgebra booleana)</title>
+      <link>http://example.org/notes/20211104081955-producto_de_sumas_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211104081955-producto_de_sumas_algebra_booleana/</guid>
+      <description>Es una expresión que consiste de puros maxitérminos multiplicándose entre sí.
+Esto es, son productos de sumas, donde en cada suma aparece el dominio completo de la ecuación.
+Por ejemplo, un producto de sumas sería: \((A+B&#39;)(A&#39;+B)\)
+CONVERTIR A POS ESTÁNDAR Para obtener la forma canónica, se debe complementar cada suma que le falte algúna variable, sumando la suma con el complemento de la and.
+Nota: Esto se hace porque el complemento del and \(AA&#39;\) genera como resultado 0, por lo que se considera un elemento neutro de la suma.</description>
+    </item>
+    
+    <item>
+      <title>Producto de vector con escalar</title>
+      <link>http://example.org/notes/20210827182716-producto_de_vector_con_escalar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827182716-producto_de_vector_con_escalar/</guid>
+      <description>Un escalar actúa como una constante que escala los vectores. Este escalamiento puede invertir al vector, si el escalar es negativo.
+Toma de ejemplo un vector \(u = (u_1, u_2)\), y \(c\) es un escalar.
+Para multiplicar ambos, simplemente se hace la multiplicación del escalar por cada elemento del vector.
+Como resultado se obtiene un vector escalado por c, con las mismas características que el vector original.
+\begin{equation*} cu = \begin{bmatrix}cu_1\\ cu_2 \end{bmatrix} \end{equation*}</description>
+    </item>
+    
+    <item>
+      <title>Producto externo</title>
+      <link>http://example.org/notes/20210928204200-producto_externo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928204200-producto_externo/</guid>
+      <description>Se le llama producto externo al producto de dos vectores con dimensiones \(n \times 1\) y \(1 \times m\).
+Se le llama de esta forma porque tanto n como m quedan en el lado externo al hacer la operación.
+E.g: (nx1)(1xm)
+Esto genera una matriz de tamaño \(n \times m\).
+Por otro lado, el producto interno deja a n y m adentro, al centro, y produce un escalar. Para más información sobre el producto interno, ver Producto punto.</description>
+    </item>
+    
+    <item>
+      <title>Producto matriz por escalar</title>
+      <link>http://example.org/notes/20210910131414-productio_matriz_por_escalar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210910131414-productio_matriz_por_escalar/</guid>
+      <description>Se multiplica el escalar por cada elemento de la matriz, y el resultado es una matriz con las mismas dimensiones, pero escalada.
+Ejemplo:
+\begin{align*} A = \begin{bmatrix} 1\ 2\ 3\\
+4\ 5\ 6\\
+7\ 8\ 9\\
+\end{bmatrix} \; y \; c = 5\\
+\\
+cA = \begin{bmatrix} 5\ &amp;amp;10\ &amp;amp;15\\
+20\ &amp;amp;25\ &amp;amp;30\\
+35\ &amp;amp;40\ &amp;amp;45\\
+\end{bmatrix} \end{align*}</description>
+    </item>
+    
+    <item>
+      <title>Producto punto</title>
+      <link>http://example.org/notes/20210827184353-producto_punto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827184353-producto_punto/</guid>
+      <description>El producto punto de un vector produce un escalar. Esto es diferente a otras operaciones con vectores, las cuales generan otros vectores.
+Cabe mencionar que el producto punto es conmutativo, es decir que: \(v \cdot w = w \cdot v\)
+DEFINICIÓN El producto pusto también se conoce como el producto interno, y se describe como la suma de los productos escalares de los elementos que comparten índice entre vectores.
+Es decir, 2 vectores \(u=(u_1,u_2)\) y \(v=(v_1,v_2)\) tendrían un producto punto de esta forma:</description>
+    </item>
+    
+    <item>
+      <title>Propiedades de las matrices</title>
+      <link>http://example.org/notes/20210918112915-propiedades_de_las_matrices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210918112915-propiedades_de_las_matrices/</guid>
+      <description>Predicado I Si existe una matriz no singular, y dado el sistema \(Ax=b\), entonces: \(x=A^{-1}\). Predicado II Si existe la matriz inversa de A, y \(Ax=0\), entonces el único valor que puede tomar x será el vector columna 0: \(x=0\). Predicado III Si la determinante de A es diferente de cero, entonces sí existe la matriz inversa de A. Predicado IV Una matriz A tendrá una y solo una matriz inversa.</description>
+    </item>
+    
+    <item>
+      <title>Proyecciones</title>
+      <link>http://example.org/notes/20211102122927-proyecciones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211102122927-proyecciones/</guid>
+      <description>Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
+PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
+Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
+\(p = \hat{x}a\) Donde:</description>
+    </item>
+    
+    <item>
+      <title>Punto Critico</title>
+      <link>http://example.org/notes/20210908104638-punto_critico/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210908104638-punto_critico/</guid>
+      <description>En cálculo, un punto crítico de una función de una variable real es cualquier valor del dominio donde una función no es diferenciable, es decir, que su derivada es 0.
+Dicho de otra forma, los puntos críticos son los máximos y los mínimos de una función, AKA puntos de inflexión.
+EJEMPLO \(f(x) = x^3\)
+\(f&#39;(x)=3x^2\)
+Un punto crítico sería 0, porque:
+\(f&#39;(0) = 0\)
+Imagen en Geogebra del punto critico de x^3</description>
+    </item>
+    
+    <item>
+      <title>Punto fijo (cálculo de raices)</title>
+      <link>http://example.org/notes/20211008175651-punto_fijo_calculo_de_raices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211008175651-punto_fijo_calculo_de_raices/</guid>
+      <description>FUNDAMENTO Se parte de la definición de un punto fijo.
+Como en un punto fijo \(f(x)=x\), el cálculo de raíces usando este método nos ayuda a buscar un punto p tal que \(f(p)=0\).
+Lo que se hace entonces es plantear otra función g(x), la cual se define como \(g(x)=x-f(x)\).
+En este caso, calcular \(g(p)\) será igual a \(p-f(p)\) que, como sabemos que \(f(p)=0\), entonces queda \(g(p)=p\), lo que es un punto fijo.</description>
+    </item>
+    
+    <item>
+      <title>Punto fijo (definición)</title>
+      <link>http://example.org/notes/20211008175730-punto_fijo_definicion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211008175730-punto_fijo_definicion/</guid>
+      <description>En una función f(x), un punto fijo es un valo x que, al ser evaluado, genera como resultado el mismo valor x.
+EJEMPLOS Si f(x) es una función para números reales:
+  \(f(x)=x^2\) 0 y 1 serán los puntos fijos, porque:
+ \(0^2=0\) \(1^2=1\)    \(f(x)=x^2-3x+4\) 2 será el punto fijo de la función. \(2^2 -3(2)+4=2\)
+  </description>
+    </item>
+    
+    <item>
+      <title>Queue</title>
+      <link>http://example.org/notes/20210907205415-queue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210907205415-queue/</guid>
+      <description>Es un tipo de estructura lineal en la que el orden en el que entran y salen los elementos sí importa.
+La estructura de datos es bastante similar a una Pila, y la principal diferencia radica en el extraer elementos.
+DEFINICIÓN Una cola es una lista ordenada en la cual los elementos se insertan por un extremo (el final) y se eliminan por el otro (el frente). A esto se le llama FIFO (First In, First Out) o LILO (List In, Last Out).</description>
+    </item>
+    
+    <item>
+      <title>Quicksort</title>
+      <link>http://example.org/notes/20210827173911-quicksort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827173911-quicksort/</guid>
+      <description>Utiliza el paradigma de Divide and Conquer.
+Se elige un pivote de forma arbitraria. Este es usado para partir el array en 2, y a partir de ahí conquistar los problemas de forma recursiva.
+Nota: Lo que se elige es el índice del array (arbitrariamente). No se sabe de antemano qué elemento habrá ahí, así que será suerte si la lista se parte limpiamente a la mitad, o si quea desequilibrada.</description>
+    </item>
+    
+    <item>
+      <title>Rank de matriz</title>
+      <link>http://example.org/notes/20211005132127-rank_de_matriz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211005132127-rank_de_matriz/</guid>
+      <description>El rank r de A es el número de pivotes.
+E.g:
+\begin{equation*} A= \begin{bmatrix} 1\ 0\ 2\ 3\\
+0\ 1\ 0\ 1\\
+0\ 0\ 0\ 0\\
+\end{bmatrix} \end{equation*}
+Hay 2 pivotes y 2 variables libres, por lo tanto:
+\(rank(A)=2\)
+CONOCIMIENTO QUE PROPORCIONA EL RANK Para una matriz \(A_{mn}\):
+FULL COLUMN RANK Si \(r=n\), se se llama full column rank, e implica que:
+Todas las matrices A que tengan \(r=n\) (son full column rank) tienen estas propiedades:</description>
+    </item>
+    
+    <item>
+      <title>Razón de cambio promedio</title>
+      <link>http://example.org/notes/20210908163802-razon_de_cambio_promedio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210908163802-razon_de_cambio_promedio/</guid>
+      <description>La tasa de cambio promedio es un concepto muy similar a la pendiente, y es una medida de cuánto cambia la función por unidad, en promedio, de un intervalo.
+Es decir, qué tan rápido crece o disminuye f(x) por cada unidad de x.
+Se obtiene calculando la pendiente de la linea que se forma entre los 2 extremos de la función.
+ CALCULAR LA RAZÓN DE CAMBIO PROMEDIO Es idéntico a la pendiente, pero como la ecuación no siempre será lineal, se puede platean como:</description>
+    </item>
+    
+    <item>
+      <title>Reconnaissance</title>
+      <link>http://example.org/notes/20211015095223-reconnaissance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015095223-reconnaissance/</guid>
+      <description>Information gathering.
+ACTIVE Use tools and use them against a client.
+PASSIVE  Target Validation Finding subdomains Fingerprinting Data Breaches (Ethical Hacking) OSINT  </description>
+    </item>
+    
+    <item>
+      <title>Recurrences</title>
+      <link>http://example.org/notes/20210825102049-recurrences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825102049-recurrences/</guid>
+      <description>It is an equation or inequality that describes a function in terms of its value on smaller inputs.
+Solving recurrences Substitution method We guess a bound and then use mathematical induction to prove if it is correct.
+Recursion-tree method It converts the recurrence into a tree whose nodes represent the costs incurred at various levels of the recursion. To solve it, we use techniques for bounding summations.
+Master method Provides bounds for recurrences of the form T(n) = aT(n/b) + f(n)</description>
+    </item>
+    
+    <item>
+      <title>Regresión Lineal</title>
+      <link>http://example.org/notes/20211011100822-regresion_lineal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211011100822-regresion_lineal/</guid>
+      <description>Técnica de modelado estadístico usada para describir una variable de respuesta continua como una función de una o varias variables predictoras.
+  La línea roja es la regresión lineal. Es lineal porque es una linea (duh). La línea busca minimizar la sumatoria de distancias entre la recta y los puntos. La incógnita es la ecuación de la recta. \(y=mx+b\)  SISTEMA Ax=b Para poder obtener la ecuación de la recta que hará la aproximación, se plantea el siguiente sistema Ax=b:</description>
+    </item>
+    
+    <item>
+      <title>Reverse shell</title>
+      <link>http://example.org/notes/20211016205307-reverse_shell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211016205307-reverse_shell/</guid>
+      <description>The most common kind of shell: The victim connects to us.
+We open a port on our machine (like using netcat), and we listen. Then, the target connects using that port.</description>
+    </item>
+    
+    <item>
+      <title>Scanning and enumeration</title>
+      <link>http://example.org/notes/20211015095312-scanning_and_enumeration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015095312-scanning_and_enumeration/</guid>
+      <description>TOOLS  nmap Network mapper nikto Web vulnerability scanner Directory busting  dirbuster dirb gobuster   msfconsole SMB  smbclient Use nmap script    PORTS/SERVICES  Port 21/FTP  </description>
+    </item>
+    
+    <item>
+      <title>Schedule Zoom Meetings</title>
+      <link>http://example.org/notes/20211003172900-schedule_zoom_meetings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211003172900-schedule_zoom_meetings/</guid>
+      <description>Create a bash file with the following syntax:
+zoom &amp;#34;zoommtg://zoom.us/join?confno=&amp;lt;conference_number&amp;gt;&amp;amp;pwd=&amp;lt;password&amp;gt;&amp;#34; Notes:
+ Password is optional To get the necessary data, open the call on internet, and get it from the link. For example: url: zoommtg://zoom.us/join?confno=81119430791&amp;amp;pwd=bnBOOEZ6UWFtV3ZvUnVLK0VmakdWQT09 conference number: 81119430791 password: bnBOOEZ6UWFtV3ZvUnVLK0VmakdWQT09  Once you have the script, schedule it using cron or systemd.</description>
+    </item>
+    
+    <item>
+      <title>Scheduling with systemd</title>
+      <link>http://example.org/notes/20211003173313-scheduling_with_systemd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211003173313-scheduling_with_systemd/</guid>
+      <description>PROCESS  Create your bash script, and make it executable. Create your timer and service files. Enable and activate the timer, using: systemctl enable &amp;lt;file&amp;gt;.timer --user systemctl start &amp;lt;file&amp;gt;.timer --user Note: The user flag is, obviously, for user scripts. For system-wide scripts, run it without that flag.  NEEDED FILES You&amp;rsquo;ll need 2 files, both with the same name:
+ Service unit Here you specify which script to run. Timer unit The timer controls and activates the service unit.</description>
+    </item>
+    
+    <item>
+      <title>Selection sort</title>
+      <link>http://example.org/notes/20210827172726-selection_sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827172726-selection_sort/</guid>
+      <description>Recorre todo el array buscando el número menor de la lista lst[i:], y cuando acaba esa iteración la coloca en la posición i, haciendo un intercambio con el elemento que estaba ahí.
+Repetir hasta que el arreglo esté ordenado.
+ Mejor caso: \(O(n^{2})\) Caso promedio: \(O(n^{2})\) Peor \(O(n^{2})\).  El número de intercambios es \(O(n)\), lo que es mejor que Bubble Sort. El algoritmo hace un número fijo de pasadas.   Complejidad de espacio: \(O(1)\)  PASOS  Seleccionar el menor elemento del arreglo Intercambiarlo con el elemento en la primer posición Repetir con el mismo arreglo excepto el elemento que acabas de acomodar.</description>
+    </item>
+    
+    <item>
+      <title>Serie de Taylor</title>
+      <link>http://example.org/notes/20211004101040-serie_de_taylor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211004101040-serie_de_taylor/</guid>
+      <description>Es una aproximación de funciones utilizando polinomios. La serie se plantea como:
+\begin{equation*} \sum _{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n \end{equation*}
+Donde:
+ \(f^{(n)}(a)\) es la n-ésima derivada de la función. a es el valor en el cual se centra la función.  CENTRAR LA FUNCIÓN a es el valor en el que está centrada la función, esto significa que, el polinomio que salga al calcular la Serie de Taylor, solo funcionará para valores cercanos a a.</description>
+    </item>
+    
+    <item>
+      <title>Set image size in org</title>
+      <link>http://example.org/notes/20211005165705-set_image_size_in_org/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211005165705-set_image_size_in_org/</guid>
+      <description>Use these tags above the image (without blank lines):
+#+ATTR_HTML: :width &amp;lt;width&amp;gt;px #+ATTR_LATEX: :width &amp;lt;width&amp;gt;px </description>
+    </item>
+    
+    <item>
+      <title>Setup mu4e</title>
+      <link>http://example.org/notes/20210929092514-setup_mu4e/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210929092514-setup_mu4e/</guid>
+      <description>Asegúrate de usar la configuración de mi repo https://github.com/LeobardoArguelles/emacs.
+  Clona mi repositorio dotfiles. https://github.com/LeobardoArguelles/dotfiles
+  Copia el archivo .mbsyncrc de dotfiles a ~/.config/mu4e
+cp .dotfiles/.mbsyncrc .config/mu4e   Crea un archivo llamado &amp;ldquo;mbsyncpass-acc1&amp;rdquo; con la contraseña de la cuenta registrada, en texto.
+  Encriptalo:
+gpg2 -c mbsyncpass-acc1 #+end_src* 5. Borra el archivo de texto sin encriptar. 6. Instala ~mu~ desde [[https://aur.archlinux.org/packages/mu/][el repositorio en AUR.]] 7. Cierra Doom y corre ~doom sync~.</description>
+    </item>
+    
+    <item>
+      <title>Shell Sort</title>
+      <link>http://example.org/notes/20210912205914-shell_sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210912205914-shell_sort/</guid>
+      <description>Es una mejora sobre Insertion sort.
+En shell sort se comparan elementos distantes, y se incercambian si es necesario.
+La principal diferencia entre shell e insertion sort, es que insertion solo maneja un array ordenado, mientras que shell maneja length/h arrays ordenados.
+PASOS  Dividir la lista en \(\frac{n}{2}\) grupos, cada uno con 2 elementos. Cada grupo de elementos estará separado por un espacio también de n/2. Recorrer la lista, comparando individualmente cada grupo de elementos, y haciendo los intercambios necesarios.</description>
+    </item>
+    
+    <item>
+      <title>Shells</title>
+      <link>http://example.org/notes/20211016205232-shells/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211016205232-shells/</guid>
+      <description>See:
+ Reverse shell This is the most common kind. Bind shell  </description>
+    </item>
+    
+    <item>
+      <title>Sistema de ecuaciones lineales con matrices</title>
+      <link>http://example.org/notes/20210831222734-sistema_de_ecuaciones_lineales_con_matrices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210831222734-sistema_de_ecuaciones_lineales_con_matrices/</guid>
+      <description>Un sistema de ecuaciones lineales se puede plantear como un producto de matriz por vector, de la siguiente forma:
+\begin{equation*} Ax = b \end{equation*}
+donde:
+ A es la matriz de coeficientes Los coeficientes se obtienen de las ecuaciones del sistema. x es el vector de variables Por ejemplo: x, y, z. b es el resultado, el cual es una combinación lineal de las columnas de A.  De esto se deduce también que:</description>
+    </item>
+    
+    <item>
+      <title>Sistema generador (Álgebra lineal)</title>
+      <link>http://example.org/notes/20211015185451-sistema_generador_algebra_lineal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015185451-sistema_generador_algebra_lineal/</guid>
+      <description>En ingles se dice que un sistema generador son vectores que span (abarcan?) el espacio vectorial.
+En español, un sistema generador es un conjunto de vectores a partir de los cuales se puede generar el espacio vectorial V completo.
+EJEMPLO El sistema generador básico de un espacio en \(R^n\) es la matriz identidad de dimensión n.
+Esto es porque sus columnas son linealmente independientes, y al combinarlas linealmente es posible generar cualquier vector de \(R^n\).</description>
+    </item>
+    
+    <item>
+      <title>smbclient</title>
+      <link>http://example.org/notes/20211015102229-smbclient/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015102229-smbclient/</guid>
+      <description>LIST SERVICES smbclient -L &amp;lt;ip&amp;gt; # Example: smbclient -L \\\\192.168.54.4\\ It should output a table containing, for example:
+ IPC$ ADMIN$  Then, you could try and connect to one of these services.
+CONNECT SERVICES smbclient &amp;lt;ip&amp;gt;\\&amp;lt;service&amp;gt; # Example: smbclient \\\\192.168.54.4\\ADMIN$ </description>
+    </item>
+    
+    <item>
+      <title>Solucionar sistemas de ecuaciones con matrices elementales</title>
+      <link>http://example.org/notes/20210909211627-solucionar_sistemas_de_ecuaciones_con_matrices_elementales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210909211627-solucionar_sistemas_de_ecuaciones_con_matrices_elementales/</guid>
+      <description>Es posible solucionar un sistema de ecuaciones si se plantea de la forma Ax = b.
+Para hacerlo, hay que encontrar una matriz \(E\) que, al multiplicarse con \(A\), genere la matriz identidad. Dicho de otra forma, hay que encontrar la matriz inversa de A (\(A^{-1}\)).
+Nota: Si una matriz tiene matriz inversa, significa que habrá una solución para cualquier vector b. Sin embargo, que no exista la matriz inversa no significa que no exista ninguna solución.</description>
+    </item>
+    
+    <item>
+      <title>Solución completa de Ax=b</title>
+      <link>http://example.org/notes/20211008140534-solucion_completa_de_ax_b/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211008140534-solucion_completa_de_ax_b/</guid>
+      <description>La solución completa x es: \(x= x_p + x_n\), donde:
+ \(x_p\) son las soluciones particulares. \(x_6\) son las soluciones del espacio nulo.  OBTENIENDO SOLUCIONES PARTICULARES Se recomienda obtenerlas partir de la matriz escalonada reducida R, pues así es más fácil encontrar los valores de los pivotes.
+Entonces, partiendo de R:
+ Se le asigna valor 0 a todas las variables libres. Se calculan los valores de los pivotes usando sutitución hacia atrás.</description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>http://example.org/notes/20211015192620-ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211015192620-ssh/</guid>
+      <description>NORMAL CONNECTION ssh &amp;lt;ip_address&amp;gt; # Example: ssh 192.168.57.134 ALTERNATIVE METHOD Sometimes, when we dont have the key, we will need to do this process:
+First, try the normal connection: ssh &amp;lt;ip_address&amp;gt;. This shoul throw an error, and it should give you an &amp;ldquo;offer&amp;rdquo; of a key exchange. Copy it, and use it in the next line:
+ssh &amp;lt;ip_address&amp;gt; -oKexAlgorithms=+&amp;lt;key_exchange&amp;gt; This should also throw an error, and it should also offer a &amp;ldquo;matchin cipher&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Stack</title>
+      <link>http://example.org/notes/20210902113325-stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210902113325-stack/</guid>
+      <description>Una estructura de datos simple, en la que el orden de llegada de los elementos sí importa.
+DEFINICIÓN Es una lista ordenada en la cual los elementos se insertan y se quitan del mismo extremo, llamado cima. El último elemento en ser insertado será el primero en ser extraído. LIFO: Last-In-First-Out.
+OPERACIONES PUSH Introduce un elemento a la pila.
+POP Elimina un elemento de la pila.
+EMPTY Función booleana que indica si la pila está o no vacía.</description>
+    </item>
+    
+    <item>
+      <title>Strings</title>
+      <link>http://example.org/notes/20210825105751-strings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825105751-strings/</guid>
+      <description>Una cadena de caracteres es una secuencia de 0 o más símbolos alfanuméricos y caracteres especiales.
+Juegos de caracteres ASCII American Standard Code for Information Interchange
+ Básico  Usa 7 bits por carácter para represetar 128 caracteres distintos.   Ampliado  Usa 8 bits, para 256 caracteres.    EBCDIC Extended Binary Coded Decimal Interchange Code. Usa 8 bits, para 256 caracteres.
+Constantes Se encierran entre apostrofes o comillas.</description>
+    </item>
+    
+    <item>
+      <title>Sub-caption matriz de imagenes (Latex)</title>
+      <link>http://example.org/notes/20211007153156-sub_caption_matriz_de_imagenes_latex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211007153156-sub_caption_matriz_de_imagenes_latex/</guid>
+      <description>Este comando lo uso en combo con tabular para crear una matriz de figuras, donde cada figura tenga su propio texto.
+LATEX DEFINITION Se usa de la siguiente manera:
+AS ORG HEADER #+LATEX_HEADER: \newcommand{\subf}[2]{{\small\begin{tabular}[t]{@{}c@{}}#1\\#2 \end{tabular}}} </description>
+    </item>
+    
+    <item>
+      <title>Subespacio vectorial</title>
+      <link>http://example.org/notes/20211001110338-subespacio_vectorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211001110338-subespacio_vectorial/</guid>
+      <description>Son espacios vectoriales más chicos, contenidos dentro de los espacios vectoriales grandes, que contienen a todos los vectores (como \(R^2\) tiene todos los vectores bidimensionales)
+Ejemplo: Un plano es un subespacio de \(R^3\), porque cumple todas las reglas necesarias, pero los vectores ahí contenidos nunca saldrán del plano. Y, aunque pudiera parecer que está entonces en 2 dimensiones, no pertenece a \(R^2\), pues los vectores tienen 3 dimensiones (una de ellas es 0).</description>
+    </item>
+    
+    <item>
+      <title>Suma de matrices</title>
+      <link>http://example.org/notes/20210910131218-suma_de_matrices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210910131218-suma_de_matrices/</guid>
+      <description>La condición es que las matrices deben tener las mismas dimensiones \(mn\).
+Nada más se suman los elementos en las misma coordenadas, y el resultado es una matriz con las mismas dimensiones.
+Ej:
+\begin{equation*} A = \begin{bmatrix} 1\ 2\ 3\\
+4\ 5\ 6\\
+7\ 8\ 9\\
+\end{bmatrix} \; B = \begin{bmatrix} 9\ 8\ 7\\
+6\ 5\ 4\\
+3\ 2\ 1\\
+\end{bmatrix} \end{equation*}
+\begin{equation*} A + B = \begin{bmatrix} (1+9)\ (2+8)\ (3+7)\\</description>
+    </item>
+    
+    <item>
+      <title>Suma de productos (Álgebra booleana)</title>
+      <link>http://example.org/notes/20211018123453-suma_de_productos_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211018123453-suma_de_productos_algebra_booleana/</guid>
+      <description>Es una ecuación formada por la suma de puros productos.
+Por ejemplo, una suma de productos sería: \(AB+CD\)
+CONVERTIR PRODUCTOS NORMALES A SOP La condición es simplemente que los productos se estén sumando, entonces podemos pasar de esto:
+\begin{equation*} A(B+CD) \end{equation*}
+A esto (lo que ya es una suma de productos):
+\begin{equation*} AB + ACD \end{equation*}
+SUMA DE PRODUCTOS CANÓNICA Es una suma de productos, donde cada producto es un minitérmino.</description>
+    </item>
+    
+    <item>
+      <title>Suma de vectores</title>
+      <link>http://example.org/notes/20210827182425-suma_de_vectores/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827182425-suma_de_vectores/</guid>
+      <description>Simplemente se suman los elementos que estén en la misma posición en cada vector.
+Por ejemplo, tome 2 vectores u y v: \(u = \bigl[\begin{smallmatrix}u_{1}\\ u_{2}\end{smallmatrix}\bigr]\) \(v = \bigl[\begin{smallmatrix}v_{1}\\ v_{2}\end{smallmatrix}\bigr]\)
+Para sumarlos, se suman los elementos que tengan el mismo subíndice, y el resultado es un vector con las mismas dimensiones que los originales:
+\begin{equation*} u + v = \begin{bmatrix} u_{1} &amp;amp; + &amp;amp; v_{1} \\
+u_{2} &amp;amp; + &amp;amp; v_{2} \\</description>
+    </item>
+    
+    <item>
+      <title>Target Validation</title>
+      <link>http://example.org/notes/20211012195002-target_validation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211012195002-target_validation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tecnologia</title>
+      <link>http://example.org/notes/20210912163615-tecnologia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210912163615-tecnologia/</guid>
+      <description>Tecnología viene del griego Techne, que significa hacer (craft, as in Minecraft).
+ Tecnología es el conjunto de varias creaciones de la ingeniería, juntas.
+ DEFINICIONES  Un dispositivo, sistema, o proceso diseñado para satisfacer una necesidad o un deseo humano. Se refiere a los métodos, sistemas, aparatos que son resultado de conocimiento científico, usado en propósitos prácticos.  </description>
+    </item>
+    
+    <item>
+      <title>Teorema de Rolle</title>
+      <link>http://example.org/notes/20210908103438-teorema_de_rolle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210908103438-teorema_de_rolle/</guid>
+      <description>Este teorema nos permite saber si una función \(f(x)\) tiene un punto crítico en un intervalo dado.
+ENUNCIADO Sea \(f(x)\) una función que:
+ es continua en [a, b] es derivable en (a, b) cumple que \(f(a)=f(b)\)  Entonces existe algún punto \(c \in (a, b)\) tal que \(f&#39;( c)=0\).</description>
+    </item>
+    
+    <item>
+      <title>Teorema de Stone-Weierstrass</title>
+      <link>http://example.org/notes/20210908181638-teorema_de_stone_weierstrass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210908181638-teorema_de_stone_weierstrass/</guid>
+      <description>Este es una generalización del Teorema de Weierstrass.
+La diferencia radica en que en vez de usar un intervalo cerrado [a, b], se considera un espacio compacto de Hausdorff, y en vez de utilizar polinomios, la aproximación se realiza con subalgebras de C(X).
+Entonces, el teorema de Stone-Weierstrass dice que si existe un anillo de funciones continuas \(C[a,b]\) en el intervalo [a, b], en el conjunto de números reales, entonces hay ciertos sub-anillos de \(C[a,b]\) que son densos en \(C[a,b]\).</description>
+    </item>
+    
+    <item>
+      <title>Teorema de Weierstrass</title>
+      <link>http://example.org/notes/20210908175322-teorema_de_weierstrass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210908175322-teorema_de_weierstrass/</guid>
+      <description>Establece que cada función continua sobre un intervalo [a, b] del conjunto de números reales, puede ser aproximada uniformemente por polinomios.
+Este teorema tiene aplicaciones tanto teóricas como prácticas, porque los polinomios son de las funciones más sencillas, y las computadoras pueden evaluarlos directamente.</description>
+    </item>
+    
+    <item>
+      <title>Teorema del Valor Intermedio</title>
+      <link>http://example.org/notes/20210908174310-teorema_del_valor_intermedio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210908174310-teorema_del_valor_intermedio/</guid>
+      <description>El oficiado formalmente dice:
+ Para cualquier valor L entre f(a) y f(b), existirá un valor c en el intervalo [a, b] tal que f(c) = L.
+ Esto significa, coloquialmente, que si la función f es continua en el intervalo [a, b] entonces alcanzará cualquier valor entre f(a) y f(b).
+REPRESENTACIÓN GRÁFICA  Se puede ver que, como la función es continua, la gráfica tocará (al menos) todos los puntos entre f(a) y f(b).</description>
+    </item>
+    
+    <item>
+      <title>Teorema del Valor Medio</title>
+      <link>http://example.org/notes/20210908110631-teorema_del_valor_medio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210908110631-teorema_del_valor_medio/</guid>
+      <description>Este teorema relaciona la razón de cambio promedio de una función con su derivada.
+El enunciado dice que para cualquier función diferenciable f, y cualquier intervalo [a, b] que pertenezca al dominio de f, exstirá un número c dentro de (a, b) tal que f&#39;(c) sea igual a la razón de cambio promedio de la función en el intervalo [a, b].
+\begin{equation*} f&#39;( c) = \frac{f(b)-f(a)}{b-a} \end{equation*}
+Condiciones  La función debe ser continuo en el intervalo [a, b].</description>
+    </item>
+    
+    <item>
+      <title>Teorema fundamental del algebra</title>
+      <link>http://example.org/notes/20210908185000-teorema_fundamental_del_algebra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210908185000-teorema_fundamental_del_algebra/</guid>
+      <description>El teorema establece que una función polinomial de grado \(n\) tiene exactamente \(n\) ceros en el conjunto de números complejos, incluyendo los ceros repetidos.</description>
+    </item>
+    
+    <item>
+      <title>Teoremas de Morgan (Ley de álgebra booleana)</title>
+      <link>http://example.org/notes/20210928201147-teoremas_de_morgan_ley_de_algebra_booleana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928201147-teoremas_de_morgan_ley_de_algebra_booleana/</guid>
+      <description>Una operación negada puede partirse en la negación de sus elementos, unidos por otro operando. Hablamos en específico de estos 2 casos:
+  \(\overline{A+B} = \overline{A} * \overline{B}\)
+  \(\overline{A*B} = \overline{A} + \overline{B}\)
+  </description>
+    </item>
+    
+    <item>
+      <title>The five stages of ethical hacking</title>
+      <link>http://example.org/notes/20211012194251-the_five_stages_of_ethical_hacking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211012194251-the_five_stages_of_ethical_hacking/</guid>
+      <description> RECONNAISSANCE SCANNING &amp;amp; ENUMERATION Searching for open ports, investigating what services are being run. GAINING ACCESS aka Explotation. Once we gain acces, we scan and enumerate again. MAINTAIN ACCESS COVER TRACKS  </description>
+    </item>
+    
+    <item>
+      <title>The Maximum Subarray Problem</title>
+      <link>http://example.org/notes/20210825101220-the_maximum_subarray_problem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210825101220-the_maximum_subarray_problem/</guid>
+      <description>This problem aims to find what subarray from an array of integers provides the largest sum.
+The Divide-and-Conquer paradigm implies that we have to split our original array in two parts and solve them recursively. Knowing this, we need to keep in mind that the maximum subarray could either:
+ Be in the left half (from start to midpoint) Be in the right half (from midpoint + 1 to end) Span both halfs  This last scenario is an additional problem that is not a smaller version of the original problem.</description>
+    </item>
+    
+    <item>
+      <title>Theta Notation</title>
+      <link>http://example.org/notes/20210827072852-theta_notation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827072852-theta_notation/</guid>
+      <description>Theta notation gives us a way to measure the performance threshold of an algorithm.
+That is, theta notation is the meeting point of the upper and lower bounds, given by omega notation, and Big O notation, respectively.</description>
+    </item>
+    
+    <item>
+      <title>TikZ</title>
+      <link>http://example.org/notes/20210914080541-tikz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210914080541-tikz/</guid>
+      <description>TikZ allows creation of vector graphic schemes, charts, diagrams, etc&amp;hellip; in LaTeX.</description>
+    </item>
+    
+    <item>
+      <title>Vector unitario</title>
+      <link>http://example.org/notes/20210827190611-vector_unitario/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827190611-vector_unitario/</guid>
+      <description>Es un vector cuya longitud (norma) es igual a 1.
+Por la definición de norma, esto significa que un vector unitario \(u\): \(u \cdot u = 1\).
+NOTACIÓN Frecuentemente se denota con acento circunflejo sobre su nombre, o con una breve:
+ Circunflejo: \(\hat{v}\) Breve: \(\breve{v}\)  La tendencia actual es representar el vector unitario en dirección del vector r, en la forma \(u_r\)
+PROPIEDADES DE LOS VECTORES UNITARIOS  El producto punto de 2 vectores unitario es igual al coseno del ángulo entre ellos.</description>
+    </item>
+    
+    <item>
+      <title>Vectores</title>
+      <link>http://example.org/notes/20210827181941-vectores/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210827181941-vectores/</guid>
+      <description>Son el corazón de álgebra lineal. En física, los vectores tienen magnitud y dirección.
+En álgebra lineal, un vector puede representarse de la misma forma gráficamente, pero lo verdaderamente interesante son sus propiedades y las operaciones que se pueden realizar con ellos.
+OPERACIONES CON VECTORES  Suma de vectores Producto de vector con escalar Combinacion lineal Producto punto Normalizar vectores Calcular angulo entre vectores usando producto punto  PROPIEDADES DE LOS VECTORES  Longitud de un vector (Norma) Desigualdad de Schwartz  VECTORES ESPECIALES  Vector unitario  </description>
+    </item>
+    
+    <item>
+      <title>Vite</title>
+      <link>http://example.org/notes/20210830202948-vite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210830202948-vite/</guid>
+      <description>Vite is a fast server used for development. It is used in conjunction with Vue.js.
+INITIALIZATION # Mind the extra double dash right ▼▼▼ here npm init vite@latest &amp;lt;project-name&amp;gt; -- --template vue RUN If it was installed using --template vue, then you can run it using npm, like so:
+npm run dev or run it directly using:
+npx vite ASKING FOR HELP npx vite --help </description>
+    </item>
+    
+    <item>
+      <title>Vue Components</title>
+      <link>http://example.org/notes/20210906211220-vue_components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210906211220-vue_components/</guid>
+      <description>Vue components have 3 parts:
+        TEMPLATE It has the markup and display logic.
+SCRIPT It has the non-display logic. It must have a default exported JS object.
+STYLE It has the css.</description>
+    </item>
+    
+    <item>
+      <title>XNOR</title>
+      <link>http://example.org/notes/20210928192615-xnor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928192615-xnor/</guid>
+      <description>Es un &amp;ldquo;bicondicional&amp;rdquo;. Puede llamarse como una compuerta de equivalencia, pues regresa positivo solo cuando ambas entradas son iguales.
+FORMAS DE REPRESENTARLO   \((A+\overline{B})(\overline{A}+B)\)
+  \(A\cdot B + \overline{A} \cdot \overline{B}\)
+  \(A \odot B\)
+  TABLA DE VERDAD \(Y=AB + \overline{AB}\)
+   A B Y     0 0 1   0 1 0   1 0 0   1 1 1    </description>
+    </item>
+    
+    <item>
+      <title>XOR</title>
+      <link>http://example.org/notes/20210928192033-xor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20210928192033-xor/</guid>
+      <description>Llamado también &amp;ldquo;or exclusivo&amp;rdquo;, pues actúa como una compuerta OR, pero se diferencía en que solo regresa Verdadero si sus 2 entradas son diferentes: Una verdadera y una falsa. Entonces, puede ser &amp;ldquo;una o la otra, pero no ambas&amp;rdquo;.
+FORMAS DE REPRESENTARLO   \(A\cdot \overline{B} + \overline{A} \cdot B\)
+  \((A+B)(\overline{A}+\overline{B})\)
+  \(A \oplus B\)
+  TABLA DE VERDAD \(Y=\overline{A}B + A\overline{B}\)
+   A B Y     0 0 0   0 1 1   1 0 1   1 1 0    </description>
+    </item>
+    
+    <item>
+      <title>Árbol AVL</title>
+      <link>http://example.org/notes/20211014111207-arbol_avl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211014111207-arbol_avl/</guid>
+      <description>Es un árbol binario de búsqueda que, como característica, siempre está balanceado
+OPERACIONES Las mismas de cualquier árbol binario:
+ Insertar Eliminar Buscar  La diferencia radica en que cuando se insertan o eliminan elementos, se deteriman si el árbol está o no balanceado. Si es necesario, se balancea.
+BALANCEO El balanceo se revisa de abajo hacia arriba.
+Es decir, se checa el factor de balanceo en las hojas, luego en el nivel de arriba, y así sucesivamente hasta que se encuentre un factor que no entre en los parámetros permitidos (-1, 0, ó 1).</description>
+    </item>
+    
+    <item>
+      <title>Árbol binario</title>
+      <link>http://example.org/notes/20211005165009-arbol_binario/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211005165009-arbol_binario/</guid>
+      <description>Árbol donde cada nodo puede tener máximo 2 hijos.
+IMPLEMENTACIÓN Clase nodo, atributos:
+ Básicos  Valor Nodo izq Nodo derecho   Extras  Nodo padre Is_root Is_leftorright    RECORRER EL ÁRBOL Se puede recorrer el árbol en 3 órdenes distintos:
+ Inorder: Left -&amp;gt; Root -&amp;gt; Right Preorder: Root -&amp;gt; Left -&amp;gt; Right Postorder: Left -&amp;gt; Right -&amp;gt; Root  SUBTIPOS DE ÁRBOL BINARIO ÁRBOL BINARIO LLENO Tiene todos sus nodos llenos.</description>
+    </item>
+    
+    <item>
+      <title>Árbol binario de búsqueda</title>
+      <link>http://example.org/notes/20211007190551-arbol_binario_de_busqueda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211007190551-arbol_binario_de_busqueda/</guid>
+      <description>Un árbol binario que sigue las siguientes reglas:
+ Siempre tenemos un nodo raíz. Todos los datos &amp;lt;= a la raíz van del lado izquierdo. Todos los datos &amp;gt; a la raíz van del lado derecho. Todos los subárboles también son árboles binarios de búsqueda  INSERTAR ELEMENTOS Se necesitan 2 métodos:
+ El de insertar Otro para buscar la posición correcta del valor a insertar. Este trabaja recursivamente, siguiendo la rama adecuada hasta llegar a un espacio vacío.</description>
+    </item>
+    
+    <item>
+      <title>Árbol m-ario</title>
+      <link>http://example.org/notes/20211005170410-arbol_m_ario/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211005170410-arbol_m_ario/</guid>
+      <description>Es un árbol donde cada nodo puede tener, como máximo, m hijos.
+Por ejemplo, un Árbol binario es un caso especial donde m=2.
+TIPOS FULL (LLENO) Todos los nodos en cada nivel tienen 0 o m hijos. Es decir, todos los nodos son hojas, o están llenos.
+COMPLETE (COMPLETO) Un árbol m-ario donde todos los niveles están llenos, excepto el último (el de las hojas).
+Si el último nivel no está completo, las hojas se cargan hacia la izquierda.</description>
+    </item>
+    
+    <item>
+      <title>Árbol rojo-negro</title>
+      <link>http://example.org/notes/20211102204808-arbol_rojo_negro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211102204808-arbol_rojo_negro/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

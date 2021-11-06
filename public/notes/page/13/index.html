@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>CS, Leo personal wiki</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.88.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+      <link href="/notes/index.xml" rel="alternate" type="application/rss+xml" title="CS, Leo personal wiki" />
+      <link href="/notes/index.xml" rel="feed" type="application/rss+xml" title="CS, Leo personal wiki" />
+      
+    
+    
+    <meta property="og:title" content="Notes" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://example.org/notes/" />
+
+<meta itemprop="name" content="Notes">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Notes"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        CS, Leo personal wiki
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Notes
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210902164949-matriz_de_seleccion/" class="link black dim">
+        Matriz de Seleccion
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Solamente tiene unos y ceros, donde los unos son los elementos a conservar al hacer el producto punto con otra matriz.
+\begin{equation*} \begin{bmatrix} 1\ 2\\
+3\ 4\\
+\end{bmatrix} \begin{bmatrix} 0\\ 1 \end{bmatrix} \begin{bmatrix} 2\\ 4 \end{bmatrix} \end{equation*}
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210918130420-matriz_densa/" class="link black dim">
+        Matriz Densa
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      No he encontrado una definición per se, pero es una matriz que no puede ser comprimida, porque contiene más valores que ceros.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210907130335-matriz_diagonalizada/" class="link black dim">
+        Matriz Diagonal
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Una matriz que, solo tiene valores distintos a 0 en su diagonal. Todos los demás serán 0.
+Ejemplo:
+\begin{equation*} A = \begin{bmatrix} &amp;2\ &amp;4\ &amp;-2\\
+&amp;4\ &amp;9\ &amp;-3\\
+&amp;-2\ &amp;-3\ &amp;7 \end{bmatrix} \end{equation*}
+Para esta A, su matriz diagonal será:
+\begin{equation*} D = \begin{bmatrix} &amp;2\ &amp;0\ &amp;0\\
+&amp;0\ &amp;1\ &amp;0\\
+&amp;0\ &amp;0\ &amp;4 \end{bmatrix} \end{equation*}
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210918125241-matriz_tridiagonal_dominante/" class="link black dim">
+        Matriz Diagonal Dominante
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Definición formal: El valor absoluto del elemento en \(a_{ii}\) es mayor que lo suma total de los demás elementos de su línea. (Nota: \(a_{ii}\) es un elemento de la diagonal).
+\begin{equation*} \lvert a_{ii} \rvert &gt; \sum_{j \neq i} \lvert a_{ij} \rvert \end{equation*}
+EJEMPLO DE MATRIZ DIAGONAL DOMINANTE \begin{equation*} A = \begin{bmatrix} 5\ &amp;1\ &amp;2\\
+0\ &amp;-9\ &amp;3\\
+1\ &amp;3\ &amp;5\\
+\end{bmatrix} \end{equation*}
+Fila por fila:
+ Fila 1.  Elemento en la diagonal: 5 Suma de todos los demás en esa fila: 3 Cumple la condición.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210907211457-matrices_elementales/" class="link black dim">
+        Matriz Elemental
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Es una variante de la Matriz Identidad, la cual, además de la diagonal de unos, tien un único elemento con valor distinto a cero, el cuál afectará a la matriz por la cual se multiplice esta matriz elemental.
+Ej:
+\begin{equation*} E_{13} = \begin{bmatrix} 1\ 0\ \frac{1}{4}\\
+0\ 1\ 0\\
+0\ 0\ 1\\
+\end{bmatrix} \end{equation*}
+CREACION DE LA MATRIZ ELEMENTAL \(E_{ij}\) es la matriz identidad con multiplicador \(-\ell _{ij}\) en su posición i,j, donde \(-\ell _{ij}\) es el valor que se usará para afectará a la posición (i, j) de la matriz multiplicada.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20211008134315-matriz_escalonada/" class="link black dim">
+        Matriz Escalonada Reducida
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Esta matriz es generada aplicando eliminación a una matriz rectangular.
+Si se trabaja con una matriz cuadrada, la eliminación se detiene al generar la matriz triangular U.
+PRODUCIENDO LA MATRIZ R Hablando de matrices rectangulares, podemos llegar a la forma escalonada reducida R aplicando los siguientes 2 pasos:
+ Producir ceros arriba de los pivotes. Producir unos en los pivotes.  EJEMPLO Partiendo de una matriz U:
+\begin{equation*} U= \begin{bmatrix} 1\ 2\ 2\ 4\\
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210831224956-matriz_identidad/" class="link black dim">
+        Matriz Identidad
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Es la matriz que multiplicada por otra matriz, da la misma matriz. Equivalente al 1 en multiplicación escalar. Su diagonal está llena de 1, el resto son ceros. Es un subtipo de matriz identidad.  Nota: Otra notación para la matriz inversa \(I\) es escribirlo como: \(A^0\)
+\begin{equation*} I = \begin{bmatrix} 1\ 0\ 0\\
+0\ 1\ 0\\
+0\ 0\ 1 \end{bmatrix} = A^0 \end{equation*}
+CARACTERÍSTICAS  Es cuadrada Tiene una diagonal de unos, y el resto son ceros Su símbolo es la letra &ldquo;I&rdquo;.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210831224318-matriz_inversa/" class="link black dim">
+        Matriz Inversa
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      La inversa de una matriz es una matriz que cuando se multiplican entre sí, producen la matriz identidad:
+\begin{equation*} A \cdot A^{-1} = A^{-1} \cdot A = I \end{equation*}
+Nota: No todas las matrices tienen inversa. Para que tenga inversa, la matriz debe ser linealmente independiente. También su determinante debe ser != 0
+DETERMINAR SI EXISTE LA MATRIZ INVERSA  Si A es de \(nxn\), y tiene \(n\) pivotes, sí existe.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210918123533-matriz_inversa_de_una_matriz_elemental/" class="link black dim">
+        Matriz inversa de una matriz elemental
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Nada más se invierte el signo del multiplicador, y queda en la misma posición.
+Ejemplo:
+\begin{equation*} E= \begin{bmatrix} 1\ &amp;0\ &amp;0\\
+-5\ &amp;1\ &amp;0\\
+0\ &amp;0\ &amp;1 \end{bmatrix} \; \; E^{-1}= \begin{bmatrix} 1\ &amp;0\ &amp;0\\
+5\ &amp;1\ &amp;0\\
+0\ &amp;0\ &amp;1 \end{bmatrix} \end{equation*}
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210918130217-matriz_rala/" class="link black dim">
+        Matriz Rala
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Esta es una matriz con poca información útil, pues tiene más ceros que valores.
+EJEMPLO \begin{equation*} A= \begin{bmatrix} 1\ 2\ 0\ 0\ 0\\
+0\ 1\ 2\ 0\ 0\\
+0\ 0\ 2\ 1\ 0\\
+0\ 0\ 0\ 1\ 0\\
+0\ 0\ 0\ 0\ 2\\
+\end{bmatrix} \end{equation*}
+    </div>
+  </div>
+</div>
+</div>
+      
+    </section>
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/notes/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/12/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/11/" aria-label="Page 11" class="page-link" role="button">11</a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/12/" aria-label="Page 12" class="page-link" role="button">12</a>
+      </li>
+      <li class="page-item active">
+        <a href="#" aria-current="page" aria-label="Page 13" class="page-link" role="button">13</a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/14/" aria-label="Page 14" class="page-link" role="button">14</a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/15/" aria-label="Page 15" class="page-link" role="button">15</a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/14/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy;  CS, Leo personal wiki 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

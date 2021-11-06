@@ -1,0 +1,4 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'CS, Leo personal wiki'
+theme = "ananke"

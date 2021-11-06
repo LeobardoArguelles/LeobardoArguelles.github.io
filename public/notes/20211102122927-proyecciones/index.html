@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Proyecciones | CS, Leo personal wiki</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
+PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
+Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
+\(p = \hat{x}a\) Donde:">
+    <meta name="generator" content="Hugo 0.88.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Proyecciones" />
+<meta property="og:description" content="Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
+PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
+Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
+\(p = \hat{x}a\) Donde:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/notes/20211102122927-proyecciones/" /><meta property="article:section" content="notes" />
+
+
+
+<meta itemprop="name" content="Proyecciones">
+<meta itemprop="description" content="Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
+PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
+Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
+\(p = \hat{x}a\) Donde:">
+
+<meta itemprop="wordCount" content="484">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Proyecciones"/>
+<meta name="twitter:description" content="Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
+PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
+Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
+\(p = \hat{x}a\) Donde:"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        CS, Leo personal wiki
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        NOTES
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://example.org/notes/20211102122927-proyecciones/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://example.org/notes/20211102122927-proyecciones/&amp;text=Proyecciones" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://example.org/notes/20211102122927-proyecciones/&amp;title=Proyecciones" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Proyecciones</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Leobardo Argüelles
+          
+          </strong>
+      </p>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Las proyecciones buscan encontrar el vector que forma parte de
+un subespacio, que <strong>minimice</strong> el error entre las componentes
+del subespacio, y el vector proyectado.</p>
+<h2 id="proyección-de-un-vector-a-un-segmento">PROYECCIÓN DE UN VECTOR A UN SEGMENTO</h2>
+<p>Cuando se proyecta un <a href="/notes/20210827181941-vectores/">vector</a> sobre una línea, <strong>la proyección es la parte</strong>
+<strong>del vector que corre sobre esa línea</strong>.</p>
+<p>Por lo tanto, la proyección sobre una línea no es más que <strong>la misma línea, escalada</strong>.
+Entonces:</p>
+<p>\(p = \hat{x}a\)
+Donde:</p>
+<ul>
+<li>p es la proyección</li>
+<li>x gorrito es un escalar</li>
+<li>a es la línea sobre la cual se está proyectando.</li>
+</ul>
+<p>Notación alterna de la proyección:
+(Se lee como proyección de <em>b</em> sobre <em>a</em>)</p>
+<p>\begin{equation*}
+Proy_{ab} = \hat{x}a
+\end{equation*}</p>
+<ul>
+<li>La proyección sobre una línea se obtiene utilizando una matriz de <a href="/notes/20211005132127-rank_de_matriz/">rango</a> 1.</li>
+<li>Proyección sobre un plano viene de una matriz de rango 2.</li>
+</ul>
+<h3 id="restricciones">RESTRICCIONES</h3>
+<ul>
+<li>
+<p>Los <a href="/notes/20211001110338-subespacio_vectorial/">subespacios</a> <em>xy</em> y <em>z</em> son <a href="/notes/20211022120819-ortogonalidad/">ortogonales</a>.</p>
+</li>
+<li>
+<p>\(b=p_1+p_2\)
+Esto significa que las proyecciones son las <em>componentes</em> de \(\vec{b}\)
+en la línea y el plano.
+Por lo tanto, cualquier vector <em>b</em> puede obtenerse sumando sus partes
+en los <em>n</em> <a href="/notes/20211001110338-subespacio_vectorial/">subespacios</a>.</p>
+</li>
+<li>
+<p>\(P_1+P_2=I\)</p>
+</li>
+</ul>
+<h3 id="matriz-de-proyección-sobre-la-línea">MATRIZ DE PROYECCIÓN SOBRE LA LÍNEA</h3>
+<p>\begin{equation*}
+P_1 = \frac{a\, a^T}{a^T\, a}
+\end{equation*}</p>
+<p>Entonces, la proyección ab será:</p>
+<p>\begin{equation*}
+P_1b = \frac{a\, a^T}{a^T\, a}\, b
+\end{equation*}</p>
+<h4 id="características-de-esta-matriz-p1">CARACTERÍSTICAS DE ESTA MATRIZ P1</h4>
+<ul>
+<li>La matriz de proyección sobre una línea es de rango 1.</li>
+<li>La misma matriz <strong>sirve para proyecta cualquier vector <em>b</em> sobre la línea <em>a</em>.</strong>
+Si se observa la fórmula, se visualiza que para obtener la matriz
+de proyección, únicamente se requiere la línea sobre la cuál se hará la prayección.</li>
+<li>La matriz \(P_1\) es simétrica.</li>
+<li>Los elementos de la diagonal de \(P_1\) suman 1.</li>
+</ul>
+<h4 id="ejemplo">EJEMPLO</h4>
+<p>Encontrar la matriz de proyección \(P_1\) a través de \(a=(1\ 2\ 2)\)</p>
+<p>Resolviendo:</p>
+<p>\begin{equation*}
+P_1=\frac{a\, a^T}{a^T\, a}=\frac{
+\begin{bmatrix}1\\ 2\\ 2\end{bmatrix}
+\begin{bmatrix}1\ 2\ 2\end{bmatrix}
+}
+{
+\begin{bmatrix}1\ 2\ 2\end{bmatrix}
+\begin{bmatrix}1\\ 2\\ 2\end{bmatrix}
+}=
+\frac{1}{9}
+\begin{bmatrix}
+1\ 2\ 2\\<br>
+2\ 4\ 4\\<br>
+2\ 4\ 4\\<br>
+\end{bmatrix}
+\end{equation*}</p>
+<h3 id="valor-de-la-constante-de-escalamiento-de-la-línea">VALOR DE LA CONSTANTE DE ESCALAMIENTO DE LA LÍNEA</h3>
+<p>\begin{equation*}
+\hat{x} = \frac{a^Tb}{a^Ta}
+\end{equation*}</p>
+<h3 id="matriz-de-proyección-del-error">MATRIZ DE PROYECCIÓN DEL ERROR</h3>
+<p>Partiendo de la matriz de proyección <strong>sobre</strong> la línea \(P_1\), la matriz
+para proyectar al error se obtiene con:</p>
+<p>\begin{equation*}
+P_{perp}=I-P_1
+\end{equation*}</p>
+<p>Para obtener la proyección, se multiplica:</p>
+<p>\begin{equation*}
+P_{perp}b
+\end{equation*}</p>
+<h3 id="visto-gráficamente">VISTO GRÁFICAMENTE</h3>
+<p>Ambas imágenes pertenecen al mismo ejemplo:</p>
+<figure><img src="/ox-hugo/proyecciones_ejemplo.png"/>
+</figure>
+
+<figure><img src="/ox-hugo/mismo_plano.png"/>
+</figure>
+
+<h3 id="casos-especiales">CASOS ESPECIALES</h3>
+<ol>
+<li>Si <em>b=a</em>, entonces \(\hat{x}=1\).
+Es decir, la proyección sobre a, es a misma.</li>
+<li>Si <em>b</em> es pependicular a <em>a</em>, entonces \(a^Tb=0\), y la proyección es
+igual a 0.</li>
+<li>Si <em>b</em> es un escalar de <em>a</em> (está en la misma línea), la proyección es b misma.</li>
+</ol>
+<h2 id="proyección-sobre-un-espacio-n-dimensional">PROYECCIÓN SOBRE UN ESPACIO N-DIMENSIONAL</h2>
+<p>Donde <em>A</em> es la matriz cuyas columnas son la <a href="/notes/20211015130711-bases_algebra_lineal/">base</a> del subespacio
+sobre el cuál se proyectará el vector.</p>
+<p>Proyección:</p>
+<p>\begin{equation*}
+p = A(A^TA)^{-1}A^Tb
+\end{equation*}</p>
+<p>Matriz de proyección:</p>
+<p>\begin{equation*}
+P = A(A^TA)^{-1}A^T
+\end{equation*}</p>
+<h2 id="cálculo-del-error">CÁLCULO DEL ERROR</h2>
+<p>\begin{equation*}
+e=b-p
+\end{equation*}</p>
+<p>Nota: El error debe ser ortogonal al <a href="/notes/20210827181941-vectores/">vector</a> a, por lo que se ubica en
+su espacio nulo izquierdo.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy;  CS, Leo personal wiki 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

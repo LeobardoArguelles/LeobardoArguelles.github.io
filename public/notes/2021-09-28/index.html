@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>2021-09-28 | CS, Leo personal wiki</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="ESTRUCTURAS DE DATOS Lista doblemente enlazada Esta lista permite ir en ambas direcciones: Hacia delante y hacia atrás.
+Nodos Tienen 3 campos: Valor, nodo anterior, nodo siguiente.
+Preguntas para Anki  Cuantas clases se usan para implementar lista enlazada 2, una para lista enlazada, otra para nodo Qué atributos tiene la un objeto nodo (hablando de listas enlazadas) Valor, next (apuntador) Qué atributos tiene un objeto lista enlazada Head, tail, size Cuantas formas hay de insertar un nodo en una lista.">
+    <meta name="generator" content="Hugo 0.88.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="2021-09-28" />
+<meta property="og:description" content="ESTRUCTURAS DE DATOS Lista doblemente enlazada Esta lista permite ir en ambas direcciones: Hacia delante y hacia atrás.
+Nodos Tienen 3 campos: Valor, nodo anterior, nodo siguiente.
+Preguntas para Anki  Cuantas clases se usan para implementar lista enlazada 2, una para lista enlazada, otra para nodo Qué atributos tiene la un objeto nodo (hablando de listas enlazadas) Valor, next (apuntador) Qué atributos tiene un objeto lista enlazada Head, tail, size Cuantas formas hay de insertar un nodo en una lista." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/notes/2021-09-28/" /><meta property="article:section" content="notes" />
+
+
+
+<meta itemprop="name" content="2021-09-28">
+<meta itemprop="description" content="ESTRUCTURAS DE DATOS Lista doblemente enlazada Esta lista permite ir en ambas direcciones: Hacia delante y hacia atrás.
+Nodos Tienen 3 campos: Valor, nodo anterior, nodo siguiente.
+Preguntas para Anki  Cuantas clases se usan para implementar lista enlazada 2, una para lista enlazada, otra para nodo Qué atributos tiene la un objeto nodo (hablando de listas enlazadas) Valor, next (apuntador) Qué atributos tiene un objeto lista enlazada Head, tail, size Cuantas formas hay de insertar un nodo en una lista.">
+
+<meta itemprop="wordCount" content="799">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="2021-09-28"/>
+<meta name="twitter:description" content="ESTRUCTURAS DE DATOS Lista doblemente enlazada Esta lista permite ir en ambas direcciones: Hacia delante y hacia atrás.
+Nodos Tienen 3 campos: Valor, nodo anterior, nodo siguiente.
+Preguntas para Anki  Cuantas clases se usan para implementar lista enlazada 2, una para lista enlazada, otra para nodo Qué atributos tiene la un objeto nodo (hablando de listas enlazadas) Valor, next (apuntador) Qué atributos tiene un objeto lista enlazada Head, tail, size Cuantas formas hay de insertar un nodo en una lista."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        CS, Leo personal wiki
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        NOTES
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://example.org/notes/2021-09-28/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://example.org/notes/2021-09-28/&amp;text=2021-09-28" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://example.org/notes/2021-09-28/&amp;title=2021-09-28" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">2021-09-28</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Leobardo Argüelles
+          
+          </strong>
+      </p>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="estructuras-de-datos">ESTRUCTURAS DE DATOS</h2>
+<h3 id="lista-doblemente-enlazada">Lista doblemente enlazada</h3>
+<p>Esta lista permite ir en ambas direcciones: Hacia delante y hacia atrás.</p>
+<h4 id="nodos">Nodos</h4>
+<p>Tienen 3 campos: Valor, nodo anterior, nodo siguiente.</p>
+<h3 id="preguntas-para-anki">Preguntas para Anki</h3>
+<ul>
+<li>Cuantas clases se usan para implementar lista enlazada
+2, una para lista enlazada, otra para nodo</li>
+<li>Qué atributos tiene la un objeto nodo (hablando de listas enlazadas)
+Valor, next (apuntador)</li>
+<li>Qué atributos tiene un objeto lista enlazada
+Head, tail, size</li>
+<li>Cuantas formas hay de insertar un nodo en una lista.
+Append (añadir al final), preppend (añadir al inicio), insert (donde
+quieras)</li>
+<li>Simbolo de tierra (electrónica) para representar valor nulo</li>
+<li>Tipo de lista donde el apuntador previo del primer elemento, y el apuntador siguiente del ultimo elemento, ambos apuntan a nulo
+Lista doblemente enlazada</li>
+</ul>
+<h2 id="cc-aplicadas">CC APLICADAS</h2>
+<p>TEMA: ESPACIO VECTORIAL</p>
+<h3 id="competencias">Competencias</h3>
+<ul>
+<li>Identificar el espacio columna C(A) de A</li>
+<li>Determinar si el vector b pertenece al espacio columna: \(b \in (A)\)
+Si pertenece, hay solución. Si no, no hay.
+No pertenece: \(b \not\in (A)\)</li>
+<li>Identificar un subespacio vectorial dado un espacio vectorial.</li>
+</ul>
+<h3 id="conocimiento-previo">Conocimiento previo</h3>
+<p>Un grupo es un conjunto A aunado a un operador binario <strong>(cualquier operador binario)</strong>.
+Esto se denota con una tupla: (A, <!-- raw HTML omitted -->) tal que satisfaga los
+siguientes axiomas:</p>
+<h4 id="i-cerradura">I) Cerradura</h4>
+<p>\(\forall a, b \in A \therefore a \cdot b \in A\)
+(Traducción: Para todo a,b que pertencee a A, a <!-- raw HTML omitted --> b también
+pertenece a A)
+Donde el punto representa a <strong>cualquier operador binario</strong>.
+Ejemplo: \(a,b \in R\)</p>
+<ul>
+<li>a = 2</li>
+<li>b = 3</li>
+<li>Operador = +</li>
+</ul>
+<p>¿\(2+3 \in R\)?</p>
+<h4 id="ii-asociatividad">II) Asociatividad</h4>
+<p>\(\forall a,b,c \in A \therefor (a \cdot b)\cdot c = a \cdot (b\cdot c)\)</p>
+<h4 id="iii-elemento-identidad">III) Elemento identidad</h4>
+<p>\(\exists e \in A\; \nin \forall a \in A\) vale ea = ae = a.</p>
+<p>En este caso, <em>e</em> depende de la definición de <em>A</em>.</p>
+<ul>
+<li>Si hablamos de una matriz <em>A</em>, <em>e</em> es la matriz identidad.</li>
+<li>Si hablamos de un número <em>A</em>, <em>e</em> es el uno.</li>
+</ul>
+<h4 id="iv-elemento-inverso">IV) Elemento inverso</h4>
+<p>\(\forall \; a \in A\; \exists\; b \in A\; \exists \; a\cdot b = b \cdot a\)</p>
+<p>En este caso, <em>b</em> depende del operador.</p>
+<ul>
+<li>Si el operador es <strong>producto</strong>, <em>b</em> es el recíproco de <em>a</em>..</li>
+<li>Si el operodor es <strong>suma</strong>, <em>b</em> es <em>-a</em>.</li>
+</ul>
+<p>Ojo, hay que prestar atención al operador, ese es el importante en este
+axioma.</p>
+<h4 id="v-conmutatividad">V) Conmutatividad</h4>
+<p>\(\forall a,b \; \in A \; \; vale \; \; a\cdot b = b\cdot a\)</p>
+<h3 id="clases-de-grupos">Clases de grupos</h3>
+<p>Existen distintos tipos de grupos, dependiendo de qué axiomas aceptan
+o permiten:</p>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>I</th>
+<th>II</th>
+<th>III</th>
+<th>IV</th>
+<th>V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>semigrupo</td>
+<td>no</td>
+<td>si</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>grupoide</td>
+<td>no</td>
+<td>si</td>
+<td>si</td>
+<td>si</td>
+<td>no</td>
+</tr>
+<tr>
+<td>lazo</td>
+<td>si</td>
+<td>no</td>
+<td>si</td>
+<td>si</td>
+<td>no</td>
+</tr>
+<tr>
+<td>cuerpo</td>
+<td>si</td>
+<td>si</td>
+<td>si</td>
+<td>si</td>
+<td>si</td>
+</tr>
+</tbody>
+</table>
+<p>En este tema, nos importa el grupo <strong>cuerpo</strong>, el cual acepta <strong>todos los</strong>
+<strong>axiomas</strong>.</p>
+<h3 id="espacio-vectorial">Espacio vectorial</h3>
+<p>Un espacio vectorial sobre un <a href="#clases-de-grupos">cuerpo</a> <em>k</em> es un conjunto <em>V</em> <strong>no vacío</strong>
+(\(V \neq \{\}\)), dotado de <strong>dos operadores</strong>:</p>
+<ul>
+<li>Adición</li>
+<li>Producto</li>
+</ul>
+<p>Para el cuál es cerrado.</p>
+<ol>
+<li><em>V</em> contiene el vector cero.
+No ahuevo un vector, pero el equivalente en cero de acuerdo a con lo que
+estemos trabajando: Vector 0, el escalar 0, complejo (0, 0j), etc&hellip;</li>
+<li>Si \(c \in K\) y \(v \in V \; \therefore \; cv \in V\).
+Es cerrado con respecto al producto.</li>
+<li>Si \(v,w \in V\; \therefore \; v+w\in V\)
+Es cerrado con respecto a la suma.</li>
+</ol>
+<h4 id="ejemplos">Ejemplos</h4>
+<p>Considere el conjunto de matrices reales de 2x2 denotado como \(M_{22}\)
+Sean dos matrices cualquiera U y V \(\nin a,b,c,d,&hellip;h \in R\):</p>
+<p>\begin{align*}
+U &amp;=
+\begin{bmatrix}
+a\ b\\ c\ d\\<br>
+\end{bmatrix}
+\\<br>
+V &amp;=
+\begin{bmatrix}
+e\ f\\ g\ h\\<br>
+\end{bmatrix}
+\end{align*}</p>
+<p>Comprobando con regla 3 de la definición:
+\(¿U+V \in M_{22}\)
+Se tiene que:</p>
+<h1 id="endbmatrix">\begin{equation*}
+U+V =
+\begin{bmatrix}
+a\ b\\ c\ d\\<br>
+\end{bmatrix}
++
+\begin{bmatrix}
+e\ f\\ g\ h\\<br>
+\end{bmatrix}</h1>
+<p>\begin{bmatrix}
+a+e\; b+f\\ c+g\; d+h\\<br>
+\end{bmatrix}
+\end{equation*}</p>
+<p>La matriz resultante <strong>sí es de 2x2</strong>.
+Además, la suma de todos sus elementos <strong>sí pertenece a los reales</strong>,
+porque la suma de números reales da otro nnumero real.
+Por lo tanto: <strong>EL AXIOMA III ES VERDADERO</strong>.</p>
+<p>Nota: Esto solo comprueba el axioma III. Si se quiere demostrar que el
+grupo sí es, en efecto, un espacio vectorial, se deben comprobar <strong>todos</strong>
+los axiomas.</p>
+<h3 id="subespacio-vectorial">Subespacio vectorial</h3>
+<p>Sea \(\nu\) un <strong>subespacio</strong> vectorial de V, sobre un cuerpo K, no vacío, con
+V siendo un espacio vectorial, sujeto a:</p>
+<ol>
+<li>\(\nu\) contiene el vector cero.</li>
+<li>\(\forall v \in \nu, \; \;\forall c \in K \; \; vale \; \;cv \in \nu\)
+Cerrado con respecto al producto.</li>
+<li>\(\forall u,v \in \nu, \; \; u+v \in \nu\)
+Cerrado con respecto a la suma.</li>
+</ol>
+<p>Ejemplo:
+<img src="/ox-hugo/ejemplo_espacio_cerrado.png" alt=""></p>
+<h3 id="notas-anki">Notas anki</h3>
+<ul>
+<li>
+<p>Nota con símbolos matemáticos latex: in, nin, not, negation, etc.</p>
+</li>
+<li>
+<p>\(R ^2\) es el espacio cartesiano</p>
+</li>
+<li>
+<p>Este vector corresponde a \(R^2\)</p>
+<p>\begin{bmatrix}
+4\\ \pi
+\end{bmatrix}</p>
+</li>
+<li>
+<p>Este vector corresponde a \(R^5\): (1, 1, 0, 1, 1)</p>
+</li>
+<li>
+<p>Este vector corresponde a \(C^2\)</p>
+<p>\begin{bmatrix}
+1+i\\ 1-i
+\end{bmatrix}</p>
+</li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy;  CS, Leo personal wiki 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
