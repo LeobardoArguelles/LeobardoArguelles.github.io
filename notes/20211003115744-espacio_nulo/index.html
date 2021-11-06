@@ -1,0 +1,263 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<title>Espacio nulo | CS, Leo personal wiki</title>
+<meta name=viewport content="width=device-width,minimum-scale=1">
+<meta name=description content="El espacio nulo (nullspace) es el subespacio que contiene todas las soluciones al sistema Ax=0.
+NOTACIÓN El espacio nulo se representa como: \(N(A)\).
+Hay que notar que los vectores x tienen n componentes, hablando de una matriz con dimensiones \(A_{mn}\). Entonces, los vectores x pertenecientes a \(N(A)\), están en \(R^n\). Hay que diferenciar eso del espacio columna, cuyos vectores pertenecen a \(R^m\).
+ESPACIO NULO EN MATRICES INVERTIBLES En matrices que sí pueden ser invertidas, el único vector en el espacio nulo es el vector cero.">
+<meta name=generator content="Hugo 0.89.0">
+<meta name=ROBOTS content="NOINDEX, NOFOLLOW">
+<link rel=stylesheet href=/ananke/css/main.min.css>
+<meta property="og:title" content="Espacio nulo">
+<meta property="og:description" content="El espacio nulo (nullspace) es el subespacio que contiene todas las soluciones al sistema Ax=0.
+NOTACIÓN El espacio nulo se representa como: \(N(A)\).
+Hay que notar que los vectores x tienen n componentes, hablando de una matriz con dimensiones \(A_{mn}\). Entonces, los vectores x pertenecientes a \(N(A)\), están en \(R^n\). Hay que diferenciar eso del espacio columna, cuyos vectores pertenecen a \(R^m\).
+ESPACIO NULO EN MATRICES INVERTIBLES En matrices que sí pueden ser invertidas, el único vector en el espacio nulo es el vector cero.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://example.org/notes/20211003115744-espacio_nulo/"><meta property="article:section" content="notes">
+<meta itemprop=name content="Espacio nulo">
+<meta itemprop=description content="El espacio nulo (nullspace) es el subespacio que contiene todas las soluciones al sistema Ax=0.
+NOTACIÓN El espacio nulo se representa como: \(N(A)\).
+Hay que notar que los vectores x tienen n componentes, hablando de una matriz con dimensiones \(A_{mn}\). Entonces, los vectores x pertenecientes a \(N(A)\), están en \(R^n\). Hay que diferenciar eso del espacio columna, cuyos vectores pertenecen a \(R^m\).
+ESPACIO NULO EN MATRICES INVERTIBLES En matrices que sí pueden ser invertidas, el único vector en el espacio nulo es el vector cero.">
+<meta itemprop=wordCount content="801">
+<meta itemprop=keywords content><meta name=twitter:card content="summary">
+<meta name=twitter:title content="Espacio nulo">
+<meta name=twitter:description content="El espacio nulo (nullspace) es el subespacio que contiene todas las soluciones al sistema Ax=0.
+NOTACIÓN El espacio nulo se representa como: \(N(A)\).
+Hay que notar que los vectores x tienen n componentes, hablando de una matriz con dimensiones \(A_{mn}\). Entonces, los vectores x pertenecientes a \(N(A)\), están en \(R^n\). Hay que diferenciar eso del espacio columna, cuyos vectores pertenecen a \(R^m\).
+ESPACIO NULO EN MATRICES INVERTIBLES En matrices que sí pueden ser invertidas, el único vector en el espacio nulo es el vector cero.">
+</head>
+<body class="ma0 avenir bg-near-white">
+<header>
+<div class=bg-black>
+<nav class="pv3 ph3 ph4-ns" role=navigation>
+<div class="flex-l justify-between items-center center">
+<a href=/ class="f3 fw2 hover-white no-underline white-90 dib">
+CS, Leo personal wiki
+</a>
+<div class="flex-l items-center">
+</div>
+</div>
+</nav>
+</div>
+<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:!0,processEnvironments:!0},options:{skipHtmlTags:['script','noscript','style','textarea','pre']}},window.addEventListener('load',a=>{document.querySelectorAll("mjx-container").forEach(function(a){a.parentElement.classList+='has-jax'})})</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+</header>
+<main class=pb7 role=main>
+<article class="flex-l flex-wrap justify-between mw8 center ph3">
+<header class="mt4 w-100">
+<aside class="instapaper_ignoref b helvetica tracked">
+NOTES
+</aside>
+<div id=sharing class=mt3>
+<a href="https://www.facebook.com/sharer.php?u=http://example.org/notes/20211003115744-espacio_nulo/" class="facebook no-underline" aria-label="share on Facebook"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765 50.32h6.744V33.998h4.499l.596-5.624h-5.095l.007-2.816c0-1.466.14-2.253 2.244-2.253h2.812V17.68h-4.5c-5.405.0-7.307 2.729-7.307 7.317v3.377h-3.369v5.625h3.369V50.32zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd"/></svg>
+</a>
+<a href="https://twitter.com/share?url=http://example.org/notes/20211003115744-espacio_nulo/&text=Espacio%20nulo" class="twitter no-underline" aria-label="share on Twitter"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173.0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678c-1.676.976-3.646 1.526-5.616 1.568C19.775 43.256 19 43.341 19 43.405c0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.673 5.657-5 6.978-8.221.713-1.716 1.425-4.851 1.425-6.354.0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267.0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932C39.766 21.902 38.131 21.944 37.167 22.283zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg>
+</a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.org/notes/20211003115744-espacio_nulo/&title=Espacio%20nulo" class="linkedin no-underline" aria-label="share on LinkedIn"><svg height="32" style="enable-background:new 0 0 65 65" viewBox="0 0 65 65" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M50.837 48.137V36.425c0-6.275-3.35-9.195-7.816-9.195-3.604.0-5.219 1.983-6.119 3.374V27.71h-6.79c.09 1.917.0 20.427.0 20.427h6.79V36.729c0-.609.044-1.219.224-1.655.49-1.22 1.607-2.483 3.482-2.483 2.458.0 3.44 1.873 3.44 4.618v10.929H50.837zM22.959 24.922c2.367.0 3.842-1.57 3.842-3.531-.044-2.003-1.475-3.528-3.797-3.528s-3.841 1.524-3.841 3.528c0 1.961 1.474 3.531 3.753 3.531H22.959zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30zM26.354 48.137V27.71h-6.789v20.427h6.789z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg>
+</a>
+</div>
+<h1 class="f1 athelas mt3 mb1">Espacio nulo</h1>
+<p class=tracked>
+By <strong>
+Leobardo Argüelles
+</strong>
+</p>
+</header>
+<div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>El espacio nulo (<em>nullspace</em>) es el <a href=/notes/20211001110338-subespacio_vectorial/>subespacio</a> que contiene todas las
+soluciones al sistema <em>Ax=0</em>.</p>
+<h2 id=notación>NOTACIÓN</h2>
+<p>El espacio nulo se representa como: \(N(A)\).</p>
+<p>Hay que notar que los vectores <em>x</em> tienen <em>n</em> componentes, hablando de una
+matriz con dimensiones \(A_{mn}\).
+Entonces, los vectores <em>x</em> pertenecientes a \(N(A)\), están en \(R^n\). Hay que
+diferenciar eso del <a href=/notes/20211003105934-espacio_columna_de_a/>espacio columna</a>, cuyos vectores pertenecen a \(R^m\).</p>
+<h2 id=espacio-nulo-en-matrices-invertibles>ESPACIO NULO EN MATRICES INVERTIBLES</h2>
+<p>En matrices que sí pueden ser invertidas, el único vector en el espacio nulo
+es el <strong>vector cero</strong>.</p>
+<p>En este caso, el vector cero es la <strong>única solución</strong> a \(Ax=0\)</p>
+<h2 id=espacio-nulo-en-matrices-no-invertibles>ESPACIO NULO EN MATRICES NO INVERTIBLES</h2>
+<p>Existirá al menos una solución al sistema \(Ax=0\), <strong>diferente al vector 0</strong>
+Cada <em>x</em> que resuelva el sistema pertenece al espacio nulo de A.</p>
+<h2 id=describiendo-el-espacio-nulo>DESCRIBIENDO EL ESPACIO NULO</h2>
+<p>La mejor forma de describirlo es encontrar las <strong>soluciones especiales</strong> al
+sistema, y definir que el espacio nulo se compone de todos los múltiplos
+de esa solución especial.</p>
+<p><strong>Nota: Para una matriz \(A_{mn}\), habrá \(n-r\) soluciones especiales, donde</strong>
+<strong><em>n</em> son las columnas de A, y <em>r</em> es su rank</strong>.</p>
+<p>Entonces, el espacio nulo \(N(A)\) consiste de todas las combinaciones lineales
+de las soluciones especiales de \(Ax=0\)</p>
+<h3 id=ejemplo>EJEMPLO</h3>
+<p>Para la matriz A:</p>
+<p>\begin{equation*}
+A=
+\begin{bmatrix}
+1\ 2\\ 3\ 6\\
+\end{bmatrix}
+\end{equation*}</p>
+<p>Se nota que es singular, por lo que puede aplicarse eliminación y llegar
+a:</p>
+<p>\begin{equation*}
+U=
+\begin{bmatrix}
+1\ 2\\ 0\ 0\\
+\end{bmatrix}
+\end{equation*}</p>
+<p>Partiendo de aquí, como ahora \(Ux=0\), se sabe que \(x_1 + 2x_2 = 0\).</p>
+<p>\(x_1\) es una variable <strong>no libre</strong>, porque viene de multiplicarse por un
+<strong>pivote</strong> de la matriz. Entonces, la despejamos para conocer su valor:
+\(x_1 = -2x_2\)</p>
+<p>Como \(x_2\) no es una <em>variable pivote</em>, será una varible libre, por lo
+que se le asigna cualquier valor (el más sencillo es darle valor 1).</p>
+<p>Ahora podemos elegir, <strong>arbitrariamente</strong>, el valor \(x_2\).
+Con este \(x_2\) se determina el valor de \(x_1\), y esa será nuestra solución
+especial.</p>
+<p>Por ejemplo, podemos decir que:</p>
+<p>\(x_2=1 \therefore \; x_1=-2\)</p>
+<p>La solución especial se plantea como: \(s=(-2, 1)\).</p>
+<p>Entonces:</p>
+<blockquote>
+<p>El espacio nulo de A contiene todos los múltiplos de s = (-2, 1)</p>
+</blockquote>
+<h3 id=ejemplo-de-clase>EJEMPLO DE CLASE</h3>
+<blockquote>
+<p>El espacio nulo de A consiste de todas las combinaciones lineales de las
+soluciones especiales de Ax=0</p>
+</blockquote>
+<p>Partiendo de la ecuación: \(x+2y+3z=0\),</p>
+<p>Se tiene que \(x\) será el pivote (porque tiene coeficiente de 1).
+Entonces, <em>y</em>, <em>z</em> serán variables libres.</p>
+<p><strong>De cada variable libre sale una solución especial</strong>:</p>
+<ul>
+<li>
+<p>Primer caso: Elegimos y
+Se elige <em>y</em> dándole un valor de 1, y a todas las demás variables libres
+se les asigna 0:
+\(y=1\)
+\(z=0\)</p>
+<p>Se resuelve el sistema para obtener x:</p>
+<p>\begin{align*}
+x+2(1)+3(0)&=0\\
+x&=-2
+\end{align*}</p>
+<p>Esto nos da la solución especial: \((-2, 1, 0)\)</p>
+</li>
+<li>
+<p>Segundo caso: Elegimos z
+\(y=0\)
+\(z=1\)</p>
+<p>Se resuelve el sistema:</p>
+<p>\begin{align*}
+x+2(0)+3(1)&=0\\
+x&=-3
+\end{align*}</p>
+<p>Lo que nos da la solución especial: \((-3,0,1)\)</p>
+</li>
+</ul>
+<p>Con esto, nos queda que el espacio nulo de A es:</p>
+<p>\begin{equation*}
+N(A) = \left\{
+\begin{bmatrix}
+-2\\ 1\\ 0
+\end{bmatrix}, \;
+\begin{bmatrix}
+-3\\ 0\\ 1
+\end{bmatrix}
+\right\}
+\end{equation*}</p>
+<p>Y cualquier vector derivado de combinear linealmente estos vectores forma
+parte del espacio nulo.</p>
+<h2 id=pivotes-y-variables-libres>PIVOTES Y VARIABLES LIBRES</h2>
+<p>En una <a href=/notes/20210909214626-multiplicacion_matriz_matriz/>multiplicación de filas por columnas</a>, el vector x tendrá tantas
+filas como A tenga columnas.</p>
+<h3 id=tantos-pivotes-como-la-dimensión-de-x>TANTOS PIVOTES COMO LA DIMENSIÓN DE X</h3>
+<p>En los casos que A sea cuadrada, o cuando sea un tipo rectángulo vectical
+(más filas que columnas), entonces <em>probablemente</em> no haya variables libres,
+porque cada columna que tenga un pivote le va corresponder una variable
+pivote.</p>
+<p>Por ejemplo:</p>
+<p>\begin{equation*}
+B = \begin{bmatrix}
+1\ 2\\ 3\ 8\\ 2\ 4\\ 6\ 16\\
+\end{bmatrix}
+\implies \;
+U=
+\begin{bmatrix}
+1\ 2\\ 0\ 1\\ 0\ 0\\ 0\ 0\\
+\end{bmatrix}
+\end{equation*}</p>
+<p>Esto pasa al aplicar eliminación.</p>
+<p>Entonces, en el sistema \(Ux=0\)</p>
+<p>Nos queda que:</p>
+<p>\begin{equation*}
+Ux=
+\begin{bmatrix}
+1\ 2\\ 0\ 1\\ 0\ 0\\ 0\ 0\\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\ x_2\\
+\end{bmatrix}
+\end{equation*}</p>
+<p>Y como hay 2 pivotes, tanto \(x_1\) como \(x_2\) son pivotes.</p>
+<h3 id=menos-pivotes-que-la-dimensión-de-x>MENOS PIVOTES QUE LA DIMENSIÓN DE X</h3>
+<p>Por otro lado, cuando no hay tantos pivotes como la dimensión de <em>x</em>,
+entonces <strong>sí quedarán variables libres</strong>.</p>
+<p>E.g.:</p>
+<p>\begin{equation*}
+B=
+\begin{bmatrix}
+1\ &2\ &2\ &4\\
+3\ &8\ &6\ &16
+\end{bmatrix}
+\implies \;
+U=
+\begin{bmatrix}
+1\ 2\ 2\ 4\\
+0\ 2\ 0\ 4\\
+\end{bmatrix}
+\end{equation*}</p>
+<p>Esto queda al aplicar eliminación.</p>
+<p>Luego, tenemos que los pivotes de la matriz son las columnas 1 y 2.
+Viendo el sistema Ux:</p>
+<p>\begin{equation*}
+Ux=
+\begin{bmatrix}
+1\ 2\ 2\ 4\\
+0\ 2\ 0\ 4\\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\ x_2\\ x_3\\ x_4\\
+\end{bmatrix}
+\end{equation*}</p>
+<p>Se aprecia que los pivotes se multiplicarán por \(x_1\) y \(x_2\). Por lo que
+esas variables son nuestros pivotes.</p>
+<p>Por otro lado, \(x_3\) y \(x_4\) son <strong>variables libres</strong>.</p>
+<h2 id=dimensión>DIMENSIÓN</h2>
+<p>Tiene dimensión <em>n-r</em>, donde <em>r</em> es el <a href=/notes/20211005132127-rank_de_matriz/>rango</a> de la matriz.</p>
+<p>Se complementa con la <a href=/notes/20211015190936-espacio_linea_de_a/>dimensión del espacio línea</a>, que es <em>r</em>, y entre los
+dos completan todo <em>n</em>.</p>
+<ul class=pa0>
+</ul>
+<div class="mt6 instapaper_ignoref">
+</div>
+</div>
+<aside class="w-30-l mt6-l">
+</aside>
+</article>
+</main>
+<footer class="bg-black bottom-0 w-100 pa3" role=contentinfo>
+<div class="flex justify-between">
+<a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=http://example.org/>
+&copy; CS, Leo personal wiki 2021
+</a>
+<div>
+</div>
+</div>
+</footer>
+</body>
+</html>
