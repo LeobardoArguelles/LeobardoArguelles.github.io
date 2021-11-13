@@ -46,15 +46,17 @@ Notes
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211018121043-miniterminos_y_maxiterminos/ class="link black dim">
-Minitérminos y Maxitérminos
+<a href=/notes/20210924142844-nand/ class="link black dim">
+NAND
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-MINITÉRMINO Es el producto de todas las variables con, o sin su complemento. Cada variable aparece únicamente una sola vez, y existe una sola combinación que haga que el resultado del producto sea 1.
-Todas las demás serán 0.
-Se crean a partir de los valores de las variables:
-Si el valor es 0, se usa la variable complementada. Si el valor es 1, se usa la variable tal como es.
+Hace una operación AND, y luego la niega. Esto significa que siempre regresa verdadero, excepto cuando sus dos entradas son verdaderas.
+Formas de expresarlo:
+\(\overline{\left( A \wedge B \right)}\)
+\(\neg (A \wedge B)\)
+TABLA DE VERDAD \(Y=\overline{(A \cdot B)}\)
+A B Y 0 0 1 0 1 1 1 0 1 1 1 0
 </div>
 </div>
 </div>
@@ -63,14 +65,11 @@ Si el valor es 0, se usa la variable complementada. Si el valor es 1, se usa la 
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210913075136-monticulo/ class="link black dim">
-Monticulo
+<a href=/notes/20211016205431-netcat/ class="link black dim">
+netcat
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Los montículos (Heap en inglés) son estructuras de datos basadas en la estructura multi-enlazada árbol.
-La característica principal es que en un montículo, la raiz de cualquier árbol siempre será mayor o igual (o menor igual, depende lo que se quiera) que todos sus hijos. Esto se conoce como heap property.
-Sin embargo, esto no significa que sea una estructura ordenada. Cada nodo debe cumplir el heap property, pero los hijos de los nodos hermanos pueden estar repartidos en cualquier orden.
 </div>
 </div>
 </div>
@@ -79,14 +78,14 @@ Sin embargo, esto no significa que sea una estructura ordenada. Cada nodo debe c
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210913074958-monticulo_binario/ class="link black dim">
-Monticulo Binario
+<a href=/notes/20211030211530-netdiscover/ class="link black dim">
+netdiscover
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Es un tipo de Monticulo que cumple con la propiedad de que todos los nodos son mayores (o menores) que cualquiera de sus hijos.
-Es binario porque sigue la estructura de un árbol binario, donde cada nodo tiene como máximo 2 hijos.
-PROPIEDADES El árbol binario es completo Esto significa que todos los niveles están llenos, excepto las hojas del árbol, las cuales son colocadas cargadas hacia la izquierda. Max-heap property (or min-heap property) El valor de cada nodo es mayor o igual (o menor igual) que el de cualquiera de sus hijos.
+Useful to scan for devices on your network.
+Run:
+sudo netdiscover -r &lt;ip_here>/24
 </div>
 </div>
 </div>
@@ -95,14 +94,14 @@ PROPIEDADES El árbol binario es completo Esto significa que todos los niveles 
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210909214626-multiplicacion_matriz_matriz/ class="link black dim">
-Multiplicación Matriz-Matriz
+<a href=/notes/20211015094622-nikto/ class="link black dim">
+nikto
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-LEY FUNDAMENTAL \(AB\ times \ C\ equals\ A\ times\ BC\)
-REGLAS Para 2 matrices A y B, en el producto AB=C:
-El número de columnas de A debe coincidr con el número de filas de B. Es decir que para poder multiplicarlas, deben tener la siguiente forma: \(A_{m\times n} \; B_{n\times p}\) porque n será común. El resultado tendrá las dimensiones \(C_{m\times p}\) Cada elemento de C será el resultado del producto punto AB.
+Web vulnerability scanner.
+TCM recommended command:
+nikto -h &lt;page or ip> -h stands for &ldquo;host&rdquo;
 </div>
 </div>
 </div>
@@ -111,17 +110,14 @@ El número de columnas de A debe coincidr con el número de filas de B. Es dec
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211011164954-metodo_de_choleski/ class="link black dim">
-Método de Choleski
+<a href=/notes/20211015093157-nmap/ class="link black dim">
+nmap
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-CONDICIÓN A debe ser simétrica, por lo que se puede descomponer como:
-\begin{equation*} A=LL^T \end{equation*}
-PROCEDIMIENTO Se aplica exactamente lo mismo que en Eliminación de Gauss (LU), pero como se está trabajando con matrices simétricas, podemos ahorrar espacio.
-Normalmente A se factorizaría en LU, pero cuando se trabaja con matrices simétricas, se sabe que \(U=L^T\).
-Entonces se obtiene únicamente L, y ahorramos el almacenamiento de U.
-A continuación se muestra el procedimiento algebraico sobre cómo se despejan las ecuaciones usadas:
+BASIC TCM recommended command:
+nmap -T4 -p- -A &lt;ip> Where:
+T4 is the speeed from 1 (slow) to 5 (fast) -p- asks to scan every port. -A enables scripts to get more info SMB nmap -p445,139 --scrit smb-protocols &lt;ip>
 </div>
 </div>
 </div>
@@ -130,17 +126,14 @@ A continuación se muestra el procedimiento algebraico sobre cómo se despejan l
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211011161752-metodo_de_gauss_seided/ class="link black dim">
-Método de Gauss-Seidel
+<a href=/notes/20210928191555-nor/ class="link black dim">
+NOR
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-CONDICIÓN La matriz A debe ser diagonal dominante. PROCEDIMIENTO Se factoriza A en L, D, y U. Luego se despeja el vector de resultados x, de la misma forma que en Método de Jacobi (Usando matrices).
-A continuación se muestra el procedimiento.
-\begin{equation*} \begin{aligned} Ax&=b\\ A&=L+D+U\\ (L+D+U)x&=b\\ Lx+Dx+Ux&=b\\ (L+D)x&=b-Ux\\ x&=(L+D)^{-1}\, (b-Ux) \end{aligned} \end{equation*}
-ECUACIÓN FINAL (LA QUE SE USA) \begin{equation*} x_{i+1}&=(L+D)^{-1}\, (b-Ux_{i}) \end{equation*}
-Donde:
-L, D, y U vienen de la factorización de A.
+Hace una operación OR y luego la niega. Si cualquiera de sus entradas es 1, regresará 0. Entonces, la única ocasión que regresa 1, es cuando ambas entradas son 0. Por lo anterior, puede considerarse como el inverso del AND.
+TABLA DE VERDAD \(Y=\overline{A+B}\)
+A B Y 0 0 1 0 1 0 1 0 0 1 1 0
 </div>
 </div>
 </div>
@@ -149,12 +142,14 @@ L, D, y U vienen de la factorización de A.
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211011144116-metodo_de_jacobi/ class="link black dim">
-Método de Jacobi
+<a href=/notes/20210827191223-normalizar_vectores/ class="link black dim">
+Normalizar vectores
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-CONDICIONES Para poder aplicar este método, la matriz A debe ser diagonal dominante. Para n incógnitas, debemos tener n ecuaciones. PROCEDIMIENTO De cada ecuación se despeja una variable diferente. Iterativamente se usan las ecuaciones obtenidas para obtener el siguiente término, hasta que el error sea aceptable. Por ejemplo, para calcular un \(x_{n+1}\) en función de y, se utiliza \(y_n\). Es decir, cada iteración depende de la anterior. Nota: Los términos iniciales \(x_0\) y \(y_0\) deben iniciar en un punto cercano a la solución.
+Normalizar un vector significa obtener un vector unitario que tenga las mismas características que otro vector no unitario.
+Para lograr esto, simplemente se divide cualquier vector (que no sea el vector cero) entre su norma:
+\begin{equation*} Unit\ vector = \frac{v}{\lVert v \rVert} \end{equation*}
 </div>
 </div>
 </div>
@@ -163,14 +158,14 @@ CONDICIONES Para poder aplicar este método, la matriz A debe ser diagonal domin
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211011155405-metodo_de_jacobi_usando_matrices/ class="link black dim">
-Método de Jacobi (Usando matrices)
+<a href=/notes/20210924113322-not/ class="link black dim">
+NOT
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Es la misma idea que el Método de Jacobi con ecuaciones, pero en vez de despejar variables y usar las ecuaciones, podemos usar matrices y vectores, lo que resulta más sencillo de trabajar en la computadora.
-CONDICIONES Las mismas que Jacobi normal:
-Para poder aplicar este método, la matriz A debe ser diagonal dominante. Para n incógnitas, debemos tener n ecuaciones. PROCEDIMIENTO Se inicia a partir de un sistema de ecuaciones como el siguiente:
+También conocido como negación. Invierte el resultado del valor booleano al que se aplique.
+SÍMBOLO Símbolo: \(\neg\) Nombre en latex: ¬
+TABLA DE VERDAD A Y = ¬A 0 1 1 0
 </div>
 </div>
 </div>
@@ -179,14 +174,15 @@ Para poder aplicar este método, la matriz A debe ser diagonal dominante. Para n
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211008174336-metodo_de_newton_raphson_calculo_de_raices/ class="link black dim">
-Método de Newton-Raphson (cálculo de raices)
+<a href=/notes/20210830195008-npm/ class="link black dim">
+NPM
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Este método parte de un guess \(x_0\), al cual le corresponderá un \(y_0\) en la gráfica de la función.
-Con este punto \(P_0\), se calcula la pendiente, usando 2 definiciones distintas:
-La derivada La derivada es la pendiente de la recta tangente en un punto. La pendiente es el delta y sobre el desta x. Para calcular el delta, se necesita otro punto. Se usará el punto donde la recta tangente cruce el eje X, por lo que se sabrá que \(y=0\).
+Npm can be used as a standalone package manager, although it is usually used with Node.js.
+Because of this, npm will go hand in hand with a package.json file, which will hold the projects metadata and the packages required.
+ESENTIAL COMMANDS npm init This command will init a project and ask questions like its name, version, description, etc&mldr; and create a initial package.json.
+npm install npm install &lt;module> will install the requested &lt;module>.
 </div>
 </div>
 </div>
@@ -195,13 +191,12 @@ La derivada La derivada es la pendiente de la recta tangente en un punto. La pen
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211011143935-metodos_numericos_para_solucionar_un_sistema_ax_b/ class="link black dim">
-Métodos numéricos para solucionar un sistema Ax=b
+<a href=/notes/20211112141948-obligaciones_como_contribuyente/ class="link black dim">
+Obligaciones como contribuyente
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-MÉTODOS ITERATIVOS Estos son métodos abiertos, y se aproximan a la solución.
-Método de Jacobi Método de Jacobi (Usando matrices) Método de Gauss-Seided Eliminación de Gauss usando factorización LU
+CONTRIBUCIONES Aportaciones de seguridad social Se va a servicios como IMSS, ISSTECALI, juvilaciones, pensiones. Contribuciones de mejoras Derechos Impuestos IMPUESTOS IMPUESTO SOBRE LA RENTA Es el que se paga al ganar dinero, o al incrementar nuestro patrimonio. Lo pagamos quienes vivimos en México, incluyendo a extranjeros con residencia permanente, y empresas con sucursales en México. Residentes en el extranjero que ganan dinero que proviene de México. Se cobra sobre la ganancia neta.
 </div>
 </div>
 </div>
@@ -233,7 +228,7 @@ Método de Jacobi Método de Jacobi (Usando matrices) Método de Gauss-Seided El
 <a href=/notes/page/16/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/notes/page/25/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/notes/page/24/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></article>
 </main>

@@ -46,16 +46,14 @@ Notes
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211104081955-producto_de_sumas_algebra_booleana/ class="link black dim">
-Producto de sumas (Álgebra booleana)
+<a href=/notes/20210907205415-queue/ class="link black dim">
+Queue
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Es una expresión que consiste de puros maxitérminos multiplicándose entre sí.
-Esto es, son productos de sumas, donde en cada suma aparece el dominio completo de la ecuación.
-Por ejemplo, un producto de sumas sería: \((A+B')(A'+B)\)
-CONVERTIR A POS ESTÁNDAR Para obtener la forma canónica, se debe complementar cada suma que le falte algúna variable, sumando la suma con el complemento de la and.
-Nota: Esto se hace porque el complemento del and \(AA'\) genera como resultado 0, por lo que se considera un elemento neutro de la suma.
+Es un tipo de estructura lineal en la que el orden en el que entran y salen los elementos sí importa.
+La estructura de datos es bastante similar a una Pila, y la principal diferencia radica en el extraer elementos.
+DEFINICIÓN Una cola es una lista ordenada en la cual los elementos se insertan por un extremo (el final) y se eliminan por el otro (el frente). A esto se le llama FIFO (First In, First Out) o LILO (List In, Last Out).
 </div>
 </div>
 </div>
@@ -64,16 +62,14 @@ Nota: Esto se hace porque el complemento del and \(AA'\) genera como resultado 0
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210827182716-producto_de_vector_con_escalar/ class="link black dim">
-Producto de vector con escalar
+<a href=/notes/20210827173911-quicksort/ class="link black dim">
+Quicksort
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Un escalar actúa como una constante que escala los vectores. Este escalamiento puede invertir al vector, si el escalar es negativo.
-Toma de ejemplo un vector \(u = (u_1, u_2)\), y \(c\) es un escalar.
-Para multiplicar ambos, simplemente se hace la multiplicación del escalar por cada elemento del vector.
-Como resultado se obtiene un vector escalado por c, con las mismas características que el vector original.
-\begin{equation*} cu = \begin{bmatrix}cu_1\\ cu_2 \end{bmatrix} \end{equation*}
+Utiliza el paradigma de Divide and Conquer.
+Se elige un pivote de forma arbitraria. Este es usado para partir el array en 2, y a partir de ahí conquistar los problemas de forma recursiva.
+Nota: Lo que se elige es el índice del array (arbitrariamente). No se sabe de antemano qué elemento habrá ahí, así que será suerte si la lista se parte limpiamente a la mitad, o si quea desequilibrada.
 </div>
 </div>
 </div>
@@ -82,16 +78,19 @@ Como resultado se obtiene un vector escalado por c, con las mismas característ
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210928204200-producto_externo/ class="link black dim">
-Producto externo
+<a href=/notes/20211005132127-rank_de_matriz/ class="link black dim">
+Rank de matriz
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Se le llama producto externo al producto de dos vectores con dimensiones \(n \times 1\) y \(1 \times m\).
-Se le llama de esta forma porque tanto n como m quedan en el lado externo al hacer la operación.
-E.g: (nx1)(1xm)
-Esto genera una matriz de tamaño \(n \times m\).
-Por otro lado, el producto interno deja a n y m adentro, al centro, y produce un escalar. Para más información sobre el producto interno, ver Producto punto.
+El rank r de A es el número de pivotes.
+E.g:
+\begin{equation*} A= \begin{bmatrix} 1\ 0\ 2\ 3\\ 0\ 1\ 0\ 1\\ 0\ 0\ 0\ 0\\ \end{bmatrix} \end{equation*}
+Hay 2 pivotes y 2 variables libres, por lo tanto:
+\(rank(A)=2\)
+CONOCIMIENTO QUE PROPORCIONA EL RANK Para una matriz \(A_{mn}\):
+FULL COLUMN RANK Si \(r=n\), se se llama full column rank, e implica que:
+Todas las matrices A que tengan \(r=n\) (son full column rank) tienen estas propiedades:
 </div>
 </div>
 </div>
@@ -100,14 +99,15 @@ Por otro lado, el producto interno deja a n y m adentro, al centro, y produce un
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210910131414-productio_matriz_por_escalar/ class="link black dim">
-Producto matriz por escalar
+<a href=/notes/20210908163802-razon_de_cambio_promedio/ class="link black dim">
+Razón de cambio promedio
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Se multiplica el escalar por cada elemento de la matriz, y el resultado es una matriz con las mismas dimensiones, pero escalada.
-Ejemplo:
-\begin{align*} A = \begin{bmatrix} 1\ 2\ 3\\ 4\ 5\ 6\\ 7\ 8\ 9\\ \end{bmatrix} \; y \; c = 5\\ \\ cA = \begin{bmatrix} 5\ &10\ &15\\ 20\ &25\ &30\\ 35\ &40\ &45\\ \end{bmatrix} \end{align*}
+La tasa de cambio promedio es un concepto muy similar a la pendiente, y es una medida de cuánto cambia la función por unidad, en promedio, de un intervalo.
+Es decir, qué tan rápido crece o disminuye f(x) por cada unidad de x.
+Se obtiene calculando la pendiente de la linea que se forma entre los 2 extremos de la función.
+CALCULAR LA RAZÓN DE CAMBIO PROMEDIO Es idéntico a la pendiente, pero como la ecuación no siempre será lineal, se puede platean como:
 </div>
 </div>
 </div>
@@ -116,15 +116,14 @@ Ejemplo:
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210827184353-producto_punto/ class="link black dim">
-Producto punto
+<a href=/notes/20211015095223-reconnaissance/ class="link black dim">
+Reconnaissance
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-El producto punto de un vector produce un escalar. Esto es diferente a otras operaciones con vectores, las cuales generan otros vectores.
-Cabe mencionar que el producto punto es conmutativo, es decir que: \(v \cdot w = w \cdot v\)
-DEFINICIÓN El producto pusto también se conoce como el producto interno, y se describe como la suma de los productos escalares de los elementos que comparten índice entre vectores.
-Es decir, 2 vectores \(u=(u_1,u_2)\) y \(v=(v_1,v_2)\) tendrían un producto punto de esta forma:
+Information gathering.
+ACTIVE Use tools and use them against a client.
+PASSIVE Target Validation Finding subdomains Fingerprinting Data Breaches (Ethical Hacking) OSINT
 </div>
 </div>
 </div>
@@ -133,12 +132,15 @@ Es decir, 2 vectores \(u=(u_1,u_2)\) y \(v=(v_1,v_2)\) tendrían un producto pu
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210918112915-propiedades_de_las_matrices/ class="link black dim">
-Propiedades de las matrices
+<a href=/notes/20210825102049-recurrences/ class="link black dim">
+Recurrences
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Predicado I Si existe una matriz no singular, y dado el sistema \(Ax=b\), entonces: \(x=A^{-1}\). Predicado II Si existe la matriz inversa de A, y \(Ax=0\), entonces el único valor que puede tomar x será el vector columna 0: \(x=0\). Predicado III Si la determinante de A es diferente de cero, entonces sí existe la matriz inversa de A. Predicado IV Una matriz A tendrá una y solo una matriz inversa.
+It is an equation or inequality that describes a function in terms of its value on smaller inputs.
+Solving recurrences Substitution method We guess a bound and then use mathematical induction to prove if it is correct.
+Recursion-tree method It converts the recurrence into a tree whose nodes represent the costs incurred at various levels of the recursion. To solve it, we use techniques for bounding summations.
+Master method Provides bounds for recurrences of the form T(n) = aT(n/b) + f(n)
 </div>
 </div>
 </div>
@@ -147,15 +149,13 @@ Predicado I Si existe una matriz no singular, y dado el sistema \(Ax=b\), entonc
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211102122927-proyecciones/ class="link black dim">
-Proyecciones
+<a href=/notes/20211011100822-regresion_lineal/ class="link black dim">
+Regresión Lineal
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
-PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
-Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
-\(\rho = \hat{x}a\) Donde:
+Técnica de modelado estadístico usada para describir una variable de respuesta continua como una función de una o varias variables predictoras.
+La línea roja es la regresión lineal. Es lineal porque es una linea (duh). La línea busca minimizar la sumatoria de distancias entre la recta y los puntos. La incógnita es la ecuación de la recta. \(y=mx+b\) SISTEMA Ax=b Para poder obtener la ecuación de la recta que hará la aproximación, se plantea el siguiente sistema Ax=b:
 </div>
 </div>
 </div>
@@ -164,12 +164,13 @@ Por lo tanto, la proyección sobre una línea no es más que la misma línea, es
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211105223547-publish_hugo_site_in_github_pages/ class="link black dim">
-Publish hugo site in github pages
+<a href=/notes/20211016205307-reverse_shell/ class="link black dim">
+Reverse shell
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Create a repository in your github account named: &lt;github_username>.github.io Don&rsquo;t have a github account? Well, create one. Don&rsquo;t add any of the freebies included in the repo (License, readme, etc&mldr;) Link the repository with the directory that has your Hugo files. In the main directory of your site, create the directories and the file &ldquo;.github/workflows/gh-pages.yml&rdquo; This is a default path for github to look for &ldquo;gh-pages.yml&rdquo; Inside &ldquo;gh-pages.yml&rdquo;, add the code from the appendix.
+The most common kind of shell: The victim connects to us.
+We open a port on our machine (like using netcat), and we listen. Then, the target connects using that port.
 </div>
 </div>
 </div>
@@ -178,18 +179,12 @@ Create a repository in your github account named: &lt;github_username>.github.io
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210908104638-punto_critico/ class="link black dim">
-Punto Critico
+<a href=/notes/20211015095312-scanning_and_enumeration/ class="link black dim">
+Scanning and enumeration
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-En cálculo, un punto crítico de una función de una variable real es cualquier valor del dominio donde una función no es diferenciable, es decir, que su derivada es 0.
-Dicho de otra forma, los puntos críticos son los máximos y los mínimos de una función, AKA puntos de inflexión.
-EJEMPLO \(f(x) = x^3\)
-\(f'(x)=3x^2\)
-Un punto crítico sería 0, porque:
-\(f'(0) = 0\)
-Imagen en Geogebra del punto critico de x^3
+TOOLS nmap Network mapper nikto Web vulnerability scanner Directory busting dirbuster dirb gobuster msfconsole SMB smbclient Use nmap script PORTS/SERVICES Port 21/FTP
 </div>
 </div>
 </div>
@@ -198,15 +193,14 @@ Imagen en Geogebra del punto critico de x^3
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211008175651-punto_fijo_calculo_de_raices/ class="link black dim">
-Punto fijo (cálculo de raices)
+<a href=/notes/20211003172900-schedule_zoom_meetings/ class="link black dim">
+Schedule Zoom Meetings
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-FUNDAMENTO Se parte de la definición de un punto fijo.
-Como en un punto fijo \(f(x)=x\), el cálculo de raíces usando este método nos ayuda a buscar un punto p tal que \(f(p)=0\).
-Lo que se hace entonces es plantear otra función g(x), la cual se define como \(g(x)=x-f(x)\).
-En este caso, calcular \(g(p)\) será igual a \(p-f(p)\) que, como sabemos que \(f(p)=0\), entonces queda \(g(p)=p\), lo que es un punto fijo.
+Create a bash file with the following syntax:
+zoom "zoommtg://zoom.us/join?confno=&lt;conference_number>&pwd=&lt;password>" Notes:
+Password is optional To get the necessary data, open the call on internet, and get it from the link. For example: url: zoommtg://zoom.us/join?confno=81119430791&pwd=bnBOOEZ6UWFtV3ZvUnVLK0VmakdWQT09 conference number: 81119430791 password: bnBOOEZ6UWFtV3ZvUnVLK0VmakdWQT09 Once you have the script, schedule it using cron or systemd.
 </div>
 </div>
 </div>
@@ -238,7 +232,7 @@ En este caso, calcular \(g(p)\) será igual a \(p-f(p)\) que, como sabemos que \
 <a href=/notes/page/20/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/notes/page/25/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/notes/page/24/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></article>
 </main>

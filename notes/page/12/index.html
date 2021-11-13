@@ -46,14 +46,13 @@ Notes
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210929122632-lista_enlazada_simple/ class="link black dim">
-Lista enlazada simple
+<a href=/notes/20210902164949-matriz_de_seleccion/ class="link black dim">
+Matriz de Seleccion
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Se implementa con 2 tipos de datos abstractos: LinkedList, Node.
-Cada elemento de una lista enlazada es de tipo Node, y el nodo tiene 2 atributos:
-Key: El valor almacenado Next: El nodo que viene después en la secuencia Es un puntero. El último elemento de la lista no tiene sucesor, así que se le asigna valor null, o None. REPRESENTACIÓN GRÁFICA IMPLEMENTACIÓN (PYTHON) class Node: """ Clase auxiliar para una lista enlazada.
+Solamente tiene unos y ceros, donde los unos son los elementos a conservar al hacer el producto punto con otra matriz.
+\begin{equation*} \begin{bmatrix} 1\ 2\\ 3\ 4\\ \end{bmatrix} \begin{bmatrix} 0\\ 1 \end{bmatrix} \begin{bmatrix} 2\\ 4 \end{bmatrix} \end{equation*}
 </div>
 </div>
 </div>
@@ -62,14 +61,12 @@ Key: El valor almacenado Next: El nodo que viene después en la secuencia Es un 
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210929121401-listas_enlazadas/ class="link black dim">
-Listas enlazadas
+<a href=/notes/20210918130420-matriz_densa/ class="link black dim">
+Matriz Densa
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Una lista enlazada es una estructura de datos lineal, donde el orden de los elementos se determina utilizando punteros.
-PROS Y CONTRAS Usar punteros trae varias ventajas sobre los arreglos estáticos, entre ellas:
-Modificar su tamaño durante la ejecución del programa. Tienen tamaño &ldquo;infinito&rdquo;. Siempre y cuando no se agote la memoria de la máquina. No desperdician espacio, pues solo se asigna memoria cuando se necesita agregar un elemento. La desventaja es que se requiere memoria extra por nodo, para almacenar tanto el dato como el puntero.
+No he encontrado una definición per se, pero es una matriz que no puede ser comprimida, porque contiene más valores que ceros.
 </div>
 </div>
 </div>
@@ -78,13 +75,16 @@ Modificar su tamaño durante la ejecución del programa. Tienen tamaño &ldquo;i
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210826165250-literature_survey/ class="link black dim">
-Literature Survey
+<a href=/notes/20210907130335-matriz_diagonalizada/ class="link black dim">
+Matriz Diagonal
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-It is a review of the existing material regarding a topic. A literature survey (or literature review) is meant to check existing published works to get a general overview of the state of the art and the current knowledge about said topic.
-It can be formalized by writting it in a proper article, or just a section of it, but both have the same objective.
+Una matriz que, solo tiene valores distintos a 0 en su diagonal. Todos los demás serán 0.
+Ejemplo:
+\begin{equation*} A = \begin{bmatrix} &2\ &4\ &-2\\ &4\ &9\ &-3\\ &-2\ &-3\ &7 \end{bmatrix} \end{equation*}
+Para esta A, su matriz diagonal será:
+\begin{equation*} D = \begin{bmatrix} &2\ &0\ &0\\ &0\ &1\ &0\\ &0\ &0\ &4 \end{bmatrix} \end{equation*}
 </div>
 </div>
 </div>
@@ -93,14 +93,16 @@ It can be formalized by writting it in a proper article, or just a section of it
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210827190056-longitud_de_un_vector/ class="link black dim">
-Longitud de un vector
+<a href=/notes/20210918125241-matriz_tridiagonal_dominante/ class="link black dim">
+Matriz Diagonal Dominante
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-La longitud de un vector es lo mismo que su norma. Para calcularla se requiere utilizar el producto punto.
-DEFINICIÓN La longitud de un vector \(\lVert v \rVert\) es igual a la raíz cuadrada del producto punto del vector por sí mismo.
-\begin{equation*} length = \lVert v \rVert = \sqrt{v \cdot v} \end{equation*}
+Definición formal: El valor absoluto del elemento en \(a_{ii}\) es mayor que lo suma total de los demás elementos de su línea. (Nota: \(a_{ii}\) es un elemento de la diagonal).
+\begin{equation*} \lvert a_{ii} \rvert > \sum_{j \neq i} \lvert a_{ij} \rvert \end{equation*}
+EJEMPLO DE MATRIZ DIAGONAL DOMINANTE \begin{equation*} A = \begin{bmatrix} 5\ &1\ &2\\ 0\ &-9\ &3\\ 1\ &3\ &5\\ \end{bmatrix} \end{equation*}
+Fila por fila:
+Fila 1. Elemento en la diagonal: 5 Suma de todos los demás en esa fila: 3 Cumple la condición.
 </div>
 </div>
 </div>
@@ -109,15 +111,15 @@ DEFINICIÓN La longitud de un vector \(\lVert v \rVert\) es igual a la raíz c
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211018130613-mapas_de_karnaugh/ class="link black dim">
-Mapas de Karnaugh
+<a href=/notes/20210907211457-matrices_elementales/ class="link black dim">
+Matriz Elemental
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Los mapas proveen un sistema para simplificar ecuaciones booleanas, resultando en expresiones POS o SOP en su mínima expresión.
-Es similar a una tabla de verdad, porque tiene \(2^n\) celdas, donde n es el número de variables, y además muestra todas las posibles combinaciones de entrada, y sus posibles resultados.
-Para reducir, hay que elegir entre trabajar la ecuación utilizando suma de productos o producto de sumas.
-Para elegir cual de las dos se usa:
+Es una variante de la Matriz Identidad, la cual, además de la diagonal de unos, tien un único elemento con valor distinto a cero, el cuál afectará a la matriz por la cual se multiplice esta matriz elemental.
+Ej:
+\begin{equation*} E_{13} = \begin{bmatrix} 1\ 0\ \frac{1}{4}\\ 0\ 1\ 0\\ 0\ 0\ 1\\ \end{bmatrix} \end{equation*}
+CREACION DE LA MATRIZ ELEMENTAL \(E_{ij}\) es la matriz identidad con multiplicador \(-\ell _{ij}\) en su posición i,j, donde \(-\ell _{ij}\) es el valor que se usará para afectará a la posición (i, j) de la matriz multiplicada.
 </div>
 </div>
 </div>
@@ -126,15 +128,16 @@ Para elegir cual de las dos se usa:
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210831072010-matrices/ class="link black dim">
-Matrices
+<a href=/notes/20211008134315-matriz_escalonada/ class="link black dim">
+Matriz Escalonada Reducida
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Las matrices pueden entenderse como varios vectores combinados en una misma estructura, dependiendo de qué tipo de vector estamos usando:
-Vectores columna Cada vector columna es una columna de la matriz. Vectores línea Cada vector línea es una línea de la matriz. Por ejemplo:
-Los vectores columna \(u=(1, 3, 5)\) y \(v=(2,4,6)\) pueden colocarse en la matriz 3x2:
-\begin{equation*} A = \begin{bmatrix} 1\ 2\\ 3\ 4\\ 5\ 6\\ \end{bmatrix} \end{equation*}
+Esta matriz es generada aplicando eliminación a una matriz rectangular.
+Si se trabaja con una matriz cuadrada, la eliminación se detiene al generar la matriz triangular U.
+PRODUCIENDO LA MATRIZ R Hablando de matrices rectangulares, podemos llegar a la forma escalonada reducida R aplicando los siguientes 2 pasos:
+Producir ceros arriba de los pivotes. Producir unos en los pivotes. EJEMPLO Partiendo de una matriz U:
+\begin{equation*} U= \begin{bmatrix} 1\ 2\ 2\ 4\\ 0\ 2\ 0\ 4\\ \end{bmatrix} \end{equation*}
 </div>
 </div>
 </div>
@@ -143,13 +146,14 @@ Los vectores columna \(u=(1, 3, 5)\) y \(v=(2,4,6)\) pueden colocarse en la matr
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210902165246-matrices_triangulares/ class="link black dim">
-Matrices Triangulares
+<a href=/notes/20210831224956-matriz_identidad/ class="link black dim">
+Matriz Identidad
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Los valores no tienen que ser 1, pero la característica es que se forma un triángulo arriba, con elementos con valor distinto de 0. Todos los demás son iguales a 0.
-En matrices triangulares, la diagonal de la matriz está formada por los pivotes. Además, para que exista la matriz inversa, debe haber tantos pivotes como el tamaño de la matriz. De lo contrario, una ecuación es linealmente dependiente, y no existe la matriz inversa.
+Es la matriz que multiplicada por otra matriz, da la misma matriz. Equivalente al 1 en multiplicación escalar. Su diagonal está llena de 1, el resto son ceros. Es un subtipo de matriz identidad. Nota: Otra notación para la matriz inversa \(I\) es escribirlo como: \(A^0\)
+\begin{equation*} I = \begin{bmatrix} 1\ 0\ 0\\ 0\ 1\ 0\\ 0\ 0\ 1 \end{bmatrix} = A^0 \end{equation*}
+CARACTERÍSTICAS Es cuadrada Tiene una diagonal de unos, y el resto son ceros Su símbolo es la letra &ldquo;I&rdquo;.
 </div>
 </div>
 </div>
@@ -158,16 +162,15 @@ En matrices triangulares, la diagonal de la matriz está formada por los pivote
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210909214239-matriz_aumentada/ class="link black dim">
-Matriz Aumentada
+<a href=/notes/20210831224318-matriz_inversa/ class="link black dim">
+Matriz Inversa
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Se le conoce de esta forma a la matriz que combina a la matriz de coeficientes y al resultado de un sistema de ecuaciones en una sola matriz.
-Es decir, si el sistema se plantea de la forma \(Ax=b\), entonces la matriz aumentada es [Ab].
-Para crearla, simplemente se agrega b hasta la derecha de A.
-Ej: Si A y b son:
-\begin{equation*} A = \begin{bmatrix} 1\ &2\\ 6\ &10\\ \end{bmatrix} \; b = \begin{bmatrix} 7\\ 42\\ \end{bmatrix} \end{equation*}
+La inversa de una matriz es una matriz que cuando se multiplican entre sí, producen la matriz identidad:
+\begin{equation*} A \cdot A^{-1} = A^{-1} \cdot A = I \end{equation*}
+Nota: No todas las matrices tienen inversa. Para que tenga inversa, la matriz debe ser linealmente independiente. También su determinante debe ser != 0
+DETERMINAR SI EXISTE LA MATRIZ INVERSA Si A es de \(nxn\), y tiene \(n\) pivotes, sí existe.
 </div>
 </div>
 </div>
@@ -176,15 +179,14 @@ Ej: Si A y b son:
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211009181821-matriz_bloque/ class="link black dim">
-Matriz bloque
+<a href=/notes/20210918123533-matriz_inversa_de_una_matriz_elemental/ class="link black dim">
+Matriz inversa de una matriz elemental
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Es una matriz que se interpreta como que fue sub-dividida en secciones llamadas bloques o submatrices.
-EJEMPLO Una matriz P de 4x4 puede partirse en 4 bloques de 2x2:
-\begin{equation*} P= \begin{bmatrix} 1\ 2\ 2\ 7\\ 1\ 5\ 6\ 2\\ 3\ 3\ 4\ 5\\ 3\ 3\ 6\ 7\\ \end{bmatrix} \end{equation*}
-\begin{equation*} P_{11}= \begin{bmatrix} 1\ 2\\ 1\ 5\\ \end{bmatrix}, \; \; P_{12}= \begin{bmatrix} 2\ 7\\ 6\ 2\\ \end{bmatrix}, \; \; P_{21}= \begin{bmatrix} 3\ 3\\ 3\ 3\\ \end{bmatrix}, \; \; P_{22}= \begin{bmatrix} 4\ 5\\ 6\ 7\\ \end{bmatrix} \end{equation*}
+Nada más se invierte el signo del multiplicador, y queda en la misma posición.
+Ejemplo:
+\begin{equation*} E= \begin{bmatrix} 1\ &0\ &0\\ -5\ &1\ &0\\ 0\ &0\ &1 \end{bmatrix} \; \; E^{-1}= \begin{bmatrix} 1\ &0\ &0\\ 5\ &1\ &0\\ 0\ &0\ &1 \end{bmatrix} \end{equation*}
 </div>
 </div>
 </div>
@@ -193,14 +195,13 @@ EJEMPLO Una matriz P de 4x4 puede partirse en 4 bloques de 2x2:
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210902165338-matriz_cuadrada/ class="link black dim">
-Matriz Cuadrada
+<a href=/notes/20210918130217-matriz_rala/ class="link black dim">
+Matriz Rala
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Son las matrices que tienen la misma cantidad de líneas que de columnas.
-Las siguientes 2 matrices son cuadradas:
-\begin{equation*} \begin{bmatrix} 1\ 2\\ 3\ 4\\ \end{bmatrix} \; y \; \begin{bmatrix} 1\ 2\ 3\\ 4\ 5\ 6\\ 7\ 8\ 9\\ \end{bmatrix} \end{equation*}
+Esta es una matriz con poca información útil, pues tiene más ceros que valores.
+EJEMPLO \begin{equation*} A= \begin{bmatrix} 1\ 2\ 0\ 0\ 0\\ 0\ 1\ 2\ 0\ 0\\ 0\ 0\ 2\ 1\ 0\\ 0\ 0\ 0\ 1\ 0\\ 0\ 0\ 0\ 0\ 2\\ \end{bmatrix} \end{equation*}
 </div>
 </div>
 </div>
@@ -232,7 +233,7 @@ Las siguientes 2 matrices son cuadradas:
 <a href=/notes/page/13/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/notes/page/25/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/notes/page/24/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></article>
 </main>

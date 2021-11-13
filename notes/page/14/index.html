@@ -46,13 +46,14 @@ Notes
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210918130217-matriz_rala/ class="link black dim">
-Matriz Rala
+<a href=/notes/20210913075136-monticulo/ class="link black dim">
+Monticulo
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Esta es una matriz con poca información útil, pues tiene más ceros que valores.
-EJEMPLO \begin{equation*} A= \begin{bmatrix} 1\ 2\ 0\ 0\ 0\\ 0\ 1\ 2\ 0\ 0\\ 0\ 0\ 2\ 1\ 0\\ 0\ 0\ 0\ 1\ 0\\ 0\ 0\ 0\ 0\ 2\\ \end{bmatrix} \end{equation*}
+Los montículos (Heap en inglés) son estructuras de datos basadas en la estructura multi-enlazada árbol.
+La característica principal es que en un montículo, la raiz de cualquier árbol siempre será mayor o igual (o menor igual, depende lo que se quiera) que todos sus hijos. Esto se conoce como heap property.
+Sin embargo, esto no significa que sea una estructura ordenada. Cada nodo debe cumplir el heap property, pero los hijos de los nodos hermanos pueden estar repartidos en cualquier orden.
 </div>
 </div>
 </div>
@@ -61,15 +62,14 @@ EJEMPLO \begin{equation*} A= \begin{bmatrix} 1\ 2\ 0\ 0\ 0\\ 0\ 1\ 2\ 0\ 0\\ 0\ 
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210918125103-matriz_simetrica/ class="link black dim">
-Matriz Simétrica
+<a href=/notes/20210913074958-monticulo_binario/ class="link black dim">
+Monticulo Binario
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Es una matriz donde aplicarle la transpuesta no genera ningun cambio.
-\begin{equation*} A = A^{T} \end{equation*}
-E.g
-\begin{equation*} A= \begin{bmatrix} 1\ 7\ 3\\ 7\ 4\ 5\\ 3\ 5\ 0\\ \end{bmatrix} \; \; \; A^{T}= \begin{bmatrix} 1\ 7\ 3\\ 7\ 4\ 5\\ 3\ 5\ 0\\ \end{bmatrix} \end{equation*}
+Es un tipo de Monticulo que cumple con la propiedad de que todos los nodos son mayores (o menores) que cualquiera de sus hijos.
+Es binario porque sigue la estructura de un árbol binario, donde cada nodo tiene como máximo 2 hijos.
+PROPIEDADES El árbol binario es completo Esto significa que todos los niveles están llenos, excepto las hojas del árbol, las cuales son colocadas cargadas hacia la izquierda. Max-heap property (or min-heap property) El valor de cada nodo es mayor o igual (o menor igual) que el de cualquiera de sus hijos.
 </div>
 </div>
 </div>
@@ -78,17 +78,14 @@ E.g
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210918113102-matriz_singular/ class="link black dim">
-Matriz Singular
+<a href=/notes/20210909214626-multiplicacion_matriz_matriz/ class="link black dim">
+Multiplicación Matriz-Matriz
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Una matriz singular es una matriz que no tiene matriz inversa.
-De forma contraria a las propiedades de una matriz inversa, una matriz será singular si:
-Su determinante es igual a 0. Alguno de sus vectores es linealmente dependiente. Ejemplo: Para una matriz A:
-\begin{equation*} A= \begin{bmatrix} 1\ 2\\ 1\ 2\\ \end{bmatrix} \end{equation*}
-Su determinante será:
-\begin{align*} \lvert A \rvert &= (1*2)-(1*2)\\ \lvert A \rvert &= 2 - 2\\ \lvert A \rvert &= 0 \end{align*}
+LEY FUNDAMENTAL \(AB\ times \ C\ equals\ A\ times\ BC\)
+REGLAS Para 2 matrices A y B, en el producto AB=C:
+El número de columnas de A debe coincidr con el número de filas de B. Es decir que para poder multiplicarlas, deben tener la siguiente forma: \(A_{m\times n} \; B_{n\times p}\) porque n será común. El resultado tendrá las dimensiones \(C_{m\times p}\) Cada elemento de C será el resultado del producto punto AB.
 </div>
 </div>
 </div>
@@ -97,16 +94,17 @@ Su determinante será:
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210928201705-matriz_transpuesta/ class="link black dim">
-Matriz Transpuesta
+<a href=/notes/20211011164954-metodo_de_choleski/ class="link black dim">
+Método de Choleski
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-La transpuesta de una matriz A, es una matriz \(A^T\) cuyas columnas corresponden a las líneas de A, y sus filas a las columnas de A. Es decir: Las filas y columnas están intercambiadas.
-Ejemplo:
-\begin{equation*} A= \begin{bmatrix} 1\ 2\ 3\\ 4\ 5\ 6\\ \end{bmatrix} \; \; \; A^{T} = \begin{bmatrix} 1\ 4\\ 2\ 5\\ 3\ 6\\ \end{bmatrix}
-\end{equation*}
-OPERACIONES CON LA TRANSPUESTA SUMA \begin{equation*} \left( A + B \right)^{T} = A^{T} + B^{T} \end{equation*}
+CONDICIÓN A debe ser simétrica, por lo que se puede descomponer como:
+\begin{equation*} A=LL^T \end{equation*}
+PROCEDIMIENTO Se aplica exactamente lo mismo que en Eliminación de Gauss (LU), pero como se está trabajando con matrices simétricas, podemos ahorrar espacio.
+Normalmente A se factorizaría en LU, pero cuando se trabaja con matrices simétricas, se sabe que \(U=L^T\).
+Entonces se obtiene únicamente L, y ahorramos el almacenamiento de U.
+A continuación se muestra el procedimiento algebraico sobre cómo se despejan las ecuaciones usadas:
 </div>
 </div>
 </div>
@@ -115,15 +113,17 @@ OPERACIONES CON LA TRANSPUESTA SUMA \begin{equation*} \left( A + B \right)^{T} =
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210918125138-matriz_tridiagonal/ class="link black dim">
-Matriz Tridiagonal
+<a href=/notes/20211011161752-metodo_de_gauss_seided/ class="link black dim">
+Método de Gauss-Seidel
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Tiene la diagonal central, y otras 2 diagonales adyacentes. Todo lo demás son ceros.
-NOTAS EFICIENCIA Y RECURSOS COMPUTACIONALES Una matriz rala es una matriz que tiene más ceros que valores Entonces, hablando de recursos computacionales, podemos comprimir esa matriz, para no usar tanto espacio.
-La excepción es si vamos a calcular su inversa, pues será densa.
-INVERSA DE UNA MATRIZ TRIDIAGONAL La inversa tiene la característica de que será densa.
+CONDICIÓN La matriz A debe ser diagonal dominante. PROCEDIMIENTO Se factoriza A en L, D, y U. Luego se despeja el vector de resultados x, de la misma forma que en Método de Jacobi (Usando matrices).
+A continuación se muestra el procedimiento.
+\begin{equation*} \begin{aligned} Ax&=b\\ A&=L+D+U\\ (L+D+U)x&=b\\ Lx+Dx+Ux&=b\\ (L+D)x&=b-Ux\\ x&=(L+D)^{-1}\, (b-Ux) \end{aligned} \end{equation*}
+ECUACIÓN FINAL (LA QUE SE USA) \begin{equation*} x_{i+1}&=(L+D)^{-1}\, (b-Ux_{i}) \end{equation*}
+Donde:
+L, D, y U vienen de la factorización de A.
 </div>
 </div>
 </div>
@@ -132,12 +132,12 @@ INVERSA DE UNA MATRIZ TRIDIAGONAL La inversa tiene la característica de que se
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211015101405-msfconsole/ class="link black dim">
-Metasploit
+<a href=/notes/20211011144116-metodo_de_jacobi/ class="link black dim">
+Método de Jacobi
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Run it msfconsole search &lt;something> use &lt;code> info Set the necessary options set &lt;option> &lt;value> run
+CONDICIONES Para poder aplicar este método, la matriz A debe ser diagonal dominante. Para n incógnitas, debemos tener n ecuaciones. PROCEDIMIENTO De cada ecuación se despeja una variable diferente. Iterativamente se usan las ecuaciones obtenidas para obtener el siguiente término, hasta que el error sea aceptable. Por ejemplo, para calcular un \(x_{n+1}\) en función de y, se utiliza \(y_n\). Es decir, cada iteración depende de la anterior. Nota: Los términos iniciales \(x_0\) y \(y_0\) deben iniciar en un punto cercano a la solución.
 </div>
 </div>
 </div>
@@ -146,13 +146,14 @@ Run it msfconsole search &lt;something> use &lt;code> info Set the necessary opt
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211017184236-meterpreter/ class="link black dim">
-Meterpreter
+<a href=/notes/20211011155405-metodo_de_jacobi_usando_matrices/ class="link black dim">
+Método de Jacobi (Usando matrices)
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Environment from Metasploit.
-HASHDUMP The command hashdump dumps the contents of the SAM database.
+Es la misma idea que el Método de Jacobi con ecuaciones, pero en vez de despejar variables y usar las ecuaciones, podemos usar matrices y vectores, lo que resulta más sencillo de trabajar en la computadora.
+CONDICIONES Las mismas que Jacobi normal:
+Para poder aplicar este método, la matriz A debe ser diagonal dominante. Para n incógnitas, debemos tener n ecuaciones. PROCEDIMIENTO Se inicia a partir de un sistema de ecuaciones como el siguiente:
 </div>
 </div>
 </div>
@@ -161,16 +162,14 @@ HASHDUMP The command hashdump dumps the contents of the SAM database.
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210902165958-metodo_de_eliminacion/ class="link black dim">
-Metodo de eliminacion
+<a href=/notes/20211008174336-metodo_de_newton_raphson_calculo_de_raices/ class="link black dim">
+Método de Newton-Raphson (cálculo de raices)
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Este método busca crear una matriz triangular superior.
-Es el método que ya conozco para resolver ecuaciones lineales:
-Se plantean las ecuaciones Se multiplica una igualdad por el recíproco del primer término, y eso se mutiplica por el primer término de la siguiente igualdad. Se repiten estos pasos hasta que se obtiene la matriz triangular superior. En general, si nuestras ecuaciones son:
-\begin{align*} 2x+4y-2z&=2\\ 4x+9y-3z&=8\\ -2x-3y+7z&=10 \end{align*}
-Generan el sistema Ax = b:
+Este método parte de un guess \(x_0\), al cual le corresponderá un \(y_0\) en la gráfica de la función.
+Con este punto \(P_0\), se calcula la pendiente, usando 2 definiciones distintas:
+La derivada La derivada es la pendiente de la recta tangente en un punto. La pendiente es el delta y sobre el desta x. Para calcular el delta, se necesita otro punto. Se usará el punto donde la recta tangente cruce el eje X, por lo que se sabrá que \(y=0\).
 </div>
 </div>
 </div>
@@ -179,16 +178,13 @@ Generan el sistema Ax = b:
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210918122240-metodo_de_gauss_jordan_para_obtener_matriz_inversa/ class="link black dim">
-Método de Gauss-Jordan para obtener matriz inversa
+<a href=/notes/20211011143935-metodos_numericos_para_solucionar_un_sistema_ax_b/ class="link black dim">
+Métodos numéricos para solucionar un sistema Ax=b
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Para una matriz A, se aumenta con la matriz identidad: [AI]
-Ejemplo:
-\begin{equation*} A= \begin{bmatrix} \ \ 2\ \ &\llap{$-$}1\ \ &0\\ \ \ \llap{$-$}1\ \ &2\ \ &\llap{$-$}1\\ \ \ 0\ \ &\llap{$-$}1\ \ &2 \end{bmatrix} \end{equation*}
-Matriz aumentada [AI]:
-\begin{equation*} [AI]= \begin{bmatrix} \ \ 2\ \ &\llap{$-$}1\ \ &0\ \ 1\ \ 0\ \ 0\\ \ \ \llap{$-$}1\ \ &2\ \ &\llap{$-$}1\ \ 0\ \ 1\ \ 0\\ \ \ 0\ \ &\llap{$-$}1\ \ &2\ \ 0\ \ 0\ \ 1\\ \end{bmatrix} \end{equation*}
+MÉTODOS ITERATIVOS Estos son métodos abiertos, y se aproximan a la solución.
+Método de Jacobi Método de Jacobi (Usando matrices) Método de Gauss-Seided Eliminación de Gauss usando factorización LU
 </div>
 </div>
 </div>
@@ -197,14 +193,12 @@ Matriz aumentada [AI]:
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210902171623-metodo_de_substitucion_hacia_atras/ class="link black dim">
-Método de substitución hacia atrás
+<a href=/notes/20211109121923-minimos_cuadrados/ class="link black dim">
+Mínimos cuadrados
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Este método se usa para solucionar un sistema de ecuaciones lineales, con matrices.
-Para poder aplicarlo, es necesario obtener una matriz triangular superior, la cual puede determinarse aplicando el metodo de eliminacion.
-Se llama sustitución hacia atrás porque se inicia resolviendo la igualdad con una sola incógnita y, con ese valor, se empieza a resolver hacia atrás resto de las ecuaciones, pues cada una utiliza el valor recién calculado en la anterior.
+*
 </div>
 </div>
 </div>
@@ -236,7 +230,7 @@ Se llama sustitución hacia atrás porque se inicia resolviendo la igualdad co
 <a href=/notes/page/15/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/notes/page/25/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/notes/page/24/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></article>
 </main>

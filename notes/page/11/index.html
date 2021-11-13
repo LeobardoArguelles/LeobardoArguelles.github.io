@@ -46,14 +46,14 @@ Notes
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210926184306-install_matlab_arch_linux/ class="link black dim">
-Install Matlab Arch Linux
+<a href=/notes/20210929121401-listas_enlazadas/ class="link black dim">
+Listas enlazadas
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Download, install, and activate Matlab from the official page. There shouldn&rsquo;t be any problems here.
-Now, what I had to do to actually make it work:
-Install Java 8 sudo pacman -S jdk8-openjdk. Add to your .bashrc these variables: export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre/ export J2D_D3D=false export GTK_PATH=/usr/lib/gtk-3.0 export _JAVA_AWT_WM_NONREPARENTING=1 Create a symbolic link to launch it just calling matlab. ln -s &lt;path/to/MATLAB/VERSION/bin/matlab> /usr/local/bin E.g: ln -s /usr/local/MATLAB/R2020a/bin/matlab /usr/local/bin Done?
+Una lista enlazada es una estructura de datos lineal, donde el orden de los elementos se determina utilizando punteros.
+PROS Y CONTRAS Usar punteros trae varias ventajas sobre los arreglos estáticos, entre ellas:
+Modificar su tamaño durante la ejecución del programa. Tienen tamaño &ldquo;infinito&rdquo;. Siempre y cuando no se agote la memoria de la máquina. No desperdician espacio, pues solo se asigna memoria cuando se necesita agregar un elemento. La desventaja es que se requiere memoria extra por nodo, para almacenar tanto el dato como el puntero.
 </div>
 </div>
 </div>
@@ -62,12 +62,13 @@ Install Java 8 sudo pacman -S jdk8-openjdk. Add to your .bashrc these variables:
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211027110735-interpolacion/ class="link black dim">
-Interpolación
+<a href=/notes/20210826165250-literature_survey/ class="link black dim">
+Literature Survey
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Vander Lagrange Spline cuadrático/cúbico/etc
+It is a review of the existing material regarding a topic. A literature survey (or literature review) is meant to check existing published works to get a general overview of the state of the art and the current knowledge about said topic.
+It can be formalized by writting it in a proper article, or just a section of it, but both have the same objective.
 </div>
 </div>
 </div>
@@ -76,12 +77,14 @@ Vander Lagrange Spline cuadrático/cúbico/etc
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210914080443-latex/ class="link black dim">
-LaTeX
+<a href=/notes/20210827190056-longitud_de_un_vector/ class="link black dim">
+Longitud de un vector
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-GRÁFICOS TikZ
+La longitud de un vector es lo mismo que su norma. Para calcularla se requiere utilizar el producto punto.
+DEFINICIÓN La longitud de un vector \(\lVert v \rVert\) es igual a la raíz cuadrada del producto punto del vector por sí mismo.
+\begin{equation*} length = \lVert v \rVert = \sqrt{v \cdot v} \end{equation*}
 </div>
 </div>
 </div>
@@ -90,11 +93,15 @@ GRÁFICOS TikZ
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211008111839-latex_decimal_point/ class="link black dim">
-Latex decimal point
+<a href=/notes/20211018130613-mapas_de_karnaugh/ class="link black dim">
+Mapas de Karnaugh
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
+Los mapas proveen un sistema para simplificar ecuaciones booleanas, resultando en expresiones POS o SOP en su mínima expresión.
+Es similar a una tabla de verdad, porque tiene \(2^n\) celdas, donde n es el número de variables, y además muestra todas las posibles combinaciones de entrada, y sus posibles resultados.
+Para reducir, hay que elegir entre trabajar la ecuación utilizando suma de productos o producto de sumas.
+Para elegir cual de las dos se usa:
 </div>
 </div>
 </div>
@@ -103,13 +110,15 @@ Latex decimal point
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211007153011-latex_image_matrix/ class="link black dim">
-Latex image matrix
+<a href=/notes/20210831072010-matrices/ class="link black dim">
+Matrices
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Se utiliza tabular para crear la cuadrícula. Para que cada imagen tenga su caption, podemos definir un comando nuevo: subf, y otro para que se vea bonito con espacios: Add height (Latex command)
-USO
+Las matrices pueden entenderse como varios vectores combinados en una misma estructura, dependiendo de qué tipo de vector estamos usando:
+Vectores columna Cada vector columna es una columna de la matriz. Vectores línea Cada vector línea es una línea de la matriz. Por ejemplo:
+Los vectores columna \(u=(1, 3, 5)\) y \(v=(2,4,6)\) pueden colocarse en la matriz 3x2:
+\begin{equation*} A = \begin{bmatrix} 1\ 2\\ 3\ 4\\ 5\ 6\\ \end{bmatrix} \end{equation*}
 </div>
 </div>
 </div>
@@ -118,12 +127,13 @@ USO
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210914131950-leyes_de_las_operaciones_con_matrices/ class="link black dim">
-Leyes de las operaciones con matrices
+<a href=/notes/20210902165246-matrices_triangulares/ class="link black dim">
+Matrices Triangulares
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-SUMA Conmutativa: \(A+B=B+A\) Distributiva: \(c(A+B)=(cA+cB)\) Asociativa: \(A+(B+C)=(A+B)+C\) PRODUCTO Conmutativa: \(AB \neq BA\) Distributiva Por la izq: \(A(B+C)=AB+AC\) Por la der: \((A+B)C=AC+BC\) Asociativa: \(A(BC)=(AB)C\)
+Los valores no tienen que ser 1, pero la característica es que se forma un triángulo arriba, con elementos con valor distinto de 0. Todos los demás son iguales a 0.
+En matrices triangulares, la diagonal de la matriz está formada por los pivotes. Además, para que exista la matriz inversa, debe haber tantos pivotes como el tamaño de la matriz. De lo contrario, una ecuación es linealmente dependiente, y no existe la matriz inversa.
 </div>
 </div>
 </div>
@@ -132,13 +142,16 @@ SUMA Conmutativa: \(A+B=B+A\) Distributiva: \(c(A+B)=(cA+cB)\) Asociativa: \(A+(
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211002130409-linux_screensaver/ class="link black dim">
-Linux Screensaver
+<a href=/notes/20210909214239-matriz_aumentada/ class="link black dim">
+Matriz Aumentada
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Use the program xset.
-COMMON COMMANDS To set time before screensaver activation, use: xset s &lt;seconds> To turn off the screensaver, use: xset s off. Prevent screen from blacking: xset s off -dpms
+Se le conoce de esta forma a la matriz que combina a la matriz de coeficientes y al resultado de un sistema de ecuaciones en una sola matriz.
+Es decir, si el sistema se plantea de la forma \(Ax=b\), entonces la matriz aumentada es [Ab].
+Para crearla, simplemente se agrega b hasta la derecha de A.
+Ej: Si A y b son:
+\begin{equation*} A = \begin{bmatrix} 1\ &2\\ 6\ &10\\ \end{bmatrix} \; b = \begin{bmatrix} 7\\ 42\\ \end{bmatrix} \end{equation*}
 </div>
 </div>
 </div>
@@ -147,13 +160,15 @@ COMMON COMMANDS To set time before screensaver activation, use: xset s &lt;secon
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211011124224-linux_zoom_can_t_annotate/ class="link black dim">
-Linux Zoom Can't Annotate
+<a href=/notes/20211009181821-matriz_bloque/ class="link black dim">
+Matriz bloque
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-INSTALLATION You need an extra package to handle transparecies.
-Install xdpyinfo sudo pacman -S xdpyinfo Check if you have the &ldquo;Composite&rdquo; extension enabled for the X Serve: Run xdpyinfo | grep Composite It should output &ldquo;Composite&rdquo;. Otherwise, check the source. Install xcompmgr sudo pacman -S xcompmgr CONFIGURATION Run xcompmgr -c Add the following line to your xprofile to make it run at session start. xcompmgr -c &
+Es una matriz que se interpreta como que fue sub-dividida en secciones llamadas bloques o submatrices.
+EJEMPLO Una matriz P de 4x4 puede partirse en 4 bloques de 2x2:
+\begin{equation*} P= \begin{bmatrix} 1\ 2\ 2\ 7\\ 1\ 5\ 6\ 2\\ 3\ 3\ 4\ 5\\ 3\ 3\ 6\ 7\\ \end{bmatrix} \end{equation*}
+\begin{equation*} P_{11}= \begin{bmatrix} 1\ 2\\ 1\ 5\\ \end{bmatrix}, \; \; P_{12}= \begin{bmatrix} 2\ 7\\ 6\ 2\\ \end{bmatrix}, \; \; P_{21}= \begin{bmatrix} 3\ 3\\ 3\ 3\\ \end{bmatrix}, \; \; P_{22}= \begin{bmatrix} 4\ 5\\ 6\ 7\\ \end{bmatrix} \end{equation*}
 </div>
 </div>
 </div>
@@ -162,13 +177,14 @@ Install xdpyinfo sudo pacman -S xdpyinfo Check if you have the &ldquo;Composite&
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211001110532-lista_enlazada_circular/ class="link black dim">
-Lista enlazada circular
+<a href=/notes/20210902165338-matriz_cuadrada/ class="link black dim">
+Matriz Cuadrada
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-En una lista circular, todos los nodos están conectados para formar un círculo, o un anillo de elementos.
-Es una lista enlazada que puede ser simple o doble, donde el atributo previo de la cabeza apunta a la cola, y el atributo siguiente de la cola apunta a la cabeza.
+Son las matrices que tienen la misma cantidad de líneas que de columnas.
+Las siguientes 2 matrices son cuadradas:
+\begin{equation*} \begin{bmatrix} 1\ 2\\ 3\ 4\\ \end{bmatrix} \; y \; \begin{bmatrix} 1\ 2\ 3\\ 4\ 5\ 6\\ 7\ 8\ 9\\ \end{bmatrix} \end{equation*}
 </div>
 </div>
 </div>
@@ -177,14 +193,15 @@ Es una lista enlazada que puede ser simple o doble, donde el atributo previo de 
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210929124014-lista_enlazada_doble/ class="link black dim">
-Lista enlazada doble
+<a href=/notes/20210909220221-matriz_de_permutacion/ class="link black dim">
+Matriz de Permutación
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Esta lista, a diferencia de la Lista enlazada simple, puede recorrerse hacia delante y también hacia atrás.
-La principal diferencia es la clase Nodo, que ahora tiene 3 campos:
-Valor Nodo anterior Nodo siguiente.
+Es similar a la matriz identidad, pero con 2 filas intercambiadas para que, al multiplicarla por otra matriz, se haga el mismo intercambio.
+\begin{equation*} I = \begin{bmatrix} 1\ 0\ 0\\ 0\ 1\ 0\\ 0\ 0\ 1\\ \end{bmatrix} \end{equation*}
+\begin{equation*} P_{23} = \begin{bmatrix} 1\ 0\ 0\\ 0\ 0\ 1\\ 0\ 1\ 0\\ \end{bmatrix} \end{equation*}
+UTILIDAD DE MATRIZ PERMUTACIÓN Esta matriz se vuelve importante cuando se obtiene un sistema \(Ax=b\) donde no es posible aplicar eliminación, pues hay un cero en los pivotes.
 </div>
 </div>
 </div>
@@ -216,7 +233,7 @@ Valor Nodo anterior Nodo siguiente.
 <a href=/notes/page/12/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/notes/page/25/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/notes/page/24/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></article>
 </main>

@@ -46,15 +46,14 @@ Notes
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210927112505-arch_linux_beep_sound/ class="link black dim">
-Arch Linux Beep Sound
+<a href=/notes/20211008173537-punto_medio_calculo_de_raices/ class="link black dim">
+Bisección (cálculo de raices)
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Save your ears the sorrow, turn off the beep today, not tomorrow.
-For a one-timer, not-permanent solution, just run on terminal: sudo rmmod pcspkr.
-To win the war against the annoying speaker, blacklist it.
-Create the file: /etc/modprobe.d/nobeep.conf Add this line: &ldquo;blacklist pcspkr&rdquo;
+Como una raíz es el punto donde y=0, entonces este método toma un intervalo definido por dos puntos a y b, donde:
+f(a) sea negativo f(b) sea positivo (Estos pueden ser al revés, la idea es que la función cruce el eje x en el intervalo)
+Partiendo de ahí, se determina un punto c a la mitad del intervalo. Si f(c) es positivo, el nuevo intervalo va desde a hasta c.
 </div>
 </div>
 </div>
@@ -63,13 +62,15 @@ Create the file: /etc/modprobe.d/nobeep.conf Add this line: &ldquo;blacklist pcs
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210926163543-arch_linux_volume_control_with_buttons/ class="link black dim">
-Arch Linux volume control (with buttons)
+<a href=/notes/20210827171653-bubble_sort/ class="link black dim">
+Bubble Sort
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Source: https://wiki.archlinux.org/title/Xbindkeys
-Install the xbindkeys package. Create the /.xbindkeysrc file. Write the content bellow in said file. Run the command xbindkeys --poll-rc. Add it to .bashrc so that it runs on startup. Done. # Increase volume "pactl set-sink-volume @DEFAULT_SINK@ +1000" XF86AudioRaiseVolume # Decrease volume "pactl set-sink-volume @DEFAULT_SINK@ -1000" XF86AudioLowerVolume # Mute volume "pactl set-sink-mute @DEFAULT_SINK@ toggle" XF86AudioMute # Mute microphone "pactl set-source-mute @DEFAULT_SOURCE@ toggle" XF86AudioMicMute
+Este es un algoritmo de ordenación directo.
+Funciona comparando pares de elementos adyacentes, y los intecambia entre sí hasta que estén ordenados.
+Puede hacerse de dos formas:
+Llevando elementos pequeños hacia la izq. Moviendos elementos grandes hacia la derecha. Por ser de ordenamiento directo, no es muy eficiente. De hecho, bubble sort es uno de los algoritmos más simples, y a diferencia de otros métodos directos como insertion sort, no hay técnica que lo haga más eficiente.
 </div>
 </div>
 </div>
@@ -78,15 +79,12 @@ Install the xbindkeys package. Create the /.xbindkeysrc file. Write the content 
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210825105705-archivos_tipo_de_dato/ class="link black dim">
-Archivos (Tipo de dato)
+<a href=/notes/20211012202852-burp_suite/ class="link black dim">
+Burp Suite
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Son usados para almacenar información fuera de la memoria principal.
-Conjunto de datos estructurados en registros/artículos, que son de igual tipo, y a su vez constan de entidades de nivel más bajo llamadas campos.
-La organización de un archivo define la forma en que los registros se distribuyen. Se consideran 3 tipos:
-Secuencial Directa o aleatoria (random) Secuencial indexada (indexed) Cada una de estas tendrá su propia forma de acceder a los registros.
+Web proxy used to analyze web requests, modify them, and test webpages.
 </div>
 </div>
 </div>
@@ -95,14 +93,14 @@ Secuencial Directa o aleatoria (random) Secuencial indexada (indexed) Cada una d
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210825105600-arrays/ class="link black dim">
-Arrays
+<a href=/notes/20210830181735-calcular_angulo_entre_vectores_usando_producto_punto/ class="link black dim">
+Calcular angulo entre vectores usando producto punto
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Un conjunto de datos que todos son del mismo tipo (puros int, puros float, puros char, etc&mldr;).
-Se almacenan secuencialmente en la memoria, entonces si el array inicia en la memoria 10200, el elemento 1 estará en el espacio 10201 y así sucesivamente.
-Características Ordenado Es decir, se sabe cuál es el elemento 1, 2, 3, etc&mldr; Homogéneo Todos los datos son del mismo tipo. Vector Es un array unidimensional: [1, 2, 3, &mldr;, n]
+Es posible calcular el angulo que hay entre 2 vectores sin necesidad de recurrir a trigonometría, simplemente sabiendo calcular el producto punto, y sabiendo como normalizar vectores.
+Sabemos (por definición) que cuando trabajamos con vectores unitarios, el producto punto resultante es igual al coseno del angulo que forman. \(u \cdot v = \cos \theta\)
+Además, cuando tenemos vectores no unitarios podemos convertirlos en unitarios al normalizarlos, dividiendo cada componente por la norma:
 </div>
 </div>
 </div>
@@ -111,14 +109,13 @@ Características Ordenado Es decir, se sabe cuál es el elemento 1, 2, 3, etc&
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210928201004-asociativa_ley_de_algebra_booleana/ class="link black dim">
-Asociativa (Ley de álgebra booleana)
+<a href=/notes/20210918124952-calculo_de_matriz_inversa_usando_determinante_y_cofactores/ class="link black dim">
+Calculo de matriz inversa usando determinante y cofactores
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Se pueden re-asociar los elementos:
-\(A+(B+C) = (A+B)+C\)
-\(A(BC) = (AB)C\)
+FALTA EXPANDIR MAS, YA QUE SE VEA EL TEMA.
+\begin{equation*} A^{-1} = \frac{1}{\lvert A \rvert}(cofactores\ A) \end{equation*}
 </div>
 </div>
 </div>
@@ -127,15 +124,13 @@ Se pueden re-asociar los elementos:
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211005164123-arbol_estructura_de_datos/ class="link black dim">
-Árbol (Estructura de datos)
+<a href=/notes/20211009172953-cdpath/ class="link black dim">
+cdpath
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Se usa principalmente para representar datos con relación jerárquica entre sus elementos.
-Un árbol es un conjunto finito de nodos, tal que:
-Hay un nodo especial llamado RAIZ (\(V_{1}\)). Les demás nodos se dividen en conjuntos disjuntos y cada uno es, a su vez, un árbol. Se les llama suárboles del raíz. TERMINOLOGÍA TIPOS DE NODOS Los nodos son los vértices o elementos del árbol.
-POR SU POSICIÓN Raíz Si el árbol no está vacío, tiene un único nodo raíz.
+A colon-separated list of search paths available to the cd command, similar in function to the $PATH variable for binaries. The $CDPATH variable may be set in the local ~/.bashrc file.
+bash$ cd bash-doc bash: cd: bash-doc: No such file or directory bash$ CDPATH=/usr/share/doc bash$ cd bash-doc /usr/share/doc/bash-doc bash$ echo $PWD /usr/share/doc/bash-doc
 </div>
 </div>
 </div>
@@ -144,16 +139,12 @@ POR SU POSICIÓN Raíz Si el árbol no está vacío, tiene un único nodo r
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211102201547-b_trees/ class="link black dim">
-B-trees
+<a href=/notes/20210912164224-ciencia/ class="link black dim">
+Ciencia
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Son árboles balanceados diseñados para funcionar bien en la memoria secundaria.
-Son similares a los árboles rojo-negro, pero los árboles-B minimizan las operaciones de entrada y salida (I/O).
-Estos árboles generalizan a los árboles binarios.
-JUSTIFICACIÓN DE USO La memoria secundaria tiene tiempos de operación mucho más lentos que la memoria primaria (RAM). Sin embargo, su costo de almacenamiento es más barato.
-Entonces, juntando ambas características, es conveniente usar esta estructura que usa mucho espacio, pero disminuye las operaciones de I/O.
+Es el cuerpo de conocimiento que explora el mundo físico y natural.
 </div>
 </div>
 </div>
@@ -162,14 +153,13 @@ Entonces, juntando ambas características, es conveniente usar esta estructura q
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211015130711-bases_algebra_lineal/ class="link black dim">
-Bases (Álgebra Lineal)
+<a href=/notes/20210912170257-ciencias_computacionales/ class="link black dim">
+Ciencias Computacionales
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-La base de un espacio vectorial es la secuencia de vectores donde:
-Los vectores son linealmente independientes. Los vectores son generadores del espacio. Dicho de otra forma (mi forma): Es la cantidad mínima de vectores (independientes) que pueden generar todo el espacio vectorial. Existen rank de ellos Por ejemplo:
-2 vectores para el plano cartesiano. 3 vectores para \(R^3\) BASES Y PIVOTES Partiendo de una matriz A, los pivotes facilitan encontrar las bases de los espacios vectoriales:
+Es el estudio de las computadoras. Incluye:
+Teoria, diseño, desarrollo de software Análisis y diseño de algoritmos Determinar qué problemas se pueden resolver, y la complejidad de los algoritmos que los resuelven. Diseñar aplicaciones fáciles de usar, que respeten medidas de seguridad.
 </div>
 </div>
 </div>
@@ -178,16 +168,14 @@ Los vectores son linealmente independientes. Los vectores son generadores del es
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211004084630-batch_scripting_windows/ class="link black dim">
-Batch Scripting (Windows)
+<a href=/notes/20210912164407-codigo_de_etica_de_la_ingenieria/ class="link black dim">
+Codigo de Etica de la Ingenieria
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-File extension It can be either .bat or .cmd
-Commands Turn off cmd logging @echo off
-Comments &ldquo;Rem&rdquo; marks a comment: Rem A comment here.
-Open a shortcut Just write the path to the shortcut, starting from the bat file location. "Path/to/script.bat"
-Scheduling Open task scheduler Click on Create Task Follow the instructions Write name and description Set triggers Set action Action: Start a program Program/script: &lt;Path/to/file.bat> Add &ldquo;Start in&rdquo; field with &lt;Path/to/file> Or really, wherever you would like for your script to start running.
+REGLAS Quien se desenvuelva en el ámbito de ingeniería debe&mldr;
+Mantener como lo más importante la salud, seguridad, y el bienestar del público. Trabajar sólo en el área de su competencia. Hacer declaraciones públicas solo de forma objetiva y diciendo la verdad. Actuar siempre como un agente de confianza de sus clientes y empleadores. Evitar actos engañosos. OBLIGACIONES PROFESIONALES Las ingenieras y los ingenieros&mldr;
+Deben ser guiados en sus relaciones por los estándares más altos de honestidad e integridad.
 </div>
 </div>
 </div>
@@ -196,14 +184,15 @@ Scheduling Open task scheduler Click on Create Task Follow the instructions Writ
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210925211521-battery_status_bash_script/ class="link black dim">
-Battery status bash script
+<a href=/notes/20210827183539-combinacion_lineal/ class="link black dim">
+Combinacion lineal
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-What we want to do is get the battery info, which we can do with the package acpi, get the necessary data, and then if the battery is low, send a notification using notify-send.
-This is done with:
-BATTINFO=`acpi` if [[ `echo $BATTINFO | grep Discharging` && `echo $BATTINFO | cut -f 4 -d " " | cut -c -2` &lt; 15 ]] ; then DISPLAY=:0.0 /usr/bin/notify-send "low battery" "$BATTINFO" fi Then we just run it regularly using a Cron job.
+Es la combinación de dos operaciones fundamentales: La suma y el producto escalar de vectores.
+Si se tienen 2 vectores \(u\) y \(v\), y 2 escalares \(c\) y \(d\), una combinación lineal sería:
+\begin{equation*} cu + dv = \begin{bmatrix} cu_1\ +\ dv_1\\ cu_2\ +\ dv_2\\ \end{bmatrix} \end{equation*}
+CASOS ESPECIALES SUMA Una suma se puede entender como una combinación linear donde todos los escalares son iguales a 1: \(1v + 1w\)
 </div>
 </div>
 </div>
@@ -235,7 +224,7 @@ BATTINFO=`acpi` if [[ `echo $BATTINFO | grep Discharging` && `echo $BATTINFO | c
 <a href=/notes/page/4/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/notes/page/25/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/notes/page/24/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></article>
 </main>

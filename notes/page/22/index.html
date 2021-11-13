@@ -46,14 +46,11 @@ Notes
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211015102229-smbclient/ class="link black dim">
-smbclient
+<a href=/notes/20211012195002-target_validation/ class="link black dim">
+Target Validation
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-LIST SERVICES smbclient -L &lt;ip> # Example: smbclient -L \\\\192.168.54.4\\ It should output a table containing, for example:
-IPC$ ADMIN$ Then, you could try and connect to one of these services.
-CONNECT SERVICES smbclient &lt;ip>\\&lt;service> # Example: smbclient \\\\192.168.54.4\\ADMIN$
 </div>
 </div>
 </div>
@@ -62,14 +59,14 @@ CONNECT SERVICES smbclient &lt;ip>\\&lt;service> # Example: smbclient \\\\192.16
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210909211627-solucionar_sistemas_de_ecuaciones_con_matrices_elementales/ class="link black dim">
-Solucionar sistemas de ecuaciones con matrices elementales
+<a href=/notes/20210912163615-tecnologia/ class="link black dim">
+Tecnologia
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Es posible solucionar un sistema de ecuaciones si se plantea de la forma Ax = b.
-Para hacerlo, hay que encontrar una matriz \(E\) que, al multiplicarse con \(A\), genere la matriz identidad. Dicho de otra forma, hay que encontrar la matriz inversa de A (\(A^{-1}\)).
-Nota: Si una matriz tiene matriz inversa, significa que habrá una solución para cualquier vector b. Sin embargo, que no exista la matriz inversa no significa que no exista ninguna solución.
+Tecnología viene del griego Techne, que significa hacer (craft, as in Minecraft).
+Tecnología es el conjunto de varias creaciones de la ingeniería, juntas.
+DEFINICIONES Un dispositivo, sistema, o proceso diseñado para satisfacer una necesidad o un deseo humano. Se refiere a los métodos, sistemas, aparatos que son resultado de conocimiento científico, usado en propósitos prácticos.
 </div>
 </div>
 </div>
@@ -78,15 +75,14 @@ Nota: Si una matriz tiene matriz inversa, significa que habrá una solución par
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211008140534-solucion_completa_de_ax_b/ class="link black dim">
-Solución completa de Ax=b
+<a href=/notes/20210908103438-teorema_de_rolle/ class="link black dim">
+Teorema de Rolle
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-La solución completa x es: \(x= x_p + x_n\), donde:
-\(x_p\) son las soluciones particulares. \(x_6\) son las soluciones del espacio nulo. OBTENIENDO SOLUCIONES PARTICULARES Se recomienda obtenerlas partir de la matriz escalonada reducida R, pues así es más fácil encontrar los valores de los pivotes.
-Entonces, partiendo de R:
-Se le asigna valor 0 a todas las variables libres. Se calculan los valores de los pivotes usando sutitución hacia atrás.
+Este teorema nos permite saber si una función \(f(x)\) tiene un punto crítico en un intervalo dado.
+ENUNCIADO Sea \(f(x)\) una función que:
+es continua en [a, b] es derivable en (a, b) cumple que \(f(a)=f(b)\) Entonces existe algún punto \(c \in (a, b)\) tal que \(f'( c)=0\).
 </div>
 </div>
 </div>
@@ -95,14 +91,14 @@ Se le asigna valor 0 a todas las variables libres. Se calculan los valores de lo
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211015192620-ssh/ class="link black dim">
-ssh
+<a href=/notes/20210908181638-teorema_de_stone_weierstrass/ class="link black dim">
+Teorema de Stone-Weierstrass
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-NORMAL CONNECTION ssh &lt;ip_address> # Example: ssh 192.168.57.134 ALTERNATIVE METHOD Sometimes, when we dont have the key, we will need to do this process:
-First, try the normal connection: ssh &lt;ip_address>. This shoul throw an error, and it should give you an &ldquo;offer&rdquo; of a key exchange. Copy it, and use it in the next line:
-ssh &lt;ip_address> -oKexAlgorithms=+&lt;key_exchange> This should also throw an error, and it should also offer a &ldquo;matchin cipher&rdquo;.
+Este es una generalización del Teorema de Weierstrass.
+La diferencia radica en que en vez de usar un intervalo cerrado [a, b], se considera un espacio compacto de Hausdorff, y en vez de utilizar polinomios, la aproximación se realiza con subalgebras de C(X).
+Entonces, el teorema de Stone-Weierstrass dice que si existe un anillo de funciones continuas \(C[a,b]\) en el intervalo [a, b], en el conjunto de números reales, entonces hay ciertos sub-anillos de \(C[a,b]\) que son densos en \(C[a,b]\).
 </div>
 </div>
 </div>
@@ -111,16 +107,13 @@ ssh &lt;ip_address> -oKexAlgorithms=+&lt;key_exchange> This should also throw an
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210902113325-stack/ class="link black dim">
-Stack
+<a href=/notes/20210908175322-teorema_de_weierstrass/ class="link black dim">
+Teorema de Weierstrass
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Una estructura de datos simple, en la que el orden de llegada de los elementos sí importa.
-DEFINICIÓN Es una lista ordenada en la cual los elementos se insertan y se quitan del mismo extremo, llamado cima. El último elemento en ser insertado será el primero en ser extraído. LIFO: Last-In-First-Out.
-OPERACIONES PUSH Introduce un elemento a la pila.
-POP Elimina un elemento de la pila.
-EMPTY Función booleana que indica si la pila está o no vacía.
+Establece que cada función continua sobre un intervalo [a, b] del conjunto de números reales, puede ser aproximada uniformemente por polinomios.
+Este teorema tiene aplicaciones tanto teóricas como prácticas, porque los polinomios son de las funciones más sencillas, y las computadoras pueden evaluarlos directamente.
 </div>
 </div>
 </div>
@@ -129,15 +122,15 @@ EMPTY Función booleana que indica si la pila está o no vacía.
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210825105751-strings/ class="link black dim">
-Strings
+<a href=/notes/20210908174310-teorema_del_valor_intermedio/ class="link black dim">
+Teorema del Valor Intermedio
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Una cadena de caracteres es una secuencia de 0 o más símbolos alfanuméricos y caracteres especiales.
-Juegos de caracteres ASCII American Standard Code for Information Interchange
-Básico Usa 7 bits por carácter para represetar 128 caracteres distintos. Ampliado Usa 8 bits, para 256 caracteres. EBCDIC Extended Binary Coded Decimal Interchange Code. Usa 8 bits, para 256 caracteres.
-Constantes Se encierran entre apostrofes o comillas.
+El oficiado formalmente dice:
+Para cualquier valor L entre f(a) y f(b), existirá un valor c en el intervalo [a, b] tal que f(c) = L.
+Esto significa, coloquialmente, que si la función f es continua en el intervalo [a, b] entonces alcanzará cualquier valor entre f(a) y f(b).
+REPRESENTACIÓN GRÁFICA Se puede ver que, como la función es continua, la gráfica tocará (al menos) todos los puntos entre f(a) y f(b).
 </div>
 </div>
 </div>
@@ -146,14 +139,15 @@ Constantes Se encierran entre apostrofes o comillas.
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211007153156-sub_caption_matriz_de_imagenes_latex/ class="link black dim">
-Sub-caption matriz de imagenes (Latex)
+<a href=/notes/20210908110631-teorema_del_valor_medio/ class="link black dim">
+Teorema del Valor Medio
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Este comando lo uso en combo con tabular para crear una matriz de figuras, donde cada figura tenga su propio texto.
-LATEX DEFINITION Se usa de la siguiente manera:
-AS ORG HEADER #+LATEX_HEADER: \newcommand{\subf}[2]{{\small\begin{tabular}[t]{@{}c@{}}#1\\#2 \end{tabular}}}
+Este teorema relaciona la razón de cambio promedio de una función con su derivada.
+El enunciado dice que para cualquier función diferenciable f, y cualquier intervalo [a, b] que pertenezca al dominio de f, exstirá un número c dentro de (a, b) tal que f'(c) sea igual a la razón de cambio promedio de la función en el intervalo [a, b].
+\begin{equation*} f'( c) = \frac{f(b)-f(a)}{b-a} \end{equation*}
+Condiciones La función debe ser continuo en el intervalo [a, b].
 </div>
 </div>
 </div>
@@ -162,13 +156,12 @@ AS ORG HEADER #+LATEX_HEADER: \newcommand{\subf}[2]{{\small\begin{tabular}[t]{@{
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211001110338-subespacio_vectorial/ class="link black dim">
-Subespacio vectorial
+<a href=/notes/20210908185000-teorema_fundamental_del_algebra/ class="link black dim">
+Teorema fundamental del algebra
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Son espacios vectoriales más chicos, contenidos dentro de los espacios vectoriales grandes, que contienen a todos los vectores (como \(R^2\) tiene todos los vectores bidimensionales)
-Ejemplo: Un plano es un subespacio de \(R^3\), porque cumple todas las reglas necesarias, pero los vectores ahí contenidos nunca saldrán del plano. Y, aunque pudiera parecer que está entonces en 2 dimensiones, no pertenece a \(R^2\), pues los vectores tienen 3 dimensiones (una de ellas es 0).
+El teorema establece que una función polinomial de grado \(n\) tiene exactamente \(n\) ceros en el conjunto de números complejos, incluyendo los ceros repetidos.
 </div>
 </div>
 </div>
@@ -177,16 +170,14 @@ Ejemplo: Un plano es un subespacio de \(R^3\), porque cumple todas las reglas ne
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210910131218-suma_de_matrices/ class="link black dim">
-Suma de matrices
+<a href=/notes/20210928201147-teoremas_de_morgan_ley_de_algebra_booleana/ class="link black dim">
+Teoremas de Morgan (Ley de álgebra booleana)
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-La condición es que las matrices deben tener las mismas dimensiones \(mn\).
-Nada más se suman los elementos en las misma coordenadas, y el resultado es una matriz con las mismas dimensiones.
-Ej:
-\begin{equation*} A = \begin{bmatrix} 1\ 2\ 3\\ 4\ 5\ 6\\ 7\ 8\ 9\\ \end{bmatrix} \; B = \begin{bmatrix} 9\ 8\ 7\\ 6\ 5\ 4\\ 3\ 2\ 1\\ \end{bmatrix} \end{equation*}
-\begin{equation*} A + B = \begin{bmatrix} (1+9)\ (2+8)\ (3+7)\\ (4+6)\ (5+5)\ (6+4)\\ (7+3)\ (8+2)\ (9+1)\\ \end{bmatrix} \begin{bmatrix} 10\ 10\ 10\\ 10\ 10\ 10\\ 10\ 10\ 10\\ \end{bmatrix} \end{equation*}
+Una operación negada puede partirse en la negación de sus elementos, unidos por otro operando. Hablamos en específico de estos 2 casos:
+\(\overline{A+B} = \overline{A} * \overline{B}\)
+\(\overline{A*B} = \overline{A} + \overline{B}\)
 </div>
 </div>
 </div>
@@ -195,18 +186,12 @@ Ej:
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211018123453-suma_de_productos_algebra_booleana/ class="link black dim">
-Suma de productos (Álgebra booleana)
+<a href=/notes/20211012194251-the_five_stages_of_ethical_hacking/ class="link black dim">
+The five stages of ethical hacking
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Es una ecuación formada por la suma de puros productos.
-Por ejemplo, una suma de productos sería: \(AB+CD\)
-CONVERTIR PRODUCTOS NORMALES A SOP La condición es simplemente que los productos se estén sumando, entonces podemos pasar de esto:
-\begin{equation*} A(B+CD) \end{equation*}
-A esto (lo que ya es una suma de productos):
-\begin{equation*} AB + ACD \end{equation*}
-SUMA DE PRODUCTOS CANÓNICA Es una suma de productos, donde cada producto es un minitérmino.
+RECONNAISSANCE SCANNING & ENUMERATION Searching for open ports, investigating what services are being run. GAINING ACCESS aka Explotation. Once we gain acces, we scan and enumerate again. MAINTAIN ACCESS COVER TRACKS
 </div>
 </div>
 </div>
@@ -238,7 +223,7 @@ SUMA DE PRODUCTOS CANÓNICA Es una suma de productos, donde cada producto es un 
 <a href=/notes/page/23/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/notes/page/25/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/notes/page/24/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></article>
 </main>

@@ -46,13 +46,13 @@ Notes
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/2021-10-08/ class="link black dim">
-2021-10-08
+<a href=/notes/20210926163543-arch_linux_volume_control_with_buttons/ class="link black dim">
+Arch Linux volume control (with buttons)
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-CC APLICADAS Expectativas:
-Conocer la solución completa para Ax=b Aplicar eliminación al sistema aumentado [A b] y transformarlo a [R d]. Y entender cómo se relacionan Endender que los sistemas Ax=b y Rx=d tienen solución solo si todos los ceros en R poseen ceros en d. MATRIZ A -> R Se forma la matriz aumentada [A b] Se transforma A en R (aplicando eliminación para llegar a la forma escalonada) Al terminar el paso 2, nos queda la matriz aumentada [A d] El vector b se transformó en el vector d.
+Source: https://wiki.archlinux.org/title/Xbindkeys
+Install the xbindkeys package. Create the /.xbindkeysrc file. Write the content bellow in said file. Run the command xbindkeys --poll-rc. Add it to .bashrc so that it runs on startup. Done. # Increase volume "pactl set-sink-volume @DEFAULT_SINK@ +1000" XF86AudioRaiseVolume # Decrease volume "pactl set-sink-volume @DEFAULT_SINK@ -1000" XF86AudioLowerVolume # Mute volume "pactl set-sink-mute @DEFAULT_SINK@ toggle" XF86AudioMute # Mute microphone "pactl set-source-mute @DEFAULT_SOURCE@ toggle" XF86AudioMicMute
 </div>
 </div>
 </div>
@@ -61,15 +61,15 @@ Conocer la solución completa para Ax=b Aplicar eliminación al sistema aumentad
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210922195503-a_lu/ class="link black dim">
-A = LU
+<a href=/notes/20210825105705-archivos_tipo_de_dato/ class="link black dim">
+Archivos (Tipo de dato)
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-La matriz A puede ser factorizada en dos matrices triangulares: L y U.
-\begin{equation*} A = LU \end{equation*}
-Donde:
-A es la matriz original U es la matriz triangular superior que se obtiene aplicando eliminación a A. L es una matriz triangular inferior que hace el proceso inverso a eliminación. Es decir, se puede entender como que se genera invirtiendo cada paso necesario para convertir A en U. Entonces, si E es la matriz elemental tal que \(EA=U\), entonces L es la inversa de esa matriz: \(L=E^{-1}\) L Esta matriz es el producto de las inversas de todas las matrices elementales que se usaron para convertir A en U.
+Son usados para almacenar información fuera de la memoria principal.
+Conjunto de datos estructurados en registros/artículos, que son de igual tipo, y a su vez constan de entidades de nivel más bajo llamadas campos.
+La organización de un archivo define la forma en que los registros se distribuyen. Se consideran 3 tipos:
+Secuencial Directa o aleatoria (random) Secuencial indexada (indexed) Cada una de estas tendrá su propia forma de acceder a los registros.
 </div>
 </div>
 </div>
@@ -78,13 +78,14 @@ A es la matriz original U es la matriz triangular superior que se obtiene aplica
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210926101708-accents_in_linux/ class="link black dim">
-Accents in Linux
+<a href=/notes/20210825105600-arrays/ class="link black dim">
+Arrays
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Add the following content to ~/etc/X11/xorg.conf.d/00-keyboard.conf:
-Section "InputClass" Identifier "Keyboard Defaults" MatchIsKeyboard "yes" Option "XkbLayout" "us" Option "XkbVariant" "intl" EndSection
+Un conjunto de datos que todos son del mismo tipo (puros int, puros float, puros char, etc&mldr;).
+Se almacenan secuencialmente en la memoria, entonces si el array inicia en la memoria 10200, el elemento 1 estará en el espacio 10201 y así sucesivamente.
+Características Ordenado Es decir, se sabe cuál es el elemento 1, 2, 3, etc&mldr; Homogéneo Todos los datos son del mismo tipo. Vector Es un array unidimensional: [1, 2, 3, &mldr;, n]
 </div>
 </div>
 </div>
@@ -93,13 +94,14 @@ Section "InputClass" Identifier "Keyboard Defaults" MatchIsKeyboard "yes" Option
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211008110551-add_height_latex_command/ class="link black dim">
-Add height (Latex command)
+<a href=/notes/20210928201004-asociativa_ley_de_algebra_booleana/ class="link black dim">
+Asociativa (Ley de álgebra booleana)
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Usado en combo con subf para crear matrices de imágenes en latex.
-LATEX DEFINITION AS ORG HEADER #+LATEX_HEADER:\newcommand*{\addheight}[2][.5ex]{ \raisebox{0pt}[\dimexpr\height+(#1)\relax]{#2}}
+Se pueden re-asociar los elementos:
+\(A+(B+C) = (A+B)+C\)
+\(A(BC) = (AB)C\)
 </div>
 </div>
 </div>
@@ -108,14 +110,15 @@ LATEX DEFINITION AS ORG HEADER #+LATEX_HEADER:\newcommand*{\addheight}[2][.5ex]{
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210924110942-algebra_booleana/ class="link black dim">
-Algebra Booleana
+<a href=/notes/20211005164123-arbol_estructura_de_datos/ class="link black dim">
+Árbol (Estructura de datos)
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Son las reglas que describen a las operaciones booleanas, tal como la aritmética, pero con algunas importantes diferencias.
-Las funciones booleanas se forman tanto con variables como con operadores booleanos, y su resultado siempre será 0 o 1.
-CARACTERÍSTICAS PRINCIPALES Las variables solo pueden tener 2 valores: 0 o 1. Las operaciones principales son: OR AND NOT Otras operaciones: NAND NOR XOR XNOR LEYES DEL ÁLGEBRA BOOLEANA Son usadas para simplificar una expresión booleana, y reducir la cantidad de compuertas/operaciones necesarias para obtener el resultado correcto.
+Se usa principalmente para representar datos con relación jerárquica entre sus elementos.
+Un árbol es un conjunto finito de nodos, tal que:
+Hay un nodo especial llamado RAIZ (\(V_{1}\)). Les demás nodos se dividen en conjuntos disjuntos y cada uno es, a su vez, un árbol. Se les llama suárboles del raíz. TERMINOLOGÍA TIPOS DE NODOS Los nodos son los vértices o elementos del árbol.
+POR SU POSICIÓN Raíz Si el árbol no está vacío, tiene un único nodo raíz.
 </div>
 </div>
 </div>
@@ -124,15 +127,16 @@ CARACTERÍSTICAS PRINCIPALES Las variables solo pueden tener 2 valores: 0 o 1. 
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210827072505-algorithms/ class="link black dim">
-Algorithms
+<a href=/notes/20211102201547-b_trees/ class="link black dim">
+B-trees
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Los algoritmos son una serie ordenada y finita de pasos, los cuales tienen entradas y salidas para resolver un problema específico.
-Sus caracteriśticas princiaples son que los algoritmos son:
-Finitos Exactos Bien definidos EFICIENCIA Y RECURSOS Es importante que se busque tener algoritmos eficientes, ya que todo algoritmo utiliza recursos tanto de tiempo como de memoria.
-La cantidad de recursos que utilizan se representa en función de la cantidad de datos N (Theta Notation):
+Son árboles balanceados diseñados para funcionar bien en la memoria secundaria.
+Son similares a los árboles rojo-negro, pero los árboles-B minimizan las operaciones de entrada y salida (I/O).
+Estos árboles generalizan a los árboles binarios.
+JUSTIFICACIÓN DE USO La memoria secundaria tiene tiempos de operación mucho más lentos que la memoria primaria (RAM). Sin embargo, su costo de almacenamiento es más barato.
+Entonces, juntando ambas características, es conveniente usar esta estructura que usa mucho espacio, pero disminuye las operaciones de I/O.
 </div>
 </div>
 </div>
@@ -141,16 +145,14 @@ La cantidad de recursos que utilizan se representa en función de la cantidad d
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210827171047-algoritmos_de_ordenamiento/ class="link black dim">
-Algoritmos de Ordenamiento
+<a href=/notes/20211015130711-bases_algebra_lineal/ class="link black dim">
+Bases (Álgebra Lineal)
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Estos son necesarios cuando se hará una gran cantidad de búsquedas en un conjunto de datos, pues los algoritmos de búsqueda son más eficientes en conjuntos ordenados.
-Hay 2 tipos de ordenamiento: Interno y externo.
-Ordenamiento interno (arreglos) Los elementos a ordenar se encuentran en la memoria principal.
-Métodos directos (n^2) Recorren todo el array por completo hasta \(n^2\) veces para realizar el ordenamiento.
-Bubble sort Selection sort Insertion sort Métodos logarítmicos (log n) Esto algoritmos usan técnicas que resultan más eficientes para grandes colecciones de datos.
+La base de un espacio vectorial es la secuencia de vectores donde:
+Los vectores son linealmente independientes. Los vectores son generadores del espacio. Dicho de otra forma (mi forma): Es la cantidad mínima de vectores (independientes) que pueden generar todo el espacio vectorial. Existen rank de ellos Por ejemplo:
+2 vectores para el plano cartesiano. 3 vectores para \(R^3\) BASES Y PIVOTES Partiendo de una matriz A, los pivotes facilitan encontrar las bases de los espacios vectoriales:
 </div>
 </div>
 </div>
@@ -159,14 +161,16 @@ Bubble sort Selection sort Insertion sort Métodos logarítmicos (log n) Esto 
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210924112414-and/ class="link black dim">
-AND
+<a href=/notes/20211004084630-batch_scripting_windows/ class="link black dim">
+Batch Scripting (Windows)
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-También llamado conjunction, puede pensarse como una multiplicación lógica.
-SÍMBOLO Símbolo: \(\wedge\) Nombre en latex: ∧
-TABLA DE VERDAD A B Y = A*B 0 0 0 0 1 0 1 0 0 1 1 1
+File extension It can be either .bat or .cmd
+Commands Turn off cmd logging @echo off
+Comments &ldquo;Rem&rdquo; marks a comment: Rem A comment here.
+Open a shortcut Just write the path to the shortcut, starting from the bat file location. "Path/to/script.bat"
+Scheduling Open task scheduler Click on Create Task Follow the instructions Write name and description Set triggers Set action Action: Start a program Program/script: &lt;Path/to/file.bat> Add &ldquo;Start in&rdquo; field with &lt;Path/to/file> Or really, wherever you would like for your script to start running.
 </div>
 </div>
 </div>
@@ -175,15 +179,14 @@ TABLA DE VERDAD A B Y = A*B 0 0 0 0 1 0 1 0 0 1 1 1
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210902175812-anki_flashcards/ class="link black dim">
-Anki Flashcards
+<a href=/notes/20210925211521-battery_status_bash_script/ class="link black dim">
+Battery status bash script
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-MAKE ATOMIC CARDS One idea per card:
-Be specific, break up big ideas into smaller ones. Or, condense multiple ideas into a higher level one (this is harder). BE HOLISTIC That is, integrate an idea into your knowledge before putting it into Anki:
-Have holistic ideas, but atomic flashcards.
-FUTURE-PROOF YOUR CARDS Don&rsquo;t think that remembering something know equals to remembering it in the future, with the same level of detail.
+What we want to do is get the battery info, which we can do with the package acpi, get the necessary data, and then if the battery is low, send a notification using notify-send.
+This is done with:
+BATTINFO=`acpi` if [[ `echo $BATTINFO | grep Discharging` && `echo $BATTINFO | cut -f 4 -d " " | cut -c -2` &lt; 15 ]] ; then DISPLAY=:0.0 /usr/bin/notify-send "low battery" "$BATTINFO" fi Then we just run it regularly using a Cron job.
 </div>
 </div>
 </div>
@@ -192,16 +195,13 @@ FUTURE-PROOF YOUR CARDS Don&rsquo;t think that remembering something know equals
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210928193343-anulacion_ley_de_algebra_booleana/ class="link black dim">
-Anulación (Ley de álgebra booleana)
+<a href=/notes/20211016205317-bind_shell/ class="link black dim">
+Bind shell
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Se anula el valor de la variable de entrada, y toma el valor constante ya sea de 1 o de 0:
-\(A+1=1\) Esto es como un OR. Otras formas de verlo: -\(A\; or\; 1 = 1\)
-\(A \vee 1 = 1\) \(A*0=0\) Esto es un AND. Otras formas de verlo:
-\(A\; and\; 0 = 0\)
-\(A \wedge 0 = 0\)
+We connect to the target machine.
+The ide is that we will (somehow) open up a port in the target, which will be listening, and then we connect to that specific port.
 </div>
 </div>
 </div>
@@ -233,7 +233,7 @@ Se anula el valor de la variable de entrada, y toma el valor constante ya sea de
 <a href=/notes/page/3/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/notes/page/25/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/notes/page/24/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></article>
 </main>

@@ -46,15 +46,13 @@ Notes
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211008175730-punto_fijo_definicion/ class="link black dim">
-Punto fijo (definición)
+<a href=/notes/20211003173313-scheduling_with_systemd/ class="link black dim">
+Scheduling with systemd
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-En una función f(x), un punto fijo es un valo x que, al ser evaluado, genera como resultado el mismo valor x.
-EJEMPLOS Si f(x) es una función para números reales:
-\(f(x)=x^2\) 0 y 1 serán los puntos fijos, porque:
-\(0^2=0\) \(1^2=1\) \(f(x)=x^2-3x+4\) 2 será el punto fijo de la función. \(2^2 -3(2)+4=2\)
+PROCESS Create your bash script, and make it executable. Create your timer and service files. Enable and activate the timer, using: systemctl enable &lt;file>.timer --user systemctl start &lt;file>.timer --user Note: The user flag is, obviously, for user scripts. For system-wide scripts, run it without that flag. NEEDED FILES You&rsquo;ll need 2 files, both with the same name:
+Service unit Here you specify which script to run. Timer unit The timer controls and activates the service unit.
 </div>
 </div>
 </div>
@@ -63,14 +61,14 @@ EJEMPLOS Si f(x) es una función para números reales:
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210907205415-queue/ class="link black dim">
-Queue
+<a href=/notes/20210827172726-selection_sort/ class="link black dim">
+Selection sort
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Es un tipo de estructura lineal en la que el orden en el que entran y salen los elementos sí importa.
-La estructura de datos es bastante similar a una Pila, y la principal diferencia radica en el extraer elementos.
-DEFINICIÓN Una cola es una lista ordenada en la cual los elementos se insertan por un extremo (el final) y se eliminan por el otro (el frente). A esto se le llama FIFO (First In, First Out) o LILO (List In, Last Out).
+Recorre todo el array buscando el número menor de la lista lst[i:], y cuando acaba esa iteración la coloca en la posición i, haciendo un intercambio con el elemento que estaba ahí.
+Repetir hasta que el arreglo esté ordenado.
+Mejor caso: \(O(n^{2})\) Caso promedio: \(O(n^{2})\) Peor \(O(n^{2})\). El número de intercambios es \(O(n)\), lo que es mejor que Bubble Sort. El algoritmo hace un número fijo de pasadas. Complejidad de espacio: \(O(1)\) PASOS Seleccionar el menor elemento del arreglo Intercambiarlo con el elemento en la primer posición Repetir con el mismo arreglo excepto el elemento que acabas de acomodar.
 </div>
 </div>
 </div>
@@ -79,14 +77,15 @@ DEFINICIÓN Una cola es una lista ordenada en la cual los elementos se insertan
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210827173911-quicksort/ class="link black dim">
-Quicksort
+<a href=/notes/20211004101040-serie_de_taylor/ class="link black dim">
+Serie de Taylor
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Utiliza el paradigma de Divide and Conquer.
-Se elige un pivote de forma arbitraria. Este es usado para partir el array en 2, y a partir de ahí conquistar los problemas de forma recursiva.
-Nota: Lo que se elige es el índice del array (arbitrariamente). No se sabe de antemano qué elemento habrá ahí, así que será suerte si la lista se parte limpiamente a la mitad, o si quea desequilibrada.
+Es una aproximación de funciones utilizando polinomios. La serie se plantea como:
+\begin{equation*} \sum _{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n \end{equation*}
+Donde:
+\(f^{(n)}(a)\) es la n-ésima derivada de la función. a es el valor en el cual se centra la función. CENTRAR LA FUNCIÓN a es el valor en el que está centrada la función, esto significa que, el polinomio que salga al calcular la Serie de Taylor, solo funcionará para valores cercanos a a.
 </div>
 </div>
 </div>
@@ -95,19 +94,13 @@ Nota: Lo que se elige es el índice del array (arbitrariamente). No se sabe de 
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211005132127-rank_de_matriz/ class="link black dim">
-Rank de matriz
+<a href=/notes/20211005165705-set_image_size_in_org/ class="link black dim">
+Set image size in org
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-El rank r de A es el número de pivotes.
-E.g:
-\begin{equation*} A= \begin{bmatrix} 1\ 0\ 2\ 3\\ 0\ 1\ 0\ 1\\ 0\ 0\ 0\ 0\\ \end{bmatrix} \end{equation*}
-Hay 2 pivotes y 2 variables libres, por lo tanto:
-\(rank(A)=2\)
-CONOCIMIENTO QUE PROPORCIONA EL RANK Para una matriz \(A_{mn}\):
-FULL COLUMN RANK Si \(r=n\), se se llama full column rank, e implica que:
-Todas las matrices A que tengan \(r=n\) (son full column rank) tienen estas propiedades:
+Use these tags above the image (without blank lines):
+#+ATTR_HTML: :width &lt;width>px #+ATTR_LATEX: :width &lt;width>px
 </div>
 </div>
 </div>
@@ -116,15 +109,17 @@ Todas las matrices A que tengan \(r=n\) (son full column rank) tienen estas prop
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210908163802-razon_de_cambio_promedio/ class="link black dim">
-Razón de cambio promedio
+<a href=/notes/20210929092514-setup_mu4e/ class="link black dim">
+Setup mu4e
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-La tasa de cambio promedio es un concepto muy similar a la pendiente, y es una medida de cuánto cambia la función por unidad, en promedio, de un intervalo.
-Es decir, qué tan rápido crece o disminuye f(x) por cada unidad de x.
-Se obtiene calculando la pendiente de la linea que se forma entre los 2 extremos de la función.
-CALCULAR LA RAZÓN DE CAMBIO PROMEDIO Es idéntico a la pendiente, pero como la ecuación no siempre será lineal, se puede platean como:
+Asegúrate de usar la configuración de mi repo https://github.com/LeobardoArguelles/emacs.
+Clona mi repositorio dotfiles. https://github.com/LeobardoArguelles/dotfiles
+Copia el archivo .mbsyncrc de dotfiles a ~/.config/mu4e
+cp .dotfiles/.mbsyncrc .config/mu4e Crea un archivo llamado &ldquo;mbsyncpass-acc1&rdquo; con la contraseña de la cuenta registrada, en texto.
+Encriptalo:
+gpg2 -c mbsyncpass-acc1 #+end_src* 5. Borra el archivo de texto sin encriptar. 6. Instala ~mu~ desde [[https://aur.archlinux.org/packages/mu/][el repositorio en AUR.]] 7. Cierra Doom y corre ~doom sync~.
 </div>
 </div>
 </div>
@@ -133,14 +128,15 @@ CALCULAR LA RAZÓN DE CAMBIO PROMEDIO Es idéntico a la pendiente, pero como l
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211015095223-reconnaissance/ class="link black dim">
-Reconnaissance
+<a href=/notes/20210912205914-shell_sort/ class="link black dim">
+Shell Sort
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Information gathering.
-ACTIVE Use tools and use them against a client.
-PASSIVE Target Validation Finding subdomains Fingerprinting Data Breaches (Ethical Hacking) OSINT
+Es una mejora sobre Insertion sort.
+En shell sort se comparan elementos distantes, y se incercambian si es necesario.
+La principal diferencia entre shell e insertion sort, es que insertion solo maneja un array ordenado, mientras que shell maneja length/h arrays ordenados.
+PASOS Dividir la lista en \(\frac{n}{2}\) grupos, cada uno con 2 elementos. Cada grupo de elementos estará separado por un espacio también de n/2. Recorrer la lista, comparando individualmente cada grupo de elementos, y haciendo los intercambios necesarios.
 </div>
 </div>
 </div>
@@ -149,15 +145,13 @@ PASSIVE Target Validation Finding subdomains Fingerprinting Data Breaches (Ethic
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20210825102049-recurrences/ class="link black dim">
-Recurrences
+<a href=/notes/20211016205232-shells/ class="link black dim">
+Shells
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-It is an equation or inequality that describes a function in terms of its value on smaller inputs.
-Solving recurrences Substitution method We guess a bound and then use mathematical induction to prove if it is correct.
-Recursion-tree method It converts the recurrence into a tree whose nodes represent the costs incurred at various levels of the recursion. To solve it, we use techniques for bounding summations.
-Master method Provides bounds for recurrences of the form T(n) = aT(n/b) + f(n)
+See:
+Reverse shell This is the most common kind. Bind shell
 </div>
 </div>
 </div>
@@ -166,13 +160,15 @@ Master method Provides bounds for recurrences of the form T(n) = aT(n/b) + f(n)
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211011100822-regresion_lineal/ class="link black dim">
-Regresión Lineal
+<a href=/notes/20210831222734-sistema_de_ecuaciones_lineales_con_matrices/ class="link black dim">
+Sistema de ecuaciones lineales con matrices
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-Técnica de modelado estadístico usada para describir una variable de respuesta continua como una función de una o varias variables predictoras.
-La línea roja es la regresión lineal. Es lineal porque es una linea (duh). La línea busca minimizar la sumatoria de distancias entre la recta y los puntos. La incógnita es la ecuación de la recta. \(y=mx+b\) SISTEMA Ax=b Para poder obtener la ecuación de la recta que hará la aproximación, se plantea el siguiente sistema Ax=b:
+Un sistema de ecuaciones lineales se puede plantear como un producto de matriz por vector, de la siguiente forma:
+\begin{equation*} Ax = b \end{equation*}
+donde:
+A es la matriz de coeficientes Los coeficientes se obtienen de las ecuaciones del sistema. x es el vector de variables Por ejemplo: x, y, z. b es el resultado, el cual es una combinación lineal de las columnas de A. De esto se deduce también que:
 </div>
 </div>
 </div>
@@ -181,13 +177,15 @@ La línea roja es la regresión lineal. Es lineal porque es una linea (duh). La 
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211016205307-reverse_shell/ class="link black dim">
-Reverse shell
+<a href=/notes/20211015185451-sistema_generador_algebra_lineal/ class="link black dim">
+Sistema generador (Álgebra lineal)
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-The most common kind of shell: The victim connects to us.
-We open a port on our machine (like using netcat), and we listen. Then, the target connects using that port.
+En ingles se dice que un sistema generador son vectores que span (abarcan?) el espacio vectorial.
+En español, un sistema generador es un conjunto de vectores a partir de los cuales se puede generar el espacio vectorial V completo.
+EJEMPLO El sistema generador básico de un espacio en \(R^n\) es la matriz identidad de dimensión n.
+Esto es porque sus columnas son linealmente independientes, y al combinarlas linealmente es posible generar cualquier vector de \(R^n\).
 </div>
 </div>
 </div>
@@ -196,12 +194,14 @@ We open a port on our machine (like using netcat), and we listen. Then, the targ
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
 <h1 class="f3 near-black">
-<a href=/notes/20211015095312-scanning_and_enumeration/ class="link black dim">
-Scanning and enumeration
+<a href=/notes/20211015102229-smbclient/ class="link black dim">
+smbclient
 </a>
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
-TOOLS nmap Network mapper nikto Web vulnerability scanner Directory busting dirbuster dirb gobuster msfconsole SMB smbclient Use nmap script PORTS/SERVICES Port 21/FTP
+LIST SERVICES smbclient -L &lt;ip> # Example: smbclient -L \\\\192.168.54.4\\ It should output a table containing, for example:
+IPC$ ADMIN$ Then, you could try and connect to one of these services.
+CONNECT SERVICES smbclient &lt;ip>\\&lt;service> # Example: smbclient \\\\192.168.54.4\\ADMIN$
 </div>
 </div>
 </div>
@@ -233,7 +233,7 @@ TOOLS nmap Network mapper nikto Web vulnerability scanner Directory busting dirb
 <a href=/notes/page/21/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
 </li>
 <li class=page-item>
-<a href=/notes/page/25/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+<a href=/notes/page/24/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul></article>
 </main>
