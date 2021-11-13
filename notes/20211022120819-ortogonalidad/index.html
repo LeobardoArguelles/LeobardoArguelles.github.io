@@ -5,23 +5,31 @@
 <title>Ortogonalidad | The CS Wiki</title>
 <meta name=viewport content="width=device-width,minimum-scale=1">
 <meta name=description content="Dos subespacios u y v son ortogonales si todos los vectores de u son perpendiculares a (también) todos los vectores v.
-ORTOGONALIDAD DE LOS 4 SUBESPACIOS  El espacio nulo y el espacio columna son subespacios ortogonales en \(R^n\)  TEMAS RELACIONADOS  Complemento ortogonal  ">
-<meta name=generator content="Hugo 0.89.0">
+ORTOGONALIDAD DEL ESPACIO COLUMNA El espacio columna y el espacio nulo izquierdo son ortogonales en \(R^m\).
+\begin{equation*} A^Ty = \begin{bmatrix} column\; 1\\ \vdots \\ column\; 2 \end{bmatrix} \begin{bmatrix} \\ y\\ \\ \end{bmatrix}= \begin{bmatrix} 0\\ \vdots \\ 0\\ \end{bmatrix} \end{equation*}
+ORTOGONALIDAD DEL ESPACIO LINEA El espacio línea y el espacio nulo son ortogonales en \(R^n\)">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <meta property="og:title" content="Ortogonalidad">
 <meta property="og:description" content="Dos subespacios u y v son ortogonales si todos los vectores de u son perpendiculares a (también) todos los vectores v.
-ORTOGONALIDAD DE LOS 4 SUBESPACIOS  El espacio nulo y el espacio columna son subespacios ortogonales en \(R^n\)  TEMAS RELACIONADOS  Complemento ortogonal  ">
+ORTOGONALIDAD DEL ESPACIO COLUMNA El espacio columna y el espacio nulo izquierdo son ortogonales en \(R^m\).
+\begin{equation*} A^Ty = \begin{bmatrix} column\; 1\\ \vdots \\ column\; 2 \end{bmatrix} \begin{bmatrix} \\ y\\ \\ \end{bmatrix}= \begin{bmatrix} 0\\ \vdots \\ 0\\ \end{bmatrix} \end{equation*}
+ORTOGONALIDAD DEL ESPACIO LINEA El espacio línea y el espacio nulo son ortogonales en \(R^n\)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://example.org/notes/20211022120819-ortogonalidad/"><meta property="article:section" content="notes">
 <meta itemprop=name content="Ortogonalidad">
 <meta itemprop=description content="Dos subespacios u y v son ortogonales si todos los vectores de u son perpendiculares a (también) todos los vectores v.
-ORTOGONALIDAD DE LOS 4 SUBESPACIOS  El espacio nulo y el espacio columna son subespacios ortogonales en \(R^n\)  TEMAS RELACIONADOS  Complemento ortogonal  ">
-<meta itemprop=wordCount content="42">
+ORTOGONALIDAD DEL ESPACIO COLUMNA El espacio columna y el espacio nulo izquierdo son ortogonales en \(R^m\).
+\begin{equation*} A^Ty = \begin{bmatrix} column\; 1\\ \vdots \\ column\; 2 \end{bmatrix} \begin{bmatrix} \\ y\\ \\ \end{bmatrix}= \begin{bmatrix} 0\\ \vdots \\ 0\\ \end{bmatrix} \end{equation*}
+ORTOGONALIDAD DEL ESPACIO LINEA El espacio línea y el espacio nulo son ortogonales en \(R^n\)">
+<meta itemprop=wordCount content="178">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Ortogonalidad">
 <meta name=twitter:description content="Dos subespacios u y v son ortogonales si todos los vectores de u son perpendiculares a (también) todos los vectores v.
-ORTOGONALIDAD DE LOS 4 SUBESPACIOS  El espacio nulo y el espacio columna son subespacios ortogonales en \(R^n\)  TEMAS RELACIONADOS  Complemento ortogonal  ">
+ORTOGONALIDAD DEL ESPACIO COLUMNA El espacio columna y el espacio nulo izquierdo son ortogonales en \(R^m\).
+\begin{equation*} A^Ty = \begin{bmatrix} column\; 1\\ \vdots \\ column\; 2 \end{bmatrix} \begin{bmatrix} \\ y\\ \\ \end{bmatrix}= \begin{bmatrix} 0\\ \vdots \\ 0\\ \end{bmatrix} \end{equation*}
+ORTOGONALIDAD DEL ESPACIO LINEA El espacio línea y el espacio nulo son ortogonales en \(R^n\)">
 </head>
 <body class="ma0 avenir bg-near-white">
 <header>
@@ -63,10 +71,49 @@ Leobardo Argüelles
 </header>
 <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Dos subespacios <em>u</em> y <em>v</em> son ortogonales si <strong>todos los vectores</strong> de <em>u</em>
 son perpendiculares a (también) <strong>todos los vectores</strong> <em>v</em>.</p>
-<h2 id=ortogonalidad-de-los-4-subespacios>ORTOGONALIDAD DE LOS 4 SUBESPACIOS</h2>
-<ul>
-<li>El <a href=/notes/20211003115744-espacio_nulo/>espacio nulo</a> y el <a href=/notes/20211003105934-espacio_columna_de_a/>espacio columna</a> son <a href=/notes/20211001110338-subespacio_vectorial/>subespacios</a> ortogonales en \(R^n\)</li>
-</ul>
+<h2 id=ortogonalidad-del-espacio-columna>ORTOGONALIDAD DEL ESPACIO COLUMNA</h2>
+<p>El <a href=/notes/20211003105934-espacio_columna_de_a/>espacio columna</a> y el <a href=/notes/20211016200122-espacio_nulo_izquierdo/>espacio nulo izquierdo</a> son ortogonales en \(R^m\).</p>
+<p>\begin{equation*}
+A^Ty =
+\begin{bmatrix}
+column\; 1\\
+\vdots \\
+column\; 2
+\end{bmatrix}
+\begin{bmatrix}
+\\ y\\ \\
+\end{bmatrix}=
+\begin{bmatrix}
+0\\
+\vdots \\
+0\\
+\end{bmatrix}
+\end{equation*}</p>
+<h2 id=ortogonalidad-del-espacio-linea>ORTOGONALIDAD DEL ESPACIO LINEA</h2>
+<p>El <a href=/notes/20211015190936-espacio_linea_de_a/>espacio línea</a> y el <a href=/notes/20211003115744-espacio_nulo/>espacio nulo</a> son ortogonales en \(R^n\)</p>
+<p>Mira la siguiente ecuación.</p>
+<p>\begin{equation*}
+Ax =
+\begin{bmatrix}
+row\; 1\\
+\vdots \\
+row\; 2
+\end{bmatrix}
+\begin{bmatrix}
+\\ x\\ \\
+\end{bmatrix}=
+\begin{bmatrix}
+0\\
+\vdots \\
+0\\
+\end{bmatrix}
+\end{equation*}</p>
+<h2 id=explicación-para-ambos>EXPLICACIÓN PARA AMBOS</h2>
+<p>\(\vec{x}\) y \(\vec{y}\) generan al vector 0, por lo que está en el <strong>espacio nulo</strong> de A.</p>
+<p>Ah, pero el truco es este: El vector <em>x</em> o <em>y</em>, al hacer producto punto con cada línea de A (su espacio línea/columna), genera un 0.</p>
+<p>Ring any bells?</p>
+<p>Producto punto entre 2 vectores = a cero significa que son perpendiculares.
+¿2 subespacios donde todos sus vectores generan 0? Bingo! Son ortogonales.</p>
 <h2 id=temas-relacionados>TEMAS RELACIONADOS</h2>
 <ul>
 <li><a href=/notes/20211022125140-complemento_ortogonal/>Complemento ortogonal</a></li>

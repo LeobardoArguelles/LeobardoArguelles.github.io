@@ -9,7 +9,7 @@ PRODUCTO LÍNEA I-ÉSIMA-MATRIZ \begin{equation*} AB= \begin{bmatrix} a_1\\ \d
 Es como el producto columna j-ésima matriz, pero con los vectores línea de A.
   CON NUMPY
 l1 = A[0,:].dot(B)[np.newaxis, :] l2 = A[1,:].dot(B)[np.newaxis, :] C = np.concatenate((l1, l2), axis=0)   LEYES PARA OPERACIÓN DE MATRICES SUMA  Conmutativa: \(A+B=B+A\) Distributiva: \(c(A+B)=(cA+cB)\) Asociativa: \(A+(B+C)=(A+B)+C\)  PRODUCTO  Conmutativa: \(AB \neq BA\) Distributiva  Por la izq: \(A(B+C)=AB+AC\) Por la der: \((A+B)C=AC+BC\)   Asociativa: \(A(BC)=(AB)C\)  PRODUCTO DE UNA SECUENCIA DE MATRICES Suponga una secuencia de n matrices cuadradas \(AA \dots A\) Podemos asociar el producto como \((A^p)(A^q)\) talque \(p+q=n\) y \(n \geq 1\).">
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <meta property="og:title" content="2021-09-14">

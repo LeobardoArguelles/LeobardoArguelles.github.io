@@ -7,7 +7,7 @@
 <meta name=description content="Download, install, and activate Matlab from the official page. There shouldn&rsquo;t be any problems here.
 Now, what I had to do to actually make it work:
  Install Java 8 sudo pacman -S jdk8-openjdk. Add to your .bashrc these variables:  export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre/ export J2D_D3D=false export GTK_PATH=/usr/lib/gtk-3.0 export _JAVA_AWT_WM_NONREPARENTING=1   Create a symbolic link to launch it just calling matlab. ln -s <path/to/MATLAB/VERSION/bin/matlab> /usr/local/bin E.g: ln -s /usr/local/MATLAB/R2020a/bin/matlab /usr/local/bin  Done?">
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <meta property="og:title" content="Install Matlab Arch Linux">

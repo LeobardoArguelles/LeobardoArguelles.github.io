@@ -5,7 +5,7 @@
 <title>The CS Wiki</title>
 <meta name=viewport content="width=device-width,minimum-scale=1">
 <meta name=description content>
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <link href=/notes/index.xml rel=alternate type=application/rss+xml title="The CS Wiki">
@@ -42,6 +42,23 @@ Notes
 <article class="pa3 pa4-ns nested-copy-line-height nested-img">
 <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
 <section class="flex-ns flex-wrap justify-around mt5">
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210913074004-heap_sort/ class="link black dim">
+Heap Sort
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Este algoritmo utilizarun Monticulo Binario.
+COMPLEJIDAD EN TIEMPO Para sus 3 casos (mejor, peor, promedio), heap sort tiene una complejidad en tiempo de \(n \log (n)\)
+COMPLEJIDAD EN ESPACIO Heapsort ordena in place, por lo que no usa espacio auxiliar. En este sentido, heapsort es superior a mergesort, el cual corre también en \(n \log (n)\), pero utiliza \(n\) espacio.
+PASOS Construir un max-heap de un array desordenado. Encontrar el elemento máximo, localizado en A[0], porque es un max-heap.
+</div>
+</div>
+</div>
+</div>
 <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
@@ -183,22 +200,6 @@ Install Anki Arch Linux
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
 Download and install Anki from the official page. Install qt5: sudo pacman -S qt5-base Profit? I hope I didn&rsquo;t miss something. ADD-ONS Hierarchical Tags 594329229 Image Occlusion Enhanced for Anki 2.1 (alpha) 1374772155 ReviewHeatmap 723520343
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20210926184306-install_matlab_arch_linux/ class="link black dim">
-Install Matlab Arch Linux
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Download, install, and activate Matlab from the official page. There shouldn&rsquo;t be any problems here.
-Now, what I had to do to actually make it work:
-Install Java 8 sudo pacman -S jdk8-openjdk. Add to your .bashrc these variables: export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre/ export J2D_D3D=false export GTK_PATH=/usr/lib/gtk-3.0 export _JAVA_AWT_WM_NONREPARENTING=1 Create a symbolic link to launch it just calling matlab. ln -s &lt;path/to/MATLAB/VERSION/bin/matlab> /usr/local/bin E.g: ln -s /usr/local/MATLAB/R2020a/bin/matlab /usr/local/bin Done?
 </div>
 </div>
 </div>

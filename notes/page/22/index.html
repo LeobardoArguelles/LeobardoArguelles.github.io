@@ -5,7 +5,7 @@
 <title>The CS Wiki</title>
 <meta name=viewport content="width=device-width,minimum-scale=1">
 <meta name=description content>
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <link href=/notes/index.xml rel=alternate type=application/rss+xml title="The CS Wiki">
@@ -42,6 +42,71 @@ Notes
 <article class="pa3 pa4-ns nested-copy-line-height nested-img">
 <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
 <section class="flex-ns flex-wrap justify-around mt5">
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20211015102229-smbclient/ class="link black dim">
+smbclient
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+LIST SERVICES smbclient -L &lt;ip> # Example: smbclient -L \\\\192.168.54.4\\ It should output a table containing, for example:
+IPC$ ADMIN$ Then, you could try and connect to one of these services.
+CONNECT SERVICES smbclient &lt;ip>\\&lt;service> # Example: smbclient \\\\192.168.54.4\\ADMIN$
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210909211627-solucionar_sistemas_de_ecuaciones_con_matrices_elementales/ class="link black dim">
+Solucionar sistemas de ecuaciones con matrices elementales
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Es posible solucionar un sistema de ecuaciones si se plantea de la forma Ax = b.
+Para hacerlo, hay que encontrar una matriz \(E\) que, al multiplicarse con \(A\), genere la matriz identidad. Dicho de otra forma, hay que encontrar la matriz inversa de A (\(A^{-1}\)).
+Nota: Si una matriz tiene matriz inversa, significa que habrá una solución para cualquier vector b. Sin embargo, que no exista la matriz inversa no significa que no exista ninguna solución.
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20211008140534-solucion_completa_de_ax_b/ class="link black dim">
+Solución completa de Ax=b
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+La solución completa x es: \(x= x_p + x_n\), donde:
+\(x_p\) son las soluciones particulares. \(x_6\) son las soluciones del espacio nulo. OBTENIENDO SOLUCIONES PARTICULARES Se recomienda obtenerlas partir de la matriz escalonada reducida R, pues así es más fácil encontrar los valores de los pivotes.
+Entonces, partiendo de R:
+Se le asigna valor 0 a todas las variables libres. Se calculan los valores de los pivotes usando sutitución hacia atrás.
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20211015192620-ssh/ class="link black dim">
+ssh
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+NORMAL CONNECTION ssh &lt;ip_address> # Example: ssh 192.168.57.134 ALTERNATIVE METHOD Sometimes, when we dont have the key, we will need to do this process:
+First, try the normal connection: ssh &lt;ip_address>. This shoul throw an error, and it should give you an &ldquo;offer&rdquo; of a key exchange. Copy it, and use it in the next line:
+ssh &lt;ip_address> -oKexAlgorithms=+&lt;key_exchange> This should also throw an error, and it should also offer a &ldquo;matchin cipher&rdquo;.
+</div>
+</div>
+</div>
+</div>
 <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
@@ -142,68 +207,6 @@ CONVERTIR PRODUCTOS NORMALES A SOP La condición es simplemente que los producto
 A esto (lo que ya es una suma de productos):
 \begin{equation*} AB + ACD \end{equation*}
 SUMA DE PRODUCTOS CANÓNICA Es una suma de productos, donde cada producto es un minitérmino.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20210827182425-suma_de_vectores/ class="link black dim">
-Suma de vectores
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Simplemente se suman los elementos que estén en la misma posición en cada vector.
-Por ejemplo, tome 2 vectores u y v: \(u = \bigl[\begin{smallmatrix}u_{1}\\ u_{2}\end{smallmatrix}\bigr]\) \(v = \bigl[\begin{smallmatrix}v_{1}\\ v_{2}\end{smallmatrix}\bigr]\)
-Para sumarlos, se suman los elementos que tengan el mismo subíndice, y el resultado es un vector con las mismas dimensiones que los originales:
-\begin{equation*} u + v = \begin{bmatrix} u_{1} & + & v_{1} \\ u_{2} & + & v_{2} \\ \end{bmatrix} = w \end{equation*}
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211012195002-target_validation/ class="link black dim">
-Target Validation
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20210912163615-tecnologia/ class="link black dim">
-Tecnologia
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Tecnología viene del griego Techne, que significa hacer (craft, as in Minecraft).
-Tecnología es el conjunto de varias creaciones de la ingeniería, juntas.
-DEFINICIONES Un dispositivo, sistema, o proceso diseñado para satisfacer una necesidad o un deseo humano. Se refiere a los métodos, sistemas, aparatos que son resultado de conocimiento científico, usado en propósitos prácticos.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20210908103438-teorema_de_rolle/ class="link black dim">
-Teorema de Rolle
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Este teorema nos permite saber si una función \(f(x)\) tiene un punto crítico en un intervalo dado.
-ENUNCIADO Sea \(f(x)\) una función que:
-es continua en [a, b] es derivable en (a, b) cumple que \(f(a)=f(b)\) Entonces existe algún punto \(c \in (a, b)\) tal que \(f'( c)=0\).
 </div>
 </div>
 </div>

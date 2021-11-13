@@ -5,7 +5,7 @@
 <title>The CS Wiki</title>
 <meta name=viewport content="width=device-width,minimum-scale=1">
 <meta name=description content>
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <link href=/notes/index.xml rel=alternate type=application/rss+xml title="The CS Wiki">
@@ -42,6 +42,65 @@ Notes
 <article class="pa3 pa4-ns nested-copy-line-height nested-img">
 <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
 <section class="flex-ns flex-wrap justify-around mt5">
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20211012194251-the_five_stages_of_ethical_hacking/ class="link black dim">
+The five stages of ethical hacking
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+RECONNAISSANCE SCANNING & ENUMERATION Searching for open ports, investigating what services are being run. GAINING ACCESS aka Explotation. Once we gain acces, we scan and enumerate again. MAINTAIN ACCESS COVER TRACKS
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210825101220-the_maximum_subarray_problem/ class="link black dim">
+The Maximum Subarray Problem
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+This problem aims to find what subarray from an array of integers provides the largest sum.
+The Divide-and-Conquer paradigm implies that we have to split our original array in two parts and solve them recursively. Knowing this, we need to keep in mind that the maximum subarray could either:
+Be in the left half (from start to midpoint) Be in the right half (from midpoint + 1 to end) Span both halfs This last scenario is an additional problem that is not a smaller version of the original problem.
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210827072852-theta_notation/ class="link black dim">
+Theta Notation
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Theta notation gives us a way to measure the performance threshold of an algorithm.
+That is, theta notation is the meeting point of the upper and lower bounds, given by omega notation, and Big O notation, respectively.
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210914080541-tikz/ class="link black dim">
+TikZ
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+TikZ allows creation of vector graphic schemes, charts, diagrams, etc&mldr; in LaTeX.
+</div>
+</div>
+</div>
+</div>
 <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
@@ -144,75 +203,6 @@ FORMAS DE REPRESENTARLO \(A\cdot \overline{B} + \overline{A} \cdot B\)
 \(A \oplus B\)
 TABLA DE VERDAD \(Y=\overline{A}B + A\overline{B}\)
 A B Y 0 0 0 0 1 1 1 0 1 1 1 0
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211014111207-arbol_avl/ class="link black dim">
-Árbol AVL
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Es un árbol binario de búsqueda que, como característica, siempre está balanceado
-OPERACIONES Las mismas de cualquier árbol binario:
-Insertar Eliminar Buscar La diferencia radica en que cuando se insertan o eliminan elementos, se deteriman si el árbol está o no balanceado. Si es necesario, se balancea.
-BALANCEO El balanceo se revisa de abajo hacia arriba.
-Es decir, se checa el factor de balanceo en las hojas, luego en el nivel de arriba, y así sucesivamente hasta que se encuentre un factor que no entre en los parámetros permitidos (-1, 0, ó 1).
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211005165009-arbol_binario/ class="link black dim">
-Árbol binario
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Árbol donde cada nodo puede tener máximo 2 hijos.
-IMPLEMENTACIÓN Clase nodo, atributos:
-Básicos Valor Nodo izq Nodo derecho Extras Nodo padre Is_root Is_leftorright RECORRER EL ÁRBOL Se puede recorrer el árbol en 3 órdenes distintos:
-Inorder: Left -> Root -> Right Preorder: Root -> Left -> Right Postorder: Left -> Right -> Root SUBTIPOS DE ÁRBOL BINARIO ÁRBOL BINARIO LLENO Tiene todos sus nodos llenos.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211007190551-arbol_binario_de_busqueda/ class="link black dim">
-Árbol binario de búsqueda
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Un árbol binario que sigue las siguientes reglas:
-Siempre tenemos un nodo raíz. Todos los datos &lt;= a la raíz van del lado izquierdo. Todos los datos > a la raíz van del lado derecho. Todos los subárboles también son árboles binarios de búsqueda INSERTAR ELEMENTOS Se necesitan 2 métodos:
-El de insertar Otro para buscar la posición correcta del valor a insertar. Este trabaja recursivamente, siguiendo la rama adecuada hasta llegar a un espacio vacío.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211005170410-arbol_m_ario/ class="link black dim">
-Árbol m-ario
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Es un árbol donde cada nodo puede tener, como máximo, m hijos.
-Por ejemplo, un Árbol binario es un caso especial donde m=2.
-TIPOS FULL (LLENO) Todos los nodos en cada nivel tienen 0 o m hijos. Es decir, todos los nodos son hojas, o están llenos.
-COMPLETE (COMPLETO) Un árbol m-ario donde todos los niveles están llenos, excepto el último (el de las hojas).
-Si el último nivel no está completo, las hojas se cargan hacia la izquierda.
 </div>
 </div>
 </div>

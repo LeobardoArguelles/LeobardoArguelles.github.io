@@ -5,7 +5,7 @@
 <title>The CS Wiki</title>
 <meta name=viewport content="width=device-width,minimum-scale=1">
 <meta name=description content>
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <link href=/notes/index.xml rel=alternate type=application/rss+xml title="The CS Wiki">
@@ -42,6 +42,70 @@ Notes
 <article class="pa3 pa4-ns nested-copy-line-height nested-img">
 <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
 <section class="flex-ns flex-wrap justify-around mt5">
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20211003172900-schedule_zoom_meetings/ class="link black dim">
+Schedule Zoom Meetings
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Create a bash file with the following syntax:
+zoom "zoommtg://zoom.us/join?confno=&lt;conference_number>&pwd=&lt;password>" Notes:
+Password is optional To get the necessary data, open the call on internet, and get it from the link. For example: url: zoommtg://zoom.us/join?confno=81119430791&pwd=bnBOOEZ6UWFtV3ZvUnVLK0VmakdWQT09 conference number: 81119430791 password: bnBOOEZ6UWFtV3ZvUnVLK0VmakdWQT09 Once you have the script, schedule it using cron or systemd.
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20211003173313-scheduling_with_systemd/ class="link black dim">
+Scheduling with systemd
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+PROCESS Create your bash script, and make it executable. Create your timer and service files. Enable and activate the timer, using: systemctl enable &lt;file>.timer --user systemctl start &lt;file>.timer --user Note: The user flag is, obviously, for user scripts. For system-wide scripts, run it without that flag. NEEDED FILES You&rsquo;ll need 2 files, both with the same name:
+Service unit Here you specify which script to run. Timer unit The timer controls and activates the service unit.
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210827172726-selection_sort/ class="link black dim">
+Selection sort
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Recorre todo el array buscando el número menor de la lista lst[i:], y cuando acaba esa iteración la coloca en la posición i, haciendo un intercambio con el elemento que estaba ahí.
+Repetir hasta que el arreglo esté ordenado.
+Mejor caso: \(O(n^{2})\) Caso promedio: \(O(n^{2})\) Peor \(O(n^{2})\). El número de intercambios es \(O(n)\), lo que es mejor que Bubble Sort. El algoritmo hace un número fijo de pasadas. Complejidad de espacio: \(O(1)\) PASOS Seleccionar el menor elemento del arreglo Intercambiarlo con el elemento en la primer posición Repetir con el mismo arreglo excepto el elemento que acabas de acomodar.
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20211004101040-serie_de_taylor/ class="link black dim">
+Serie de Taylor
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Es una aproximación de funciones utilizando polinomios. La serie se plantea como:
+\begin{equation*} \sum _{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n \end{equation*}
+Donde:
+\(f^{(n)}(a)\) es la n-ésima derivada de la función. a es el valor en el cual se centra la función. CENTRAR LA FUNCIÓN a es el valor en el que está centrada la función, esto significa que, el polinomio que salga al calcular la Serie de Taylor, solo funcionará para valores cercanos a a.
+</div>
+</div>
+</div>
+</div>
 <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
@@ -138,71 +202,6 @@ En ingles se dice que un sistema generador son vectores que span (abarcan?) el e
 En español, un sistema generador es un conjunto de vectores a partir de los cuales se puede generar el espacio vectorial V completo.
 EJEMPLO El sistema generador básico de un espacio en \(R^n\) es la matriz identidad de dimensión n.
 Esto es porque sus columnas son linealmente independientes, y al combinarlas linealmente es posible generar cualquier vector de \(R^n\).
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211015102229-smbclient/ class="link black dim">
-smbclient
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-LIST SERVICES smbclient -L &lt;ip> # Example: smbclient -L \\\\192.168.54.4\\ It should output a table containing, for example:
-IPC$ ADMIN$ Then, you could try and connect to one of these services.
-CONNECT SERVICES smbclient &lt;ip>\\&lt;service> # Example: smbclient \\\\192.168.54.4\\ADMIN$
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20210909211627-solucionar_sistemas_de_ecuaciones_con_matrices_elementales/ class="link black dim">
-Solucionar sistemas de ecuaciones con matrices elementales
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Es posible solucionar un sistema de ecuaciones si se plantea de la forma Ax = b.
-Para hacerlo, hay que encontrar una matriz \(E\) que, al multiplicarse con \(A\), genere la matriz identidad. Dicho de otra forma, hay que encontrar la matriz inversa de A (\(A^{-1}\)).
-Nota: Si una matriz tiene matriz inversa, significa que habrá una solución para cualquier vector b. Sin embargo, que no exista la matriz inversa no significa que no exista ninguna solución.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211008140534-solucion_completa_de_ax_b/ class="link black dim">
-Solución completa de Ax=b
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-La solución completa x es: \(x= x_p + x_n\), donde:
-\(x_p\) son las soluciones particulares. \(x_6\) son las soluciones del espacio nulo. OBTENIENDO SOLUCIONES PARTICULARES Se recomienda obtenerlas partir de la matriz escalonada reducida R, pues así es más fácil encontrar los valores de los pivotes.
-Entonces, partiendo de R:
-Se le asigna valor 0 a todas las variables libres. Se calculan los valores de los pivotes usando sutitución hacia atrás.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211015192620-ssh/ class="link black dim">
-ssh
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-NORMAL CONNECTION ssh &lt;ip_address> # Example: ssh 192.168.57.134 ALTERNATIVE METHOD Sometimes, when we dont have the key, we will need to do this process:
-First, try the normal connection: ssh &lt;ip_address>. This shoul throw an error, and it should give you an &ldquo;offer&rdquo; of a key exchange. Copy it, and use it in the next line:
-ssh &lt;ip_address> -oKexAlgorithms=+&lt;key_exchange> This should also throw an error, and it should also offer a &ldquo;matchin cipher&rdquo;.
 </div>
 </div>
 </div>

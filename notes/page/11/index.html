@@ -5,7 +5,7 @@
 <title>The CS Wiki</title>
 <meta name=viewport content="width=device-width,minimum-scale=1">
 <meta name=description content>
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <link href=/notes/index.xml rel=alternate type=application/rss+xml title="The CS Wiki">
@@ -42,6 +42,22 @@ Notes
 <article class="pa3 pa4-ns nested-copy-line-height nested-img">
 <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
 <section class="flex-ns flex-wrap justify-around mt5">
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210926184306-install_matlab_arch_linux/ class="link black dim">
+Install Matlab Arch Linux
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Download, install, and activate Matlab from the official page. There shouldn&rsquo;t be any problems here.
+Now, what I had to do to actually make it work:
+Install Java 8 sudo pacman -S jdk8-openjdk. Add to your .bashrc these variables: export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre/ export J2D_D3D=false export GTK_PATH=/usr/lib/gtk-3.0 export _JAVA_AWT_WM_NONREPARENTING=1 Create a symbolic link to launch it just calling matlab. ln -s &lt;path/to/MATLAB/VERSION/bin/matlab> /usr/local/bin E.g: ln -s /usr/local/MATLAB/R2020a/bin/matlab /usr/local/bin Done?
+</div>
+</div>
+</div>
+</div>
 <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
@@ -169,22 +185,6 @@ Lista enlazada doble
 Esta lista, a diferencia de la Lista enlazada simple, puede recorrerse hacia delante y también hacia atrás.
 La principal diferencia es la clase Nodo, que ahora tiene 3 campos:
 Valor Nodo anterior Nodo siguiente.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20210929122632-lista_enlazada_simple/ class="link black dim">
-Lista enlazada simple
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Se implementa con 2 tipos de datos abstractos: LinkedList, Node.
-Cada elemento de una lista enlazada es de tipo Node, y el nodo tiene 2 atributos:
-Key: El valor almacenado Next: El nodo que viene después en la secuencia Es un puntero. El último elemento de la lista no tiene sucesor, así que se le asigna valor null, o None. REPRESENTACIÓN GRÁFICA IMPLEMENTACIÓN (PYTHON) class Node: """ Clase auxiliar para una lista enlazada.
 </div>
 </div>
 </div>

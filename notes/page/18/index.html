@@ -5,7 +5,7 @@
 <title>The CS Wiki</title>
 <meta name=viewport content="width=device-width,minimum-scale=1">
 <meta name=description content>
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <link href=/notes/index.xml rel=alternate type=application/rss+xml title="The CS Wiki">
@@ -42,6 +42,58 @@ Notes
 <article class="pa3 pa4-ns nested-copy-line-height nested-img">
 <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
 <section class="flex-ns flex-wrap justify-around mt5">
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210908164151-pendiente/ class="link black dim">
+Pendiente
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Es la inclinación que tiene una línea respecto al eje horizontal. Va de 0ᵒ a 180ᵒ.
+CÁLCULO DE LA PENDIENTE Se denota con la letra m, y se calcula:
+\begin{equation*} m = \frac{̣\Delta y}{\Delta x} = \frac{y_2-y_1}{x_2-x_1} \end{equation*}
+RELACIÓN ENTRE EL ÁNGULO DE INCLINACIÓN Y LA PENDIENTE Otra forma de llamar a la pendiente es como coeficiente angular, el cual se denota con la letra k, y este es igual a la tangente del ángulo de la recta.
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210909215903-permutacion_de_lineas/ class="link black dim">
+Permutación de lineas
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Una permutación es intercambiar las líneas de alguna matriz.
+Se crea una matriz de permutación intercambiando las líneas i y j de la matriz identidad, y multiplicandola por la matriz que queremos permutar. Nota: Esta matriz es útil para colocar las filas en una posición más conveniente para resolverlo computacionalmente.
+\begin{equation*} I = \begin{bmatrix} 1\ 0\ 0\\ 0\ 1\ 0\\ 0\ 0\ 1\\ \end{bmatrix} \end{equation*}
+\begin{equation*} P_{23} = \begin{bmatrix} 1\ 0\ 0\\ 0\ 0\ 1\\ 0\ 1\ 0\\ \end{bmatrix} \end{equation*}
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210914132053-pivotes_de_una_matriz/ class="link black dim">
+Pivotes de una matriz
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Los pivotes de una matriz son posiciones que indican un &ldquo;límite&rdquo; de la matriz. Normalmente queremos que los elementos a la izquierda y abajo de los pivotes se conviertan en 0.
+Se localizan en la diagonal de la matriz.
+Ejemplo:
+\begin{equation*} \begin{bmatrix} 1\ 2\ 3\\ 0\ 1\ 4\\ 0\ 0\ 1\\ \end{bmatrix} \end{equation*}
+Cada uno de la diagonal es un pivote de la matriz.
+</div>
+</div>
+</div>
+</div>
 <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
@@ -150,60 +202,6 @@ Producto de matriz con matriz
 Se hace el producto punto: Filas de la primera matriz, con columnas de la segunda matriz. La fila i con la columna j dará el elemento i,j del resultado.
 Ej:
 \begin{equation*} \begin{bmatrix} a\ b\\ c\ d \end{bmatrix} \begin{bmatrix} e\ f\\ g\ h \end{bmatrix} \begin{bmatrix} &(a, b)\cdot (e, g)^T\ &(a, b)\cdot (f, h)^T\\ &(c, d)\cdot (e, g)^T\ &(c, d)\cdot (f, h)^T \end{bmatrix} \end{equation*}
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211104081955-producto_de_sumas_algebra_booleana/ class="link black dim">
-Producto de sumas (Álgebra booleana)
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Es una expresión que consiste de puros maxitérminos multiplicándose entre sí.
-Esto es, son productos de sumas, donde en cada suma aparece el dominio completo de la ecuación.
-Por ejemplo, un producto de sumas sería: \((A+B')(A'+B)\)
-CONVERTIR A POS ESTÁNDAR Para obtener la forma canónica, se debe complementar cada suma que le falte algúna variable, sumando la suma con el complemento de la and.
-Nota: Esto se hace porque el complemento del and \(AA'\) genera como resultado 0, por lo que se considera un elemento neutro de la suma.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20210827182716-producto_de_vector_con_escalar/ class="link black dim">
-Producto de vector con escalar
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Un escalar actúa como una constante que escala los vectores. Este escalamiento puede invertir al vector, si el escalar es negativo.
-Toma de ejemplo un vector \(u = (u_1, u_2)\), y \(c\) es un escalar.
-Para multiplicar ambos, simplemente se hace la multiplicación del escalar por cada elemento del vector.
-Como resultado se obtiene un vector escalado por c, con las mismas características que el vector original.
-\begin{equation*} cu = \begin{bmatrix}cu_1\\ cu_2 \end{bmatrix} \end{equation*}
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20210928204200-producto_externo/ class="link black dim">
-Producto externo
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Se le llama producto externo al producto de dos vectores con dimensiones \(n \times 1\) y \(1 \times m\).
-Se le llama de esta forma porque tanto n como m quedan en el lado externo al hacer la operación.
-E.g: (nx1)(1xm)
-Esto genera una matriz de tamaño \(n \times m\).
-Por otro lado, el producto interno deja a n y m adentro, al centro, y produce un escalar. Para más información sobre el producto interno, ver Producto punto.
 </div>
 </div>
 </div>

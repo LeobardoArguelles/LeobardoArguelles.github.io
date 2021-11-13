@@ -5,7 +5,7 @@
 <title>The CS Wiki</title>
 <meta name=viewport content="width=device-width,minimum-scale=1">
 <meta name=description content>
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <link href=/notes/index.xml rel=alternate type=application/rss+xml title="The CS Wiki">
@@ -42,6 +42,76 @@ Notes
 <article class="pa3 pa4-ns nested-copy-line-height nested-img">
 <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
 <section class="flex-ns flex-wrap justify-around mt5">
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20211008175730-punto_fijo_definicion/ class="link black dim">
+Punto fijo (definición)
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+En una función f(x), un punto fijo es un valo x que, al ser evaluado, genera como resultado el mismo valor x.
+EJEMPLOS Si f(x) es una función para números reales:
+\(f(x)=x^2\) 0 y 1 serán los puntos fijos, porque:
+\(0^2=0\) \(1^2=1\) \(f(x)=x^2-3x+4\) 2 será el punto fijo de la función. \(2^2 -3(2)+4=2\)
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210907205415-queue/ class="link black dim">
+Queue
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Es un tipo de estructura lineal en la que el orden en el que entran y salen los elementos sí importa.
+La estructura de datos es bastante similar a una Pila, y la principal diferencia radica en el extraer elementos.
+DEFINICIÓN Una cola es una lista ordenada en la cual los elementos se insertan por un extremo (el final) y se eliminan por el otro (el frente). A esto se le llama FIFO (First In, First Out) o LILO (List In, Last Out).
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210827173911-quicksort/ class="link black dim">
+Quicksort
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Utiliza el paradigma de Divide and Conquer.
+Se elige un pivote de forma arbitraria. Este es usado para partir el array en 2, y a partir de ahí conquistar los problemas de forma recursiva.
+Nota: Lo que se elige es el índice del array (arbitrariamente). No se sabe de antemano qué elemento habrá ahí, así que será suerte si la lista se parte limpiamente a la mitad, o si quea desequilibrada.
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20211005132127-rank_de_matriz/ class="link black dim">
+Rank de matriz
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+El rank r de A es el número de pivotes.
+E.g:
+\begin{equation*} A= \begin{bmatrix} 1\ 0\ 2\ 3\\ 0\ 1\ 0\ 1\\ 0\ 0\ 0\ 0\\ \end{bmatrix} \end{equation*}
+Hay 2 pivotes y 2 variables libres, por lo tanto:
+\(rank(A)=2\)
+CONOCIMIENTO QUE PROPORCIONA EL RANK Para una matriz \(A_{mn}\):
+FULL COLUMN RANK Si \(r=n\), se se llama full column rank, e implica que:
+Todas las matrices A que tengan \(r=n\) (son full column rank) tienen estas propiedades:
+</div>
+</div>
+</div>
+</div>
 <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
@@ -132,70 +202,6 @@ Scanning and enumeration
 </h1>
 <div class="nested-links f5 lh-copy nested-copy-line-height">
 TOOLS nmap Network mapper nikto Web vulnerability scanner Directory busting dirbuster dirb gobuster msfconsole SMB smbclient Use nmap script PORTS/SERVICES Port 21/FTP
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211003172900-schedule_zoom_meetings/ class="link black dim">
-Schedule Zoom Meetings
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Create a bash file with the following syntax:
-zoom "zoommtg://zoom.us/join?confno=&lt;conference_number>&pwd=&lt;password>" Notes:
-Password is optional To get the necessary data, open the call on internet, and get it from the link. For example: url: zoommtg://zoom.us/join?confno=81119430791&pwd=bnBOOEZ6UWFtV3ZvUnVLK0VmakdWQT09 conference number: 81119430791 password: bnBOOEZ6UWFtV3ZvUnVLK0VmakdWQT09 Once you have the script, schedule it using cron or systemd.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211003173313-scheduling_with_systemd/ class="link black dim">
-Scheduling with systemd
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-PROCESS Create your bash script, and make it executable. Create your timer and service files. Enable and activate the timer, using: systemctl enable &lt;file>.timer --user systemctl start &lt;file>.timer --user Note: The user flag is, obviously, for user scripts. For system-wide scripts, run it without that flag. NEEDED FILES You&rsquo;ll need 2 files, both with the same name:
-Service unit Here you specify which script to run. Timer unit The timer controls and activates the service unit.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20210827172726-selection_sort/ class="link black dim">
-Selection sort
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Recorre todo el array buscando el número menor de la lista lst[i:], y cuando acaba esa iteración la coloca en la posición i, haciendo un intercambio con el elemento que estaba ahí.
-Repetir hasta que el arreglo esté ordenado.
-Mejor caso: \(O(n^{2})\) Caso promedio: \(O(n^{2})\) Peor \(O(n^{2})\). El número de intercambios es \(O(n)\), lo que es mejor que Bubble Sort. El algoritmo hace un número fijo de pasadas. Complejidad de espacio: \(O(1)\) PASOS Seleccionar el menor elemento del arreglo Intercambiarlo con el elemento en la primer posición Repetir con el mismo arreglo excepto el elemento que acabas de acomodar.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211004101040-serie_de_taylor/ class="link black dim">
-Serie de Taylor
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Es una aproximación de funciones utilizando polinomios. La serie se plantea como:
-\begin{equation*} \sum _{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n \end{equation*}
-Donde:
-\(f^{(n)}(a)\) es la n-ésima derivada de la función. a es el valor en el cual se centra la función. CENTRAR LA FUNCIÓN a es el valor en el que está centrada la función, esto significa que, el polinomio que salga al calcular la Serie de Taylor, solo funcionará para valores cercanos a a.
 </div>
 </div>
 </div>

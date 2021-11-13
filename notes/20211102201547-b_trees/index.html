@@ -9,7 +9,7 @@ Son similares a los árboles rojo-negro, pero los árboles-B minimizan las opera
 Estos árboles generalizan a los árboles binarios.
 JUSTIFICACIÓN DE USO La memoria secundaria tiene tiempos de operación mucho más lentos que la memoria primaria (RAM). Sin embargo, su costo de almacenamiento es más barato.
 Entonces, juntando ambas características, es conveniente usar esta estructura que usa mucho espacio, pero disminuye las operaciones de I/O.">
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <meta property="og:title" content="B-trees">
@@ -26,7 +26,7 @@ Son similares a los árboles rojo-negro, pero los árboles-B minimizan las opera
 Estos árboles generalizan a los árboles binarios.
 JUSTIFICACIÓN DE USO La memoria secundaria tiene tiempos de operación mucho más lentos que la memoria primaria (RAM). Sin embargo, su costo de almacenamiento es más barato.
 Entonces, juntando ambas características, es conveniente usar esta estructura que usa mucho espacio, pero disminuye las operaciones de I/O.">
-<meta itemprop=wordCount content="710">
+<meta itemprop=wordCount content="718">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="B-trees">
 <meta name=twitter:description content="Son árboles balanceados diseñados para funcionar bien en la memoria secundaria.
@@ -107,7 +107,7 @@ se sabe dónde empezar a buscar de forma más precisa.</li>
 <li>Página es cada <em>nodo</em> del árbol.</li>
 <li>m es el grado del árbol, y es el máximo número de hijos que puede tener una página</li>
 <li>m-1 es el máximo número de claves en una página</li>
-<li>Número mínimo de hijos: t
+<li>Número mínimo de hijos:
 <ul>
 <li>
 <p>El número mínimo de <strong>claves</strong> en una página es (redondeando):</p>
@@ -166,15 +166,15 @@ Esto es tal que, si <em>k</em> son los valores del subárbol:
 <li>t >= 2</li>
 <li>Lower bounds
 <ul>
-<li>Cada nodo, con la única excepción de la raíz, debe tener <strong>al menos</strong> <em>t-1</em> valores.</li>
+<li>Cada nodo, con la única excepción de la raíz, debe tener <strong>al menos</strong> <em>t-1</em> claves.</li>
 <li>Cada nodo interno tiene, entonces, al menos <em>t</em> hijos.</li>
 </ul>
 </li>
 <li>Upper bounds
 <ul>
-<li>Cada nodo tiene, como máximo, <em>2t-1</em> valores.
+<li>Cada nodo tiene, como máximo, <em>2t-1</em> claves.
 <ul>
-<li>Si un nodo tiene exactamente <em>2t-1</em> valores, se le considera <strong>lleno</strong></li>
+<li>Si un nodo tiene exactamente <em>2t-1</em> claves, se le considera <strong>lleno</strong></li>
 </ul>
 </li>
 <li>Cada nodo interno tiene, entonces, máximo <em>2t</em> hijos.</li>
@@ -185,7 +185,7 @@ Esto es tal que, si <em>k</em> son los valores del subárbol:
 </ul>
 <h2 id=operaciones>OPERACIONES</h2>
 <h3 id=inserción>INSERCIÓN</h3>
-<p>Se manejan X casos.</p>
+<p>Se manejan 4 casos, y sólo se insertan datos en los nodos hoja.</p>
 <h4 id=caso-1-y-2>CASO 1 y 2</h4>
 <p>Se insertan claves válidas, en un nodo al cuál aún le caben claves,
 y la clave queda al inicio o al final (no se tienen que mover las

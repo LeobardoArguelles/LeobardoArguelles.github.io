@@ -5,7 +5,7 @@
 <title>The CS Wiki</title>
 <meta name=viewport content="width=device-width,minimum-scale=1">
 <meta name=description content>
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <link href=/notes/index.xml rel=alternate type=application/rss+xml title="The CS Wiki">
@@ -42,6 +42,60 @@ Notes
 <article class="pa3 pa4-ns nested-copy-line-height nested-img">
 <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
 <section class="flex-ns flex-wrap justify-around mt5">
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20211104081955-producto_de_sumas_algebra_booleana/ class="link black dim">
+Producto de sumas (Álgebra booleana)
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Es una expresión que consiste de puros maxitérminos multiplicándose entre sí.
+Esto es, son productos de sumas, donde en cada suma aparece el dominio completo de la ecuación.
+Por ejemplo, un producto de sumas sería: \((A+B')(A'+B)\)
+CONVERTIR A POS ESTÁNDAR Para obtener la forma canónica, se debe complementar cada suma que le falte algúna variable, sumando la suma con el complemento de la and.
+Nota: Esto se hace porque el complemento del and \(AA'\) genera como resultado 0, por lo que se considera un elemento neutro de la suma.
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210827182716-producto_de_vector_con_escalar/ class="link black dim">
+Producto de vector con escalar
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Un escalar actúa como una constante que escala los vectores. Este escalamiento puede invertir al vector, si el escalar es negativo.
+Toma de ejemplo un vector \(u = (u_1, u_2)\), y \(c\) es un escalar.
+Para multiplicar ambos, simplemente se hace la multiplicación del escalar por cada elemento del vector.
+Como resultado se obtiene un vector escalado por c, con las mismas características que el vector original.
+\begin{equation*} cu = \begin{bmatrix}cu_1\\ cu_2 \end{bmatrix} \end{equation*}
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20210928204200-producto_externo/ class="link black dim">
+Producto externo
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Se le llama producto externo al producto de dos vectores con dimensiones \(n \times 1\) y \(1 \times m\).
+Se le llama de esta forma porque tanto n como m quedan en el lado externo al hacer la operación.
+E.g: (nx1)(1xm)
+Esto genera una matriz de tamaño \(n \times m\).
+Por otro lado, el producto interno deja a n y m adentro, al centro, y produce un escalar. Para más información sobre el producto interno, ver Producto punto.
+</div>
+</div>
+</div>
+</div>
 <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
 <div class="bg-white mb3 pa4 gray overflow-hidden">
 <span class="f6 db">Notes</span>
@@ -101,7 +155,21 @@ Proyecciones
 Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
 PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
 Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
-\(p = \hat{x}a\) Donde:
+\(\rho = \hat{x}a\) Donde:
+</div>
+</div>
+</div>
+</div>
+<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+<div class="bg-white mb3 pa4 gray overflow-hidden">
+<span class="f6 db">Notes</span>
+<h1 class="f3 near-black">
+<a href=/notes/20211105223547-publish_hugo_site_in_github_pages/ class="link black dim">
+Publish hugo site in github pages
+</a>
+</h1>
+<div class="nested-links f5 lh-copy nested-copy-line-height">
+Create a repository in your github account named: &lt;github_username>.github.io Don&rsquo;t have a github account? Well, create one. Don&rsquo;t add any of the freebies included in the repo (License, readme, etc&mldr;) Link the repository with the directory that has your Hugo files. In the main directory of your site, create the directories and the file &ldquo;.github/workflows/gh-pages.yml&rdquo; This is a default path for github to look for &ldquo;gh-pages.yml&rdquo; Inside &ldquo;gh-pages.yml&rdquo;, add the code from the appendix.
 </div>
 </div>
 </div>
@@ -139,76 +207,6 @@ FUNDAMENTO Se parte de la definición de un punto fijo.
 Como en un punto fijo \(f(x)=x\), el cálculo de raíces usando este método nos ayuda a buscar un punto p tal que \(f(p)=0\).
 Lo que se hace entonces es plantear otra función g(x), la cual se define como \(g(x)=x-f(x)\).
 En este caso, calcular \(g(p)\) será igual a \(p-f(p)\) que, como sabemos que \(f(p)=0\), entonces queda \(g(p)=p\), lo que es un punto fijo.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211008175730-punto_fijo_definicion/ class="link black dim">
-Punto fijo (definición)
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-En una función f(x), un punto fijo es un valo x que, al ser evaluado, genera como resultado el mismo valor x.
-EJEMPLOS Si f(x) es una función para números reales:
-\(f(x)=x^2\) 0 y 1 serán los puntos fijos, porque:
-\(0^2=0\) \(1^2=1\) \(f(x)=x^2-3x+4\) 2 será el punto fijo de la función. \(2^2 -3(2)+4=2\)
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20210907205415-queue/ class="link black dim">
-Queue
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Es un tipo de estructura lineal en la que el orden en el que entran y salen los elementos sí importa.
-La estructura de datos es bastante similar a una Pila, y la principal diferencia radica en el extraer elementos.
-DEFINICIÓN Una cola es una lista ordenada en la cual los elementos se insertan por un extremo (el final) y se eliminan por el otro (el frente). A esto se le llama FIFO (First In, First Out) o LILO (List In, Last Out).
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20210827173911-quicksort/ class="link black dim">
-Quicksort
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-Utiliza el paradigma de Divide and Conquer.
-Se elige un pivote de forma arbitraria. Este es usado para partir el array en 2, y a partir de ahí conquistar los problemas de forma recursiva.
-Nota: Lo que se elige es el índice del array (arbitrariamente). No se sabe de antemano qué elemento habrá ahí, así que será suerte si la lista se parte limpiamente a la mitad, o si quea desequilibrada.
-</div>
-</div>
-</div>
-</div>
-<div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-<div class="bg-white mb3 pa4 gray overflow-hidden">
-<span class="f6 db">Notes</span>
-<h1 class="f3 near-black">
-<a href=/notes/20211005132127-rank_de_matriz/ class="link black dim">
-Rank de matriz
-</a>
-</h1>
-<div class="nested-links f5 lh-copy nested-copy-line-height">
-El rank r de A es el número de pivotes.
-E.g:
-\begin{equation*} A= \begin{bmatrix} 1\ 0\ 2\ 3\\ 0\ 1\ 0\ 1\\ 0\ 0\ 0\ 0\\ \end{bmatrix} \end{equation*}
-Hay 2 pivotes y 2 variables libres, por lo tanto:
-\(rank(A)=2\)
-CONOCIMIENTO QUE PROPORCIONA EL RANK Para una matriz \(A_{mn}\):
-FULL COLUMN RANK Si \(r=n\), se se llama full column rank, e implica que:
-Todas las matrices A que tengan \(r=n\) (son full column rank) tienen estas propiedades:
 </div>
 </div>
 </div>

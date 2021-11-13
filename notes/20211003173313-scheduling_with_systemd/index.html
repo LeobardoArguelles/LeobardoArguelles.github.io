@@ -6,7 +6,7 @@
 <meta name=viewport content="width=device-width,minimum-scale=1">
 <meta name=description content="PROCESS  Create your bash script, and make it executable. Create your timer and service files. Enable and activate the timer, using: systemctl enable <file>.timer --user systemctl start <file>.timer --user Note: The user flag is, obviously, for user scripts. For system-wide scripts, run it without that flag.  NEEDED FILES You&rsquo;ll need 2 files, both with the same name:
  Service unit Here you specify which script to run. Timer unit The timer controls and activates the service unit.">
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <meta property="og:title" content="Scheduling with systemd">
@@ -17,7 +17,7 @@
 <meta itemprop=name content="Scheduling with systemd">
 <meta itemprop=description content="PROCESS  Create your bash script, and make it executable. Create your timer and service files. Enable and activate the timer, using: systemctl enable <file>.timer --user systemctl start <file>.timer --user Note: The user flag is, obviously, for user scripts. For system-wide scripts, run it without that flag.  NEEDED FILES You&rsquo;ll need 2 files, both with the same name:
  Service unit Here you specify which script to run. Timer unit The timer controls and activates the service unit.">
-<meta itemprop=wordCount content="357">
+<meta itemprop=wordCount content="363">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Scheduling with systemd">
 <meta name=twitter:description content="PROCESS  Create your bash script, and make it executable. Create your timer and service files. Enable and activate the timer, using: systemctl enable <file>.timer --user systemctl start <file>.timer --user Note: The user flag is, obviously, for user scripts. For system-wide scripts, run it without that flag.  NEEDED FILES You&rsquo;ll need 2 files, both with the same name:
@@ -101,14 +101,14 @@ range.</p>
 <p>EXAMPLE</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>/etc/systemd/system/foo.timer
 
-
+[Unit]
 Description=Run foo weekly
 
-
+[Timer]
 OnCalendar=weekly
 Persistent=true
 
-
+[Install]
 WantedBy=timers.target
 </code></pre></div><p>Note on the example:</p>
 <ul>
@@ -143,14 +143,14 @@ deactivated.</li>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text># Starts 15 minute after boot, and again every week while the system runs
 /etc/systemd/system/foo.timer
 
-
+[Unit]
 Description=Run foo weekly and on boot
 
-
+[Timer]
 OnBootSec=15min
 OnUnitActiveSec=1w
 
-
+[Install]
 WantedBy=timers.target
 </code></pre></div><p>Note on the example:</p>
 <ul>

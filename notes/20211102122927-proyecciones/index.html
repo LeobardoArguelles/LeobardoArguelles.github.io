@@ -7,29 +7,29 @@
 <meta name=description content="Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
 PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
 Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
-\(p = \hat{x}a\) Donde:">
-<meta name=generator content="Hugo 0.89.0">
+\(\rho = \hat{x}a\) Donde:">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <meta property="og:title" content="Proyecciones">
 <meta property="og:description" content="Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
 PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
 Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
-\(p = \hat{x}a\) Donde:">
+\(\rho = \hat{x}a\) Donde:">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://example.org/notes/20211102122927-proyecciones/"><meta property="article:section" content="notes">
 <meta itemprop=name content="Proyecciones">
 <meta itemprop=description content="Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
 PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
 Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
-\(p = \hat{x}a\) Donde:">
-<meta itemprop=wordCount content="484">
+\(\rho = \hat{x}a\) Donde:">
+<meta itemprop=wordCount content="514">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Proyecciones">
 <meta name=twitter:description content="Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
 PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
 Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
-\(p = \hat{x}a\) Donde:">
+\(\rho = \hat{x}a\) Donde:">
 </head>
 <body class="ma0 avenir bg-near-white">
 <header>
@@ -77,7 +77,7 @@ del subespacio, y el vector proyectado.</p>
 <strong>del vector que corre sobre esa línea</strong>.</p>
 <p>Por lo tanto, la proyección sobre una línea no es más que <strong>la misma línea, escalada</strong>.
 Entonces:</p>
-<p>\(p = \hat{x}a\)
+<p>\(\rho = \hat{x}a\)
 Donde:</p>
 <ul>
 <li>p es la proyección</li>
@@ -175,10 +175,11 @@ igual a 0.</li>
 </ol>
 <h2 id=proyección-sobre-un-espacio-n-dimensional>PROYECCIÓN SOBRE UN ESPACIO N-DIMENSIONAL</h2>
 <p>Donde <em>A</em> es la matriz cuyas columnas son la <a href=/notes/20211015130711-bases_algebra_lineal/>base</a> del subespacio
-sobre el cuál se proyectará el vector.</p>
+sobre el cuál se proyectará el vector. (Es decir, sus columnas deben ser
+linealmente independientes)</p>
 <p>Proyección:</p>
 <p>\begin{equation*}
-p = A(A^TA)^{-1}A^Tb
+\rho = A(A^TA)^{-1}A^Tb
 \end{equation*}</p>
 <p>Matriz de proyección:</p>
 <p>\begin{equation*}
@@ -188,8 +189,12 @@ P = A(A^TA)^{-1}A^T
 <p>\begin{equation*}
 e=b-p
 \end{equation*}</p>
-<p>Nota: El error debe ser ortogonal al <a href=/notes/20210827181941-vectores/>vector</a> a, por lo que se ubica en
-su espacio nulo izquierdo.</p>
+<p>Nota: El error debe ser ortogonal al <a href=/notes/20210827181941-vectores/>vector</a> a, o al subespacio (depende con
+qué estamos trabajando) por lo que se ubica en su espacio nulo izquierdo.</p>
+<h3 id=para-que-el-error-sea-positivo>PARA QUE EL ERROR SEA POSITIVO</h3>
+<p>\begin{equation*}
+E= \lVert b- \rho \rVert ^2
+\end{equation*}</p>
 <ul class=pa0>
 </ul>
 <div class="mt6 instapaper_ignoref">
