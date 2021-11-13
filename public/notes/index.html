@@ -101,81 +101,15 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/2021-08-31/" class="link black dim">
-        2021-08-31
+      <a href="/notes/20210922195503-a_lu/" class="link black dim">
+        A = LU
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Estructuras de datos Shell Parecido a insert, pero más eficiente
-Heap sort Usa un árbol para ir organizando los números. Reglas:
- Un nodo siempre debe tener valor &lt;= a sus hijos El arbol se puede representar linealmente, si un nodo en i tiene sus hijos in i*2 e i*2 + 1 El arbol se ordena haciendo pop a la raiz, se mueve hasta el final del array, el elemento que estaba ahí se intercambia con la raíz, y este elemento se reordena antes de pasar a la siguiente iteración (se deja caer como hoja hasta su posición correcta).
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Notes</span>
-    <h1 class="f3 near-black">
-      <a href="/notes/2021-09-14/" class="link black dim">
-        2021-09-14
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      CC Aplicadas Multiplicación de matrices &hellip;Continuación de una clase anterior
-PRODUCTO LÍNEA I-ÉSIMA-MATRIZ \begin{equation*} AB= \begin{bmatrix} a_1\\ \dots \\ a_n \end{bmatrix} B = \begin{bmatrix} a_1B\ \dots a_nB \end{bmatrix} \end{equation*}
-Es como el producto columna j-ésima matriz, pero con los vectores línea de A.
-  CON NUMPY
-l1 = A[0,:].dot(B)[np.newaxis, :] l2 = A[1,:].dot(B)[np.newaxis, :] C = np.concatenate((l1, l2), axis=0)   LEYES PARA OPERACIÓN DE MATRICES SUMA  Conmutativa: \(A+B=B+A\) Distributiva: \(c(A+B)=(cA+cB)\) Asociativa: \(A+(B+C)=(A+B)+C\)  PRODUCTO  Conmutativa: \(AB \neq BA\) Distributiva  Por la izq: \(A(B+C)=AB+AC\) Por la der: \((A+B)C=AC+BC\)   Asociativa: \(A(BC)=(AB)C\)  PRODUCTO DE UNA SECUENCIA DE MATRICES Suponga una secuencia de n matrices cuadradas \(AA \dots A\) Podemos asociar el producto como \((A^p)(A^q)\) talque \(p+q=n\) y \(n \geq 1\).
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Notes</span>
-    <h1 class="f3 near-black">
-      <a href="/notes/2021-09-17/" class="link black dim">
-        2021-09-17
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Predicado II Comprobación directa.
-Suponga \(\exists A^{-1}\) y dado \(Ax=0 \therefore x=0\) (vector columna)
-\begin{align} P_1 &amp;: \exists A^{-1}\\
-P_2 &amp;: Ax=0\\
-P_3 &amp;: A^{-1}Ax=A^{-1}0\\
-P_4 &amp;: A^{-1}A=I\\
-P_5 &amp;:Ix=A^{-1}0\\
-P_6 &amp;:Ix=x\\
-P_7 &amp;:x=0 \end{align}
-Donde x será un vector columna de tamaño n.
-Predicado III Comprobación directa.
-Si \(\lvert A \rvert \neq 0 \therefore \exists A^{-1}\).
-Predicado IV A no posee dos o más matrices inversas (solo tiene una).
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Notes</span>
-    <h1 class="f3 near-black">
-      <a href="/notes/2021-09-21/" class="link black dim">
-        2021-09-21
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Factorización A en LU \begin{equation*} L = E^{-1} \end{equation*}
-La matriz L es la inversa de la matriz elemental que genera U, a partir de A.
-Entonces:
-\begin{equation*} LU = A \end{equation*}
+      La matriz A puede ser factorizada en dos matrices triangulares: L y U.
+\begin{equation*} A = LU \end{equation*}
 Donde:
- L tiene los multiplicadores U tiene los pivotes  Flashcard: Si A y B son invertibles, entonces el producto AB es invertible. Flashcard: L es la matriz que cuando multiplica a U, genera A.
-Entonces, si \(E_{21}E_{31}E_{32}A=U\),
+ A es la matriz original U es la matriz triangular superior que se obtiene aplicando eliminación a A. L es una matriz triangular inferior que hace el proceso inverso a eliminación. Es decir, se puede entender como que se genera invirtiendo cada paso necesario para convertir A en U. Entonces, si E es la matriz elemental tal que \(EA=U\), entonces L es la inversa de esa matriz: \(L=E^{-1}\)  L Esta matriz es el producto de las inversas de todas las matrices elementales que se usaron para convertir A en U.
     </div>
   </div>
 </div>
@@ -185,20 +119,13 @@ Entonces, si \(E_{21}E_{31}E_{32}A=U\),
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/2021-09-24/" class="link black dim">
-        2021-09-24
+      <a href="/notes/20210926101708-accents_in_linux/" class="link black dim">
+        Accents in Linux
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      TRANSPUESTA Y MATRICES DE PERMUTACION Transpuesta Dice Mr. Hirales que nos ayuda a reducir la cantidad de espacio requerido para almacenar la informacion.
-La matriz transpuesta de A, se denota como \(A^{T}\). Y la transpuesta es la matriz donde las lineas y las columnas estan volteadas. E.g:
-\begin{equation*} A= \begin{bmatrix} 1\ 2\ 3\\
-4\ 5\ 6\\
-\end{bmatrix} \end{equation*}
-\begin{equation*} A^{T} = \begin{bmatrix} 1\ 4\\
-2\ 5\\
-3\ 6\\
-\end{bmatrix} \end{equation*}
+      Add the following content to ~/etc/X11/xorg.conf.d/00-keyboard.conf:
+Section &#34;InputClass&#34; Identifier &#34;Keyboard Defaults&#34; MatchIsKeyboard &#34;yes&#34; Option &#34;XkbLayout&#34; &#34;us&#34; Option &#34;XkbVariant&#34; &#34;intl&#34; EndSection 
     </div>
   </div>
 </div>
@@ -208,14 +135,13 @@ La matriz transpuesta de A, se denota como \(A^{T}\). Y la transpuesta es la mat
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/2021-09-28/" class="link black dim">
-        2021-09-28
+      <a href="/notes/20211008110551-add_height_latex_command/" class="link black dim">
+        Add height (Latex command)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      ESTRUCTURAS DE DATOS Lista doblemente enlazada Esta lista permite ir en ambas direcciones: Hacia delante y hacia atrás.
-Nodos Tienen 3 campos: Valor, nodo anterior, nodo siguiente.
-Preguntas para Anki  Cuantas clases se usan para implementar lista enlazada 2, una para lista enlazada, otra para nodo Qué atributos tiene la un objeto nodo (hablando de listas enlazadas) Valor, next (apuntador) Qué atributos tiene un objeto lista enlazada Head, tail, size Cuantas formas hay de insertar un nodo en una lista.
+      Usado en combo con subf para crear matrices de imágenes en latex.
+LATEX DEFINITION AS ORG HEADER #+LATEX_HEADER:\newcommand*{\addheight}[2][.5ex]{ \raisebox{0pt}[\dimexpr\height+(#1)\relax]{#2}} 
     </div>
   </div>
 </div>
@@ -225,12 +151,14 @@ Preguntas para Anki  Cuantas clases se usan para implementar lista enlazada 2, u
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/2021-09-30/" class="link black dim">
-        2021-09-30
+      <a href="/notes/20210924110942-algebra_booleana/" class="link black dim">
+        Algebra Booleana
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Conferencia Human-centered AI  Pone a las personas primero, usando tecnología de AI, pero a la gente no le importa eso. Guía para hacer este tipo de productos: &ldquo;People+AI Guidebook&rdquo; Primero hay que conocer a los usuarios, comprender el problema a resolver.  Entender cuáles problemas sí se pueden resolver con AI.  Hay que conocer cómo las personas hacen su trabajo diariamente Este permite detectar qué situaciones pueden resolverse con AI.
+      Son las reglas que describen a las operaciones booleanas, tal como la aritmética, pero con algunas importantes diferencias.
+Las funciones booleanas se forman tanto con variables como con operadores booleanos, y su resultado siempre será 0 o 1.
+CARACTERÍSTICAS PRINCIPALES  Las variables solo pueden tener 2 valores: 0 o 1. Las operaciones principales son:  OR AND NOT   Otras operaciones:  NAND NOR XOR XNOR    LEYES DEL ÁLGEBRA BOOLEANA Son usadas para simplificar una expresión booleana, y reducir la cantidad de compuertas/operaciones necesarias para obtener el resultado correcto.
     </div>
   </div>
 </div>
@@ -240,12 +168,15 @@ Preguntas para Anki  Cuantas clases se usan para implementar lista enlazada 2, u
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/2021-10-01/" class="link black dim">
-        2021-10-01
+      <a href="/notes/20210827072505-algorithms/" class="link black dim">
+        Algorithms
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      CC APLICADAS ESPACIO COLUMNA C(A)  Si A es inversible, entonces existe una solución para \(Ax=b\), con \(x=A^{-1}b\) Si A es singular, no significa que nunca haya solución. Es posible que para algunos valores de b sí exista solución. El objetivo es encontrar para qué valores de b existe solución.  Definición: \(Ax=b\) posee solución si y solo si b pertenece al espacio columna de A: \(Ax=b \; tiene\; solucion \; \leftrightarrow b \in c(A)\)
+      Los algoritmos son una serie ordenada y finita de pasos, los cuales tienen entradas y salidas para resolver un problema específico.
+Sus caracteriśticas princiaples son que los algoritmos son:
+ Finitos Exactos Bien definidos  EFICIENCIA Y RECURSOS Es importante que se busque tener algoritmos eficientes, ya que todo algoritmo utiliza recursos tanto de tiempo como de memoria.
+La cantidad de recursos que utilizan se representa en función de la cantidad de datos N (Theta Notation):
     </div>
   </div>
 </div>
@@ -255,12 +186,16 @@ Preguntas para Anki  Cuantas clases se usan para implementar lista enlazada 2, u
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/2021-10-05/" class="link black dim">
-        2021-10-05
+      <a href="/notes/20210827171047-algoritmos_de_ordenamiento/" class="link black dim">
+        Algoritmos de Ordenamiento
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      ESTRUCTURAS DE DATOS (ÁRBOLES)  Estructuras no lineales (duh) Se usan en fórmulas algebraicas y en varias aplicaciones como AI o cifrados Tipos de nodos:  Raíz (El de hasta arriba, sólo hay uno) Rama (tiene hijos) Hoja (No tienen hijos)   En un árbol los datos se organizan relacionando los elementos a través de ramas.  Se forma por un conjunto finitode elementos (llamados nodos) Las líneas que conectan a los nodos también son llamadas arcos.
+      Estos son necesarios cuando se hará una gran cantidad de búsquedas en un conjunto de datos, pues los algoritmos de búsqueda son más eficientes en conjuntos ordenados.
+Hay 2 tipos de ordenamiento: Interno y externo.
+Ordenamiento interno (arreglos) Los elementos a ordenar se encuentran en la memoria principal.
+Métodos directos (n^2) Recorren todo el array por completo hasta \(n^2\) veces para realizar el ordenamiento.
+ Bubble sort Selection sort Insertion sort  Métodos logarítmicos (log n) Esto algoritmos usan técnicas que resultan más eficientes para grandes colecciones de datos.
     </div>
   </div>
 </div>
@@ -270,15 +205,69 @@ Preguntas para Anki  Cuantas clases se usan para implementar lista enlazada 2, u
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/2021-10-07/" class="link black dim">
-        2021-10-07
+      <a href="/notes/20210924112414-and/" class="link black dim">
+        AND
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      ESTRUCTURAS DE DATOS RECORRER EL ÁRBOL  Inorder: Left -&gt; Root -&gt; Right Preorder: Root -&gt; Left -&gt; Right Postorder: Left -&gt; Right -&gt; Root  ELIMINAR DATOS DE ÁRBOL BINARIO Casos
-ELIMINAR HOJA El más fácil, se elimina el arco desde el padre hasta el nodo a eliminar.
-UN SOLO DESCENDIENTE El hijo sustituye al padre, easy.
-2+ DESCENDIENTES 2 formas: Sustituyendo por el nodo máz a la izquierda del subárbol derecho, o por el nodo máz a la derecha del subárbol izquierdo.
+      También llamado conjunction, puede pensarse como una multiplicación lógica.
+SÍMBOLO Símbolo: \(\wedge\) Nombre en latex: ∧
+TABLA DE VERDAD    A B Y = A*B     0 0 0   0 1 0   1 0 0   1 1 1    
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210902175812-anki_flashcards/" class="link black dim">
+        Anki Flashcards
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      MAKE ATOMIC CARDS One idea per card:
+ Be specific, break up big ideas into smaller ones. Or, condense multiple ideas into a higher level one (this is harder).  BE HOLISTIC That is, integrate an idea into your knowledge before putting it into Anki:
+ Have holistic ideas, but atomic flashcards.
+ FUTURE-PROOF YOUR CARDS Don&rsquo;t think that remembering something know equals to remembering it in the future, with the same level of detail.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210928193343-anulacion_ley_de_algebra_booleana/" class="link black dim">
+        Anulación (Ley de álgebra booleana)
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Se anula el valor de la variable de entrada, y toma el valor constante ya sea de 1 o de 0:
+  \(A+1=1\) Esto es como un OR. Otras formas de verlo: -\(A\; or\; 1 = 1\)
+ \(A \vee 1 = 1\)    \(A*0=0\) Esto es un AND. Otras formas de verlo:
+  \(A\; and\; 0 = 0\)
+  \(A \wedge 0 = 0\)
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210927112505-arch_linux_beep_sound/" class="link black dim">
+        Arch Linux Beep Sound
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Save your ears the sorrow, turn off the beep today, not tomorrow.
+For a one-timer, not-permanent solution, just run on terminal: sudo rmmod pcspkr.
+To win the war against the annoying speaker, blacklist it.
+ Create the file: /etc/modprobe.d/nobeep.conf Add this line: &ldquo;blacklist pcspkr&rdquo;  
     </div>
   </div>
 </div>
@@ -311,7 +300,7 @@ UN SOLO DESCENDIENTE El hijo sustituye al padre, easy.
         <a href="/notes/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/notes/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/notes/page/24/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></article>
 

@@ -101,17 +101,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210827183539-combinacion_lineal/" class="link black dim">
-        Combinacion lineal
+      <a href="/notes/20210825102303-data_types/" class="link black dim">
+        Data Types
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Es la combinación de dos operaciones fundamentales: La suma y el producto escalar de vectores.
-Si se tienen 2 vectores \(u\) y \(v\), y 2 escalares \(c\) y \(d\), una combinación lineal sería:
-\begin{equation*} cu + dv = \begin{bmatrix} cu_1\ +\ dv_1\\
-cu_2\ +\ dv_2\\
-\end{bmatrix} \end{equation*}
-CASOS ESPECIALES SUMA Una suma se puede entender como una combinación linear donde todos los escalares son iguales a 1: \(1v + 1w\)
+      Los tipos de datos son clasificaciones que representan qué información puede almacenar una variable o un objeto en programación.
+Se dividen de la siguiente forma:
+ Simples  Primitivos  Numéricos Lógicos (Boolean) Carácter   Abstractos   Compuestos (estructurados)  Estáticos Dinámicos    
     </div>
   </div>
 </div>
@@ -121,16 +118,16 @@ CASOS ESPECIALES SUMA Una suma se puede entender como una combinación linear d
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210928194757-complemento_ley_de_algebra_booleana/" class="link black dim">
-        Complemento (Ley de álgebra booleana)
+      <a href="/notes/20210825104843-datos_abstractos/" class="link black dim">
+        Datos abstractos
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Complemento se refiere a hacer una operación con un elemento y el mismo elemento negado.
-Dependiendo de la operación realizada, el resultado será 1 o 0.
-OR \(A \vee \neg A = 1\)
-   A A' Y     0 1 1   1 0 1    AND \(A \wedge \neg A = 0\)
-   A A' Y     0 1 0   1 0 0    
+      Son un tipo de Dato primitivo, pues no tienen estructura (a diferencia de los datos compuestos).
+Esto datos, a diferencia de los datos simples, son definidos por el programador.
+Se definen formalmente como:
+ El conjunto de valores que puede tomar este tipo de dato, así como las operaciones que los manipulan. Ejemplos son las clases usadas en los lenguajes orientados a objetos.
+ Por ejemplo, &lsquo;Game&rsquo; es un tipo de dato abstracto, con un método &lsquo;startGame&rsquo;.
     </div>
   </div>
 </div>
@@ -140,15 +137,16 @@ OR \(A \vee \neg A = 1\)
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210924101602-complemento_a_2/" class="link black dim">
-        Complemento a 2
+      <a href="/notes/20210825105148-datos_compuestos/" class="link black dim">
+        Datos compuestos
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Es la forma en que las computadoras representan números enteros. Usa el sistema binario.
-Realmente es simple:
- El bit más significativo representa el signo.  0 = Positivo 1 = Negativo    NÚMEROS POSITIVOS Es un número binario normal, con una excepción. Tiene n-1 bits, donde n es la cantidad de bits con la que normalmente estaríamos trabajando.
-Como se explicó arriba, esto es para reservar un bit para el signo.
+      Este tipo de dato tiene una estructura, la cual almacena otros datos (normalmente datos simples).
+Estas estructuras pueden ser estáticas o dinámicas.
+Estructuras estáticas El tamaño que se ocupa en memoria se define antes de que el programa se ejecute, y no se puede modificar.
+Algunas son:
+ Array (vector/matriz) [0, 1, 2, 10, 15] El array reserva espacios secuenciales en la memoria para almacenar sus datos. Archivo (fichero) Literal son archivos de la computadora.
     </div>
   </div>
 </div>
@@ -158,15 +156,14 @@ Como se explicó arriba, esto es para reservar un bit para el signo.
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211022125140-complemento_ortogonal/" class="link black dim">
-        Complemento ortogonal
+      <a href="/notes/20210825104155-datos_logicos/" class="link black dim">
+        Datos logicos
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      El conjunto de todos los vectores u que son ortogonales a w, se denomina complemento ortogonal, y se denota como \(w^{\perp}\).
-Además, para que realmente sean complementos, sus dimensiones deben sumar para dar la dimensión completa de un espacio completo.
-Por ejemplo el espacio columna y el espacio nulo izquierdo tienen dimensiones r y n-r, las cuales suman a \(R^n\).
-Nota: Un complemento ortogonal de un segmento es bidireccional, por ejemplo:
+      Los datos lógicos pertenecen a los Datos simples, pues no tienen estructura, y solamente pueden tener uno de dos valores: Verdadero o Falso.
+Operadores de comparación Estos son usados para comparar dos valores, y regresan un resultado booleano.
+   Operador Significado     == Igual a   &lt; Menor que   &gt; Mayor que   != Diferente de   &lt;= Menor o igual que   &gt;= Mayor o igual que    
     </div>
   </div>
 </div>
@@ -176,15 +173,16 @@ Nota: Un complemento ortogonal de un segmento es bidireccional, por ejemplo:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210928195051-conmutativa_ley_de_algebra_booleana/" class="link black dim">
-        Conmutativa (Ley de álgebra booleana)
+      <a href="/notes/20210825103840-datos_numericos/" class="link black dim">
+        Datos numericos
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Igual que en álgebra regular, 2 variables en una operación pueden intercambiar lugares en los extremos del operando, y la operación será la misma:
-  \(A \vee B = B \vee A\)
-  \(A \wedge B = B \wedge A\)
-  
+      Son un tipo de dato simple (sin estructura), y primitivos.
+Simplemente son valores numéricos, los cuales pueden contener valores enteros o reales, dependiendo el tipo de dato específico.
+Enteros Subconjunto finito de los números enteros. Son números completos, sin fracciones ni decimales, y pueden ser tanto positivos como negativos. Ejemplos:
+ 5 6 -15 1340  Tamaños (variables comúnes) byte, short, int, long, +unsigned.
+Real Siempre tienen punto decimal, y pueden ser positivos o negativos.
     </div>
   </div>
 </div>
@@ -194,15 +192,17 @@ Nota: Un complemento ortogonal de un segmento es bidireccional, por ejemplo:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210902112746-construccion_de_programas/" class="link black dim">
-        Construccion de programas
+      <a href="/notes/20210825103623-datos_simples_primitivos/" class="link black dim">
+        Datos primitivos
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      1. Analizar el problema Hay que entender el problema y su contexto. Asentar el análisis por escrito.
-2. Especificar la solución Se especifica qué debe hacer el programa (aún no importa cómo). Considerar:
- Datos de entrada Salidas Relación entre ambos  Hay que documentar por escrito.
-3. Diseñar la solución Se determina cómo se va atacar el problema, eligiendo algoritmos y estructuras de datos. Se toman decisiones en base al contexto en que se aplicará la solución, y los costos asociados de cada diseño.
+      Son un tipo de dato simple, es decir, sin estructura y almacenan únicamente un tipo de valor específico.
+Las datos primitivos aquellos definidos por el sistema, y no están definidos en función de otros tipos de datos.
+Los más comúnes son:
+  Numéricos Ya sea enteros o reales: 1, 5, 10.0, 3.1416
+  Lógicos Solo pueden tomar dos valores: Verdadero o falso.
+  Carácter Un solo caracter como &lsquo;a&rsquo;, o una cadena de ellos.
     </div>
   </div>
 </div>
@@ -212,13 +212,14 @@ Nota: Un complemento ortogonal de un segmento es bidireccional, por ejemplo:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210928204916-convertir_matriz_rectangular_en_matriz_cuadrada_y_simetrica/" class="link black dim">
-        Convertir matriz rectangular en matriz cuadrada y simétrica
+      <a href="/notes/20210825103204-datos_simples/" class="link black dim">
+        Datos simples
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Si A es una matriz rectangular de (nxm), \(A^{T}A\) va ser una matriz cuadrada, pues quedará un producto (mxn)(nxm), con un resultado de dimensiones (mxm).
-Además, los productos \(A^{T}A\) y \(AA^{T}\) genera una matriz simetrica. Por si fuera poco, la diagonal siempre sera positiva (porque los elementos que conforman la diagonal son las lineas multiplicadas por sí mismas, pues linea i de A es la columna i de A transpuesta).
+      Son un tipo de dato que no tienen una estructura, simplemente almacenan un tipo de información específica, ya sea números, letras, booleanos, u otros.
+Estos datos pueden ser:
+ Primitivos Estos son dados por el sistema (ej: Python), y el programador simplemente los usa. Abstractos Estos son creados por el programador para cumplir un propósito específico dentro de su abstracción.  
     </div>
   </div>
 </div>
@@ -228,14 +229,16 @@ Además, los productos \(A^{T}A\) y \(AA^{T}\) genera una matriz simetrica. Por
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210925213527-cron_job/" class="link black dim">
-        Cron job
+      <a href="/notes/20210825104621-datos_tipo_caracter/" class="link black dim">
+        Datos tipo caracter
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      cron reads from a table the scripts to run, and these are scheduled to run every certain time. The format is as follows:
-minute hour day month day_of_week path/to/command output Where:
- minute indicates that the job will run every time the time marks minutes. Range: 0 - 59 hour indicates cron to run the job at Range: 0 - 23 day indicates which day of the month to run the script Range: 0 - 31 month indicates on which month to run the script Range: 0 - 12 day_of_week indicates if it should be run monday, tuesday, and so on Range: 0 - 7  SETUP First, install cron:
+      Son un tipo de Dato simple (sin estructura).
+Representan letras o conjuntos de letras.
+Carácter (char) El conjunto finito y ordenado de caracteres que la computadora reconoce. Solo contienen un carácter. Los caracteres reconocidos no son estándar, pero la mayoría de las computadoras reconoce los caracteres:
+ Alfabéticos [A-Za-z] Numéricos [0-9] Especiales [+,-,*,/,.,&lt;,&gt;,&hellip;]  Cadena (String) Sucesión de caracteres delimitados por apóstrofes o comillas dobles.
+Como un string son &lsquo;varios caracteres juntos&rsquo;, pudiera considerarse como un dato compuesto, pues es literalmente un array de chars.
     </div>
   </div>
 </div>
@@ -245,16 +248,15 @@ minute hour day month day_of_week path/to/command output Where:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211004133941-calculo_de_raices/" class="link black dim">
-        Cálculo de raíces
+      <a href="/notes/20210831225518-dependencia_e_independencia_lineal/" class="link black dim">
+        Dependencia e Independencia lineal
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Las raíces de una función son los puntos en los que \(y=0\).
-Visto de otra forma, para \(f(x)\), son las x que hacen real la igualdad \(f(x)=0\).
-MÉTODOS  Bisección Newton-Raphson Punto fijo  EJEMPLO \(f(x)=x^2-2\)
-Raíces de la función:
- \(x= \pm \sqrt{2}\)   
+      Nota: Para más información sobre independencia, bases, y dimensión, ver la nota individual de cada tema.
+Cuando un vector es una combinación lineal de algun otro (o 2, o más) vector(es), se le llama linealmente dependiente.
+Por otro lado, si no hay una combinación lineal que genere al vector, es linealmente independiente.
+INDEPENDENCIA LINEAL Y EL ESPACIO NULO Para un sistema \(Ax=0\), las columnas de la matriz A serán linealmente independientes si y solo si el espacio nulo contiene únicamente al vector Z.
     </div>
   </div>
 </div>
@@ -264,15 +266,13 @@ Raíces de la función:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211104082929-codigo_gray/" class="link black dim">
-        Código Gray
+      <a href="/notes/20210830191226-desigualdad_de_schwartz/" class="link black dim">
+        Desigualdad de Schwartz
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Es una forma de ordenar los números binarios, de forma que cada siguiente valor solo difiera en un solo bit.
-Esto significa que son celdas o valores adyacentes.
-Ejemplo:
-   Decimal Binario Gray code     0 000 000   1 001 001   2 010 011   3 011 010   4 100 110   5 101 111   6 110 101   7 111 100    
+      El producto punto de dos vectores siempre será menor o igual (nunca mayor) que el producto de sus normas.
+\begin{equation*} u \cdot v \leq \lVert u \rVert \lVert v \rVert \end{equation*}
     </div>
   </div>
 </div>
@@ -305,7 +305,7 @@ Ejemplo:
         <a href="/notes/page/6/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/notes/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/notes/page/24/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></article>
 

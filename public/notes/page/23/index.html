@@ -101,16 +101,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210827182425-suma_de_vectores/" class="link black dim">
-        Suma de vectores
+      <a href="/notes/20210825101220-the_maximum_subarray_problem/" class="link black dim">
+        The Maximum Subarray Problem
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Simplemente se suman los elementos que estén en la misma posición en cada vector.
-Por ejemplo, tome 2 vectores u y v: \(u = \bigl[\begin{smallmatrix}u_{1}\\ u_{2}\end{smallmatrix}\bigr]\) \(v = \bigl[\begin{smallmatrix}v_{1}\\ v_{2}\end{smallmatrix}\bigr]\)
-Para sumarlos, se suman los elementos que tengan el mismo subíndice, y el resultado es un vector con las mismas dimensiones que los originales:
-\begin{equation*} u + v = \begin{bmatrix} u_{1} &amp; + &amp; v_{1} \\
-u_{2} &amp; + &amp; v_{2} \\
+      This problem aims to find what subarray from an array of integers provides the largest sum.
+The Divide-and-Conquer paradigm implies that we have to split our original array in two parts and solve them recursively. Knowing this, we need to keep in mind that the maximum subarray could either:
+ Be in the left half (from start to midpoint) Be in the right half (from midpoint + 1 to end) Span both halfs  This last scenario is an additional problem that is not a smaller version of the original problem.
     </div>
   </div>
 </div>
@@ -120,12 +118,13 @@ u_{2} &amp; + &amp; v_{2} \\
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211012195002-target_validation/" class="link black dim">
-        Target Validation
+      <a href="/notes/20210827072852-theta_notation/" class="link black dim">
+        Theta Notation
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      
+      Theta notation gives us a way to measure the performance threshold of an algorithm.
+That is, theta notation is the meeting point of the upper and lower bounds, given by omega notation, and Big O notation, respectively.
     </div>
   </div>
 </div>
@@ -135,14 +134,12 @@ u_{2} &amp; + &amp; v_{2} \\
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210912163615-tecnologia/" class="link black dim">
-        Tecnologia
+      <a href="/notes/20210914080541-tikz/" class="link black dim">
+        TikZ
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Tecnología viene del griego Techne, que significa hacer (craft, as in Minecraft).
- Tecnología es el conjunto de varias creaciones de la ingeniería, juntas.
- DEFINICIONES  Un dispositivo, sistema, o proceso diseñado para satisfacer una necesidad o un deseo humano. Se refiere a los métodos, sistemas, aparatos que son resultado de conocimiento científico, usado en propósitos prácticos.  
+      TikZ allows creation of vector graphic schemes, charts, diagrams, etc&hellip; in LaTeX.
     </div>
   </div>
 </div>
@@ -152,14 +149,16 @@ u_{2} &amp; + &amp; v_{2} \\
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210908103438-teorema_de_rolle/" class="link black dim">
-        Teorema de Rolle
+      <a href="/notes/20210827190611-vector_unitario/" class="link black dim">
+        Vector unitario
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Este teorema nos permite saber si una función \(f(x)\) tiene un punto crítico en un intervalo dado.
-ENUNCIADO Sea \(f(x)\) una función que:
- es continua en [a, b] es derivable en (a, b) cumple que \(f(a)=f(b)\)  Entonces existe algún punto \(c \in (a, b)\) tal que \(f'( c)=0\).
+      Es un vector cuya longitud (norma) es igual a 1.
+Por la definición de norma, esto significa que un vector unitario \(u\): \(u \cdot u = 1\).
+NOTACIÓN Frecuentemente se denota con acento circunflejo sobre su nombre, o con una breve:
+ Circunflejo: \(\hat{v}\) Breve: \(\breve{v}\)  La tendencia actual es representar el vector unitario en dirección del vector r, en la forma \(u_r\)
+PROPIEDADES DE LOS VECTORES UNITARIOS  El producto punto de 2 vectores unitario es igual al coseno del ángulo entre ellos.
     </div>
   </div>
 </div>
@@ -169,14 +168,14 @@ ENUNCIADO Sea \(f(x)\) una función que:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210908181638-teorema_de_stone_weierstrass/" class="link black dim">
-        Teorema de Stone-Weierstrass
+      <a href="/notes/20210827181941-vectores/" class="link black dim">
+        Vectores
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Este es una generalización del Teorema de Weierstrass.
-La diferencia radica en que en vez de usar un intervalo cerrado [a, b], se considera un espacio compacto de Hausdorff, y en vez de utilizar polinomios, la aproximación se realiza con subalgebras de C(X).
-Entonces, el teorema de Stone-Weierstrass dice que si existe un anillo de funciones continuas \(C[a,b]\) en el intervalo [a, b], en el conjunto de números reales, entonces hay ciertos sub-anillos de \(C[a,b]\) que son densos en \(C[a,b]\).
+      Son el corazón de álgebra lineal. En física, los vectores tienen magnitud y dirección.
+En álgebra lineal, un vector puede representarse de la misma forma gráficamente, pero lo verdaderamente interesante son sus propiedades y las operaciones que se pueden realizar con ellos.
+OPERACIONES CON VECTORES  Suma de vectores Producto de vector con escalar Combinacion lineal Producto punto Normalizar vectores Calcular angulo entre vectores usando producto punto  PROPIEDADES DE LOS VECTORES  Longitud de un vector (Norma) Desigualdad de Schwartz  VECTORES ESPECIALES  Vector unitario  
     </div>
   </div>
 </div>
@@ -186,13 +185,15 @@ Entonces, el teorema de Stone-Weierstrass dice que si existe un anillo de funcio
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210908175322-teorema_de_weierstrass/" class="link black dim">
-        Teorema de Weierstrass
+      <a href="/notes/20210830202948-vite/" class="link black dim">
+        Vite
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Establece que cada función continua sobre un intervalo [a, b] del conjunto de números reales, puede ser aproximada uniformemente por polinomios.
-Este teorema tiene aplicaciones tanto teóricas como prácticas, porque los polinomios son de las funciones más sencillas, y las computadoras pueden evaluarlos directamente.
+      Vite is a fast server used for development. It is used in conjunction with Vue.js.
+INITIALIZATION # Mind the extra double dash right ▼▼▼ here npm init vite@latest &lt;project-name&gt; -- --template vue RUN If it was installed using --template vue, then you can run it using npm, like so:
+npm run dev or run it directly using:
+npx vite ASKING FOR HELP npx vite --help 
     </div>
   </div>
 </div>
@@ -202,15 +203,15 @@ Este teorema tiene aplicaciones tanto teóricas como prácticas, porque los po
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210908174310-teorema_del_valor_intermedio/" class="link black dim">
-        Teorema del Valor Intermedio
+      <a href="/notes/20210906211220-vue_components/" class="link black dim">
+        Vue Components
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      El oficiado formalmente dice:
- Para cualquier valor L entre f(a) y f(b), existirá un valor c en el intervalo [a, b] tal que f(c) = L.
- Esto significa, coloquialmente, que si la función f es continua en el intervalo [a, b] entonces alcanzará cualquier valor entre f(a) y f(b).
-REPRESENTACIÓN GRÁFICA  Se puede ver que, como la función es continua, la gráfica tocará (al menos) todos los puntos entre f(a) y f(b).
+      Vue components have 3 parts:
+        TEMPLATE It has the markup and display logic.
+SCRIPT It has the non-display logic. It must have a default exported JS object.
+STYLE It has the css.
     </div>
   </div>
 </div>
@@ -220,15 +221,17 @@ REPRESENTACIÓN GRÁFICA  Se puede ver que, como la función es continua, la 
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210908110631-teorema_del_valor_medio/" class="link black dim">
-        Teorema del Valor Medio
+      <a href="/notes/20210928192615-xnor/" class="link black dim">
+        XNOR
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Este teorema relaciona la razón de cambio promedio de una función con su derivada.
-El enunciado dice que para cualquier función diferenciable f, y cualquier intervalo [a, b] que pertenezca al dominio de f, exstirá un número c dentro de (a, b) tal que f'(c) sea igual a la razón de cambio promedio de la función en el intervalo [a, b].
-\begin{equation*} f'( c) = \frac{f(b)-f(a)}{b-a} \end{equation*}
-Condiciones  La función debe ser continuo en el intervalo [a, b].
+      Es un &ldquo;bicondicional&rdquo;. Puede llamarse como una compuerta de equivalencia, pues regresa positivo solo cuando ambas entradas son iguales.
+FORMAS DE REPRESENTARLO   \((A+\overline{B})(\overline{A}+B)\)
+  \(A\cdot B + \overline{A} \cdot \overline{B}\)
+  \(A \odot B\)
+  TABLA DE VERDAD \(Y=AB + \overline{AB}\)
+   A B Y     0 0 1   0 1 0   1 0 0   1 1 1    
     </div>
   </div>
 </div>
@@ -238,12 +241,17 @@ Condiciones  La función debe ser continuo en el intervalo [a, b].
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210908185000-teorema_fundamental_del_algebra/" class="link black dim">
-        Teorema fundamental del algebra
+      <a href="/notes/20210928192033-xor/" class="link black dim">
+        XOR
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      El teorema establece que una función polinomial de grado \(n\) tiene exactamente \(n\) ceros en el conjunto de números complejos, incluyendo los ceros repetidos.
+      Llamado también &ldquo;or exclusivo&rdquo;, pues actúa como una compuerta OR, pero se diferencía en que solo regresa Verdadero si sus 2 entradas son diferentes: Una verdadera y una falsa. Entonces, puede ser &ldquo;una o la otra, pero no ambas&rdquo;.
+FORMAS DE REPRESENTARLO   \(A\cdot \overline{B} + \overline{A} \cdot B\)
+  \((A+B)(\overline{A}+\overline{B})\)
+  \(A \oplus B\)
+  TABLA DE VERDAD \(Y=\overline{A}B + A\overline{B}\)
+   A B Y     0 0 0   0 1 1   1 0 1   1 1 0    
     </div>
   </div>
 </div>
@@ -253,15 +261,16 @@ Condiciones  La función debe ser continuo en el intervalo [a, b].
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210928201147-teoremas_de_morgan_ley_de_algebra_booleana/" class="link black dim">
-        Teoremas de Morgan (Ley de álgebra booleana)
+      <a href="/notes/20211014111207-arbol_avl/" class="link black dim">
+        Árbol AVL
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Una operación negada puede partirse en la negación de sus elementos, unidos por otro operando. Hablamos en específico de estos 2 casos:
-  \(\overline{A+B} = \overline{A} * \overline{B}\)
-  \(\overline{A*B} = \overline{A} + \overline{B}\)
-  
+      Es un árbol binario de búsqueda que, como característica, siempre está balanceado
+OPERACIONES Las mismas de cualquier árbol binario:
+ Insertar Eliminar Buscar  La diferencia radica en que cuando se insertan o eliminan elementos, se deteriman si el árbol está o no balanceado. Si es necesario, se balancea.
+BALANCEO El balanceo se revisa de abajo hacia arriba.
+Es decir, se checa el factor de balanceo en las hojas, luego en el nivel de arriba, y así sucesivamente hasta que se encuentre un factor que no entre en los parámetros permitidos (-1, 0, ó 1).
     </div>
   </div>
 </div>
@@ -276,6 +285,9 @@ Condiciones  La función debe ser continuo en el intervalo [a, b].
         <a href="/notes/page/22/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
       </li>
       <li class="page-item">
+        <a href="/notes/page/20/" aria-label="Page 20" class="page-link" role="button">20</a>
+      </li>
+      <li class="page-item">
         <a href="/notes/page/21/" aria-label="Page 21" class="page-link" role="button">21</a>
       </li>
       <li class="page-item">
@@ -288,13 +300,10 @@ Condiciones  La función debe ser continuo en el intervalo [a, b].
         <a href="/notes/page/24/" aria-label="Page 24" class="page-link" role="button">24</a>
       </li>
       <li class="page-item">
-        <a href="/notes/page/25/" aria-label="Page 25" class="page-link" role="button">25</a>
-      </li>
-      <li class="page-item">
         <a href="/notes/page/24/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/notes/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/notes/page/24/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></article>
 

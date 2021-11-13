@@ -101,21 +101,43 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210909220221-matriz_de_permutacion/" class="link black dim">
-        Matriz de Permutación
+      <a href="/notes/20210918125103-matriz_simetrica/" class="link black dim">
+        Matriz Simétrica
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Es similar a la matriz identidad, pero con 2 filas intercambiadas para que, al multiplicarla por otra matriz, se haga el mismo intercambio.
-\begin{equation*} I = \begin{bmatrix} 1\ 0\ 0\\
-0\ 1\ 0\\
-0\ 0\ 1\\
+      Es una matriz donde aplicarle la transpuesta no genera ningun cambio.
+\begin{equation*} A = A^{T} \end{equation*}
+E.g
+\begin{equation*} A= \begin{bmatrix} 1\ 7\ 3\\
+7\ 4\ 5\\
+3\ 5\ 0\\
+\end{bmatrix} \; \; \; A^{T}= \begin{bmatrix} 1\ 7\ 3\\
+7\ 4\ 5\\
+3\ 5\ 0\\
 \end{bmatrix} \end{equation*}
-\begin{equation*} P_{23} = \begin{bmatrix} 1\ 0\ 0\\
-0\ 0\ 1\\
-0\ 1\ 0\\
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210918113102-matriz_singular/" class="link black dim">
+        Matriz Singular
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Una matriz singular es una matriz que no tiene matriz inversa.
+De forma contraria a las propiedades de una matriz inversa, una matriz será singular si:
+ Su determinante es igual a 0. Alguno de sus vectores es linealmente dependiente.  Ejemplo: Para una matriz A:
+\begin{equation*} A= \begin{bmatrix} 1\ 2\\ 1\ 2\\
 \end{bmatrix} \end{equation*}
-UTILIDAD DE MATRIZ PERMUTACIÓN Esta matriz se vuelve importante cuando se obtiene un sistema \(Ax=b\) donde no es posible aplicar eliminación, pues hay un cero en los pivotes.
+Su determinante será:
+\begin{align*} \lvert A \rvert &amp;= (1*2)-(1*2)\\
+\lvert A \rvert &amp;= 2 - 2\\
     </div>
   </div>
 </div>
@@ -125,53 +147,21 @@ UTILIDAD DE MATRIZ PERMUTACIÓN Esta matriz se vuelve importante cuando se obtie
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210902164949-matriz_de_seleccion/" class="link black dim">
-        Matriz de Seleccion
+      <a href="/notes/20210928201705-matriz_transpuesta/" class="link black dim">
+        Matriz Transpuesta
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Solamente tiene unos y ceros, donde los unos son los elementos a conservar al hacer el producto punto con otra matriz.
-\begin{equation*} \begin{bmatrix} 1\ 2\\
-3\ 4\\
-\end{bmatrix} \begin{bmatrix} 0\\ 1 \end{bmatrix} \begin{bmatrix} 2\\ 4 \end{bmatrix} \end{equation*}
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Notes</span>
-    <h1 class="f3 near-black">
-      <a href="/notes/20210918130420-matriz_densa/" class="link black dim">
-        Matriz Densa
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      No he encontrado una definición per se, pero es una matriz que no puede ser comprimida, porque contiene más valores que ceros.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Notes</span>
-    <h1 class="f3 near-black">
-      <a href="/notes/20210907130335-matriz_diagonalizada/" class="link black dim">
-        Matriz Diagonal
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Una matriz que, solo tiene valores distintos a 0 en su diagonal. Todos los demás serán 0.
+      La transpuesta de una matriz A, es una matriz \(A^T\) cuyas columnas corresponden a las líneas de A, y sus filas a las columnas de A. Es decir: Las filas y columnas están intercambiadas.
 Ejemplo:
-\begin{equation*} A = \begin{bmatrix} &amp;2\ &amp;4\ &amp;-2\\
-&amp;4\ &amp;9\ &amp;-3\\
-&amp;-2\ &amp;-3\ &amp;7 \end{bmatrix} \end{equation*}
-Para esta A, su matriz diagonal será:
-\begin{equation*} D = \begin{bmatrix} &amp;2\ &amp;0\ &amp;0\\
-&amp;0\ &amp;1\ &amp;0\\
-&amp;0\ &amp;0\ &amp;4 \end{bmatrix} \end{equation*}
+\begin{equation*} A= \begin{bmatrix} 1\ 2\ 3\\
+4\ 5\ 6\\
+\end{bmatrix} \; \; \; A^{T} = \begin{bmatrix} 1\ 4\\
+2\ 5\\
+3\ 6\\
+\end{bmatrix}
+\end{equation*}
+OPERACIONES CON LA TRANSPUESTA SUMA \begin{equation*} \left( A + B \right)^{T} = A^{T} + B^{T} \end{equation*}
     </div>
   </div>
 </div>
@@ -181,19 +171,15 @@ Para esta A, su matriz diagonal será:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210918125241-matriz_tridiagonal_dominante/" class="link black dim">
-        Matriz Diagonal Dominante
+      <a href="/notes/20210918125138-matriz_tridiagonal/" class="link black dim">
+        Matriz Tridiagonal
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Definición formal: El valor absoluto del elemento en \(a_{ii}\) es mayor que lo suma total de los demás elementos de su línea. (Nota: \(a_{ii}\) es un elemento de la diagonal).
-\begin{equation*} \lvert a_{ii} \rvert &gt; \sum_{j \neq i} \lvert a_{ij} \rvert \end{equation*}
-EJEMPLO DE MATRIZ DIAGONAL DOMINANTE \begin{equation*} A = \begin{bmatrix} 5\ &amp;1\ &amp;2\\
-0\ &amp;-9\ &amp;3\\
-1\ &amp;3\ &amp;5\\
-\end{bmatrix} \end{equation*}
-Fila por fila:
- Fila 1.  Elemento en la diagonal: 5 Suma de todos los demás en esa fila: 3 Cumple la condición.
+      Tiene la diagonal central, y otras 2 diagonales adyacentes. Todo lo demás son ceros.
+NOTAS EFICIENCIA Y RECURSOS COMPUTACIONALES Una matriz rala es una matriz que tiene más ceros que valores Entonces, hablando de recursos computacionales, podemos comprimir esa matriz, para no usar tanto espacio.
+La excepción es si vamos a calcular su inversa, pues será densa.
+INVERSA DE UNA MATRIZ TRIDIAGONAL La inversa tiene la característica de que será densa.
     </div>
   </div>
 </div>
@@ -203,18 +189,12 @@ Fila por fila:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210907211457-matrices_elementales/" class="link black dim">
-        Matriz Elemental
+      <a href="/notes/20211015101405-msfconsole/" class="link black dim">
+        Metasploit
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Es una variante de la Matriz Identidad, la cual, además de la diagonal de unos, tien un único elemento con valor distinto a cero, el cuál afectará a la matriz por la cual se multiplice esta matriz elemental.
-Ej:
-\begin{equation*} E_{13} = \begin{bmatrix} 1\ 0\ \frac{1}{4}\\
-0\ 1\ 0\\
-0\ 0\ 1\\
-\end{bmatrix} \end{equation*}
-CREACION DE LA MATRIZ ELEMENTAL \(E_{ij}\) es la matriz identidad con multiplicador \(-\ell _{ij}\) en su posición i,j, donde \(-\ell _{ij}\) es el valor que se usará para afectará a la posición (i, j) de la matriz multiplicada.
+       Run it msfconsole search &lt;something&gt; use &lt;code&gt; info Set the necessary options set &lt;option&gt; &lt;value&gt; run  
     </div>
   </div>
 </div>
@@ -224,16 +204,13 @@ CREACION DE LA MATRIZ ELEMENTAL \(E_{ij}\) es la matriz identidad con multiplica
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211008134315-matriz_escalonada/" class="link black dim">
-        Matriz Escalonada Reducida
+      <a href="/notes/20211017184236-meterpreter/" class="link black dim">
+        Meterpreter
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Esta matriz es generada aplicando eliminación a una matriz rectangular.
-Si se trabaja con una matriz cuadrada, la eliminación se detiene al generar la matriz triangular U.
-PRODUCIENDO LA MATRIZ R Hablando de matrices rectangulares, podemos llegar a la forma escalonada reducida R aplicando los siguientes 2 pasos:
- Producir ceros arriba de los pivotes. Producir unos en los pivotes.  EJEMPLO Partiendo de una matriz U:
-\begin{equation*} U= \begin{bmatrix} 1\ 2\ 2\ 4\\
+      Environment from Metasploit.
+HASHDUMP The command hashdump dumps the contents of the SAM database.
     </div>
   </div>
 </div>
@@ -243,16 +220,18 @@ PRODUCIENDO LA MATRIZ R Hablando de matrices rectangulares, podemos llegar a la 
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210831224956-matriz_identidad/" class="link black dim">
-        Matriz Identidad
+      <a href="/notes/20210902165958-metodo_de_eliminacion/" class="link black dim">
+        Metodo de eliminacion
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Es la matriz que multiplicada por otra matriz, da la misma matriz. Equivalente al 1 en multiplicación escalar. Su diagonal está llena de 1, el resto son ceros. Es un subtipo de matriz identidad.  Nota: Otra notación para la matriz inversa \(I\) es escribirlo como: \(A^0\)
-\begin{equation*} I = \begin{bmatrix} 1\ 0\ 0\\
-0\ 1\ 0\\
-0\ 0\ 1 \end{bmatrix} = A^0 \end{equation*}
-CARACTERÍSTICAS  Es cuadrada Tiene una diagonal de unos, y el resto son ceros Su símbolo es la letra &ldquo;I&rdquo;.
+      Este método busca crear una matriz triangular superior.
+Es el método que ya conozco para resolver ecuaciones lineales:
+ Se plantean las ecuaciones Se multiplica una igualdad por el recíproco del primer término, y eso se mutiplica por el primer término de la siguiente igualdad. Se repiten estos pasos hasta que se obtiene la matriz triangular superior.  En general, si nuestras ecuaciones son:
+\begin{align*} 2x+4y-2z&amp;=2\\
+4x+9y-3z&amp;=8\\
+-2x-3y+7z&amp;=10 \end{align*}
+Generan el sistema Ax = b:
     </div>
   </div>
 </div>
@@ -262,36 +241,54 @@ CARACTERÍSTICAS  Es cuadrada Tiene una diagonal de unos, y el resto son ceros 
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210831224318-matriz_inversa/" class="link black dim">
-        Matriz Inversa
+      <a href="/notes/20210918122240-metodo_de_gauss_jordan_para_obtener_matriz_inversa/" class="link black dim">
+        Método de Gauss-Jordan para obtener matriz inversa
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      La inversa de una matriz es una matriz que cuando se multiplican entre sí, producen la matriz identidad:
-\begin{equation*} A \cdot A^{-1} = A^{-1} \cdot A = I \end{equation*}
-Nota: No todas las matrices tienen inversa. Para que tenga inversa, la matriz debe ser linealmente independiente. También su determinante debe ser != 0
-DETERMINAR SI EXISTE LA MATRIZ INVERSA  Si A es de \(nxn\), y tiene \(n\) pivotes, sí existe.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Notes</span>
-    <h1 class="f3 near-black">
-      <a href="/notes/20210918123533-matriz_inversa_de_una_matriz_elemental/" class="link black dim">
-        Matriz inversa de una matriz elemental
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Nada más se invierte el signo del multiplicador, y queda en la misma posición.
+      Para una matriz A, se aumenta con la matriz identidad: [AI]
 Ejemplo:
-\begin{equation*} E= \begin{bmatrix} 1\ &amp;0\ &amp;0\\
--5\ &amp;1\ &amp;0\\
-0\ &amp;0\ &amp;1 \end{bmatrix} \; \; E^{-1}= \begin{bmatrix} 1\ &amp;0\ &amp;0\\
-5\ &amp;1\ &amp;0\\
-0\ &amp;0\ &amp;1 \end{bmatrix} \end{equation*}
+\begin{equation*} A= \begin{bmatrix} \ \ 2\ \ &amp;\llap{$-$}1\ \ &amp;0\\
+\ \ \llap{$-$}1\ \ &amp;2\ \ &amp;\llap{$-$}1\\
+\ \ 0\ \ &amp;\llap{$-$}1\ \ &amp;2 \end{bmatrix} \end{equation*}
+Matriz aumentada [AI]:
+\begin{equation*} [AI]= \begin{bmatrix} \ \ 2\ \ &amp;\llap{$-$}1\ \ &amp;0\ \ 1\ \ 0\ \ 0\\
+\ \ \llap{$-$}1\ \ &amp;2\ \ &amp;\llap{$-$}1\ \ 0\ \ 1\ \ 0\\
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20210902171623-metodo_de_substitucion_hacia_atras/" class="link black dim">
+        Método de substitución hacia atrás
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Este método se usa para solucionar un sistema de ecuaciones lineales, con matrices.
+Para poder aplicarlo, es necesario obtener una matriz triangular superior, la cual puede determinarse aplicando el metodo de eliminacion.
+Se llama sustitución hacia atrás porque se inicia resolviendo la igualdad con una sola incógnita y, con ese valor, se empieza a resolver hacia atrás resto de las ecuaciones, pues cada una utiliza el valor recién calculado en la anterior.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Notes</span>
+    <h1 class="f3 near-black">
+      <a href="/notes/20211018121043-miniterminos_y_maxiterminos/" class="link black dim">
+        Minitérminos y Maxitérminos
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      MINITÉRMINO Es el producto de todas las variables con, o sin su complemento. Cada variable aparece únicamente una sola vez, y existe una sola combinación que haga que el resultado del producto sea 1.
+Todas las demás serán 0.
+Se crean a partir de los valores de las variables:
+ Si el valor es 0, se usa la variable complementada. Si el valor es 1, se usa la variable tal como es.
     </div>
   </div>
 </div>
@@ -324,7 +321,7 @@ Ejemplo:
         <a href="/notes/page/14/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/notes/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/notes/page/24/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></article>
 

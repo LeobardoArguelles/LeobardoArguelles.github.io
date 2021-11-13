@@ -101,14 +101,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211003172900-schedule_zoom_meetings/" class="link black dim">
-        Schedule Zoom Meetings
+      <a href="/notes/20210909211627-solucionar_sistemas_de_ecuaciones_con_matrices_elementales/" class="link black dim">
+        Solucionar sistemas de ecuaciones con matrices elementales
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Create a bash file with the following syntax:
-zoom &#34;zoommtg://zoom.us/join?confno=&lt;conference_number&gt;&amp;pwd=&lt;password&gt;&#34; Notes:
- Password is optional To get the necessary data, open the call on internet, and get it from the link. For example: url: zoommtg://zoom.us/join?confno=81119430791&amp;pwd=bnBOOEZ6UWFtV3ZvUnVLK0VmakdWQT09 conference number: 81119430791 password: bnBOOEZ6UWFtV3ZvUnVLK0VmakdWQT09  Once you have the script, schedule it using cron or systemd.
+      Es posible solucionar un sistema de ecuaciones si se plantea de la forma Ax = b.
+Para hacerlo, hay que encontrar una matriz \(E\) que, al multiplicarse con \(A\), genere la matriz identidad. Dicho de otra forma, hay que encontrar la matriz inversa de A (\(A^{-1}\)).
+Nota: Si una matriz tiene matriz inversa, significa que habrá una solución para cualquier vector b. Sin embargo, que no exista la matriz inversa no significa que no exista ninguna solución.
     </div>
   </div>
 </div>
@@ -118,13 +118,15 @@ zoom &#34;zoommtg://zoom.us/join?confno=&lt;conference_number&gt;&amp;pwd=&lt;pa
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211003173313-scheduling_with_systemd/" class="link black dim">
-        Scheduling with systemd
+      <a href="/notes/20211008140534-solucion_completa_de_ax_b/" class="link black dim">
+        Solución completa de Ax=b
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      PROCESS  Create your bash script, and make it executable. Create your timer and service files. Enable and activate the timer, using: systemctl enable &lt;file&gt;.timer --user systemctl start &lt;file&gt;.timer --user Note: The user flag is, obviously, for user scripts. For system-wide scripts, run it without that flag.  NEEDED FILES You&rsquo;ll need 2 files, both with the same name:
- Service unit Here you specify which script to run. Timer unit The timer controls and activates the service unit.
+      La solución completa x es: \(x= x_p + x_n\), donde:
+ \(x_p\) son las soluciones particulares. \(x_6\) son las soluciones del espacio nulo.  OBTENIENDO SOLUCIONES PARTICULARES Se recomienda obtenerlas partir de la matriz escalonada reducida R, pues así es más fácil encontrar los valores de los pivotes.
+Entonces, partiendo de R:
+ Se le asigna valor 0 a todas las variables libres. Se calculan los valores de los pivotes usando sutitución hacia atrás.
     </div>
   </div>
 </div>
@@ -134,14 +136,14 @@ zoom &#34;zoommtg://zoom.us/join?confno=&lt;conference_number&gt;&amp;pwd=&lt;pa
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210827172726-selection_sort/" class="link black dim">
-        Selection sort
+      <a href="/notes/20211015192620-ssh/" class="link black dim">
+        ssh
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Recorre todo el array buscando el número menor de la lista lst[i:], y cuando acaba esa iteración la coloca en la posición i, haciendo un intercambio con el elemento que estaba ahí.
-Repetir hasta que el arreglo esté ordenado.
- Mejor caso: \(O(n^{2})\) Caso promedio: \(O(n^{2})\) Peor \(O(n^{2})\).  El número de intercambios es \(O(n)\), lo que es mejor que Bubble Sort. El algoritmo hace un número fijo de pasadas.   Complejidad de espacio: \(O(1)\)  PASOS  Seleccionar el menor elemento del arreglo Intercambiarlo con el elemento en la primer posición Repetir con el mismo arreglo excepto el elemento que acabas de acomodar.
+      NORMAL CONNECTION ssh &lt;ip_address&gt; # Example: ssh 192.168.57.134 ALTERNATIVE METHOD Sometimes, when we dont have the key, we will need to do this process:
+First, try the normal connection: ssh &lt;ip_address&gt;. This shoul throw an error, and it should give you an &ldquo;offer&rdquo; of a key exchange. Copy it, and use it in the next line:
+ssh &lt;ip_address&gt; -oKexAlgorithms=+&lt;key_exchange&gt; This should also throw an error, and it should also offer a &ldquo;matchin cipher&rdquo;.
     </div>
   </div>
 </div>
@@ -151,15 +153,16 @@ Repetir hasta que el arreglo esté ordenado.
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211004101040-serie_de_taylor/" class="link black dim">
-        Serie de Taylor
+      <a href="/notes/20210902113325-stack/" class="link black dim">
+        Stack
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Es una aproximación de funciones utilizando polinomios. La serie se plantea como:
-\begin{equation*} \sum _{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n \end{equation*}
-Donde:
- \(f^{(n)}(a)\) es la n-ésima derivada de la función. a es el valor en el cual se centra la función.  CENTRAR LA FUNCIÓN a es el valor en el que está centrada la función, esto significa que, el polinomio que salga al calcular la Serie de Taylor, solo funcionará para valores cercanos a a.
+      Una estructura de datos simple, en la que el orden de llegada de los elementos sí importa.
+DEFINICIÓN Es una lista ordenada en la cual los elementos se insertan y se quitan del mismo extremo, llamado cima. El último elemento en ser insertado será el primero en ser extraído. LIFO: Last-In-First-Out.
+OPERACIONES PUSH Introduce un elemento a la pila.
+POP Elimina un elemento de la pila.
+EMPTY Función booleana que indica si la pila está o no vacía.
     </div>
   </div>
 </div>
@@ -169,13 +172,15 @@ Donde:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211005165705-set_image_size_in_org/" class="link black dim">
-        Set image size in org
+      <a href="/notes/20210825105751-strings/" class="link black dim">
+        Strings
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Use these tags above the image (without blank lines):
-#+ATTR_HTML: :width &lt;width&gt;px #+ATTR_LATEX: :width &lt;width&gt;px 
+      Una cadena de caracteres es una secuencia de 0 o más símbolos alfanuméricos y caracteres especiales.
+Juegos de caracteres ASCII American Standard Code for Information Interchange
+ Básico  Usa 7 bits por carácter para represetar 128 caracteres distintos.   Ampliado  Usa 8 bits, para 256 caracteres.    EBCDIC Extended Binary Coded Decimal Interchange Code. Usa 8 bits, para 256 caracteres.
+Constantes Se encierran entre apostrofes o comillas.
     </div>
   </div>
 </div>
@@ -185,17 +190,14 @@ Donde:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210929092514-setup_mu4e/" class="link black dim">
-        Setup mu4e
+      <a href="/notes/20211007153156-sub_caption_matriz_de_imagenes_latex/" class="link black dim">
+        Sub-caption matriz de imagenes (Latex)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Asegúrate de usar la configuración de mi repo https://github.com/LeobardoArguelles/emacs.
-  Clona mi repositorio dotfiles. https://github.com/LeobardoArguelles/dotfiles
-  Copia el archivo .mbsyncrc de dotfiles a ~/.config/mu4e
-cp .dotfiles/.mbsyncrc .config/mu4e   Crea un archivo llamado &ldquo;mbsyncpass-acc1&rdquo; con la contraseña de la cuenta registrada, en texto.
-  Encriptalo:
-gpg2 -c mbsyncpass-acc1 #+end_src* 5. Borra el archivo de texto sin encriptar. 6. Instala ~mu~ desde [[https://aur.archlinux.org/packages/mu/][el repositorio en AUR.]] 7. Cierra Doom y corre ~doom sync~.
+      Este comando lo uso en combo con tabular para crear una matriz de figuras, donde cada figura tenga su propio texto.
+LATEX DEFINITION Se usa de la siguiente manera:
+AS ORG HEADER #+LATEX_HEADER: \newcommand{\subf}[2]{{\small\begin{tabular}[t]{@{}c@{}}#1\\#2 \end{tabular}}} 
     </div>
   </div>
 </div>
@@ -205,15 +207,13 @@ gpg2 -c mbsyncpass-acc1 #+end_src* 5. Borra el archivo de texto sin encriptar. 6
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210912205914-shell_sort/" class="link black dim">
-        Shell Sort
+      <a href="/notes/20211001110338-subespacio_vectorial/" class="link black dim">
+        Subespacio vectorial
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Es una mejora sobre Insertion sort.
-En shell sort se comparan elementos distantes, y se incercambian si es necesario.
-La principal diferencia entre shell e insertion sort, es que insertion solo maneja un array ordenado, mientras que shell maneja length/h arrays ordenados.
-PASOS  Dividir la lista en \(\frac{n}{2}\) grupos, cada uno con 2 elementos. Cada grupo de elementos estará separado por un espacio también de n/2. Recorrer la lista, comparando individualmente cada grupo de elementos, y haciendo los intercambios necesarios.
+      Son espacios vectoriales más chicos, contenidos dentro de los espacios vectoriales grandes, que contienen a todos los vectores (como \(R^2\) tiene todos los vectores bidimensionales)
+Ejemplo: Un plano es un subespacio de \(R^3\), porque cumple todas las reglas necesarias, pero los vectores ahí contenidos nunca saldrán del plano. Y, aunque pudiera parecer que está entonces en 2 dimensiones, no pertenece a \(R^2\), pues los vectores tienen 3 dimensiones (una de ellas es 0).
     </div>
   </div>
 </div>
@@ -223,13 +223,22 @@ PASOS  Dividir la lista en \(\frac{n}{2}\) grupos, cada uno con 2 elementos. Cad
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211016205232-shells/" class="link black dim">
-        Shells
+      <a href="/notes/20210910131218-suma_de_matrices/" class="link black dim">
+        Suma de matrices
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      See:
- Reverse shell This is the most common kind. Bind shell  
+      La condición es que las matrices deben tener las mismas dimensiones \(mn\).
+Nada más se suman los elementos en las misma coordenadas, y el resultado es una matriz con las mismas dimensiones.
+Ej:
+\begin{equation*} A = \begin{bmatrix} 1\ 2\ 3\\
+4\ 5\ 6\\
+7\ 8\ 9\\
+\end{bmatrix} \; B = \begin{bmatrix} 9\ 8\ 7\\
+6\ 5\ 4\\
+3\ 2\ 1\\
+\end{bmatrix} \end{equation*}
+\begin{equation*} A + B = \begin{bmatrix} (1+9)\ (2+8)\ (3+7)\\
     </div>
   </div>
 </div>
@@ -239,15 +248,18 @@ PASOS  Dividir la lista en \(\frac{n}{2}\) grupos, cada uno con 2 elementos. Cad
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210831222734-sistema_de_ecuaciones_lineales_con_matrices/" class="link black dim">
-        Sistema de ecuaciones lineales con matrices
+      <a href="/notes/20211018123453-suma_de_productos_algebra_booleana/" class="link black dim">
+        Suma de productos (Álgebra booleana)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Un sistema de ecuaciones lineales se puede plantear como un producto de matriz por vector, de la siguiente forma:
-\begin{equation*} Ax = b \end{equation*}
-donde:
- A es la matriz de coeficientes Los coeficientes se obtienen de las ecuaciones del sistema. x es el vector de variables Por ejemplo: x, y, z. b es el resultado, el cual es una combinación lineal de las columnas de A.  De esto se deduce también que:
+      Es una ecuación formada por la suma de puros productos.
+Por ejemplo, una suma de productos sería: \(AB+CD\)
+CONVERTIR PRODUCTOS NORMALES A SOP La condición es simplemente que los productos se estén sumando, entonces podemos pasar de esto:
+\begin{equation*} A(B+CD) \end{equation*}
+A esto (lo que ya es una suma de productos):
+\begin{equation*} AB + ACD \end{equation*}
+SUMA DE PRODUCTOS CANÓNICA Es una suma de productos, donde cada producto es un minitérmino.
     </div>
   </div>
 </div>
@@ -257,15 +269,16 @@ donde:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211015185451-sistema_generador_algebra_lineal/" class="link black dim">
-        Sistema generador (Álgebra lineal)
+      <a href="/notes/20210827182425-suma_de_vectores/" class="link black dim">
+        Suma de vectores
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      En ingles se dice que un sistema generador son vectores que span (abarcan?) el espacio vectorial.
-En español, un sistema generador es un conjunto de vectores a partir de los cuales se puede generar el espacio vectorial V completo.
-EJEMPLO El sistema generador básico de un espacio en \(R^n\) es la matriz identidad de dimensión n.
-Esto es porque sus columnas son linealmente independientes, y al combinarlas linealmente es posible generar cualquier vector de \(R^n\).
+      Simplemente se suman los elementos que estén en la misma posición en cada vector.
+Por ejemplo, tome 2 vectores u y v: \(u = \bigl[\begin{smallmatrix}u_{1}\\ u_{2}\end{smallmatrix}\bigr]\) \(v = \bigl[\begin{smallmatrix}v_{1}\\ v_{2}\end{smallmatrix}\bigr]\)
+Para sumarlos, se suman los elementos que tengan el mismo subíndice, y el resultado es un vector con las mismas dimensiones que los originales:
+\begin{equation*} u + v = \begin{bmatrix} u_{1} &amp; + &amp; v_{1} \\
+u_{2} &amp; + &amp; v_{2} \\
     </div>
   </div>
 </div>
@@ -298,7 +311,7 @@ Esto es porque sus columnas son linealmente independientes, y al combinarlas lin
         <a href="/notes/page/22/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/notes/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/notes/page/24/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></article>
 

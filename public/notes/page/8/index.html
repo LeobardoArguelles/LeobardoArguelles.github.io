@@ -101,12 +101,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211011164032-eliminacion_de_gauss_con_factorizacion_lu/" class="link black dim">
-        Eliminación de Gauss con factorización LU
+      <a href="/notes/20210825105939-estructuras_dinamicas_lineales/" class="link black dim">
+        Estructuras dinamicas lineales
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      
+      Arreglos a.k.a. Arrays Es un conjunto de elementos de un mismo tipo, ordenados, y que pueden variar en número. A esto se le llama almacenamiento secuencial.
+Operaciones que se pueden hacer con una lista secuencial:
+ Insertar, eliminar, localizan un elemento Determinar su tamaño Recorrer la lista para localizar un elemento particular Ordenar sus elementos de forma ascendiente o descendiente Unir dos o más listas en una sola Dividir una lista en sublistas Copiarla Borrarla  Para insertar o eliminar un elemento en medio de la lista (cualquier punto excepo el final) es necesario recorrer todos los demás elementos, pues están organizados secuencialmente.
     </div>
   </div>
 </div>
@@ -116,19 +118,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211011164102-eliminacion_de_gauss_usando_id_7f536f07_0356_4223_a997_5b062429b228_eliminacion_de_gauss_con_factorizacion_lu/" class="link black dim">
-        Eliminación de Gauss usando 
+      <a href="/notes/20210825110049-estructuras_dinamicas_no_lineales/" class="link black dim">
+        Estructuras dinamicas no lineales
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Este método se utiliza para solucionar un sistema Ax=b.
-PROCEDIMIENTO  Se descompone A en 2 matrices LU. Se despejan 2 ecuaciones:  Ly=b Se obtiene y con sustitución hacia delante. Ux=y Se obtiene x con sustitución hacia atrás.     A continuación se muestra el proceso matemático para llegar a las ecuaciones.
-\begin{equation*} \begin{aligned} Ax&amp;=b\\
-A&amp;=LU\\
-(LU)x&amp;=b\\
-Ux&amp;=y\\
-Ly&amp;=b \end{aligned} \end{equation*}
-Después del tercer paso, se descomponen las 2 ecuaciones:
+      A diferencia de las estructuras lineales, en este tipo cada elemento puede tener &ldquo;varios&rdquo; elementos que le sigan.
+Por lo anterior, también se les llama estructuras multi-enlazadas.
+ Árbol  Árbol m-ario  Árbol binario      Grafo Son como una red de nodos. Sería como tener un árbol sin restricciones, donde cada nodo puede apuntar a cuantos nodos quiera, y puede ser apuntado por cualquier cantidad de nodos.
     </div>
   </div>
 </div>
@@ -138,12 +135,18 @@ Después del tercer paso, se descomponen las 2 ecuaciones:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211030215129-enummerate_ftp/" class="link black dim">
-        Enummerate ftp
+      <a href="/notes/20211018122003-expresion_canonica_algebra_booleana/" class="link black dim">
+        Expresión canónica (Álgebra booleana)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      WITH NETCAT nc -nv &lt;ip_address&gt; 21 ANONYMOUS LOGIN ftp &lt;ip_address&gt; #provide anonymous as username #provide any passowrd 
+      Es la expresión booleana que solo tiene minitérminos o maxitérminos.
+SUM-OF-PRODUCTS (SOP) CANÓNICA/ESTÁNDAR Consiste de puros minitérminos. Literal se suman los productos.
+Es una suma de productos estándar cuando todas las variables en el dominio aparecen en cada producto.
+Ejemplo:
+  Dominio: A, B, C, D.
+  SOP Estándar: \(AB&rsquo;CD+A&rsquo;B&rsquo;CD'+ABC&rsquo;D'\)
+  CONVERSIÓN DE ECUACIÓN GENERAL A SOP CANÓNICA Se parte de una ecuación no estándar, donde a algún término (o a todos) les haga falta alguna variable del dominio.
     </div>
   </div>
 </div>
@@ -153,14 +156,15 @@ Después del tercer paso, se descomponen las 2 ecuaciones:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210827182950-escalares/" class="link black dim">
-        Escalares
+      <a href="/notes/20210907200903-extend_vm_storage_virtual_box/" class="link black dim">
+        Extend VM Storage (Virtual Box)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Si un vector tiene dirección y magnitud, el escalar es simplemente una magnitud.
-Por ejemplo:
- 10 km/h es un escalar 10 km/h hacia el sur es un vector.  
+      Extender el espacio desde Virtual Box es súper fácil si la máquina fue creada con memoria estática.
+Si no, va tomar más tiempo, pero los pasos siguen siendo sencillos.
+EXTENDER MEMORIA ASIGNADA EN VBOX CON MEMORIA ESTÁTICA  Simplemente ve abre VM Box y abre Tools -&gt; Media. Ahí extiende la memoria con el slider. Easy.  Aún no terminas, ahora toca extender la partición.
+CON MEMORIA DINÁMICA Haz el paso 1 de CON MEMORIA ESTÁTICA.
     </div>
   </div>
 </div>
@@ -170,15 +174,16 @@ Por ejemplo:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211003105934-espacio_columna_de_a/" class="link black dim">
-        Espacio columna de A
+      <a href="/notes/20210922202821-factorizacion_ldu_de_a/" class="link black dim">
+        Factorizacion LDU de A
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Cuando una matriz A no tiene matriz inversa, significa que el sistema Ax=b tiene solución para algunos vectores b, pero no para todos.
-Así, el espacio columna de A está conformado por los vectores b que sí tienen solución. Es decir, que pueden crearse con una combinación lineal de A (Ax es una combinación lineal).
-La bibliografía describe el espacio columna como:
- El espacio columna consiste de todas las combinaciones lineales de las columnas de A.
+      Esta factorización parte de A = LU, y le agrega un paso extra para &ldquo;balancear&rdquo; las matrices L y U.
+Lo que se hace es dividir U entre una matriz diagonal D que contenga los pivotes. Esto ocasiona que la diagonal de U tenga puros unos, al igual que la diagonal de L.
+Ejemplo: Si una matriz A, genera el siguiente LU:
+\begin{equation*} LU = \begin{bmatrix} 1\ 0\\
+3\ 1\\
     </div>
   </div>
 </div>
@@ -188,13 +193,12 @@ La bibliografía describe el espacio columna como:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210908181753-espacio_compacto/" class="link black dim">
-        Espacio compacto
+      <a href="/notes/20211012195032-finding_subdomains/" class="link black dim">
+        Finding subdomains
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      En matemáticas, la &ldquo;compactación&rdquo; es una propiedad que generaliza la idea de un espacio Eucladiano (necesito más info aqui) que está cerrado y limitado.
-Ejemplos sencillos son: Un intervalo cerrado, un rectángulo, o un conjunto finito de puntos.
+      TOOLS  sublist3r https://crt.sh/ OWASP Amass tomnomnom httprobe Check if a list of subdomains is alive  
     </div>
   </div>
 </div>
@@ -204,19 +208,13 @@ Ejemplos sencillos son: Un intervalo cerrado, un rectángulo, o un conjunto fin
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211015190936-espacio_linea_de_a/" class="link black dim">
-        Espacio linea de A
+      <a href="/notes/20211012195056-fingerprinting/" class="link black dim">
+        Fingerprinting
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Partiendo de una matriz \(A_{mn}\), el espacio linea es el subespacio de \(R^n\) generado por las filas.
-ESPACIO LINEA DE A Y ESPACIO COLUMNA DE SU TRANSPUESTA El espacio línea de una matriz A es: \(C(A^T)\).
-Es decir, se entiende también que es igual al espacio columna de \(A^T\).
-Por ejemplo:
-\begin{equation*} A= \begin{bmatrix} 1\ 4\\
-2\ 7\\
-3\ 5\\
-\end{bmatrix}\; \; y \; \; A^T= \begin{bmatrix} 1\ 2\ 3\\
+      IDENTIFYING WEBSITE TECHNOLOGIES Tools:
+ https://builtwith.com/ Wappalyzer Whatweb (Linux tool)  
     </div>
   </div>
 </div>
@@ -226,15 +224,15 @@ Por ejemplo:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211003115744-espacio_nulo/" class="link black dim">
-        Espacio nulo
+      <a href="/notes/20210914080940-flowchart_in_latex/" class="link black dim">
+        Flowchart in LaTeX
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      El espacio nulo (nullspace) es el subespacio que contiene todas las soluciones al sistema Ax=0.
-NOTACIÓN El espacio nulo se representa como: \(N(A)\).
-Hay que notar que los vectores x tienen n componentes, hablando de una matriz con dimensiones \(A_{mn}\). Entonces, los vectores x pertenecientes a \(N(A)\), están en \(R^n\). Hay que diferenciar eso del espacio columna, cuyos vectores pertenecen a \(R^m\).
-ESPACIO NULO EN MATRICES INVERTIBLES En matrices que sí pueden ser invertidas, el único vector en el espacio nulo es el vector cero.
+      Para poder crear diagramas de flujo, vamos a necesitar TikZ.
+PACKAGES TO LOAD BUILDING THE FLOWCHART El diagrama de flujo debe ser creado en un ambiente tikzpicture. Dentro de este (en la parte de ) se agregan los nodos del diagrama de flujo.
+ADDING ARROWS ARROW PATH Una flecha puede seguir distintos caminos. Estas son las opciones disponibles:
+ -- Sigue una línea recta desde A hasta B, así que sirve para hacer líneas ortagonales, o si queremos una diagonal.
     </div>
   </div>
 </div>
@@ -244,15 +242,12 @@ ESPACIO NULO EN MATRICES INVERTIBLES En matrices que sí pueden ser invertidas, 
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211026123024-espacio_nulo_como_funcion_de_mapeo/" class="link black dim">
-        Espacio nulo como función de mapeo
+      <a href="/notes/20211105183843-git_add_repo_from_local/" class="link black dim">
+        Git add repo from local
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Se puede entender a los vectores que forman parte del espacio nulo como una &ldquo;función de mapeo&rdquo;, con las siguientes características:
- Los vectores del espacio nulo pertenecen a \(R^n\) Al hacer el producto Ax = 0, el vector 0 generado pertenece a \(R^m\)  Para visualizar lo anterior, sirve este ejemplo:
-\begin{equation*} \begin{bmatrix} 1\ 0\\ 4\ 3\\ 2\ 3\\
-\end{bmatrix} \begin{bmatrix} x_1\\ x_2 \end{bmatrix} \begin{bmatrix} 0\\ 0\\ 0 \end{bmatrix} \end{equation*}
+       Init an empty repository in local: git init -b main Add origin: git remote add origin git@github.com:&lt;Username&gt;/&lt;repo&gt;.git Set upstream: git branch --set-upstream-to=origin/main main Pull from remote: git pull --rebase Rebase to prevent losing any data. Push: git push  
     </div>
   </div>
 </div>
@@ -262,16 +257,15 @@ ESPACIO NULO EN MATRICES INVERTIBLES En matrices que sí pueden ser invertidas, 
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211016200122-espacio_nulo_izquierdo/" class="link black dim">
-        Espacio nulo izquierdo
+      <a href="/notes/20210913074004-heap_sort/" class="link black dim">
+        Heap Sort
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      &ldquo;Espacio nulo izquierdo&rdquo; es la forma fancy de llamarle al espacio nulo de la matriz transpuesta.
-Es decir, el espacio nulo izquierdo es igual a \(N(A^T)\)
-Para obtenerlo se resuelve igual que para obtener espacio nulo, pero usando el sistema: \(A^Ty=0\)
-Se le llama espacio nulo izquierdo, porque el vector y puede escribirse a la izquierda de A, de esta forma: \(y^TA=0^T\)
-DIMENSIÓN Tiene dimensión m-r, donde r es el rango de la matriz.
+      Este algoritmo utilizarun Monticulo Binario.
+COMPLEJIDAD EN TIEMPO Para sus 3 casos (mejor, peor, promedio), heap sort tiene una complejidad en tiempo de \(n \log (n)\)
+COMPLEJIDAD EN ESPACIO Heapsort ordena in place, por lo que no usa espacio auxiliar. En este sentido, heapsort es superior a mergesort, el cual corre también en \(n \log (n)\), pero utiliza \(n\) espacio.
+PASOS  Construir un max-heap de un array desordenado. Encontrar el elemento máximo, localizado en A[0], porque es un max-heap.
     </div>
   </div>
 </div>
@@ -304,7 +298,7 @@ DIMENSIÓN Tiene dimensión m-r, donde r es el rango de la matriz.
         <a href="/notes/page/9/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/notes/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/notes/page/24/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></article>
 

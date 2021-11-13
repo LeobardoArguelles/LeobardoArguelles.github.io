@@ -101,15 +101,16 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210908164151-pendiente/" class="link black dim">
-        Pendiente
+      <a href="/notes/20210827182716-producto_de_vector_con_escalar/" class="link black dim">
+        Producto de vector con escalar
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Es la inclinación que tiene una línea respecto al eje horizontal. Va de 0ᵒ a 180ᵒ.
- CÁLCULO DE LA PENDIENTE Se denota con la letra m, y se calcula:
-\begin{equation*} m = \frac{̣\Delta y}{\Delta x} = \frac{y_2-y_1}{x_2-x_1} \end{equation*}
-RELACIÓN ENTRE EL ÁNGULO DE INCLINACIÓN Y LA PENDIENTE Otra forma de llamar a la pendiente es como coeficiente angular, el cual se denota con la letra k, y este es igual a la tangente del ángulo de la recta.
+      Un escalar actúa como una constante que escala los vectores. Este escalamiento puede invertir al vector, si el escalar es negativo.
+Toma de ejemplo un vector \(u = (u_1, u_2)\), y \(c\) es un escalar.
+Para multiplicar ambos, simplemente se hace la multiplicación del escalar por cada elemento del vector.
+Como resultado se obtiene un vector escalado por c, con las mismas características que el vector original.
+\begin{equation*} cu = \begin{bmatrix}cu_1\\ cu_2 \end{bmatrix} \end{equation*}
     </div>
   </div>
 </div>
@@ -119,18 +120,16 @@ RELACIÓN ENTRE EL ÁNGULO DE INCLINACIÓN Y LA PENDIENTE Otra forma de llama
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210909215903-permutacion_de_lineas/" class="link black dim">
-        Permutación de lineas
+      <a href="/notes/20210928204200-producto_externo/" class="link black dim">
+        Producto externo
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Una permutación es intercambiar las líneas de alguna matriz.
-Se crea una matriz de permutación intercambiando las líneas i y j de la matriz identidad, y multiplicandola por la matriz que queremos permutar. Nota: Esta matriz es útil para colocar las filas en una posición más conveniente para resolverlo computacionalmente.
-\begin{equation*} I = \begin{bmatrix} 1\ 0\ 0\\
-0\ 1\ 0\\
-0\ 0\ 1\\
-\end{bmatrix} \end{equation*}
-\begin{equation*} P_{23} = \begin{bmatrix} 1\ 0\ 0\\
+      Se le llama producto externo al producto de dos vectores con dimensiones \(n \times 1\) y \(1 \times m\).
+Se le llama de esta forma porque tanto n como m quedan en el lado externo al hacer la operación.
+E.g: (nx1)(1xm)
+Esto genera una matriz de tamaño \(n \times m\).
+Por otro lado, el producto interno deja a n y m adentro, al centro, y produce un escalar. Para más información sobre el producto interno, ver Producto punto.
     </div>
   </div>
 </div>
@@ -140,19 +139,22 @@ Se crea una matriz de permutación intercambiando las líneas i y j de la matr
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210914132053-pivotes_de_una_matriz/" class="link black dim">
-        Pivotes de una matriz
+      <a href="/notes/20210910131414-productio_matriz_por_escalar/" class="link black dim">
+        Producto matriz por escalar
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Los pivotes de una matriz son posiciones que indican un &ldquo;límite&rdquo; de la matriz. Normalmente queremos que los elementos a la izquierda y abajo de los pivotes se conviertan en 0.
-Se localizan en la diagonal de la matriz.
+      Se multiplica el escalar por cada elemento de la matriz, y el resultado es una matriz con las mismas dimensiones, pero escalada.
 Ejemplo:
-\begin{equation*} \begin{bmatrix} 1\ 2\ 3\\
-0\ 1\ 4\\
-0\ 0\ 1\\
-\end{bmatrix} \end{equation*}
-Cada uno de la diagonal es un pivote de la matriz.
+\begin{align*} A = \begin{bmatrix} 1\ 2\ 3\\
+4\ 5\ 6\\
+7\ 8\ 9\\
+\end{bmatrix} \; y \; c = 5\\
+\\
+cA = \begin{bmatrix} 5\ &amp;10\ &amp;15\\
+20\ &amp;25\ &amp;30\\
+35\ &amp;40\ &amp;45\\
+\end{bmatrix} \end{align*}
     </div>
   </div>
 </div>
@@ -162,21 +164,15 @@ Cada uno de la diagonal es un pivote de la matriz.
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210918120018-predicado_i_matrices/" class="link black dim">
-        Predicado I (Matrices)
+      <a href="/notes/20210827184353-producto_punto/" class="link black dim">
+        Producto punto
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Suponga \(\exists\ A^{-1}\) y dado \(Ax=b\ \therefore \ x=A^{-1}b\)
-Comprobación directa:
-\begin{align*} P_1&amp;: Ax = b\\
-P_2&amp;: A^{-1}\\
-P_3&amp;: A^{-1}Ax = A^{-1}b\\
-P_4&amp;: AA^{-1} = I\\
-P_5&amp;: Ix = A^{-1}b\\
-P_6&amp;: Ix = x\\
-Entonces&amp;:\ x = A^{-1}b\\
-\end{align*}
+      El producto punto de un vector produce un escalar. Esto es diferente a otras operaciones con vectores, las cuales generan otros vectores.
+Cabe mencionar que el producto punto es conmutativo, es decir que: \(v \cdot w = w \cdot v\)
+DEFINICIÓN El producto pusto también se conoce como el producto interno, y se describe como la suma de los productos escalares de los elementos que comparten índice entre vectores.
+Es decir, 2 vectores \(u=(u_1,u_2)\) y \(v=(v_1,v_2)\) tendrían un producto punto de esta forma:
     </div>
   </div>
 </div>
@@ -186,21 +182,12 @@ Entonces&amp;:\ x = A^{-1}b\\
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210918120914-predicado_ii_matrices/" class="link black dim">
-        Predicado II (matrices)
+      <a href="/notes/20210918112915-propiedades_de_las_matrices/" class="link black dim">
+        Propiedades de las matrices
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Suponga \(\exists A^{-1}\) y dado \(Ax=0 \therefore x=0\) (vector columna)
-Comprobación directa:
-\begin{align} P_1 &amp;: \exists A^{-1}\\
-P_2 &amp;: Ax=0\\
-P_3 &amp;: A^{-1}Ax=A^{-1}0\\
-P_4 &amp;: A^{-1}A=I\\
-P_5 &amp;:Ix=A^{-1}0\\
-P_6 &amp;:Ix=x\\
-P_7 &amp;:x=A^{-1}0 \end{align}
-Donde x será un vector columna de tamaño n.
+      Predicado I Si existe una matriz no singular, y dado el sistema \(Ax=b\), entonces: \(x=A^{-1}\). Predicado II Si existe la matriz inversa de A, y \(Ax=0\), entonces el único valor que puede tomar x será el vector columna 0: \(x=0\). Predicado III Si la determinante de A es diferente de cero, entonces sí existe la matriz inversa de A. Predicado IV Una matriz A tendrá una y solo una matriz inversa.
     </div>
   </div>
 </div>
@@ -210,12 +197,15 @@ Donde x será un vector columna de tamaño n.
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210918121238-predicado_iii_matrices/" class="link black dim">
-        Predicado III (matrices)
+      <a href="/notes/20211102122927-proyecciones/" class="link black dim">
+        Proyecciones
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Si \(\lvert A \rvert \neq 0 \therefore \exists A^{-1}\).
+      Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
+PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
+Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
+\(\rho = \hat{x}a\) Donde:
     </div>
   </div>
 </div>
@@ -225,18 +215,12 @@ Donde x será un vector columna de tamaño n.
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210918121317-predicado_iv_matrices/" class="link black dim">
-        Predicado IV (matrices)
+      <a href="/notes/20211105223547-publish_hugo_site_in_github_pages/" class="link black dim">
+        Publish hugo site in github pages
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      A no posee dos o más matrices inversas (solo tiene una).
-Comprobación por contradicción:
-Premisa: Suponga que B y C son matrices inversas de \(A \ni B \neq C\).
-\begin{align*} B&amp;AC\\
-(BA)C &amp;= B(AC)\\
-IC &amp;= BI\\
-C &amp;= B \end{align*}
+      Create a repository in your github account named: &lt;github_username&gt;.github.io Don&rsquo;t have a github account? Well, create one. Don&rsquo;t add any of the freebies included in the repo (License, readme, etc&hellip;) Link the repository with the directory that has your Hugo files. In the main directory of your site, create the directories and the file &ldquo;.github/workflows/gh-pages.yml&rdquo; This is a default path for github to look for &ldquo;gh-pages.yml&rdquo; Inside &ldquo;gh-pages.yml&rdquo;, add the code from the appendix.
     </div>
   </div>
 </div>
@@ -246,19 +230,18 @@ C &amp;= B \end{align*}
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210918121703-predicado_iv_matrices/" class="link black dim">
-        Predicado V (matrices)
+      <a href="/notes/20210908104638-punto_critico/" class="link black dim">
+        Punto Critico
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Suponga una matriz diagonal.
-\begin{equation*} A = \begin{bmatrix} a_{11}\ \phantom{x}\ \phantom{x}\ \phantom{x}\\
-\phantom{x}\ a_{22}\ \phantom{x}\ \phantom{x}\\
-\phantom{x}\ \phantom{x}\ \dots \ \phantom{x}\\
-\phantom{x}\ \phantom{x}\ \phantom{x}\ a_{nn} \end{bmatrix} \therefore \ A^{-1} = \begin{bmatrix} \frac{1}{a_{11}}\ \phantom{x}\ \phantom{x}\ \phantom{x}\\
-\phantom{x}\ \frac{1}{a_{22}}\ \phantom{x}\ \phantom{x}\\
-\phantom{x}\ \phantom{x}\ \dots\ \phantom{x}\\
-\phantom{x}\ \phantom{x}\ \phantom{x}\ \frac{1}{a_{nn}}\end{bmatrix} \end{equation*}
+      En cálculo, un punto crítico de una función de una variable real es cualquier valor del dominio donde una función no es diferenciable, es decir, que su derivada es 0.
+Dicho de otra forma, los puntos críticos son los máximos y los mínimos de una función, AKA puntos de inflexión.
+EJEMPLO \(f(x) = x^3\)
+\(f'(x)=3x^2\)
+Un punto crítico sería 0, porque:
+\(f'(0) = 0\)
+Imagen en Geogebra del punto critico de x^3
     </div>
   </div>
 </div>
@@ -268,20 +251,15 @@ C &amp;= B \end{align*}
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210918122004-predicado_vi/" class="link black dim">
-        Predicado VI
+      <a href="/notes/20211008175651-punto_fijo_calculo_de_raices/" class="link black dim">
+        Punto fijo (cálculo de raices)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      La matriz inversa de un producto de matrices será igual al producto de al inversa de cada matriz individual, pero en orden inverso al producto original: \((AB)^{-1} = B^{-1}A^{-1}\)
-Suponga A, B matrices de (nxn) talque la inversa de A es \(A^{-1}\) y la inversa de B es \(B^{-1}\). Entonces vale: \((AB)^{-1} = B^{-1}A^{-1}\)
-Comprobación por construcción.
-\begin{align*} (AB)\\
-(AB)^{-1}\\
-ABB^{-1}A^{-1} = I\\
-A(BB^{-1})A^{-1} = I\\
-AIA^{-1} =I\\
-AA^{-1} = I\\
+      FUNDAMENTO Se parte de la definición de un punto fijo.
+Como en un punto fijo \(f(x)=x\), el cálculo de raíces usando este método nos ayuda a buscar un punto p tal que \(f(p)=0\).
+Lo que se hace entonces es plantear otra función g(x), la cual se define como \(g(x)=x-f(x)\).
+En este caso, calcular \(g(p)\) será igual a \(p-f(p)\) que, como sabemos que \(f(p)=0\), entonces queda \(g(p)=p\), lo que es un punto fijo.
     </div>
   </div>
 </div>
@@ -291,15 +269,16 @@ AA^{-1} = I\\
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210907211328-producto_de_matriz_con_matriz/" class="link black dim">
-        Producto de matriz con matriz
+      <a href="/notes/20211008175730-punto_fijo_definicion/" class="link black dim">
+        Punto fijo (definición)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Se hace el producto punto: Filas de la primera matriz, con columnas de la segunda matriz. La fila i con la columna j dará el elemento i,j del resultado.
-Ej:
-\begin{equation*} \begin{bmatrix} a\ b\\ c\ d \end{bmatrix} \begin{bmatrix} e\ f\\ g\ h \end{bmatrix} \begin{bmatrix} &amp;(a, b)\cdot (e, g)^T\ &amp;(a, b)\cdot (f, h)^T\\
-&amp;(c, d)\cdot (e, g)^T\ &amp;(c, d)\cdot (f, h)^T \end{bmatrix} \end{equation*}
+      En una función f(x), un punto fijo es un valo x que, al ser evaluado, genera como resultado el mismo valor x.
+EJEMPLOS Si f(x) es una función para números reales:
+  \(f(x)=x^2\) 0 y 1 serán los puntos fijos, porque:
+ \(0^2=0\) \(1^2=1\)    \(f(x)=x^2-3x+4\) 2 será el punto fijo de la función. \(2^2 -3(2)+4=2\)
+  
     </div>
   </div>
 </div>
@@ -332,7 +311,7 @@ Ej:
         <a href="/notes/page/19/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/notes/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/notes/page/24/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></article>
 

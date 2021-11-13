@@ -101,13 +101,19 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210830191226-desigualdad_de_schwartz/" class="link black dim">
-        Desigualdad de Schwartz
+      <a href="/notes/20211011164102-eliminacion_de_gauss_usando_id_7f536f07_0356_4223_a997_5b062429b228_eliminacion_de_gauss_con_factorizacion_lu/" class="link black dim">
+        Eliminación de Gauss usando 
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      El producto punto de dos vectores siempre será menor o igual (nunca mayor) que el producto de sus normas.
-\begin{equation*} u \cdot v \leq \lVert u \rVert \lVert v \rVert \end{equation*}
+      Este método se utiliza para solucionar un sistema Ax=b.
+PROCEDIMIENTO  Se descompone A en 2 matrices LU. Se despejan 2 ecuaciones:  Ly=b Se obtiene y con sustitución hacia delante. Ux=y Se obtiene x con sustitución hacia atrás.     A continuación se muestra el proceso matemático para llegar a las ecuaciones.
+\begin{equation*} \begin{aligned} Ax&amp;=b\\
+A&amp;=LU\\
+(LU)x&amp;=b\\
+Ux&amp;=y\\
+Ly&amp;=b \end{aligned} \end{equation*}
+Después del tercer paso, se descomponen las 2 ecuaciones:
     </div>
   </div>
 </div>
@@ -117,21 +123,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210914140823-determinante_de_una_matriz/" class="link black dim">
-        Determinante de una matriz
+      <a href="/notes/20211030215129-enummerate_ftp/" class="link black dim">
+        Enummerate ftp
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      CÁLCULO ARITMÉTICO DE LA DETERMINANTE DE A  CALCULAR DETERMINANTE DE A, UTILIZANDO U Si tenemos una matriz A, y la llevamos a la forma U, entonces la determinante se puede obtener multiplicando todos los elementos de la diagonal.
-Ejemplo:
-Aritmeticamente:
-\begin{align*} A &amp;= \begin{bmatrix} 2\ 3\\ 2\ 4\\
-\end{bmatrix} \\
-\lvert A \rvert &amp;= (2*4)-(3*2) = 8-6 \\
-\lvert A \rvert &amp;= 2\\
-\end{align*}
-Con la matriz U:
-\begin{align*} A &amp;= \begin{bmatrix} 2\ 3\\ 2\ 4\\
+      WITH NETCAT nc -nv &lt;ip_address&gt; 21 ANONYMOUS LOGIN ftp &lt;ip_address&gt; #provide anonymous as username #provide any passowrd 
     </div>
   </div>
 </div>
@@ -141,17 +138,14 @@ Con la matriz U:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211015130746-dimension_algebra_lineal/" class="link black dim">
-        Dimensión (Álgebra Lineal)
+      <a href="/notes/20210827182950-escalares/" class="link black dim">
+        Escalares
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Es la cantidad de vectores que contienen todas las bases de un espacio vectorial.
-Existen rank vectores en una base, por lo que la dimensión es igual al rank.
-DIMENSIONES DE LOS 4 SUBESPACIOS Para ver las dimensiones de los cuatro subespacios, ver individualmente:
- Espacio linea Espacio columna Espacio nulo Espacio nulo izquierdo  \begin{equation*} R= \begin{bmatrix} 1\ &amp;0\ &amp;0\ &amp;-1\\
-0\ &amp;2\ &amp;1\ &amp;-2\\
-0\ &amp;0\ &amp;0\ &amp;0\\
+      Si un vector tiene dirección y magnitud, el escalar es simplemente una magnitud.
+Por ejemplo:
+ 10 km/h es un escalar 10 km/h hacia el sur es un vector.  
     </div>
   </div>
 </div>
@@ -161,12 +155,15 @@ DIMENSIONES DE LOS 4 SUBESPACIOS Para ver las dimensiones de los cuatro subespac
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211015095717-dirbuster/" class="link black dim">
-        dirbuster
+      <a href="/notes/20211003105934-espacio_columna_de_a/" class="link black dim">
+        Espacio columna de A
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-       Set the target E.g. 192.168.57.4:80 Set the wordlist Find some lists in /usr/share/wordlists Set the extensions to search Like .pdf, .zip, .txt, etc&hellip;  
+      Cuando una matriz A no tiene matriz inversa, significa que el sistema Ax=b tiene solución para algunos vectores b, pero no para todos.
+Así, el espacio columna de A está conformado por los vectores b que sí tienen solución. Es decir, que pueden crearse con una combinación lineal de A (Ax es una combinación lineal).
+La bibliografía describe el espacio columna como:
+ El espacio columna consiste de todas las combinaciones lineales de las columnas de A.
     </div>
   </div>
 </div>
@@ -176,18 +173,13 @@ DIMENSIONES DE LOS 4 SUBESPACIOS Para ver las dimensiones de los cuatro subespac
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211012195500-discovering_email_addresses/" class="link black dim">
-        Discovering email addresses (OSINT)
+      <a href="/notes/20210908181753-espacio_compacto/" class="link black dim">
+        Espacio compacto
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Part of OSINT.
-hunter.io https://hunter.io/
-phonebook.cz https://phonebook.cz/
-voilanorbert.com https://www.voilanorbert.com/
-clearbit Google Chrome extension to find emails, sort by position, etc.
-tools.verifyemailaddress.io https://tools.emailhippo.com/
-email checker https://email-checker.net/
+      En matemáticas, la &ldquo;compactación&rdquo; es una propiedad que generaliza la idea de un espacio Eucladiano (necesito más info aqui) que está cerrado y limitado.
+Ejemplos sencillos son: Un intervalo cerrado, un rectángulo, o un conjunto finito de puntos.
     </div>
   </div>
 </div>
@@ -197,14 +189,19 @@ email checker https://email-checker.net/
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210928195228-distributiva_ley_de_algebra_booleana/" class="link black dim">
-        Distributiva (Ley de álgebra booleana)
+      <a href="/notes/20211015190936-espacio_linea_de_a/" class="link black dim">
+        Espacio linea de A
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Igual que en álgebra normal, un operando puede distribuirse en 2 o más términos dentro de un paréntesis.
- \(A \wedge (B \vee C) = (A \wedge B) \vee (A \wedge C)\)  Tabla de verdad para \(A \wedge (B \vee C)\)
-   A B C Y     0 0 0 0   0 0 1 0   0 1 0 0   0 1 1 0   1 0 0 0   1 0 1 1   1 1 0 1   1 1 1 1    Tabla de verdad para \((A \wedge B) \vee (A \wedge C)\)
+      Partiendo de una matriz \(A_{mn}\), el espacio linea es el subespacio de \(R^n\) generado por las filas.
+ESPACIO LINEA DE A Y ESPACIO COLUMNA DE SU TRANSPUESTA El espacio línea de una matriz A es: \(C(A^T)\).
+Es decir, se entiende también que es igual al espacio columna de \(A^T\).
+Por ejemplo:
+\begin{equation*} A= \begin{bmatrix} 1\ 4\\
+2\ 7\\
+3\ 5\\
+\end{bmatrix}\; \; y \; \; A^T= \begin{bmatrix} 1\ 2\ 3\\
     </div>
   </div>
 </div>
@@ -214,15 +211,15 @@ email checker https://email-checker.net/
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210825095910-divide_and_conquer/" class="link black dim">
-        Divide and Conquer
+      <a href="/notes/20211003115744-espacio_nulo/" class="link black dim">
+        Espacio nulo
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Steps Divide The problem into a number of subproblems that are smaller instances of the same problem.
-Conquer The subproblems by solving them recursively. If the subproblem sizes are small enough, however, just solve the subproblems in a straightforward manner.
-Combine The solutions to the subproblems into the solution for the original problem.
-Cases in divide and conquer Recursive case This is when the subproblem is big enough to keep solving it recursively.
+      El espacio nulo (nullspace) es el subespacio que contiene todas las soluciones al sistema Ax=0.
+NOTACIÓN El espacio nulo se representa como: \(N(A)\).
+Hay que notar que los vectores x tienen n componentes, hablando de una matriz con dimensiones \(A_{mn}\). Entonces, los vectores x pertenecientes a \(N(A)\), están en \(R^n\). Hay que diferenciar eso del espacio columna, cuyos vectores pertenecen a \(R^m\).
+ESPACIO NULO EN MATRICES INVERTIBLES En matrices que sí pueden ser invertidas, el único vector en el espacio nulo es el vector cero.
     </div>
   </div>
 </div>
@@ -232,14 +229,15 @@ Cases in divide and conquer Recursive case This is when the subproblem is big en
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210928194535-doble_negacion_ley_de_algebra_booleana/" class="link black dim">
-        Doble negación (Ley de álgebra booleana)
+      <a href="/notes/20211026123024-espacio_nulo_como_funcion_de_mapeo/" class="link black dim">
+        Espacio nulo como función de mapeo
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-       Negativo y negativo hacen positivo.
- Posdoctora Marisela, 2019   \(NOT\left( \overline{A} \right) = A\)
-TABLA DE VERDAD    A A' (A')'     0 1 0   1 0 1    
+      Se puede entender a los vectores que forman parte del espacio nulo como una &ldquo;función de mapeo&rdquo;, con las siguientes características:
+ Los vectores del espacio nulo pertenecen a \(R^n\) Al hacer el producto Ax = 0, el vector 0 generado pertenece a \(R^m\)  Para visualizar lo anterior, sirve este ejemplo:
+\begin{equation*} \begin{bmatrix} 1\ 0\\ 4\ 3\\ 2\ 3\\
+\end{bmatrix} \begin{bmatrix} x_1\\ x_2 \end{bmatrix} \begin{bmatrix} 0\\ 0\\ 0 \end{bmatrix} \end{equation*}
     </div>
   </div>
 </div>
@@ -249,14 +247,16 @@ TABLA DE VERDAD    A A' (A')'     0 1 0   1 0 1
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211018122942-dominio_algebrab_lineal/" class="link black dim">
-        Dominio (Álgebra booleana)
+      <a href="/notes/20211016200122-espacio_nulo_izquierdo/" class="link black dim">
+        Espacio nulo izquierdo
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Son todas las variables que aparecen en una ecuación booleana, ya sea que estén o no negadas.
-Ejemplo: \(F = A + B + C'\)
-Su dominio es A, B, y C.
+      &ldquo;Espacio nulo izquierdo&rdquo; es la forma fancy de llamarle al espacio nulo de la matriz transpuesta.
+Es decir, el espacio nulo izquierdo es igual a \(N(A^T)\)
+Para obtenerlo se resuelve igual que para obtener espacio nulo, pero usando el sistema: \(A^Ty=0\)
+Se le llama espacio nulo izquierdo, porque el vector y puede escribirse a la izquierda de A, de esta forma: \(y^TA=0^T\)
+DIMENSIÓN Tiene dimensión m-r, donde r es el rango de la matriz.
     </div>
   </div>
 </div>
@@ -266,14 +266,15 @@ Su dominio es A, B, y C.
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211011100922-ecuacion_de_la_recta/" class="link black dim">
-        Ecuación de la recta
+      <a href="/notes/20210929195024-espacio_vectorial/" class="link black dim">
+        Espacio vectorial
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      \begin{equation*} y = mx+b \end{equation*}
-Donde:
- m es la pendiente de la recta. b es valor de y donde la recta cruza el eje y.  
+      Se le llama espacio vectorial de dimensión n al conjunto de vectores v que tienen n dimensiones, y que cumplen las 8 reglas.
+Los espacios vectoriales contienen subespacios vectoriales.
+NOMENCLATURA LETRAS Se utilizan letras para denotar qué tipo de números son aceptados en dicho espacio vectorial:
+ \(R^n\) espacio vectorial de vectores columna con números reales. \(C^n\) espacio vectorial de vectores columna con números complejos. \(M\) espacio vectorial de todas las matrices reales 2x2 \(F\) espacio vectorial de todas las funciones reales \(f(x)\) Este espacio tiene dimensiones infinitas.
     </div>
   </div>
 </div>
@@ -306,7 +307,7 @@ Donde:
         <a href="/notes/page/8/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/notes/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/notes/page/24/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></article>
 

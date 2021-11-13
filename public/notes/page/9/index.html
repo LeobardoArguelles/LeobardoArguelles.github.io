@@ -101,15 +101,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210929195024-espacio_vectorial/" class="link black dim">
-        Espacio vectorial
+      <a href="/notes/20211016213436-hydra_bruteforcing/" class="link black dim">
+        Hydra (bruteforcing)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Se le llama espacio vectorial de dimensión n al conjunto de vectores v que tienen n dimensiones, y que cumplen las 8 reglas.
-Los espacios vectoriales contienen subespacios vectoriales.
-NOMENCLATURA LETRAS Se utilizan letras para denotar qué tipo de números son aceptados en dicho espacio vectorial:
- \(R^n\) espacio vectorial de vectores columna con números reales. \(C^n\) espacio vectorial de vectores columna con números complejos. \(M\) espacio vectorial de todas las matrices reales 2x2 \(F\) espacio vectorial de todas las funciones reales \(f(x)\) Este espacio tiene dimensiones infinitas.
+      Tool to bruteforce logins/passwords.
+Basic syntax:
+hydra -l root -P &lt;wordlist&gt; &lt;service&gt;://&lt;target&gt;:&lt;port&gt; &lt;flags&gt; # E.g: hydra -l root -P /usr/share/wordlists/metasploit/unix_passwords.txt ssh://192.168.57.134:22 -t 4 -V  -l is for loggin -P indicates the password file -t is the number of threads -V verbosity  
     </div>
   </div>
 </div>
@@ -119,14 +118,18 @@ NOMENCLATURA LETRAS Se utilizan letras para denotar qué tipo de números son ac
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210825105939-estructuras_dinamicas_lineales/" class="link black dim">
-        Estructuras dinamicas lineales
+      <a href="/notes/20210928194216-idempotente_ley_de_algebra_booleana/" class="link black dim">
+        Idempotente (Ley de álgebra booleana)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Arreglos a.k.a. Arrays Es un conjunto de elementos de un mismo tipo, ordenados, y que pueden variar en número. A esto se le llama almacenamiento secuencial.
-Operaciones que se pueden hacer con una lista secuencial:
- Insertar, eliminar, localizan un elemento Determinar su tamaño Recorrer la lista para localizar un elemento particular Ordenar sus elementos de forma ascendiente o descendiente Unir dos o más listas en una sola Dividir una lista en sublistas Copiarla Borrarla  Para insertar o eliminar un elemento en medio de la lista (cualquier punto excepo el final) es necesario recorrer todos los demás elementos, pues están organizados secuencialmente.
+      Una variable, operada consigo misma, genera esa misma variable:
+  \(A \vee A = A\)
+  \(A \wedge A = A\)
+  TABLAS DE VERDAD Para comprobar.
+OR \(Y = A \vee A\)
+   A A Y     0 0 0   1 1 1    AND \(Y = A \wedge A\)
+   A A Y     0 0 0   1 1 1    
     </div>
   </div>
 </div>
@@ -136,14 +139,19 @@ Operaciones que se pueden hacer con una lista secuencial:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210825110049-estructuras_dinamicas_no_lineales/" class="link black dim">
-        Estructuras dinamicas no lineales
+      <a href="/notes/20210928193916-identidad_ley_de_algebra_booleana/" class="link black dim">
+        Identidad (Ley de álgebra booleana)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      A diferencia de las estructuras lineales, en este tipo cada elemento puede tener &ldquo;varios&rdquo; elementos que le sigan.
-Por lo anterior, también se les llama estructuras multi-enlazadas.
- Árbol  Árbol m-ario  Árbol binario      Grafo Son como una red de nodos. Sería como tener un árbol sin restricciones, donde cada nodo puede apuntar a cuantos nodos quiera, y puede ser apuntado por cualquier cantidad de nodos.
+      Se mantiene el valor de la variable, pues realiza una operación con el valor neutral de esa operación:
+  \(A+0=A\) Las siguientes formas son equivalentes:
+  \(A\; or\; 0 = A\)
+  \(A \vee 0 = A\)
+    \(A*1=A\) Las siguientes formas son equivalentes:
+  \(A\; and\; 1 = A\)
+  \(A \wedge 1 = A\)
+    
     </div>
   </div>
 </div>
@@ -153,18 +161,12 @@ Por lo anterior, también se les llama estructuras multi-enlazadas.
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211018122003-expresion_canonica_algebra_booleana/" class="link black dim">
-        Expresión canónica (Álgebra booleana)
+      <a href="/notes/20211015130919-independencia_algebra_lineal/" class="link black dim">
+        Independencia (Álgebra Lineal)
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Es la expresión booleana que solo tiene minitérminos o maxitérminos.
-SUM-OF-PRODUCTS (SOP) CANÓNICA/ESTÁNDAR Consiste de puros minitérminos. Literal se suman los productos.
-Es una suma de productos estándar cuando todas las variables en el dominio aparecen en cada producto.
-Ejemplo:
-  Dominio: A, B, C, D.
-  SOP Estándar: \(AB&rsquo;CD+A&rsquo;B&rsquo;CD'+ABC&rsquo;D'\)
-  CONVERSIÓN DE ECUACIÓN GENERAL A SOP CANÓNICA Se parte de una ecuación no estándar, donde a algún término (o a todos) les haga falta alguna variable del dominio.
+      
     </div>
   </div>
 </div>
@@ -174,15 +176,14 @@ Ejemplo:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210907200903-extend_vm_storage_virtual_box/" class="link black dim">
-        Extend VM Storage (Virtual Box)
+      <a href="/notes/20210912163853-ingeniere/" class="link black dim">
+        Ingeniere
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Extender el espacio desde Virtual Box es súper fácil si la máquina fue creada con memoria estática.
-Si no, va tomar más tiempo, pero los pasos siguen siendo sencillos.
-EXTENDER MEMORIA ASIGNADA EN VBOX CON MEMORIA ESTÁTICA  Simplemente ve abre VM Box y abre Tools -&gt; Media. Ahí extiende la memoria con el slider. Easy.  Aún no terminas, ahora toca extender la partición.
-CON MEMORIA DINÁMICA Haz el paso 1 de CON MEMORIA ESTÁTICA.
+      Es un profesional que inventa, diseña, analiza, construye, y prueba máquinas, sistemas complejos, estructuras, y materiales para cumplir objetivos funcionales, al mismo tiempo que considera limitantes impuestas por regulaciones, practicicidad, seguridad, y costo.
+ Ingeniería es creación basada en el conocimiento científico.
+ 
     </div>
   </div>
 </div>
@@ -192,16 +193,15 @@ CON MEMORIA DINÁMICA Haz el paso 1 de CON MEMORIA ESTÁTICA.
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210922202821-factorizacion_ldu_de_a/" class="link black dim">
-        Factorizacion LDU de A
+      <a href="/notes/20210912170617-ingenieria_en_computacion/" class="link black dim">
+        Ingenieria en Computacion
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Esta factorización parte de A = LU, y le agrega un paso extra para &ldquo;balancear&rdquo; las matrices L y U.
-Lo que se hace es dividir U entre una matriz diagonal D que contenga los pivotes. Esto ocasiona que la diagonal de U tenga puros unos, al igual que la diagonal de L.
-Ejemplo: Si una matriz A, genera el siguiente LU:
-\begin{equation*} LU = \begin{bmatrix} 1\ 0\\
-3\ 1\\
+      Se enfoca en usar principios de ingeniería para resolver problemas usando hardware de computadora.
+Temas que cubre: Arquitectura de computadoras, redes, seguridad.
+ Planificación, diseño, construcción, probar dispositivos que realicen una función específica. Combina física, ingeniería eléctria y electrónica, e informática. Más hardware que software.  COMPUTACIÓN Proviene del latín computatĭo, y se deriva de computare, que quiere decir computar o evaluar.
+ Ciencia que se ocupa del estudio de las computadoras, abarcando su diseño, operación, y uso en el procesamiento de datos.
     </div>
   </div>
 </div>
@@ -211,12 +211,13 @@ Ejemplo: Si una matriz A, genera el siguiente LU:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211012195032-finding_subdomains/" class="link black dim">
-        Finding subdomains
+      <a href="/notes/20210912170913-ingenieria_en_computacion_vs_ciencias_computacionales/" class="link black dim">
+        Ingenieria en Computacion vs Ciencias Computacionales
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      TOOLS  sublist3r https://crt.sh/ OWASP Amass tomnomnom httprobe Check if a list of subdomains is alive  
+      Ver Ingenieria en Computacion y Ciencias Computacionales.
+   Ingeniería en Computación Ciencias Computacionales     Construcción de hardware Ejecución, mantenimiento, solución de problemas de OS.   Diseño de arquitectura Instalación y administración de redes de computadoras   Software de diseño, progra, y prueba Software de diseño, progra, y prueba   Desarrolla y trabaja con circuitos Diseño y codificación de estructuras de datos y algoritmos   Trabaja con varios softwares específicos Comprender lenguajes de programación    Ciberseguridad y criptografía.
     </div>
   </div>
 </div>
@@ -226,13 +227,13 @@ Ejemplo: Si una matriz A, genera el siguiente LU:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211012195056-fingerprinting/" class="link black dim">
-        Fingerprinting
+      <a href="/notes/20210827173456-insertion_sort/" class="link black dim">
+        Insertion sort
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      IDENTIFYING WEBSITE TECHNOLOGIES Tools:
- https://builtwith.com/ Wappalyzer Whatweb (Linux tool)  
+      Cada elemento se examina y se coloca en la posición correcta del subarray &ldquo;ya ordenado&rdquo;. Nota: Las condiciones iniciales consideran al elemento con índice 0 como el &ldquo;subarray ordenado&rdquo;.
+Análisis  Peor caso: \(O (n^2)\) Mejor caso: \(O (n)\) Caso promedio: \(O (n^2)\)  Pseudocódigo for i=1 to i &lt; array_size: aux = numbers[i] a = i - 1 # Insertar numbers[a] en el subarray ordenado while a &gt;= 0 and numbers[a] &gt; aux: numbers[a+1] = numbers[a] a -= 1 numbers[a+1] = aux 
     </div>
   </div>
 </div>
@@ -242,15 +243,12 @@ Ejemplo: Si una matriz A, genera el siguiente LU:
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20210914080940-flowchart_in_latex/" class="link black dim">
-        Flowchart in LaTeX
+      <a href="/notes/20210926184831-install_anki_arch_linux/" class="link black dim">
+        Install Anki Arch Linux
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Para poder crear diagramas de flujo, vamos a necesitar TikZ.
-PACKAGES TO LOAD BUILDING THE FLOWCHART El diagrama de flujo debe ser creado en un ambiente tikzpicture. Dentro de este (en la parte de ) se agregan los nodos del diagrama de flujo.
-ADDING ARROWS ARROW PATH Una flecha puede seguir distintos caminos. Estas son las opciones disponibles:
- -- Sigue una línea recta desde A hasta B, así que sirve para hacer líneas ortagonales, o si queremos una diagonal.
+       Download and install Anki from the official page. Install qt5: sudo pacman -S qt5-base Profit? I hope I didn&rsquo;t miss something.  ADD-ONS  Hierarchical Tags 594329229 Image Occlusion Enhanced for Anki 2.1 (alpha) 1374772155 ReviewHeatmap 723520343  
     </div>
   </div>
 </div>
@@ -260,12 +258,14 @@ ADDING ARROWS ARROW PATH Una flecha puede seguir distintos caminos. Estas son la
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Notes</span>
     <h1 class="f3 near-black">
-      <a href="/notes/20211105183843-git_add_repo_from_local/" class="link black dim">
-        Git add repo from local
+      <a href="/notes/20210926184306-install_matlab_arch_linux/" class="link black dim">
+        Install Matlab Arch Linux
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-       Init an empty repository in local: git init -b main Add origin: git remote add origin git@github.com:&lt;Username&gt;/&lt;repo&gt;.git Set upstream: git branch --set-upstream-to=origin/main main Pull from remote: git pull --rebase Rebase to prevent losing any data. Push: git push  
+      Download, install, and activate Matlab from the official page. There shouldn&rsquo;t be any problems here.
+Now, what I had to do to actually make it work:
+ Install Java 8 sudo pacman -S jdk8-openjdk. Add to your .bashrc these variables:  export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre/ export J2D_D3D=false export GTK_PATH=/usr/lib/gtk-3.0 export _JAVA_AWT_WM_NONREPARENTING=1   Create a symbolic link to launch it just calling matlab. ln -s &lt;path/to/MATLAB/VERSION/bin/matlab&gt; /usr/local/bin E.g: ln -s /usr/local/MATLAB/R2020a/bin/matlab /usr/local/bin  Done?
     </div>
   </div>
 </div>
@@ -298,7 +298,7 @@ ADDING ARROWS ARROW PATH Una flecha puede seguir distintos caminos. Estas son la
         <a href="/notes/page/10/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/notes/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/notes/page/24/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></article>
 
