@@ -1,0 +1,14 @@
+#+TITLE: Process
+
+
+#+begin_src emacs-lisp
+(require 'find-lisp)
+#+end_src
+
+#+RESULTS:
+: find-lisp
+
+#+begin_src emacs-lisp
+(hugcis/publish-lines "./wikifiles.txt")
+#+end_src
+
