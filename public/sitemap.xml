@@ -100,8 +100,6 @@
   </url><url>
     <loc>http://example.org/notes/20210925213527-cron_job/</loc>
   </url><url>
-    <loc>http://example.org/</loc>
-  </url><url>
     <loc>http://example.org/notes/20211004133941-calculo_de_raices/</loc>
   </url><url>
     <loc>http://example.org/notes/20211104082929-codigo_gray/</loc>
@@ -183,6 +181,8 @@
     <loc>http://example.org/notes/20211012195056-fingerprinting/</loc>
   </url><url>
     <loc>http://example.org/notes/20210914080940-flowchart_in_latex/</loc>
+  </url><url>
+    <loc>http://example.org/notes/20211105183843-git_add_repo_from_local/</loc>
   </url><url>
     <loc>http://example.org/notes/20210913074004-heap_sort/</loc>
   </url><url>
@@ -304,6 +304,8 @@
   </url><url>
     <loc>http://example.org/notes/20211011143935-metodos_numericos_para_solucionar_un_sistema_ax_b/</loc>
   </url><url>
+    <loc>http://example.org/notes/20211109121923-minimos_cuadrados/</loc>
+  </url><url>
     <loc>http://example.org/notes/20210924142844-nand/</loc>
   </url><url>
     <loc>http://example.org/notes/20211016205431-netcat/</loc>
@@ -323,6 +325,8 @@
     <loc>http://example.org/notes/</loc>
   </url><url>
     <loc>http://example.org/notes/20210830195008-npm/</loc>
+  </url><url>
+    <loc>http://example.org/notes/20211112141948-obligaciones_como_contribuyente/</loc>
   </url><url>
     <loc>http://example.org/notes/20210907210318-oop_object_oriented_programming/</loc>
   </url><url>
@@ -375,6 +379,8 @@
     <loc>http://example.org/notes/20210918112915-propiedades_de_las_matrices/</loc>
   </url><url>
     <loc>http://example.org/notes/20211102122927-proyecciones/</loc>
+  </url><url>
+    <loc>http://example.org/notes/20211105223547-publish_hugo_site_in_github_pages/</loc>
   </url><url>
     <loc>http://example.org/notes/20210908104638-punto_critico/</loc>
   </url><url>
@@ -461,6 +467,8 @@
     <loc>http://example.org/notes/20210908185000-teorema_fundamental_del_algebra/</loc>
   </url><url>
     <loc>http://example.org/notes/20210928201147-teoremas_de_morgan_ley_de_algebra_booleana/</loc>
+  </url><url>
+    <loc>http://example.org/</loc>
   </url><url>
     <loc>http://example.org/notes/20211012194251-the_five_stages_of_ethical_hacking/</loc>
   </url><url>

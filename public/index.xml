@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CS, Leo personal wiki</title>
+    <title>The CS Wiki</title>
     <link>http://example.org/</link>
-    <description>Recent content on CS, Leo personal wiki</description>
+    <description>Recent content on The CS Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -514,8 +514,9 @@ Como se explicó arriba, esto es para reservar un bit para el signo.</descripti
       
       <guid>http://example.org/notes/20211022125140-complemento_ortogonal/</guid>
       <description>El conjunto de todos los vectores u que son ortogonales a w, se denomina complemento ortogonal, y se denota como \(w^{\perp}\).
-Nota: Un complemento ortogonal de un segmento es bidireccional, por ejemplo:
-\begin{equation*} L=w^{\perp} \; \; y \; \; w = L^{\perp} \end{equation*}</description>
+Además, para que realmente sean complementos, sus dimensiones deben sumar para dar la dimensión completa de un espacio completo.
+Por ejemplo el espacio columna y el espacio nulo izquierdo tienen dimensiones r y n-r, las cuales suman a \(R^n\).
+Nota: Un complemento ortogonal de un segmento es bidireccional, por ejemplo:</description>
     </item>
     
     <item>
@@ -1053,6 +1054,15 @@ Ejemplo: Si una matriz A, genera el siguiente LU:
 PACKAGES TO LOAD BUILDING THE FLOWCHART El diagrama de flujo debe ser creado en un ambiente tikzpicture. Dentro de este (en la parte de ) se agregan los nodos del diagrama de flujo.
 ADDING ARROWS ARROW PATH Una flecha puede seguir distintos caminos. Estas son las opciones disponibles:
  -- Sigue una línea recta desde A hasta B, así que sirve para hacer líneas ortagonales, o si queremos una diagonal.</description>
+    </item>
+    
+    <item>
+      <title>Git add repo from local</title>
+      <link>http://example.org/notes/20211105183843-git_add_repo_from_local/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211105183843-git_add_repo_from_local/</guid>
+      <description> Init an empty repository in local: git init -b main Add origin: git remote add origin git@github.com:&amp;lt;Username&amp;gt;/&amp;lt;repo&amp;gt;.git Set upstream: git branch --set-upstream-to=origin/main main Pull from remote: git pull --rebase Rebase to prevent losing any data. Push: git push  </description>
     </item>
     
     <item>
@@ -1796,6 +1806,15 @@ Con este punto \(P_0\), se calcula la pendiente, usando 2 definiciones distintas
     </item>
     
     <item>
+      <title>Mínimos cuadrados</title>
+      <link>http://example.org/notes/20211109121923-minimos_cuadrados/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211109121923-minimos_cuadrados/</guid>
+      <description>*</description>
+    </item>
+    
+    <item>
       <title>NAND</title>
       <link>http://example.org/notes/20210924142844-nand/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1897,6 +1916,15 @@ npm install npm install &amp;lt;module&amp;gt; will install the requested &amp;l
     </item>
     
     <item>
+      <title>Obligaciones como contribuyente</title>
+      <link>http://example.org/notes/20211112141948-obligaciones_como_contribuyente/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211112141948-obligaciones_como_contribuyente/</guid>
+      <description>CONTRIBUCIONES  Aportaciones de seguridad social Se va a servicios como IMSS, ISSTECALI, juvilaciones, pensiones. Contribuciones de mejoras Derechos Impuestos  IMPUESTOS IMPUESTO SOBRE LA RENTA  Es el que se paga al ganar dinero, o al incrementar nuestro patrimonio. Lo pagamos quienes vivimos en México, incluyendo a extranjeros con residencia permanente, y empresas con sucursales en México. Residentes en el extranjero que ganan dinero que proviene de México. Se cobra sobre la ganancia neta.</description>
+    </item>
+    
+    <item>
       <title>OOP (Object oriented programming)</title>
       <link>http://example.org/notes/20210907210318-oop_object_oriented_programming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1945,7 +1973,15 @@ PASOS DE ACUERDO A DIVIDE AND CONQUER  Divide al partir el array a la mitad (len
       
       <guid>http://example.org/notes/20211022120819-ortogonalidad/</guid>
       <description>Dos subespacios u y v son ortogonales si todos los vectores de u son perpendiculares a (también) todos los vectores v.
-ORTOGONALIDAD DE LOS 4 SUBESPACIOS  El espacio nulo y el espacio columna son subespacios ortogonales en \(R^n\)  TEMAS RELACIONADOS  Complemento ortogonal  </description>
+ORTOGONALIDAD DEL ESPACIO COLUMNA El espacio columna y el espacio nulo izquierdo son ortogonales en \(R^m\).
+\begin{equation*} A^Ty = \begin{bmatrix} column\; 1\\
+\vdots \\
+column\; 2 \end{bmatrix} \begin{bmatrix} \\ y\\ \\
+\end{bmatrix}= \begin{bmatrix} 0\\
+\vdots \\
+0\\
+\end{bmatrix} \end{equation*}
+ORTOGONALIDAD DEL ESPACIO LINEA El espacio línea y el espacio nulo son ortogonales en \(R^n\)</description>
     </item>
     
     <item>
@@ -2232,7 +2268,16 @@ Es decir, 2 vectores \(u=(u_1,u_2)\) y \(v=(v_1,v_2)\) tendrían un producto pu
       <description>Las proyecciones buscan encontrar el vector que forma parte de un subespacio, que minimice el error entre las componentes del subespacio, y el vector proyectado.
 PROYECCIÓN DE UN VECTOR A UN SEGMENTO Cuando se proyecta un vector sobre una línea, la proyección es la parte del vector que corre sobre esa línea.
 Por lo tanto, la proyección sobre una línea no es más que la misma línea, escalada. Entonces:
-\(p = \hat{x}a\) Donde:</description>
+\(\rho = \hat{x}a\) Donde:</description>
+    </item>
+    
+    <item>
+      <title>Publish hugo site in github pages</title>
+      <link>http://example.org/notes/20211105223547-publish_hugo_site_in_github_pages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/notes/20211105223547-publish_hugo_site_in_github_pages/</guid>
+      <description>Create a repository in your github account named: &amp;lt;github_username&amp;gt;.github.io Don&amp;rsquo;t have a github account? Well, create one. Don&amp;rsquo;t add any of the freebies included in the repo (License, readme, etc&amp;hellip;) Link the repository with the directory that has your Hugo files. In the main directory of your site, create the directories and the file &amp;ldquo;.github/workflows/gh-pages.yml&amp;rdquo; This is a default path for github to look for &amp;ldquo;gh-pages.yml&amp;rdquo; Inside &amp;ldquo;gh-pages.yml&amp;rdquo;, add the code from the appendix.</description>
     </item>
     
     <item>
